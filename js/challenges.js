@@ -462,9 +462,9 @@ const CHALS = {
         title: "移除级别",
         desc: "You cannot rank up.",
         reward() {
-			if(hasElement(519))return `Meta-Hept scaling starts later. Blue chroma affects this effect, but at a reduced rate.`;
-			if(hasElement(421))return `Meta-Hex scaling starts later. Blue chroma affects this effect, but at a reduced rate.`;
-			if(hasElement(348))return `Meta-Pent scaling starts later. Blue chroma affects this effect, but at a reduced rate.`;
+			if(hasElement(519))return `使七重阶层的元折算延迟出现. 但削弱蓝色色度效果对它的提升.`;
+			if(hasElement(421))return `使六重阶层的元折算延迟出现. 但削弱蓝色色度效果对它的提升.`;
+			if(hasElement(348))return `使五重阶层的元折算延迟出现. 但削弱蓝色色度效果对它的提升.`;
 			if(hasElement(265))return `Meta-Tetr scaling starts later.`;
 			if(hasElement(230))return `Meta-Tier scaling starts later.`;
 			if(hasElement(170))return `Meta-Rank scaling starts later.`;
@@ -506,7 +506,7 @@ const CHALS = {
         title: "明镜止水",
         desc: "You cannot gain Rage Powers, but Dark Matters are gained by mass instead of Rage Powers at a reduced rate.<br>In addtional, mass gain softcap is stronger.",
         reward() {
-			if(hasElement(348))return `Rage Powers gain are raised by completions. Blue chroma affects this effect, but at a reduced rate.<br><span class="yellow">On 16th completion, unlock Elements</span>`;
+			if(hasElement(348))return `使狂怒能量的获取随着完成次数变为原来的一个指数，但削弱蓝色色度效果对它的提升.<br><span class="yellow">On 16th completion, unlock Elements</span>`;
 			return `Completions adds 2 maximum completions of 1-4 Challenge.<br><span class="yellow">On 16th completion, unlock Elements</span>`
 		},
         max: E(50),
