@@ -748,7 +748,7 @@ const FERMIONS = {
                     return `七重阶层的元折算延迟至${format(x)}倍出现`
                 },
                 inc: "[Neutrino] Tiers",
-                cons: "强制进行所有U-夸克和挑战13. 坍缩星辰获取log10.",
+                cons: "强制进行所有U-轻子和挑战13. 坍缩星辰获取log10.",
             },
             {
                 maxTier() {
@@ -779,7 +779,7 @@ const FERMIONS = {
                     return `使超新星星系的超级折算弱化${format(E(100).sub(x.mul(100)))}%`
                 },
                 inc: "[Neut-Muon] Tiers",
-                cons: "强制进行所有U-夸克和挑战13. 原子获取log10后^3000.",
+                cons: "强制进行所有U-轻子和挑战13. 原子获取log10后^3000.",
             },
             {
                 maxTier() {
