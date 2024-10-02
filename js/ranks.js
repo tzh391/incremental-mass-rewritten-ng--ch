@@ -929,7 +929,7 @@ const PRESTIGES = {
             "147": `星系碎片加成无限次数.`,
             "148": `星系碎片加成永恒次数.`,
             "155": `使辉煌141的效果平方.`,
-            "156": `使转生等级的元折算延迟至1.2倍出现r.`,
+            "156": `使转生等级的元折算延迟至1.2倍出现.`,
             "162": `使降伏器的超级折算延迟至(10/9)倍出现.`,
             "163": `使五重阶层的元折算延迟至1e10倍出现.`,
             "165": `解锁转生时间速度.`,
@@ -1137,7 +1137,7 @@ const PRESTIGES = {
 				if (hasPrestige(2,22))x += 30;
 				if (hasPrestige(2,23))x += 50;
                 return x
-            },x=>x+"% effectiveness"],
+            },x=>x+"% "],
             "242": [_=>{
                 let x = player.prestiges[1].add(1).pow(4.2)
                 return x
@@ -1174,15 +1174,15 @@ const PRESTIGES = {
             "51": [_=>{
                 let x = player.prestigeMassUpg[1].add(1)
                 return x
-            },x=>"x"+x.format()+" to power"],
+            },x=>"x"+x.format()+" "],
             "52": [_=>{
                 let x = player.prestigeMassUpg[2].add(1)
                 return x
-            },x=>"x"+x.format()+" to power"],
+            },x=>"x"+x.format()+" "],
             "53": [_=>{
                 let x = player.prestigeMassUpg[2].add(1).log10().add(1).sqrt()
                 return x
-            },x=>"x"+x.format()+" to power"],
+            },x=>"x"+x.format()+" "],
             "59": [_=>{
                 let x = 5;
 				if (hasPrestige(3,18))x += 5;
