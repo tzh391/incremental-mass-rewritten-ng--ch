@@ -1264,7 +1264,7 @@ const PRESTIGES = {
             "35": [_=>{
                 let x = player.bh.dm.add(1e10).log10().pow(0.5);
                 return x
-            },x=>x.format()+"倍出现"],
+            },x=>"延迟"+x.format()+"倍出现"],
 		},
 		{
             "4": [_=>{
