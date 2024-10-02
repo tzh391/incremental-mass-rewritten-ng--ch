@@ -742,10 +742,10 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `五重阶层的元折算延迟至${format(x)}倍出现`
+                    return `五重阶层的元折算延迟${format(x)}倍出现`
                 },
                 desc2(x) {
-                    return `七重阶层的元折算延迟至${format(x)}倍出现`
+                    return `七重阶层的元折算延迟${format(x)}倍出现`
                 },
                 inc: "[Neutrino] Tiers",
                 cons: "强制进行所有U-轻子和挑战13. 坍缩星辰获取log10.",
