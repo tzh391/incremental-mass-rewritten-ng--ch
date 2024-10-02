@@ -630,7 +630,7 @@ var cnItems = {
     'Cosmic Rays Power is raised to 1.25th power.': '使宇宙射线倍率变为原来的1.25次方。',
     'Tickspeed affect Higgs Bosons gain at a reduced rate.': '使时间速度可以加成希格斯玻色子获取速度，只是效果倍率降低。',
     'Photon, Gluon powers up each other.': '使光子和胶子互相加成彼此的获取速度。',
-    'Neutrons gain is affected by Graviton\'s effect at a reduced rate.': '使引力子可以加成中子获取速度，只是效果倍率降低。',
+    'Neutrons gain is affected by Graviton\'s effect at a reduced rate.': '使引力子可以加成中子星获取速度，只是效果倍率降低。',
     'Raise Z Bosons gain to the 1.5th power.': '使Z玻色子获取速度变为原来的1.5次方。',
     'Z Bosons also affect BHC + CR powers.': '使Z玻色子可以加成黑洞压缩器倍率和宇宙射线倍率。',
     'Tickspeed affect each Fermions gain at a reduced rate.': '使时间速度可以加成所有费米子获取速度，只是效果倍率降低。',
