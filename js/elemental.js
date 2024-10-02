@@ -2023,16 +2023,16 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Add 300 C19 completions.`,
+			desc: `使挑战19的次数上限增加300次.`,
 			cost: E("1.5e648"),
 			et: true,
 		},
 		{
-			desc: `Add 300 C18 completions.`,
+			desc: `使挑战18的次数上限增加300次.`,
 			cost: E("1.5e4856"),
 		},
 		{
-			desc: `Unlock Galactic Fermions in the Supernova tab.`,
+			desc: `在超新星选项卡中解锁星系费米子.`,
 			cost: E(6e9),
 			galQk: true,
 		},
@@ -2042,7 +2042,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Remove Meta-Tier scaling. Radiation Booster 'Meta-Rank Boost' affects Meta-Tetr at a reduced rate.`,
+			desc: `移除阶层的元折算. 辐射波加成'级别元折算加成'能以较弱的效果对三重阶层的元折算生效.`,
 			cost: E("1.5e5256"),
 			effect() {
 				let x = tmp.radiation.bs.eff[14].add(1).log10().add(1).log10();
@@ -2053,21 +2053,21 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x later"; },
 		},
 		{
-			desc: `The effect of Supernova Galaxy's Rage Power boost is better.`,
+			desc: `超新星星系加成狂怒能量获取的效果更好.`,
 			cost: E(3e10),
 			galQk: true,
 		},
 		{
-			desc: `First Black Hole Overflow effect is weaker.`,
+			desc: `弱化第一个黑洞溢出.`,
 			cost: E("1.5e704"),
 			et: true,
 		},
 		{
-			desc: `Meta-Tetr starts 10x later.`,
+			desc: `三重阶层的元折算延迟10倍出现.`,
 			cost: E("1.5e5656"),
 		},
 		{
-			desc: `The 120th element boost Eternities at a reduced rate.`,
+			desc: `使120号元素可以加成永恒次数，只是效果倍率降低.`,
 			cost: E("1.5e706"),
 			et: true,
 			effect() {
@@ -2077,7 +2077,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Elements 173-174 are better.`,
+			desc: `元素173-174变得更好.`,
 			cost: E("1.5e5796"),
 		},
 		{
