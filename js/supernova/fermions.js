@@ -457,13 +457,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Atomic Powers gain by ^${format(x)}`
+                    return `原子能量获取^${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost Atomic Powers gain exponent by ^${format(x)}`
+                    return `原子能量获取指数^${format(x)}`
                 },
                 inc: "[Up] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenge 13. Atomic Powers gain is set to log10(Atomic Powers gain).",
+                cons: "强制进行所有U-夸克和挑战13,原子能量获取log10.",
             },
             {
                 maxTier() {
@@ -489,13 +489,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Dilated Mass gain by ^${format(x)}`
+                    return `膨胀质量获取^${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost the effect above by ^${format(x)}`
+                    return `以上效果^${format(x)}`
                 },
                 inc: "[Down] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenge 13. Relativistic Particle gain is set to log10(Relativistic Particle gain).",
+                cons: "强制进行所有U-夸克和挑战13.相对论粒子获取log10 .",
             },
             {
                 maxTier() {
@@ -520,13 +520,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Mass gain by ^${format(x)}`
+                    return `质量获取^${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost Mass gain exponent by ^${format(x)}`
+                    return `质量获取指数^${format(x)}`
                 },
                 inc: "[Charm] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenges 13,20.",
+                cons: "强制进行所有U-夸克和挑战13,20.",
             },
             {
                 maxTier() {
@@ -551,13 +551,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Rage Power gain by ^${format(x)}`
+                    return `狂怒能量获取^${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost Rage Power gain exponent by ^${format(x)}`
+                    return `狂怒能量获取指数^${format(x)}`
                 },
                 inc: "[Strange] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenge 13. Rage Power gain is set to log10(Rage Power gain).",
+                cons: "强制进行所有U-夸克和挑战13. 狂怒能量获取log10.",
             },
             {
                 maxTier() {
@@ -582,13 +582,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Galactic Radiation gain by ${format(x)}x`
+                    return `星系辐射波获取x${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost Galactic Radiation gain by ^${format(x)}`
+                    return `星系辐射波获取x^${format(x)}`
                 },
                 inc: "[Top] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenge 13. Dilated Mass gain is set to log10(Dilated Mass gain)^10.",
+                cons: "强制进行所有U-夸克和挑战13. 膨胀质量获取log10后^10.",    
             },
             {
                 maxTier() {
@@ -614,13 +614,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Raise [Bottom]'s effect to a power of `+format(x)+`.`
+                    return `[底夸克]的效果^`+format(x)+`.`
                 },
                 desc2(x) {
-                    return `Boost the effect above by ^${format(x)}`
+                    return `以上效果^${format(x)}`
                 },
                 inc: "[Bottom] Tiers",
-                cons: "First 5 Galactic U-Quarks are applied at once. Also, Tickspeed Power is set to log10(Tickspeed Power).",
+                cons: "强制进行前5个星系U-夸克，以及时间速度倍率log10.",
             },
         ],[
             {
@@ -646,13 +646,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Collapsed Star gain by ^${format(x)}`
+                    return `坍缩星辰获取^${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost Collapsed Star gain exponent by ^${format(x)}`
+                    return `坍缩星辰获取指数^${format(x)}`
                 },
                 inc: "[Electron] Tiers",
-                cons: "You are trapped in all U-Leptons and Challenges 13,16. Quark gain is set to log10(Quark gain).",
+                cons: "强制进行所有U-轻子和挑战13,16. 夸克获取log10.",
             },
             {
                 maxTier() {
@@ -677,13 +677,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Galactic Bosons gain by ${format(x)}x`
+                    return `星系玻色子获取x${format(x)}`
                 },
                 desc2(x) {
-                    return `Boost Galactic Bosons gain by ^${format(x)}`
+                    return `星系玻色子获取^${format(x)}`
                 },
                 inc: "[Muon] Tiers",
-                cons: "You are trapped in all U-Leptons and Challenges 13,16. BH mass gain is set to log10(BH mass gain)^100.",
+                cons: "强制进行所有U-轻子和挑战13,16. 黑洞质量获取log10后^100.",
             },
             {
                 maxTier() {
@@ -710,13 +710,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Accelerator effect softcap ^1-^2 starts ${format(x)}x later`
+                    return `加速器效果的一重和二重软上限延迟至${format(x)}倍出现`
                 },
                 desc2(x) {
-                    return `Boost the effect above by ^${format(x)}`
+                    return `以上效果^${format(x)}`
                 },
                 inc: "[Tau] Tiers",
-                cons: "You are trapped in all U-Leptons and Challenges 13,16. Dark Matter gain is set to log10(Dark Matter gain)^5.",
+                cons: "强制进行所有U-轻子和挑战13,16. 暗物质获取log10后^5.",
             },
             {
                 maxTier() {
@@ -742,13 +742,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Meta-Pent starts ${format(x)}x later`
+                    return `五重阶层的元折算延迟至${format(x)}倍出现`
                 },
                 desc2(x) {
-                    return `Meta-Hept starts ${format(x)}x later`
+                    return `七重阶层的元折算延迟至${format(x)}倍出现`
                 },
                 inc: "[Neutrino] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenge 13. Collapsed Star gain is set to log10(Collapsed Star gain).",
+                cons: "强制进行所有U-夸克和挑战13. 坍缩星辰获取log10.",
             },
             {
                 maxTier() {
@@ -773,13 +773,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Meta-Supernova scaling is ${format(E(100).sub(x.mul(100)))}% weaker`
+                    return `使超新星的元折算弱化${format(E(100).sub(x.mul(100)))}%`
                 },
                 desc2(x) {
-                    return `Super Supernova Galaxies is ${format(E(100).sub(x.mul(100)))}% weaker`
+                    return `使超新星星系的超级折算弱化${format(E(100).sub(x.mul(100)))}%`
                 },
                 inc: "[Neut-Muon] Tiers",
-                cons: "You are trapped in all U-Quarks and Challenge 13. Atom gain is set to log10(Atom gain)^3000.",
+                cons: "强制进行所有U-夸克和挑战13. 原子获取log10后^3000.",
             },
             {
                 maxTier() {
@@ -804,13 +804,13 @@ const FERMIONS = {
                     return x
                 },
                 desc(x) {
-                    return `Boost Galactic Quark gain by `+format(x)+"x";
+                    return `星系夸克获取x`+format(x);
                 },
                 desc2(x) {
-                    return `Boost Galactic Quark gain by `+format(x)+"x";
+                    return `星系夸克获取x`+format(x);
                 },
                 inc: "[Neut-Tau] Tiers",
-                cons: "First 5 Galactic U-Leptons are applied at once. Also, Tickspeed Power is set to log10(Tickspeed Power).",
+                cons: "强制进行前5个星系U-轻子，以及时间速度倍率log10.",
             },
         ],
     ],
@@ -849,7 +849,7 @@ function setupFermionsHTML() {
                 Next Tier at: <span id="${id}_nextTier">X</span><br>
                 (单位为[${FERMIONS.sub_names[i-2][x]}]阶层)<br><br>
                 Effect: <span id="${id}_desc">X</span><br>
-                On Active: ${f.cons}
+                激活时: ${f.cons}
             </button>
             `
         }
