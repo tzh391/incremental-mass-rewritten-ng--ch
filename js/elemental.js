@@ -2053,7 +2053,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x later"; },
 		},
 		{
-			desc: `超新星星系加成狂怒能量获取的效果更好.`,
+			desc: `超新星星系加成狂怒能量获取的效果变得更好.`,
 			cost: E(3e10),
 			galQk: true,
 		},
@@ -2081,54 +2081,54 @@ const ELEMENTS = {
 			cost: E("1.5e5796"),
 		},
 		{
-			desc: `Unlock 2 new types of Galactic Fermions.`,
+			desc: `解锁2个星系费米子类型.`,
 			cost: E(1e11),
 			galQk: true,
 		},
 		{
-			desc: `Multiply all bosons base gain by 100`,
+			desc: `所有玻色子基础获取x100`,
 			cost: E("1.5e721"),
 			et: true,
 		},
 		{
-			desc: `Add 400 C14 completions.`,
+			desc: `使挑战14的次数上限增加400次.`,
 			cost: E("1.5e6226"),
 		},
 		{
-			desc: `The effect softcap of Galactic Power is weaker.`,
+			desc: `弱化星系能量软上限的效果.`,
 			cost: E(1e12),
 			galQk: true,
 		},
 		{
-			desc: `Add 100 C18-C19 max completions.`,
+			desc: `使挑战18，19的次数上限增加100次.`,
 			cost: E("1.5e756"),
 			et: true,
 		},
 		{
-			desc: `Blue Chroma's effect is better.`,
+			desc: `蓝色色度的效果变得更好.`,
 			cost: E("1.5e6956"),
 		},
 		{
-			desc: `You can assign Galactic Quarks. (In Atom Tab)`,
+			desc: `你可以分配星系夸克. (在原子选项卡)`,
 			cost: E(1e13),
 			galQk: true,
 		},
 		{
-			desc: `Add 250 C17-C19 max completions.`,
+			desc: `使挑战17-19的次数上限增加250次.`,
 			cost: E("9e779"),
 			et: true,
 		},
 		{
-			desc: `Accelerator effect softcap is weaker.`,
+			desc: `加速器效果的软上限弱化.`,
 			cost: E("1.5e7256"),
 		},
 		{
-			desc: `The effect of Supernova Galaxy's Entropy boost is better.`,
+			desc: `超新星星系加成熵获取的效果变得更好.`,
 			cost: E(5e13),
 			galQk: true,
 		},
 		{
-			desc: `Gain more Prestige Mass based on your bought Elements.`,
+			desc: `使购买元素数量加成转生质量获取.`,
 			cost: E("1.5e786"),
 			et: true,
 			effect() {
@@ -2138,16 +2138,16 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `The 120th element now count all bought elements.`,
+			desc: `使元素120的效果现在基于所有元素.`,
 			cost: E("1.5e7606"),
 		},
 		{
-			desc: `The effect softcap of Galactic Power is weaker.`,
+			desc: `弱化星系能量软上限的效果.`,
 			cost: E(1e24),
 			galQk: true,
 		},
 		{
-			desc: `Add 250 C17-C19 max completions.`,
+			desc: `使挑战17-19的次数上限增加250次.`,
 			cost: E("1.5e821"),
 			et: true,
 		},
