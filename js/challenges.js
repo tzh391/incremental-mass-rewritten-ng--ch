@@ -831,14 +831,14 @@ const CHALS = {
     24: {
         unl() { return hasTree('qp40') },
         title: "The Hardest Difficulty",
-        desc: "This challenge is just Galactic Challenge Difficulty 20.",
+        desc: "This challenge is just Galactic Challenge Difficulty 16.",
         reward: `Exotic Matter gain is better.`,
 		max: E(100),
-		inc: E(1e10),
+		inc: E(10),
 		pow: E(2),
-        start: E("1e17"),
+        start: E("1e1437"),
         effect(x) {
-            let ret = x.div(20);
+            let ret = x.pow(0.5).div(20);
             return ret
         },
         effDesc(x) { return "+"+format(x) },
