@@ -126,7 +126,7 @@ const FORMS = {
 			
 		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
 		
-        return x.min("eee100")
+        return x
     },
     massSoftGain() {
         let s = E(1.5e156)
