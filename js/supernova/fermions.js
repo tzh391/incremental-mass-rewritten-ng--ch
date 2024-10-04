@@ -585,7 +585,7 @@ const FERMIONS = {
                     return `星系辐射波获取x${format(x)}`
                 },
                 desc2(x) {
-                    return `星系辐射波获取x^${format(x)}`
+                    return `星系辐射波获取^${format(x)}`
                 },
                 inc: "[Top] Tiers",
                 cons: "强制进行所有U-夸克和挑战13. 膨胀质量获取log10后^10.",    
