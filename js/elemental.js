@@ -2152,68 +2152,68 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Prestige Mass effect affects Hyper Glory and Meta Fermion Tier scalings.`,
+			desc: `使转生质量的效果也可以对辉煌的究极折算和费米子阶层的元折算生效.`,
 			cost: E("1.5e7806"),
 		},
 		{
-			desc: `Galactic Quarks gain is better.`,
+			desc: `星系夸克的获取变得更好.`,
 			cost: E(2e24),
 			galQk: true,
 		},
 		{
-			desc: `Unlock 2 new types of Galactic Fermions.`,
+			desc: `解锁2个星系费米子类型.`,
 			cost: E(2e29),
 			galQk: true,
 		},
 		{
-			desc: `First Black Hole Overflow effect is weaker.`,
+			desc: `第一个黑洞溢出的效果弱化.`,
 			cost: E("1.5e824"),
 			et: true,
 		},
 		{
-			desc: `'60%' in Neutron Tree Upgrade [br3] is now 50%.`,
+			desc: `中子树升级[br3]的60%变为50%.`,
 			cost: E("1.5e8006"),
 		},
 		{
-			desc: `Element 231 is better.`,
+			desc: `元素231的效果变得更好.`,
 			cost: E(4e30),
 			galQk: true,
 		},
 		{
-			desc: `C5 effect is changed.`,
+			desc: `改变挑战5的效果.`,
 			cost: E("1.5e834"),
 			et: true,
 		},
 		{
-			desc: `Entropic Condenser^2 and Entropic Radiation^2 are 90% weaker.`,
+			desc: `熵压缩^2和熵辐射^2的折算弱化90%.`,
 			cost: E("1.5e8116"),
 		},
 		{
-			desc: `Unlock Galactic Challenges.`,
+			desc: `解锁星系挑战.`,
 			cost: E(1e31),
 			galQk: true,
 		},
 		{
-			desc: `Enthalpy gain is better.`,
+			desc: `熵获取变得更好.`,
 			cost: E("1.5e839"),
 			et: true,
 		},
 		{
-			desc: `The softcap of Entropic Accelerator is weaker.`,
+			desc: `弱化熵加速的软上限.`,
 			cost: E("1.5e8326"),
 		},
 		{
-			desc: `Effect of Galactic Bosons is better.`,
+			desc: `星系玻色子的效果变得更好.`,
 			cost: E(2e31),
 			galQk: true,
 		},
 		{
-			desc: `Element 161 is better.`,
+			desc: `元素161的效果变得更好.`,
 			cost: E("1.5e842"),
 			et: true,
 		},
 		{
-			desc: `Meta-Pent starts later based on Tetr.`,
+			desc: `三重阶层的数值延迟五重阶层的元折算.`,
 			cost: E("1.5e8526"),
 			effect() {
 				let x = player.ranks.tetr.add(10).log10().sqrt();
@@ -2223,41 +2223,41 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x later"; },
 		},
 		{
-			desc: `Reduce Galactic Fermion Requirements.`,
+			desc: `减少星系费米子的目标.`,
 			cost: E(5e31),
 			galQk: true,
 		},
 		{
-			desc: `Green Chroma's softcap is weaker.`,
+			desc: `弱化绿色色度软上限的效果.`,
 			cost: E("1.5e854"),
 			et: true,
 		},
 		{
-			desc: `Unlock 2 new types of Galactic Fermions.`,
+			desc: `解锁2个星系费米子类型.`,
 			cost: E(5e32),
 			galQk: true,
 		},
 		{
-			desc: `Elements 232 and 239 are better.`,
+			desc: `元素232和239的效果变得更好.`,
 			cost: E("1.5e856"),
 			et: true,
 		},
 		{
-			desc: `Add 100 C20 completions. C20 effect is better.`,
+			desc: `挑战20的次数上限增加100次. 且它的效果变得更好.`,
 			cost: E("1.5e8856"),
 		},
 		{
-			desc: `Element 231 is better.`,
+			desc: `元素231的效果变得更好.`,
 			cost: E("1.5e33"),
 			galQk: true,
 		},
 		{
-			desc: `Dark Matter Upgrade 19 is better.`,
+			desc: `暗物质升级19的效果变得更好.`,
 			cost: E("1.5e886"),
 			et: true,
 		},
 		{
-			desc: `Add 500 C17-C19 completions.`,
+			desc: `挑战17到挑战19的次数上限增加500次.`,
 			cost: E("1.5e9356"),
 		},
 		{
