@@ -1574,28 +1574,28 @@ const TREE_UPGS = {
             qf: true,
             branch: ["qp17","qp21"],
             desc: `[qp21] is better.`,
-            cost: E('ee240'),
+            cost: E('ee238'),
         },
         qp39: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp17","qp22"],
             desc: `Black Hole Overflow is weaker.`,
-            cost: E('ee250'),
+            cost: E('ee245'),
         },
         qp40: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp21","qp32"],
             desc: `Unlock Challenge 24.`,
-            cost: E('ee270'),
+            cost: E('ee250'),
         },
         qp41: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp22","qp34"],
             desc: `Pink Matter effect is better.`,
-            cost: E('ee310'),
+            cost: E('ee269'),
         },
 		
 		
