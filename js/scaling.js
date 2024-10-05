@@ -7,6 +7,7 @@ const SCALE_START = {
 		hex: E(100),
 		hept: E(15),
 		oct: E(15),
+		enne: E(9000),
         massUpg: E(100),
 		tickspeed: E(100),
 		bh_condenser: E(100),
@@ -80,6 +81,8 @@ const SCALE_START = {
 	exotic: {
 		prestige0: E(558000),
 		prestige1: E(11000000),
+		massUpg: E("ee150"),
+		rank: E("ee150"),
 	},
 }
 
@@ -92,6 +95,7 @@ const SCALE_POWER= {
 		hex: 3,
 		hept: 4,
 		oct: 5,
+		enne: 6,
 		massUpg: 2.5,
 		tickspeed: 2,
 		bh_condenser: 2,
@@ -165,6 +169,7 @@ const SCALE_POWER= {
 	exotic: {
 		prestige0: 1e125,
 		prestige1: 1e5,
+		massUpg: 10,
 	},
 }
 
@@ -681,6 +686,9 @@ function getScalingPower(type, name) {
 		if (name=="superGal") {
 			if(hasElement(503))power = power.mul(tmp.fermions.effs2[3][4]||E(1))
 		}
+		if (name=="gfTier") {
+			if(hasTree("qp42"))power = power.mul(0.01)
+		}	
 	}
 	if (type=="hyper") {
 		if (name=="rank") {
@@ -906,6 +914,9 @@ function getScalingPower(type, name) {
 		if (name=="prestige1") {
 			if (hasTree('ax28')) power = power.mul(0.75)
 			if (hasTree('ax36')) power = power.mul(treeEff('ax36'));
+		}
+		if (name=="massUpg") {
+			
 		}
 	}
 	if (name=="rank" && hasPrestige(0,58)) power = power.mul(0.5)
