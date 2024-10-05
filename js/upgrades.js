@@ -153,8 +153,8 @@ const UPGS = {
 				if (!hasElement(292))ret = ret.softcap(1.8e5,hasPrestige(0,12)?0.525:0.5,0)
                 ret = ret.mul(tmp.prim.eff[0])
                 if (!player.ranks.pent.gte(15) && (!hasElement(292))) ret = ret.softcap(ss2,sp2,0)
-				tmp.strongerOverflowStart = E("e4e6")
-				tmp.strongerOverflowPower = player.ranks.oct.gte(8)?0.6:0.5;
+                 tmp.strongerOverflowStart = E("e4e6")
+				if (!hasTree('qp39'))tmp.strongerOverflowPower = player.ranks.oct.gte(8)?0.6:0.5;
 				if (hasElement(305))tmp.strongerOverflowPower = tmp.strongerOverflowPower ** 0.9;
 				if (hasElement(315))tmp.strongerOverflowPower = tmp.strongerOverflowPower ** 0.8;
 				if (hasPrestige(2,81))tmp.strongerOverflowPower = tmp.strongerOverflowPower ** 0.5;
@@ -172,7 +172,7 @@ const UPGS = {
 				if (player.ranks.enne.gte(4570))tmp.strongerOverflowPower = tmp.strongerOverflowPower ** 0.9;
 				if (hasChargedElement(164))tmp.strongerOverflowStart = tmp.strongerOverflowStart.pow(tmp.chal?(tmp.chal.eff[15].add(9).log10()||1):1)
 				tmp.strongerOverflow = overflow(ret, tmp.strongerOverflowStart, tmp.strongerOverflowPower).log(ret);
-				ret = overflow(ret, tmp.strongerOverflowStart, tmp.strongerOverflowPower);
+				if (!hasTree('qp39'))ret = overflow(ret, tmp.strongerOverflowStart, tmp.strongerOverflowPower);
                 return {step: step, eff: ret, ss: ss}
             },
             effDesc(eff) {
@@ -1620,8 +1620,10 @@ const UPGS = {
                 cost: E(1e30),
             },
         },
+      
     },
 }
+
 
 /*
 1: {
