@@ -44,7 +44,7 @@ const FORMS = {
     },
     massGain() {
         let x = E(1)
-	 tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))	    
+	    
         x = x.add(tmp.upgs.mass[1]?tmp.upgs.mass[1].eff.eff:1)
         if (player.ranks.rank.gte(6)) x = x.mul(RANKS.effect.rank[6]())
         if (player.ranks.rank.gte(13)) x = x.mul(3)
@@ -129,7 +129,7 @@ const FORMS = {
 		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
        
         tmp.masscholestasisStart = E("eee156")   
-        
+         tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))	
         if (player.mass>= "eee100"&&x>= "eee100") x =  Decimal.tetrate(10,E(x).slog().sub(tmp.masscholestasispower).max(0) );	  
        
      
