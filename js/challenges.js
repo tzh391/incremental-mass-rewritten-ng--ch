@@ -838,7 +838,7 @@ const CHALS = {
 		pow: E(2),
         start: E("1e1400"),
         effect(x) {
-            let ret = x.pow(0.5).div(20);
+            let ret = x.div(20);
             return ret
         },
         effDesc(x) { return "+"+format(x) },
