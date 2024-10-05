@@ -85,7 +85,7 @@ const FORMS = {
 		
 		
 		x = x.pow(SUPERNOVA_GALAXY.galPow0_eff())
-		
+       
 		if (CHALS.inChal(9) || CHALS.inChal(14) || CHALS.inChal(19) || FERMIONS.onActive("12")) x = expMult(x,0.9)
         x = x.softcap(tmp.massSoftGain,tmp.massSoftPower,0)
         .softcap(tmp.massSoftGain2,tmp.massSoftPower2,0)
@@ -106,8 +106,8 @@ const FORMS = {
 		if(hasElement(530))x = expMult(x,tmp.stars.effectExpPower||E(1))
 		
 		if (CHALS.inChal(20)) x = x.add(1).log10()
+        if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)		
 		
-		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
 	
 		tmp.massOverflowStart = E("ee84")
 		if (player.ranks.hex.gte(120))tmp.massOverflowStart = tmp.massOverflowStart.pow(10)
@@ -125,8 +125,14 @@ const FORMS = {
 		if (!hasUpgrade('exotic',1))x = overflow(x,tmp.massOverflowStart,tmp.massOverflowPower);
 			
 		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
-		
-        return x
+       
+        tmp.masscholestasisStart = E("eee156")   
+        tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))  
+        if (player.mass>= "eee100"&&x>= "eee100") x =  Decimal.tetrate(10,E(x).slog().sub(tmp.masscholestasispower).max(0) );	  
+       
+     
+
+        return x.min("eee308")
     },
     massSoftGain() {
         let s = E(1.5e156)
