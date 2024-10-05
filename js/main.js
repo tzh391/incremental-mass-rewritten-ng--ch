@@ -17,6 +17,7 @@ const ST_NAMES = [
 const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
 
 const FORMS = {
+  tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))	
     getPreQUGlobalSpeed() {
         let x = E(1)
         if (tmp.qu.mil_reached[1]) x = x.mul(10)
@@ -127,7 +128,7 @@ const FORMS = {
 		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
        
         tmp.masscholestasisStart = E("eee156")   
-        tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))  
+        
         if (player.mass>= "eee100"&&x>= "eee100") x =  Decimal.tetrate(10,E(x).slog().sub(tmp.masscholestasispower).max(0) );	  
        
      
