@@ -836,7 +836,7 @@ const CHALS = {
 		max: E(100),
 		inc: E(10),
 		pow: E(2),
-        start: E("1e1437"),
+        start: E("1e1400"),
         effect(x) {
             let ret = x.pow(0.5).div(20);
             return ret
