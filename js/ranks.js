@@ -1333,6 +1333,7 @@ const ASCENSIONS = {
     fullNames: ["Ascension Level","Transcension Level","Recursion"],
     baseExponent() {
         let x = E(0)
+        if (hasTree('qp42')) x = x.add(treeEff('qp42'));
 		if(hasPrestige(3,27))x = x.add(prestigeEff(3,27,E(0)));
 		if(hasAscension(0,10))x = x.add(ascensionEff(0,10,E(0)));
 		if(hasElement(486))x = x.add(MATTERS.eff(8));
@@ -2081,7 +2082,9 @@ function ascensionMassGain(){
 	
 	let x= Decimal.log10(tmp.ascensions.base.add(10)).mul(player.ascensions[0].pow(a0pow)).mul(player.ascensions[1].pow(a1pow)).pow(player.ascensions[1].div(10));
 	if(hasAscension(2,6))x = x.pow(player.ascensions[2].div(5));
+   
 	x = x.mul(tmp.upgs.ascensionMass[1].eff.eff);
+    if(hasTree("qp43"))x = x.pow(1.25);
 	return x;
 }
 
