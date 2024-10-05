@@ -176,7 +176,7 @@ function setupHTML() {
 		for (let y = 1; y <= UPGS.main[x].lens; y++) {
 			let key = UPGS.main[x][y]
 			table += `<img onclick="UPGS.main[${x}].buy(${y})" onmouseover="UPGS.main.over(${x},${y})" onmouseleave="UPGS.main.reset()"
-			 style="margin: 3px;" class="img_btn" id="main_upg_${x}_${y}" src="images/main_upg_${(x==6||y>15)?'placeholder':(id+y)}.png">`
+			 style="margin: 3px;" class="img_btn" id="main_upg_${x}_${y}" src="images/main_upg_${(x==7||y>15)?'placeholder':(id+y)}.png">`
 		}
 		table += `</div><br><button id="main_upg_${x}_auto" class="btn" style="width: 80px;" onclick="player.auto_mainUpg.${id} = !player.auto_mainUpg.${id}">OFF</button></div>`
 	}
@@ -597,10 +597,12 @@ function updateHTML() {
 				
 				tmp.el.massOverflow.setDisplay(tmp.massGain.gte(tmp.massOverflowStart) && !hasUpgrade('exotic',1))
 				tmp.el.massOverflow2.setTxt(format(tmp.massOverflow))
+				tmp.el.massOverflow2.setTxt(format(tmp.massOverflow))
 				tmp.el.rankCollapse.setDisplay(tmp.rankCollapse.gt(1))
 				tmp.el.rankCollapse2.setTxt(format(tmp.rankCollapse))
 				tmp.el.strongerOverflow.setDisplay(tmp.strongerOverflow.lt(1))
 				tmp.el.strongerOverflow2.setTxt(format(tmp.strongerOverflow))
+				tmp.el.masscholestasispower.setTxt(format(tmp.masscholestasispower))
 			}
 			if (tmp.stab[0] == 1) {
 				updateBlackHoleHTML()
