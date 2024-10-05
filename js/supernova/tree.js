@@ -71,7 +71,7 @@ const TREE_IDS = [
         [],
         [],
         [],
-        ['qp36','qp35'],
+        ['qp43','qp36','qp35','qp42'],
 		[],
     ],[
         [],
@@ -1580,24 +1580,43 @@ const TREE_UPGS = {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp17","qp22"],
-            desc: `Black Hole Overflow is weaker.`,
-            cost: E('ee245'),
+            desc: `Black Hole Overflow is weaker和移除强化器溢出.`,
+            cost: E('ee241'),
         },
         qp40: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp21","qp32"],
             desc: `Unlock Challenge 24.`,
-            cost: E('ee250'),
+            cost: E('e3.3333e241'),
         },
         qp41: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp22","qp34"],
-            desc: `Pink Matter effect is better.`,
-            cost: E('ee269'),
+            desc: `Pink Matter effect is better（这很强）.`,
+            cost: E('ee242'),
         },
-		
+        qp42: {
+            unl() { return hasTree('ax42') },
+            qf: true,
+            branch: ["qp28","qp35"],
+            desc: `飞升基础值指数基于星尘而增加，星系费米子的超级折算削弱99%.`,
+            cost: E('ee311'),
+            effect() {
+                let x = player.stardust.add(1).log10().div(7000);
+                return x
+            },
+            effDesc(x) { return "+"+format(x) },
+        },        
+        qp43: {
+            unl() { return hasTree('ax42') },
+            qf: true,
+            branch: ["qp29","qp36"],
+            desc: `飞升质量获取^1.25.`,
+            cost: E('e5e320'),
+           
+        },        		
 		
 		
         ax1: {
@@ -2002,10 +2021,10 @@ const TREE_UPGS = {
             unl() { return player.exotic.tree.length>=41 },
             ax: true,
             branch: ["ax33"],
-            req() { return player.mass.gte("eee100") },
-            reqDesc() { return `Reach eee100 g mass.` },
+            req() { return player.mass.gte("eee99") },
+            reqDesc() { return `Reach eee99 g mass.` },
             desc: `Unlock 6 final upgrades in the Quantum+ tab of Neutron Tree.`,
-            cost: E(200000),
+            cost: E(1),
         },
     },
 }
