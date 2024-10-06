@@ -623,7 +623,9 @@ const CHALS = {
         start: E('ee40'),
         effect(x) {
 			if(CHALS.inChal(17) || CHALS.inChal(19))return E(1)
-			if(hasChargedElement(204)){
+                if(hasChargedElement(222)){
+                    if(x.gte(100000))x=x.log10().pow(1.3).mul(20000).mul(5**0.1).max(x.log10().pow(1.5).mul(1250));                
+			}else if(hasChargedElement(204)){
 				if(x.gte(100000))x=x.log10().pow(0.9).mul(20000).mul(5**0.1).max(x.log10().pow(1.5).mul(1250));
 			}else if(hasChargedElement(194)){
 				if(x.gte(100000))x=x.log10().pow(0.85).mul(20000).mul(5**0.15).max(x.log10().pow(1.5).mul(1250));
@@ -830,9 +832,9 @@ const CHALS = {
     },
     24: {
         unl() { return hasTree('qp40') },
-        title: "The Hardest Difficulty",
-        desc: "This challenge is just Galactic Challenge Difficulty 16.",
-        reward: `Exotic Matter gain is better.`,
+        title: "最简单的挑战",
+        desc: "进入难度为16级的星系挑战.",
+        reward: `奇异物质的获取变得更好.`,
 		max: E(100),
 		inc: E(10),
 		pow: E(2),
