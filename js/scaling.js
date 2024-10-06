@@ -81,8 +81,7 @@ const SCALE_START = {
 	exotic: {
 		prestige0: E(558000),
 		prestige1: E(11000000),
-		massUpg: E("ee150"),
-		rank: E("ee150"),
+		
 	},
 }
 
@@ -579,6 +578,9 @@ function getScalingStart(type, name) {
 	if (name=="hex" && type=="hyper") if (hasPrestige(2,145))return EINF;
 	if (name=="hept" && type=="super") if (hasPrestige(3,20))return EINF;
 	if (name=="hex" && type=="ultra") if (hasPrestige(3,25))return EINF;
+	if (name=="prestige2" && type=="ultra") if (hasChargedElement(223))return EINF;
+	if (name=="gfTier" && type=="super") if (hasChargedElement(223))return EINF;
+	if (name=="massUpg4" && type=="super") if (hasChargedElement(223))return EINF;
 	if (name=="oct" && type=="super") if (hasPrestige(3,46))return EINF;
 	if (name=="gamma_ray" && type=="meta") if (hasChargedElement(15))return EINF;
 	if (name=="bh_condenser" && type=="meta") if (hasChargedElement(55))return EINF;
