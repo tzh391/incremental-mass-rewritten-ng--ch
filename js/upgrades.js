@@ -1,4 +1,4 @@
-const UPGS = {
+GS = {
     mass: {
         cols: 4,
         temp() {
@@ -60,7 +60,7 @@ const UPGS = {
             return {cost: cost, bulk: bulk}
         },
         1: {
-            unl() { return player.ranks.rank.gte(1) || player.mainUpg.atom.includes(1) },
+            unl() { return (!hasChargedElement(223)) },
             title: "Muscler",
             start: E(10),
             inc: E(1.5),
@@ -88,7 +88,7 @@ const UPGS = {
             },
         },
         2: {
-            unl() { return player.ranks.rank.gte(2) || player.mainUpg.atom.includes(1) },
+            unl() { return (!hasChargedElement(223))},
             title: "Booster",
             start: E(100),
             inc: E(4),
@@ -324,6 +324,7 @@ const UPGS = {
                 if (hasPrestige(3,11)) step = step.mul(prestigeEff(3,11))
                 step = step.mul(tmp.upgs.prestigeMass[4]?tmp.upgs.prestigeMass[4].eff.eff:1)
 				let ret = step.mul(x).add(1).softcap(2000,hasAscension(1,154)?0.675:hasAscension(1,35)?0.65:hasAscension(1,32)?0.6:hasAscension(1,31)?0.55:0.5,0);
+            
                 return {step: step, eff: ret, ss: 2000}
             },
             effDesc(eff) {
@@ -956,7 +957,7 @@ const UPGS = {
             auto_unl() { return hasTree("qol1") },
             lens: 25,
             1: {
-                desc: "Start with Mass upgrades unlocked.",
+                desc: "重置时保留质量升级3解锁，狂怒能量的获取变为原来的5倍.",
                 cost: E(1),
             },
             2: {
