@@ -17,7 +17,6 @@ const ST_NAMES = [
 const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
 
 const FORMS = {
- 
     getPreQUGlobalSpeed() {
         let x = E(1)
         if (tmp.qu.mil_reached[1]) x = x.mul(10)
@@ -44,8 +43,11 @@ const FORMS = {
     },
     massGain() {
         let x = E(1)
-	    
+        tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))  
         x = x.add(tmp.upgs.mass[1]?tmp.upgs.mass[1].eff.eff:1)
+        if (player.ranks.rank.gte(1)) x = x.mul(1.2)
+        if (player.ranks.rank.gte(2)) x = x.mul(1.5)
+        if (player.ranks.rank.gte(3)) x = x.mul(2)        
         if (player.ranks.rank.gte(6)) x = x.mul(RANKS.effect.rank[6]())
         if (player.ranks.rank.gte(13)) x = x.mul(3)
         x = x.mul(tmp.tickspeedEffect.eff||E(1))
@@ -128,9 +130,9 @@ const FORMS = {
 			
 		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
        
-        tmp.masscholestasisStart = E("eee156")   
-         tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))	
-        if (player.mass>= "eee100"&&x>= "eee100") x =  Decimal.tetrate(10,E(x).slog().sub(tmp.masscholestasispower).max(0) );	  
+       
+            if (x>= "eee100")tmp.masscholestasispower =  E(x.add(10).slog().max(0).sub(4.301).max(0))
+                if (x>= "eee100")x=x.tetraflow(x,"eee100",0.5)
        
      
 
@@ -482,6 +484,7 @@ const FORMS = {
             if (player.mass.lt(1e15) || CHALS.inChal(7) || CHALS.inChal(10) || CHALS.inChal(14) || CHALS.inChal(19)) return E(0)
             let gain = player.mass.div(1e15).root(3)
             if (player.ranks.rank.gte(14)) gain = gain.mul(2)
+            if (player.mainUpg.atom.includes(1)) gain = gain.mul(5)    
             if (player.ranks.rank.gte(45)) gain = gain.mul(RANKS.effect.rank[45]())
             if (player.ranks.tier.gte(6)) gain = gain.mul(RANKS.effect.tier[6]())
             if (player.mainUpg.bh.includes(6)) gain = gain.mul(tmp.upgs.main?tmp.upgs.main[2][6].effect:E(1))
