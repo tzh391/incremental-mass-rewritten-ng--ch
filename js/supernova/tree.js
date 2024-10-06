@@ -187,6 +187,7 @@ const TREE_UPGS = {
             effect() {
                 let x = player.supernova.times.add(10).log10();
 				if(hasElement(219))x = player.supernova.times.add(1);
+                if(hasChargedElement(219))x = x.pow(9e15);
                 return x
             },
             effDesc(x) { return "^"+format(x) },
@@ -1001,42 +1002,42 @@ const TREE_UPGS = {
         },
         prim3a: {
             qf: true,
-            unl() {return hasTree("unl3")  },
+            unl() {  return hasTree("unl3")  },
             branch: ["prim3"],
             desc: `如果你没有进入量子挑战，就使艾普西隆[E]粒子的效果2更强.`,
-            cost: E(1e15),
+            cost: E(1e12),
         },
         prim4: {
             qf: true,
-            unl() { return hasTree("unl3") },
+            unl() {  return hasTree("unl3")  },
             branch: ["prim3"],
             desc: `您无法通过原基定理获得德尔塔粒子,但您可以根据原基定理的数值获得相同数量的相应粒子.`,
             cost: E(1e16),
         },
         prim5: {
             qf: true,
-            unl() { return hasTree("unl3") },
+            unl() {  return hasTree("unl3")  },
             branch: ["prim4"],
             desc: `您无法通过原基定理获得欧米伽粒子,但您可以根据原基定理的数值获得相同数量的相应粒子.`,
             cost: E(1e20),
         },
         prim6: {
             qf: true,
-            unl() { return hasTree("unl3") },
+            unl() {  return hasTree("unl3") },
             branch: ["prim5"],
             desc:`您无法通过原基定理获得阿尔法粒子,但您可以根据原基定理的数值获得相同数量的相应粒子.`,
             cost: E(1e30),
         },
         prim7: {
             qf: true,
-            unl() { return hasTree("unl3") },
+            unl() {  return hasTree("unl3") },
             branch: ["prim6"],
             desc: `您无法通过原基定理获得西格马粒子,但您可以根据原基定理的数值获得相同数量的相应粒子.`,
             cost: E(1e40),
         },
         prim8: {
             qf: true,
-            unl() { return hasTree("unl3") },
+            unl() { return player.atom.elements.includes(118) },
             branch: ["prim7"],
             desc: `使原基定理的机制改变.`,
             cost: E(1e50),
@@ -1588,14 +1589,14 @@ const TREE_UPGS = {
             qf: true,
             branch: ["qp21","qp32"],
             desc: `Unlock Challenge 24.`,
-            cost: E('e3.3333e241'),
+            cost: E('e5e249'),
         },
         qp41: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp22","qp34"],
             desc: `Pink Matter effect is better（这很强）.`,
-            cost: E('ee242'),
+            cost: E('e2.5e250'),
         },
         qp42: {
             unl() { return hasTree('ax42') },
@@ -1613,8 +1614,8 @@ const TREE_UPGS = {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp29","qp36"],
-            desc: `飞升质量获取^1.25.`,
-            cost: E('e5e320'),
+            desc: `飞升质量获取^1.25，解锁奇异之鲨neko（在元素阶层3）.`,
+            cost: E('ee320'),
            
         },        		
 		
