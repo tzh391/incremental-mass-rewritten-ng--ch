@@ -1,4 +1,4 @@
-const SCALE_START = {
+ const SCALE_START = {
     super: {
         rank: E(50),
 		tier: E(10),
