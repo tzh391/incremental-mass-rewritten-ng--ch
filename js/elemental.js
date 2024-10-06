@@ -186,7 +186,7 @@ const ELEMENTS = {
         {
             desc: `Power's gain from each particle formula is better.`,
             cost: E(1e29),
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E("ee4.65e12"),
         },
         {
@@ -271,13 +271,13 @@ const ELEMENTS = {
                 return x.min('eee15')
             },
             effDesc(x) { return format(x)+"x"+(x.gte('eee15')?" <span class='soft'>(hardcapped)</span>":"")  },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E("ee6.3e12"),
         },
         {
             desc: `The Atomic Power effect is better.`,
             cost: E(1e65),
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E("ee6.9e12"),
         },
         {
@@ -485,7 +485,7 @@ const ELEMENTS = {
 				if(hasChargedElement(42))return "^"+format(x);
 				return format(x)+"x"+(x.gte('eee10')?" <span class='soft'>(hardcapped)</span>":"") 
 			},
-            cdesc: `This element is better`,
+            cdesc: `这个元素的效果变得更好`,
             ccost: E("ee3.2e13"),
         },
         {
@@ -578,7 +578,7 @@ const ELEMENTS = {
             effDesc(x) { 
 				if(hasChargedElement(52))return "^"+format(x);
 					return format(x)+"x"+(x.gte('eee10')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `This element is better`,
+            cdesc: `这个元素的效果变得更好`,
             ccost: E("ee5.5e13"),
         },
         {
@@ -598,7 +598,7 @@ const ELEMENTS = {
             effDesc(x) { 
 				if(hasChargedElement(54))return "^"+format(x);
 			return format(x)+"x" },
-            cdesc: `This element is better`,
+            cdesc: `这个元素的效果变得更好`,
             ccost: E("ee5.8e13"),
         },
         {
@@ -625,7 +625,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better`,
+            cdesc: `这个元素的效果变得更好`,
             ccost: E("ee1e14"),
         },
         {
@@ -713,7 +713,7 @@ const ELEMENTS = {
                 return x.softcap('e3e15',0.85,2).min('eee10')
             },
             effDesc(x) { if(player.ranks.hex.gte(67) || hasChargedElement(67))return "^"+format(x);return format(x)+"x"+(x.gte('eee10')?" <span class='soft'>(hardcapped)</span>":"")  },
-            cdesc: `This element is better`,
+            cdesc: `这个元素的效果变得更好`,
             ccost: E("ee4.5e14"),
         },
         {
@@ -820,7 +820,7 @@ const ELEMENTS = {
         {
             desc: `Mass Dilation upgrade 2 effect is overpowered.`,
             cost: E('e3e14'),
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee1.7e16'),
         },
         {
@@ -885,7 +885,7 @@ const ELEMENTS = {
                 return x.min('ee15');
             },
             effDesc(x) { if(hasChargedElement(90))return "^"+format(x);return format(x)+"x"+(x.gte('ee15')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee1.35e17'),
             ceffect() {
 				if(hasChargedElement(90))return player.md.mass.add(1).log10().add(1).log10().add(1).log10().add(1).log10().add(1);
@@ -975,13 +975,13 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "+^"+format(x) },
-            cdesc: `This Element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee8e17'),
         },
         {
             desc: `Blueprint Particles effect is overpowered.`,
             cost: E('e3.5e7'),
-            cdesc: `This Element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee1e18'),
         },
         {
@@ -1000,7 +1000,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(hasChargedElement(103))return "^"+format(x);return format(x)+"x" },
-            cdesc: `This element is better. Also, permanently add ee10 Blueprint Particles to their effect.`,
+            cdesc: `这个元素的效果变得更好. Also, permanently add ee10 Blueprint Particles to their effect.`,
             ccost: E('ee4e18'),
             ceffect() {
 				if(hasChargedElement(103))return player.prestiges[1].add(1).log10().add(1).log10().add(1).pow(0.1).pow(hasPrestige(1,23)?prestigeEff(1,23):1);
@@ -1016,7 +1016,7 @@ const ELEMENTS = {
         {
             desc: `Each Particle Power’s 1st effect is exponentially overpowered.`,
             cost: E('e2.2e9'),
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee5e19'),
         },
         {
@@ -1062,7 +1062,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "^"+format(x) },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee2e20'),
         },
         {
@@ -1074,7 +1074,7 @@ const ELEMENTS = {
         {
             desc: `[bs2] uses a better formula.`,
             cost: E('e4e12'),
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee4.4444e20'),
         },
         {
@@ -1103,7 +1103,7 @@ const ELEMENTS = {
                 return x.min("e2e30")
             },
             effDesc(x) { if(hasChargedElement(116))return "^"+format(x);return format(x)+"x"+(x.gte('e2e30')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E('ee1.5e21'),
             ceffect() {
 				if(hasChargedElement(116))return (tmp.prestiges.base||E(1)).add(10).log10().pow(0.5);
@@ -1135,7 +1135,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: E("1.5e3300056"),
 		},
 		{
@@ -1168,7 +1168,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("3.3333e3333333"),
 		},
 		{
@@ -1200,7 +1200,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e25100"),
 		},
 		{
@@ -1212,7 +1212,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("1e4900000"),
 		},
 		{
@@ -1233,7 +1233,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e27875"),
 		},
 		{
@@ -1250,10 +1250,11 @@ const ELEMENTS = {
 				if(hasChargedElement(140))x = x.pow(2.5);
 				if(hasChargedElement(147))x = x.pow(1.2);
 				if(hasChargedElement(157))x = x.pow(1.2);
+				if(hasChargedElement(221))x = x.pow(2);
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e27925"),
 		},
 		{
@@ -1304,7 +1305,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x)},
-            cdesc: `This Element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e69000"),
 		},
 		{
@@ -1317,7 +1318,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This Element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e58000"),
 		},
 		{
@@ -1348,7 +1349,7 @@ const ELEMENTS = {
 			desc: `128号元素变得更好。`,
 			cost: E("1.6190000001e21"),
 			et: true,
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e99000"),
 		},
 		{
@@ -1412,7 +1413,7 @@ const ELEMENTS = {
 		{
 			desc: `降低七重阶层的需求。`,
 			cost: uni(1e7),
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e64000000"),
 		},
 		{
@@ -1493,7 +1494,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e280000"),
 		},
 		{
@@ -1589,7 +1590,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x) },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e2.5e8"),
 		},
 		{
@@ -1607,7 +1608,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x) },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: uni("e2.5e8"),
 		},
 		{
@@ -1705,6 +1706,7 @@ const ELEMENTS = {
 		{
 			desc: `使高于1.8e308克的无限质量加成基础无限质量获取。`,
 			cost: E(2).pow(1024),
+			 cdesc: `质量获取指数^1.0000000000000000000.`,
             ccost: uni("e555555555"),
 		},
 		{
@@ -1905,7 +1907,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
             ccost: mlt(1.5),
 		},
 		{
@@ -1918,7 +1920,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
-            cdesc: `This element is better.`,
+            cdesc: `这个元素的效果变得更好.`,
 			ccost: uni("e2150000"),
 		},
 		{
@@ -1935,30 +1937,43 @@ const ELEMENTS = {
 		{
 			desc: `中子树升级[sn6]变得更好。`,
 			cost: E(1e6),
+			cdesc: `第1幕目标：击败地宫养殖者————greenshayu88   作为见面礼，将中子树升级[sn6]的效果^9e15.`,
+			ccost: E("e5900000000"),
 			galQk: true,
+			
 		},
 		{
 			desc: `自动购买碎片生成器。`,
 			cost: E("1.5e516"),
 			et: true,
+			cdesc: `鲨鱼吸收了永恒质量，变得更强大了，使时间碎片的效果^2.`,
+			ccost: E("e6075000"),
 		},
 		{
 			desc: `128号元素的效果变为原来的1.63次方。`,
 			cost: E("1.5e2976"),
+			cdesc: `鲨鱼从地核捡到了128号元素，发现它的效果变成了原来的平方.`,
+			ccost: E("e5950000000"),
 		},
 		{
 			desc: `Uncap C13 completions.`,
 			cost: E(1e7),
 			galQk: true,
+			cdesc: `奇异鲨鱼用锋利的牙齿咬了一口挑战13效果的软上限（弱化）.`,
+			ccost: E("e6180000000"),
 		},
 		{
 			desc: `Timeshards effect is better.`,
 			cost: E("1.5e533"),
 			et: true,
+			cdesc: `鲨鱼吃掉了辉煌的超究折算，降伏器和星系费米子的超级折算，顺便吃掉了锻体器和强化器.`,
+			ccost: E("e6360000"),			
 		},
 		{
 			desc: `移除辐射波加成“级别元折算加成”的1个软上限。`,
 			cost: E("1.5e3306"),
+			cdesc: `当前残局.`,
+			ccost: E("e6245000000"),			
 		},
 		{
 			desc: `削弱星系能量效果的软上限。`,
