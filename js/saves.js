@@ -14,6 +14,16 @@ Decimal.prototype.tetraflow = function (number,start,power) { // EXPERIMENTAL FU
 	}
 	return number;
 }
+Decimal.prototype.tetraflow = function (number,start,power) { // EXPERIMENTAL FUNCTION - x => 10^^((slog10(x)-slog10(s))*p+slog10(s))
+    if(isNaN(number.mag))return new Decimal(0);
+	start=E(start);
+	if(number.gte(start)){
+        let s = start.slog(10)
+        // Fun Fact: if 0 < number.slog(10) - start.slog(10) < 1, such like overflow(number,start,power,start.slog(10).sub(1).floor())
+		number=Decimal.tetrate(10,number.slog(10).sub(s).mul(power).add(s))
+	}
+	return number;
+}
 Decimal.prototype.modular=Decimal.prototype.mod=function (other){
     other=E(other);
     if (other.eq(0)) return E(0);
