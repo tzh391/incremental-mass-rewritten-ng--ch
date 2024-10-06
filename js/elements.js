@@ -215,7 +215,7 @@ function setupHTML() {
 				
 			`
 		}
-		test_table.setHTML(table)1
+		test_table.setHTML(table)
 	}
 	*/
 
