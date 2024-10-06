@@ -1628,7 +1628,7 @@ GS = {
 
 /*
 1: {
-    desc: "Placeholder.",
+    desc: "Placeholder.",1
     cost: E(1),
     effect() {
         let ret = E(1)
