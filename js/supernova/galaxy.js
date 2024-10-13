@@ -163,6 +163,9 @@ const SUPERNOVA_GALAXY = {
 			if(player.superGal.lt(3) || player.chal.active == 21)return new Decimal(1);
 			return Decimal.mul(0.5, player.superGal);
 		},
+		gqk(){
+			return player.superGal.add(1);
+		},		
 		em(){
 			if(!hasElement(467))return 1;
 			return player.superGal.add(1);
@@ -317,7 +320,7 @@ const SUPERNOVA_GALAXY = {
 		ret = ret.mul(SUPERNOVA_GALAXY.galPow6_eff())
 		if(hasElement(486))ret = ret.mul(MATTERS.eff(3));
 		if(player.superCluster.gte(21))ret = ret.mul(tmp.stellar.eff);
-		ret=ret.mul((SUPERNOVA_GALAXY.effects.em())	)
+		ret=ret.mul((SUPERNOVA_GALAXY.effects.gqk())	)
 		return ret;
 	},
 }
@@ -405,7 +408,7 @@ function updateSupernovaGalaxyHTML() {
 					if(player.superGal.gte(10)){
 						html += "<br>重置时保留无限升级";
 						html += "<br>解锁元素阶层3";
-					html += "<br>星系夸克获取x"+(SUPERNOVA_GALAXY.effects.em());;	
+					html += "<br>星系夸克获取x"+(SUPERNOVA_GALAXY.effects.gqk());;	
 						tmp.el.galQk.setTxt(format(player.galQk)+player.galQk.formatGain(SUPERNOVA_GALAXY.galQkGain()))
 						tmp.el.galPowNextspan.setDisplay(false);
 					}else tmp.el.galPowNext.setTxt(10);
