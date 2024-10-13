@@ -837,7 +837,7 @@ const CHALS = {
         unl() { return hasTree('qp40') },
         title: "最简单的挑战",
         desc: "进入难度为16级的星系挑战.",
-        reward: `奇异物质的获取变得更好.`,
+        reward: `奇异物质的基础获取变得更好.`,
 		max: E(100),
 		inc: E(10),
 		pow: E(2),
