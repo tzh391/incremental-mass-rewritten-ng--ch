@@ -408,7 +408,7 @@ function updateSupernovaGalaxyHTML() {
 					if(player.superGal.gte(10)){
 						html += "<br>重置时保留无限升级";
 						html += "<br>解锁元素阶层3";
-					html += "<br>星系夸克获取x"+(SUPERNOVA_GALAXY.effects.em());;	
+					html += "<br>星系夸克获取x"+(SUPERNOVA_GALAXY.effects.gqk());;	
 						tmp.el.galQk.setTxt(format(player.galQk)+player.galQk.formatGain(SUPERNOVA_GALAXY.galQkGain()))
 						tmp.el.galPowNextspan.setDisplay(false);
 					}else tmp.el.galPowNext.setTxt(10);
