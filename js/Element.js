@@ -37,10 +37,15 @@ class Element {
 	}
 
 	setClasses(data) {
-		this.clearClasses();
-		let list = Object.keys(data).filter(x => data[x]);
-		for (let i = 0; i < list.length; i++) this.addClass(list[i]);
-	}
+        const currentClassString = this.el.className;
+        const newClassString = Object.keys(data)
+            .filter(key => data[key])
+            .join(' ');
+
+        if (currentClassString !== newClassString) {
+            this.el.className = newClassString;
+        }
+    }
 	static setClasses(id, data) {
 		new Element(id).setClasses(data);
 	}
