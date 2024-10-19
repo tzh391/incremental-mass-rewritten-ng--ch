@@ -36,27 +36,6 @@ class Element {
 		new Element(id).setDisplay(bool);
 	}
 
-	addClass(name) {
-		this.el.classList.add(name);
-	}
-	static addClass(id, name) {
-		new Element(id).addClass(name);
-	}
-
-	removeClass(name) {
-		this.el.classList.remove(name);
-	}
-	static removeClass(id, name) {
-		new Element(id).removeClass(name);
-	}
-
-	clearClasses() {
-		this.el.className = "";
-	}
-	static clearClasses(id) {
-		new Element(id).clearClasses();
-	}
-
 	setClasses(data) {
 		this.clearClasses();
 		let list = Object.keys(data).filter(x => data[x]);
