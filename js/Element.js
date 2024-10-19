@@ -9,14 +9,14 @@ class Element {
 	}
 
 	setTxt(txt) {
-		this.el.textContent = txt;
+		if (this.el.textContent !== txt) this.el.textContent = txt;
 	}
 	static setTxt(id, txt) {
 		new Element(id).setTxt(txt);
 	}
 
 	setHTML(html) {
-		this.el.innerHTML = html;
+		if (this.el.innerHTML !== html) this.el.innerHTML = html;
 	}
 	static setHTML(id, html) {
 		new Element(id).setHTML(html);
@@ -36,32 +36,16 @@ class Element {
 		new Element(id).setDisplay(bool);
 	}
 
-	addClass(name) {
-		this.el.classList.add(name);
-	}
-	static addClass(id, name) {
-		new Element(id).addClass(name);
-	}
-
-	removeClass(name) {
-		this.el.classList.remove(name);
-	}
-	static removeClass(id, name) {
-		new Element(id).removeClass(name);
-	}
-
-	clearClasses() {
-		this.el.className = "";
-	}
-	static clearClasses(id) {
-		new Element(id).clearClasses();
-	}
-
 	setClasses(data) {
-		this.clearClasses();
-		let list = Object.keys(data).filter(x => data[x]);
-		for (let i = 0; i < list.length; i++) this.addClass(list[i]);
-	}
+        const currentClassString = this.el.className;
+        const newClassString = Object.keys(data)
+            .filter(key => data[key])
+            .join(' ');
+
+        if (currentClassString !== newClassString) {
+            this.el.className = newClassString;
+        }
+    }
 	static setClasses(id, data) {
 		new Element(id).setClasses(data);
 	}
@@ -74,14 +58,14 @@ class Element {
 	}
 
 	setOpacity(value) {
-		this.el.style.opacity = value;
+		if (this.el.style.opacity !== value) this.el.style.opacity = value;
 	}
 	static setOpacity(id, value) {
 		new Element(id).setOpacity(value);
 	}
 
 	changeStyle(type, input) {
-		this.el.style[type] = input;
+		if (this.el.style[type] !== input) this.el.style[type] = input;
 	}
 	static changeStyle(id, type, input) {
 		new Element(id).changeStyle(type, input);
@@ -113,8 +97,8 @@ class Element {
 	}
 
 	setSize(h, w) {
-		this.el.style["min-height"] = h + "px";
-		this.el.style["min-width"] = w + "px";
+		this.changeStyle("min-height", h + "px");
+		this.changeStyle("min-width", w + "px");
 	}
 	static setSize(id, h, w) {
 		new Element(id).setSize(h, w);
