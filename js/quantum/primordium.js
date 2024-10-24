@@ -76,7 +76,7 @@ const PRIM = {
             x=>{ return `Boost Higgs Boson's effect by ${format(x)}x` },
             x=>{ return `Add ${format(x[0])} to base from Fermions gain ` + (hasTree("prim3") ? ` /<br> Add ${format(x[1])} free tiers to Fermions` : "") },
             x=>{ return `Boost all Radiations gains by ${format(x[0])}x` + (hasTree("prim2") ? ` /<br> Make all Radiations effects ${format(x[1])}x stronger` : "") },
-            x=>{ return `使超新星所有一阶折算延迟${format(x)}次出现` },
+            x=>{ return `使超新星所有一阶折算延迟${format(x)}次出现(低阶折算不得延迟至高阶折算之后)` },
         ],
     },
 }

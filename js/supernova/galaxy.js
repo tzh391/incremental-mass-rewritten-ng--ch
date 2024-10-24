@@ -321,6 +321,7 @@ const SUPERNOVA_GALAXY = {
 		if(hasElement(486))ret = ret.mul(MATTERS.eff(3));
 		if(player.superCluster.gte(21))ret = ret.mul(tmp.stellar.eff);
 		ret=ret.mul((SUPERNOVA_GALAXY.effects.gqk()))
+		if(hasChargedElement(251))ret = ret.pow(tmp.prestigeQKEffect)
 		return ret;
 	},
 }

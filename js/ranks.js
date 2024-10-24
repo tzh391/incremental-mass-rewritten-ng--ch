@@ -1825,6 +1825,8 @@ function updateRanksTemp() {
 	tmp.prestigeDMEffect = prestigeDMEffect()
     tmp.prestigeATGain = prestigeATGain()
 	tmp.prestigeATEffect = prestigeATEffect()
+    tmp.prestigeQKGain = prestigeQKGain()
+    tmp.prestigeQKEffect = prestigeQKEffect()
 	tmp.ascensionMassGain = ascensionMassGain()
 	tmp.ascensionMassEffect = ascensionMassEffect()
 }
@@ -1946,6 +1948,13 @@ function updateRanksHTML() {
 			tmp.el["pres_at3"].setTxt(format(E(1).sub(prestigeATEffect()).mul(100))+"%");
 		}else{
 			tmp.el["pres_at"].setDisplay(false);
+		}     
+        if (hasChargedElement(251)&&player.exotic.boosts.gte(425)){
+			tmp.el["pres_qk"].setDisplay(true);
+			tmp.el["pres_qk2"].setTxt(format(player.prestigeQK,0)+" "+formatGain(player.prestigeQK, tmp.prestigeQKGain))
+			tmp.el["pres_qk3"].setTxt(format(prestigeQKEffect()));
+		}else{
+			tmp.el["pres_qk"].setDisplay(false);
 		}        
     }
     if (tmp.rank_tab == 2) {
@@ -2064,6 +2073,14 @@ function prestigeATGain(){
     if (player.ranks.enne.gte(19275)) x = x.mul(1000);
 	return x;
 }
+function prestigeQKGain(){
+	if(!hasChargedElement(251)){
+		return E(0);
+	}
+	let x =player.prestigeBH.add(1).log10().mul(player.prestigeAT.add(10).log10().pow(2)) ;
+   
+	return x;
+}
 function prestigeMassEffect(){
 	let p = player.prestigeMass.add(1).log10();
 	if(p.gte(104))p = p.softcap(104,E(hasElement(152)?0.6:hasElement(135)?0.55:0.5).pow(hasElement(168)?tmp.chal.eff[16]:1),0);
@@ -2078,7 +2095,10 @@ function prestigeRPEffect(){
 	let p = player.prestigeRP.add(1).log10().div(1e5);
 	return p;
 }
-
+function prestigeQKEffect(){
+	let p = player.prestigeQK.add(1).log10().div(1e4).add(1);
+	return p;
+}
 function prestigeBHEffect(){
 	let p = overflow(player.prestigeBH.add(1),10,2.7);
 	if(!hasAscension(0,65))p = overflow(p,Decimal.pow(10,1e5),0.33);
@@ -2116,6 +2136,7 @@ function calcPrestigeMass(dt){
 	player.ascensionMass = player.ascensionMass.add(tmp.ascensionMassGain.mul(dt))
 	player.prestigeDM = player.prestigeDM.add(tmp.prestigeDMGain.mul(dt))
     player.prestigeAT = player.prestigeAT.add(tmp.prestigeATGain.mul(dt))
+    player.prestigeQK = player.prestigeQK.add(tmp.prestigeQKGain.mul(dt))
 
 }
 

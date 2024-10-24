@@ -99,7 +99,8 @@ const MATTERS = {
 		player.prestigeBH = E(0);
 		player.prestigeBHC = E(0);
 		player.prestigeDM = E(0);
-		player.prestigeAT = E(0);
+		player.prestigeAT= E(0);
+		player.prestigeQK= E(0);
 		player.prestigeTickspeed = E(0);
 		SUPERNOVA_CLUSTER.reset(true);
 	}

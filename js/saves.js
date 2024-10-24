@@ -203,6 +203,7 @@ function getPlayerData() {
 		prestigeDM: E(0),
 		prestigeBHC: E(0),
         prestigeAT: E(0),
+        prestigeQK: E(0),
         auto_mainUpg: {
             
         },
