@@ -1030,14 +1030,14 @@ const TREE_UPGS = {
         },
         prim7: {
             qf: true,
-            unl() {  return hasTree("unl3") },
+            unl() {  return  },
             branch: ["prim6"],
             desc: `您无法通过原基定理获得西格马粒子,但您可以根据原基定理的数值获得相同数量的相应粒子.`,
             cost: E(1e40),
         },
         prim8: {
             qf: true,
-            unl() { return player.atom.elements.includes(118) },
+            unl() { return hasTree("unl3") },
             branch: ["prim7"],
             desc: `使原基定理的机制改变.`,
             cost: E(1e50),

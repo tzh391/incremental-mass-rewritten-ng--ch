@@ -1949,7 +1949,7 @@ function updateRanksHTML() {
 		}else{
 			tmp.el["pres_at"].setDisplay(false);
 		}     
-        if (hasChargedElement(251)&&player.exotic.boosts.gte(425)){
+        if (hasChargedElement(251)&&player.exotic.boosts.reduce((acc, boost) => acc.add(boost)).gte(425) ){
 			tmp.el["pres_qk"].setDisplay(true);
 			tmp.el["pres_qk2"].setTxt(format(player.prestigeQK,0)+" "+formatGain(player.prestigeQK, tmp.prestigeQKGain))
 			tmp.el["pres_qk3"].setTxt(format(prestigeQKEffect()));
