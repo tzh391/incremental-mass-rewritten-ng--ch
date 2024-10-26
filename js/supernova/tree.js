@@ -1030,7 +1030,7 @@ const TREE_UPGS = {
         },
         prim7: {
             qf: true,
-            unl() {  return  },
+            unl() {  return hasTree("unl3") },
             branch: ["prim6"],
             desc: `您无法通过原基定理获得西格马粒子,但您可以根据原基定理的数值获得相同数量的相应粒子.`,
             cost: E(1e40),

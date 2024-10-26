@@ -130,6 +130,7 @@ const STARS = {
 				if(hasUpgrade('atom',22)) x = expMult(x,1.005)
 				if(hasChargedElement(49)) x = expMult(x,1.02)
 				if(hasChargedElement(50)) x = expMult(x,1.02)
+                if(hasChargedElement(254)&&player.exotic.dr.gte(1e160)) x = expMult(x,player.superCluster.add(1).pow(0.05))
 			if(hasElement(444) && x.gte(10))x = expMult(x,tmp.ex.exb_eff[3])
             if (QCs.active()) x = expMult(x,tmp.qu.qc_eff[0][0])
 				if(hasTree('qp33') && x.gte(10))x = expMult(x,treeEff('qp31'))

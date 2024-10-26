@@ -334,6 +334,11 @@ const RANKS = {
             '13620': "使十一重阶层加成九重阶层6的效果.",
             '13625': "使十一重阶层加成九重阶层102的效果.",
             '19275': "转生原子的效果也可以对星系费米子的究级折算生效，且转生原子的获取速度是原来的1000倍.",
+            '19955': "使十一重阶层加成九重阶层300的效果.",
+            '20001': "使转生暗物质的获取速度变为原来的10次方.",
+            '20002': "使六重阶层的元折算基于九重阶层的数值而延迟.",
+            '20003': "使强化器的溢出弱化.",
+            '20004': "使降伏器的的究级折算弱化10%.",
 		},
     },
     effect: {
@@ -594,6 +599,7 @@ const RANKS = {
             },
             '300'() {
                 let ret = beyondRankTier(9).add(1).pow(2);
+                if(player.ranks.enne.gte(19955))ret = ret.pow(beyondRankTier(10).add(1).pow(0.5));
                 return ret
             },
             '9000'() {
@@ -606,6 +612,10 @@ const RANKS = {
             },
             '13625'() {
                 let ret = beyondRankTier(10).add(1);
+                return ret
+            },
+            '19955'() {
+                let ret = beyondRankTier(10).add(1).pow(0.5);
                 return ret
             },
 		},
@@ -682,6 +692,7 @@ const RANKS = {
             9000(x) { return format(x)+"x" },
             13620(x) { return "^"+format(x) },
             13625(x) { return "^"+format(x) },
+            19955(x) { return "^"+format(x) },
 		},
     },
     fp: {

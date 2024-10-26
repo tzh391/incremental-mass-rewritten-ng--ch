@@ -663,6 +663,7 @@ const CHALS = {
         effect(x) {
 			if(CHALS.inChal(17) || CHALS.inChal(19))return E(1)
 			if(hasUpgrade('br',22)){
+                if(hasChargedElement(252))return x.pow(0.1);
 				if(hasChargedElement(210))return x.add(1e10).log10().div(10).pow(4);
 				if(hasChargedElement(206))return x.add(1e10).log10().div(10).pow(3);
 				if(hasChargedElement(159))return x.add(1e10).log10().div(10).pow(2);
@@ -708,6 +709,7 @@ const CHALS = {
         effect(x) {
 			if(CHALS.inChal(17) || CHALS.inChal(19))return E(1)
             let ret = E(0.93).pow(x.root(2))
+
             return ret
         },
         effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
@@ -723,6 +725,7 @@ const CHALS = {
         start: E('ee619'),
         effect(x) {
             let ret = E(0.95).pow(x.root(2))
+
             return ret
         },
         effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
@@ -756,6 +759,7 @@ const CHALS = {
         effect(x) {
             let ret = x.div(4).add(1);
 			if(hasChargedElement(209))ret = x.add(1).pow(2);
+            if(hasChargedElement(252))ret = x.add(1).pow(3);
 			return ret
         },
         effDesc(x) { return format(x)+"x" },
@@ -799,6 +803,7 @@ const CHALS = {
 			if(x.lt(1))return E(0);
 			let ret = x.mul(2).add(10);
 			if(hasElement(552))ret = ret.max(x.mul(3));
+            if(hasChargedElement(252))return ret.max(x.mul(3).pow(1.01));
 			return ret
         },
         effDesc(x) { return "延迟"+format(x)+"次出现" },

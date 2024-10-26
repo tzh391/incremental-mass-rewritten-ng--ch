@@ -186,6 +186,7 @@ const QUANTUM = {
         [E('1e600'), `Multiply the starting point of Meta-Pent scaling by (quantizes+1).`],
         [E('4.2e690'), `Green Chroma is applied to Pent.`],
         [E('1e900'), `Red Chroma is better.`],
+        [E("1e11800"), `量子次数的对数加成奇异物质获取.`],
     ],
     auto: {
         mode: ["Amount","Time"],
@@ -377,7 +378,7 @@ function updateQuantumHTML() {
                 tmp.el['qu_mil'+x].changeStyle('background-color',tmp.qu.mil_reached[x]?'#2f22':'#4442')
                 tmp.el['qu_mil_goal'+x].setTxt(format(QUANTUM.mils[x][0],0))
             }
-			for (let x = 7; x < QUANTUM.mils.length; x++) {
+			for (let x = 8; x < QUANTUM.mils.length; x++) {
                 tmp.el['qu_mil'+x].changeStyle('display',player.exotic.times.gte(1)?'':'none')
             }
         }

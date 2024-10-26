@@ -2213,18 +2213,29 @@ const ELEMENTS = {
 			desc: `使挑战17-19的次数上限增加250次.`,
 			cost: E("9e779"),
 			et: true,
-			cdesc: `（咕咕咕).`,
+			cdesc: `鲨鱼没活了，使挑战14,19,21的效果变得更好(需:e5e204量子之前所有资源获取速度）.`,
 		    ccost: E("e11111111"),		
 			
 		},
 		{
 			desc: `加速器效果的软上限弱化.`,
 			cost: E("1.5e7256"),
+			cdesc: `鲨鱼要加速了，加速器效果的软上限再次弱化(需:e235雕文质量）.`,
+		    ccost: E("e1.075e10"),		
 		},
 		{
 			desc: `超新星星系加成熵获取的效果变得更好.`,
 			cost: E(5e13),
 			galQk: true,
+			cdesc: `超新星要到无限了，但总有不好的预感，星辰生成器的效果指数基于超新星星团增加（需:e160暗射线）.`,
+		    ccost: E("e1.081e10"),	
+			ceffect() {
+				let x = (player.superCluster.add(1).pow(0.05))
+				
+				return x
+			},
+			ceffDesc(x) {   return "^"+format(x);
+			},
 		},
 		{
 			desc: `使购买元素数量加成转生质量获取.`,
@@ -2232,13 +2243,18 @@ const ELEMENTS = {
 			et: true,
 			effect() {
 				let x = E(1.02).pow(player.atom.elements.length);
+				if(hasChargedElement(255))x = E(1.03).pow(player.atom.elements.length);
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
+			cdesc: `使这个元素的效果变得更好且加成奇异物质获取（需:2245飞升等级）.`,
+		    ccost: E("e11333333"),	
 		},
 		{
 			desc: `使元素120的效果现在基于所有元素.`,
 			cost: E("1.5e7606"),
+			cdesc:` 咕咕咕（需:7.11111星辰第3效果）.`,
+		    ccost: E("e1.105e10"),	
 		},
 		{
 			desc: `弱化星系能量软上限的效果.`,

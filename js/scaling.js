@@ -7,7 +7,7 @@ const SCALE_START = {
 		hex: E(100),
 		hept: E(15),
 		oct: E(15),
-		enne: E(20000),
+		enne: E(19999),
 		
         massUpg: E(100),
 		tickspeed: E(100),
@@ -97,7 +97,7 @@ const SCALE_POWER= {
 		hex: 3,
 		hept: 4,
 		oct: 5,
-		enne: 10,
+		enne: 9999,
 	
 		massUpg: 2.5,
 		tickspeed: 2,
