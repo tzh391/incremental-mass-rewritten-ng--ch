@@ -91,7 +91,7 @@ const SUPERNOVA = {
 			bulk = E(0)
             if (player.stars.points.div(100).gte(1)) bulk = player.stars.points.div(100).max(1).log(1.1).max(0).mul(ml_fp).scaleEvery('supernova',true).add(1).floor()
 		}
-    
+       
         return {maxlimit: maxlimit, bulk: bulk}
     },
 }

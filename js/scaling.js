@@ -558,7 +558,7 @@ function getScalingStart(type, name) {
 	}
 	if (name=='supernova') {
 		start = start.add(tmp.prim.eff[7])
-		if (player.supernova.times.gte(Number.MAX_VALUE))start =E(Number.MAX_VALUE)
+		start =start.min(Number.MAX_VALUE)
 	}
 	if ((name=="bh_condenser" || name=="gamma_ray" || name=="tickspeed") && hasUpgrade('atom',14)) start = start.mul(10)
 	if ((name=="bh_condenser" || name=="gamma_ray" || name=="tickspeed") && hasUpgrade('atom',14) && player.prestiges[0].gte(50)) start = start.mul(1.2)
@@ -870,7 +870,7 @@ function getScalingPower(type, name) {
 	}
 	if (type=="meta") {
 		if (name=='supernova') {
-			if (player.supernova.times.gte(Number.MAX_VALUE))power =E(player.supernova.times).mul(0.01)
+			if (player.supernova.times.gte(Number.MAX_VALUE))power =power.mul(player.supernova.times.div(Number.MAX_VALUE)).pow(0.5)
 			if (hasElement(78)) power = power.mul(0.8)
 			if (player.ranks.hex.gte(78)) power = power.mul(0.95)
 			if (hasPrestige(0,93)) power = power.mul(tmp.prestigeMassEffect)

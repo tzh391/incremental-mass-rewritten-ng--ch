@@ -175,7 +175,7 @@ const QUANTUM = {
         [E(4), `Double Quantum Foam gain.`],
         [E(5), `Pre-Quantum global speed can affect Blueprint Particle & Chroma at a reduced rate.`],
         [E(5), `Supernova stars are boosted by Quantum times (capped at 1e10). Unlock Auto-Quantum.`],
-        [E(200), `如果在量子挑战中，就使时间异常的效果x0.1.`],
+        [E(200), `使量子之前所有资源获取速度再次变为原来的10倍.`],
         [E(1e250), `量子次数的双对数加成奇异物质获取.`],
         [E(1e255), `Triple Exotic Matter gain.`],
         [E(1e275), `Meta-Pent starts 100x later.`],

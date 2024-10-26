@@ -20,6 +20,7 @@ const FORMS = {
     getPreQUGlobalSpeed() {
         let x = E(1)
         if (tmp.qu.mil_reached[1]) x = x.mul(10)
+        if (tmp.qu.mil_reached[7]) x = x.mul(10)
         if (quUnl()) x = x.mul(tmp.qu.bpEff)
         if (hasElement(103) && !hasChargedElement(103)) x = x.mul(tmp.elements.effect[103])
 		if(hasTree('qc5')) x = x.mul(treeEff('qc5'));

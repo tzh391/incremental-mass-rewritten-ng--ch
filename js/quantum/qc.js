@@ -37,10 +37,10 @@ const QCs = {
 				if(i>=35)return E(2).pow(i**10/5e10)
 				if(i>=11)return E(2).pow(i**5/1000)
                 let x = E(2).pow(i**2)
-                if(player.qu.times.gte(200))x *= 0.1
-                return x
+                
+                return x.max(1)
             },
-            effDesc(x) { return `/${Math.floor(x*100)*0.01} to pre-Quantum global speed.` },
+            effDesc(x) { return `/${format(x)} to pre-Quantum global speed.` },
         },{
             eff(i) {
                 if (hasElement(129) && (player.qu.rip.active || hasChargedElement(129))) i *= 0.5
