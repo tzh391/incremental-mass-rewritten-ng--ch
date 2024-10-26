@@ -2183,29 +2183,36 @@ function ascensionMassEffect(){
 
 
 const RTNS = [
-    ['','Rank','Tier','Tetr','Pent','Hex','Hept','Oct','Enne'],
-    ['','dec','icos'], // d>2 -> cont
-    ['','hect'], // h>1 -> ct
+    ['','级别','阶层','四重阶层','五重阶层','六重阶层','七重阶层','八重阶层','九重阶层'],
 ]
 
-const RTNS2 = [
-    ['','un','do','tri','tetra','penta','hexa','hepta','octa','nona'], // d < 3
-    ['','un','du','tria','tetra','penta','hexa','hepta','octa','nona'],
-    ['','un','di','tri','tetra','penta','hexa','hepta','octa','nona'], // h
-]
+function toChinese(e) {
+  if ("" == (e = (e = e.toString().replace(/,/g, "")).replace(/^0+/, ""))) return "零";
+  if (isNaN(e)) return "错误：不是数字";
+  var r = "";
+  e.length > 1 && (0 == e.indexOf("-") && (e = e.replace("-", ""), r = "负"), 0 == e.indexOf("+") && (e = e.replace("+", "")));
+  var t, n, a, l, i, u, m, c, g, h, f, o = "",
+    p = "",
+    x = "undefined" == typeof maxDec || null == maxDec || Number(maxDec) < 0 || Number(maxDec) > 5;
+  if ((n = e.split(".")).length > 1) {
+    o = n[0], p = n[1], x && (maxDec = p.length > 5 ? 5 : p.length);
+    var b = Number("0." + p);
+    b *= Math.pow(10, maxDec), b = Math.round(Math.abs(b));
+    var N = (b /= Math.pow(10, maxDec)).toString().split(".");
+    1 == Number(N[0]) && (o = (Number(o) + 1).toString()), p = N.length > 1 ? N[1] : ""
+  } else o = e, p = "", x && (maxDec = 0);
+  if (o.length > 44) return "错误：数值过大！";
+  if (a = new Array("零", "一", "二", "三", "四", "五", "六", "七", "八", "九"), l = new Array("", "十", "百", "千"), i = new Array("", "万", "亿", "兆", "京", "垓", "杼", "穰", "沟", "涧", "正"), t = "", Number(o) > 0)
+    for (u = 0, m = 0; m < o.length; m++) h = (c = o.length - m - 1) / 4, f = c % 4, "0" == (g = o.substr(m, 1)) ? u++ : (u > 0 && (t += a[0]), u = 0, t += a[Number(g)] + l[f]), 0 == f && u < 4 && (t += i[h]);
+  return (t = "" + r + t).replace(/一十/g, "十")
+}
 
 function getRankTierName(i) {
-    if (i >= 999) return '['+format(i,0,9,'sc')+']'
+    if (i > 1e9) return +format(i,0,9,'sc')+'重阶层'
     else {
         if (i < 9) return RTNS[0][i]
         i += 1
-        let m = ''
-        let h = Math.floor(i / 100), d = Math.floor(i / 10) % 10, o = i % 10
-
-        if (d > 0) m += (d > 2 ? (o == 1 ? 'hen' : RTNS2[0][o]) + RTNS2[1][d] + 'cont' : (d == 2 && o == 3 ? "tr" : d > 1 && o == 1 ? "hen" : RTNS2[0][o]) + RTNS[1][d]) + (h > 0 ? 'a' : '');
-        if (h > 0) m += h > 1 ? RTNS2[2][h] + 'ct' : 'hect';
-
-        return capitalFirst(m)
+	return `${toChinese(i)}重阶层`
     }
 }
 
