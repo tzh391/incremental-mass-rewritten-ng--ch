@@ -1836,8 +1836,9 @@ function updateRanksTemp() {
 	tmp.prestigeDMEffect = prestigeDMEffect()
     tmp.prestigeATGain = prestigeATGain()
 	tmp.prestigeATEffect = prestigeATEffect()
-    tmp.prestigeQKGain = prestigeQKGain()
+    tmp.prestigeQKGain  = prestigeQKGain()
     tmp.prestigeQKEffect = prestigeQKEffect()
+    tmp.prestigeSTGain  = prestigeSTGain()
 	tmp.ascensionMassGain = ascensionMassGain()
 	tmp.ascensionMassEffect = ascensionMassEffect()
 }
@@ -1966,6 +1967,13 @@ function updateRanksHTML() {
 			tmp.el["pres_qk3"].setTxt(format(prestigeQKEffect()));
 		}else{
 			tmp.el["pres_qk"].setDisplay(false);
+		}      
+        if (hasChargedElement(259) ){
+			tmp.el["pres_st"].setDisplay(true);
+			tmp.el["pres_st2"].setTxt(format(player.prestigeST,0)+" "+formatGain(player.prestigeST, tmp.prestigeSTGain))
+			
+		}else{
+			tmp.el["pres_st"].setDisplay(false);
 		}        
     }
     if (tmp.rank_tab == 2) {
@@ -2082,6 +2090,7 @@ function prestigeATGain(){
 	}
 	let x =player.prestigeBH.add(1).log10().add(1).pow(2) ;
     if (player.ranks.enne.gte(19275)) x = x.mul(1000);
+    if (hasChargedElement(257)&&player.prestigeBH.gte("1e15625")) x = x.mul(100);
 	return x;
 }
 function prestigeQKGain(){
@@ -2089,7 +2098,15 @@ function prestigeQKGain(){
 		return E(0);
 	}
 	let x =player.prestigeBH.add(1).log10().mul(player.prestigeAT.add(10).log10().pow(2)) ;
-   
+    if (hasChargedElement(257)&&player.prestigeBH.gte("1e15625")) x = x.mul(100);
+	return x;
+}
+function prestigeSTGain(){
+	if(!hasChargedElement(259)){
+		return E(0);
+	}
+	let x =player.prestigeAT.add(1).log10().add(player.prestigeQK.add(10).log10()).div(2);
+    
 	return x;
 }
 function prestigeMassEffect(){
@@ -2148,7 +2165,7 @@ function calcPrestigeMass(dt){
 	player.prestigeDM = player.prestigeDM.add(tmp.prestigeDMGain.mul(dt))
     player.prestigeAT = player.prestigeAT.add(tmp.prestigeATGain.mul(dt))
     player.prestigeQK = player.prestigeQK.add(tmp.prestigeQKGain.mul(dt))
-
+    player.prestigeST = player.prestigeST.add(tmp.prestigeSTGain.mul(dt))
 }
 
 function ascensionMassGain(){

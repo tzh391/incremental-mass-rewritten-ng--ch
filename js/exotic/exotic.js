@@ -45,7 +45,7 @@ const EXOTIC = {
 		if (player.exotic.times.gte(1000))x = x.mul(player.exotic.times.add(10).log10());
 		
 		if (player.ranks.enne.gte(9000)) x = x.mul(RANKS.effect.enne[9000]())
-		if (hasChargedElement(255)) x = x.mul(tmp.elements.effect[255]);
+		if (hasChargedElement(255)&&hasAscension(0,2245)) x = x.mul(tmp.elements.effect[255]);
         return x.floor()
     },
     gainTimes() {

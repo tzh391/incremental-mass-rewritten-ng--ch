@@ -44,7 +44,7 @@ const FORMS = {
     },
     massGain() {
         let x = E(1)
-        tmp.masscholestasispower =  E(x.add(1e10).log10().log10().log10().sub(100).max(0).pow(0.25).div(100).sub(0.01).max(0))  
+     
         x = x.add(tmp.upgs.mass[1]?tmp.upgs.mass[1].eff.eff:1)
         if (player.ranks.rank.gte(1)) x = x.mul(1.2)
         if (player.ranks.rank.gte(2)) x = x.mul(1.5)
@@ -106,6 +106,7 @@ const FORMS = {
 		
         if (hasChargedElement(51) && x.gte(10)) x = expMult(x,1.005)
         if (hasChargedElement(117) && x.gte(10)) x = expMult(x,1.01)
+        if (hasChargedElement(259) && x.gte(10)) x = expMult(x,1.25)
         if (hasChargedElement(248) && x.gte(10)&&player.superGal.gte(3120)) x = expMult(x,10)
 		if(hasElement(503) && x.gte(10))x = expMult(x,tmp.fermions.effs2[2][2]||E(1))
 		if(hasElement(530))x = expMult(x,tmp.stars.effectExpPower||E(1))
@@ -412,7 +413,7 @@ const FORMS = {
 			if(hasChargedElement(102))ss = ss.mul(100)
 			if(hasAscension(1,146))p2 = p2 ** 0.95
 			if(hasAscension(2,26))p2 = p2 ** 0.81
-            if(hasChargedElement(253))p = p ** 0.95, p2 = p2 ** 0.95
+            if(hasChargedElement(253)&&player.exotic.dark_run.points.gte(1e235))p = p ** 0.95, p2 = p2 ** 0.95
 			x = overflow(overflow(x,ss,p),ss2,p2)
 			
 			return {step: step, eff: x,  ss: ss}
@@ -729,7 +730,7 @@ const FORMS = {
             atom: "Require over 1e100 uni of black hole to reset all previous features for gain Atoms & Quarks",
             md: "Dilate mass, then cancel",
             br: "Big Rip the Dimension, then go back",
-            eternity: "需要量子之前所有资源获取速度超过1e2000才能永恒",
+            eternity: "需要量子之前所有资源获取速度超过1e2000和购买无限升级14才能永恒",
             exotic: "Require over eee12 g of mass to reset previous features for gain Exotic Matter",
         },
         set(id) {
