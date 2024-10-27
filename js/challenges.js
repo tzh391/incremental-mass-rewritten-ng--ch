@@ -243,6 +243,7 @@ const CHALS = {
 		if (hasElement(280) && (i==17||i==18||i==19))  x = x.add(500)
 		if (hasTree('qp32') && (i==21||i==22||i==23))  x = x.add(100)
         if (hasChargedElement(227) && (i==22))  x = x.add(300)    
+        if ((hasChargedElement(258)&&player.chal.comps[22].gte(280)) && (i==21))  x = x.add(100) 
         return x.floor()
     },
     getScaleName(i) {
@@ -309,6 +310,7 @@ const CHALS = {
 		if(hasTree('qp29')&&x==21)pow = E(6);
 		if(hasTree('qp30')&&x==21)pow = E(5.7);
 		if(hasTree('qp32')&&x==21)pow = E(5);
+        if((hasChargedElement(258)&&player.chal.comps[22].gte(280))&&x==21)pow = E(3.325);
 		if(hasTree('qp32')&&x==22)pow = E(1);
 		if(hasTree('qp32')&&x==23)pow = E(1.5);
 		let st = chal.start
@@ -663,7 +665,7 @@ const CHALS = {
         effect(x) {
 			if(CHALS.inChal(17) || CHALS.inChal(19))return E(1)
 			if(hasUpgrade('br',22)){
-                if(hasChargedElement(252))return x.pow(0.1);
+        if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e5e204"))return x.pow(0.1);
 				if(hasChargedElement(210))return x.add(1e10).log10().div(10).pow(4);
 				if(hasChargedElement(206))return x.add(1e10).log10().div(10).pow(3);
 				if(hasChargedElement(159))return x.add(1e10).log10().div(10).pow(2);
@@ -759,7 +761,7 @@ const CHALS = {
         effect(x) {
             let ret = x.div(4).add(1);
 			if(hasChargedElement(209))ret = x.add(1).pow(2);
-            if(hasChargedElement(252))ret = x.add(1).pow(3);
+            if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e5e204"))ret = x.add(1).pow(3);
 			return ret
         },
         effDesc(x) { return format(x)+"x" },
@@ -803,7 +805,7 @@ const CHALS = {
 			if(x.lt(1))return E(0);
 			let ret = x.mul(2).add(10);
 			if(hasElement(552))ret = ret.max(x.mul(3));
-            if(hasChargedElement(252))return ret.max(x.mul(3).pow(1.01));
+            if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e5e204"))return ret.max(x.mul(3).pow(1.01));
 			return ret
         },
         effDesc(x) { return "延迟"+format(x)+"次出现" },

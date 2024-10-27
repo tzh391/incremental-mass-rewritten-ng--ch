@@ -418,7 +418,8 @@ function updateSupernovaGalaxyHTML() {
 		}else tmp.el.galPowNext.setTxt(6);
 		if(player.superGal.gte(11))html += "<br>重置时保留转生";
 		if(player.superGal.gte(13))html += "<br>重置时保留挑战13-20的完成次数";
-		if(hasElement(467))html += "<br>Multiply Exotic Matter and Glyphic Mass gain by "+format(SUPERNOVA_GALAXY.effects.em());
+		if(hasElement(467))html += "<br>奇异物质和雕文质量获取x"+format(SUPERNOVA_GALAXY.effects.em());
+		if(hasChargedElement(256)&&tmp.stars.effectExpPower.gte(7.11111))html += "<br>物质指数+"+format(SUPERNOVA_GALAXY.effects.gqk().div(37250));
 		
 		tmp.el.superGalEff.setHTML(html)
 	}else tmp.el.galPowNext.setTxt(1);
