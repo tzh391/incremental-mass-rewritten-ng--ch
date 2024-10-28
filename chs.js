@@ -149,6 +149,7 @@ var cnItems = {
     'Hex': '六重阶层',
     'Hept': '七重阶层',
     'Oct': '八重阶层',
+    'Enne': '九重阶层',
     'Mass Upgrades': '质量升级',
     'Tickspeed': '时间速度',
     'Black Hole Condenser': '黑洞压缩器',
