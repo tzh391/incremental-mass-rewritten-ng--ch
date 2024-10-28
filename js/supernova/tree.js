@@ -115,7 +115,7 @@ const TREE_UPGS = {
         c: {
             req() { return player.supernova.times.gte(1) },
             reqDesc: `1次超新星。`,
-            desc: `每秒产生1中子星（不受离线产能影响）.`,
+            desc: `每秒产生1中子星（不受离线产能影响） .`,
             cost: E(0),
         },
         sn1: {
