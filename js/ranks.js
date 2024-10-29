@@ -138,115 +138,115 @@ const RANKS = {
         },
         hex: {
             '1': "移除质量获取速度的一重软上限，氢(1H)的效果变得更强。",
-            '2': "使硬化挑战的折算效果弱25%",
-            '3': "锂(3Li)的效果变为原来的1.5次方（在软上限之前).",
-            '4': "移除质量获取速度的二重软上限,铍(4Be)的效果变为原来的1.05次方.",
-            '5': "六重阶层增加转生基础值指数.",
-            '6': "碳 (6C) 提升希格斯玻色子的效果.",
-            '7': "氮(7N)的效果变得更强.",
-            '8': "移除质量获取速度的三重软上限.",
-            '9': "使三重阶层要求降低 15%.",
-            '10': "氖(10Ne)的效果变得更强.",
-            '11': "钠(11Na)在购买了钫(87Fr)后也能生效.",
-            '12': "镁(12Mg)的效果变得更强.",
-            '13': "移除质量获取速度的四重软上限.",
-            '15': "Super BH Condenser & Cosmic Ray scales 20% weaker.",
-            '16':"硫(16S)的效果现在是100%.",
-            '17': "Raise Atom's gain by 1.1.",
-            '18': "氩(18Ar)的效果变得更强.",
-            '19': "钾(19K)的效果变得更强.",
-            '20': "使挑战7的次数上限增加1e5次.",
-            '21': "移除质量获取速度的五重软上限.",
-            '22': "钛(22Ti)的效果变得更强.",
-            '23': "钒(23V)的效果变得更强.",
-            '24': "铬(24Cr)的效果变得更强",
-            '25': "Adds 1 base of Mass Dilation upgrade 1 effect.",
-            '26': "移除铁(26Fe)的软上限和硬上限.",
-			'27': "Hyper/Ultra Rank & Tickspeed scales 25% weaker.",
-            '28': "镍(28Ni)也在质量膨胀之外生效.",
-            '29': "铜(29Cu)的效果变得更强.",
+            '2': "使硬化挑战的折算效果弱25%。",
+            '3': "锂(3Li)的效果变为原来的1.5次方（在软上限之前)。",
+            '4': "移除质量获取速度的二重软上限,铍(4Be)的效果变为原来的1.05次方。",
+            '5': "六重阶层增加转生基础值指数。",
+            '6': "碳 (6C) 提升希格斯玻色子的效果。",
+            '7': "氮(7N)的效果变得更强。",
+            '8': "移除质量获取速度的三重软上限。",
+            '9': "使三重阶层要求降低 15%。",
+            '10': "氖(10Ne)的效果变得更强。",
+            '11': "钠(11Na)在购买了钫(87Fr)后也能生效。",
+            '12': "镁(12Mg)的效果变得更强。",
+            '13': "移除质量获取速度的四重软上限。",
+            '15': "镁(12Mg)的效果变得更强。",
+            '16':"硫(16S)的效果现在是100%。",
+            '17': "使原子的获取速度变为原来的1.1次方。",
+            '18': "氩(18Ar)的效果变得更强。",
+            '19': "钾(19K)的效果变得更强。",
+            '20': "使挑战7的次数上限增加1e5次。",
+            '21': "移除质量获取速度的五重软上限。",
+            '22': "钛(22Ti)的效果变得更强。",
+            '23': "钒(23V)的效果变得更强。",
+            '24': "铬(24Cr)的效果变得更强。",
+            '25': "使质量膨胀升级1的基础效果增加1倍。",
+            '26': "移除铁(26Fe)的软上限和硬上限。",
+			'27': "使级别和时间速度的究级折算和超究折算弱化25%。",
+            '28': "镍(28Ni)也在质量膨胀之外生效。",
+            '29': "铜(29Cu)的效果变得更强。",
             '30': "锌(30Zn)的效果变得更强",
-            '31': "镓(31Ga)的效果变得更强.",
-            '32': "Increase dilated mass gain exponent by 5%.",
-            '33': "移除质量获取速度的六重软上限.",
-            '34': "硒(34Se)的效果变得更强.",
-            '35': "溴(35Br)的效果变得更强.",
-            '36': "坍缩星辰的效果增加指数加成.",
-            '37': "铷(37Rb)的效果始终为 100%.",
-            '38': "锶(38Sr)的效果翻倍.",
-            '39': "使挑战4的奖励软上限弱化.",
-            '40': "锆(40Zr)的效果变得更强.",
-            '41': "使挑战12的次数上限增加500次.",
-            '42': "钼(42Mo)的效果变得更强.",
-            '43': "移除质量膨胀惩罚.",
-            '44': "The Tetr requirement is broken.",
-            '45': "铑(45Rh)的效果变得更强.",
-            '46': "钯(46Pd)的效果变得更强.",
-			'47': "使夸克的获取指数变为原来的1.1次方.",
-			'48': "Collapsed stars effect is 10% stronger.",
-			'49': "铟(49In)的效果变得更强.",
-			'50': "Star generator is now ^1.05 stronger.",
-			'51': "使质量获取速度的九重软上限弱化10%.",
-			'52': "碲(52Te)的效果变得更强.",
-			'53': "Mass Dilation upgrade 6 is 75% stronger.",
-            '54': "移除质量获取速度的七重软上限.",
-			'55': "Hyper/Ultra BH Condenser & Cosmic Ray scale 25% weaker.",
-			'56': "使挑战12的次数上限增加500次.",
-			'57': "镧(57La)的效果变为原来的1.1次方.",
-            '58': "铈(58Ce)的效果始终为100%.",
-            '59': "镨(59Pr)的效果现在为0.5.",
-			'60': "使挑战12的次数上限增加500次.",
-			'61': "Multiply Particle Powers gain by ^0.5 of its Particle's amount after softcap.",
+            '31': "镓(31Ga)的效果变得更强。",
+            '32': "使膨胀质量获取速度的指数增加5%。",
+            '33': "移除质量获取速度的六重软上限。",
+            '34': "硒(34Se)的效果变得更强。",
+            '35': "溴(35Br)的效果变得更强。",
+            '36': "坍缩星辰的效果增加指数加成。",
+            '37': "铷(37Rb)的效果始终为 100%。",
+            '38': "锶(38Sr)的效果翻倍。",
+            '39': "使挑战4的奖励软上限弱化。",
+            '40': "锆(40Zr)的效果变得更强。",
+            '41': "使挑战12的次数上限增加500次。",
+            '42': "钼(42Mo)的效果变得更强。",
+            '43': "移除质量膨胀惩罚。",
+            '44': "使三重阶层的需求大幅降低。",
+            '45': "铑(45Rh)的效果变得更强。",
+            '46': "钯(46Pd)的效果变得更强。",
+			'47': "使夸克的获取指数变为原来的1.1次方。",
+			'48': "使坍缩星辰效果增加10%。",
+			'49': "铟(49In)的效果变得更强。",
+			'50': "使星辰发生器的速度变为原来的1.05次方。",
+			'51': "使质量获取速度的九重软上限弱化10%。",
+			'52': "碲(52Te)的效果变得更强。",
+			'53': "使质量膨胀升级6的效果增加75%。",
+            '54': "移除质量获取速度的七重软上限。",
+			'55': "使黑洞压缩器和宇宙射线的究级和超究折算弱化25%。",
+			'56': "使挑战12的次数上限增加500次。",
+			'57': "镧(57La)的效果变为原来的1。1次方。",
+            '58': "铈(58Ce)的效果始终为100%。",
+            '59': "镨(59Pr)的效果现在为0.5。",
+			'60': "使挑战12的次数上限增加500次。",
+			'61': "使粒子能量的获取速度在到达软上限以后，乘以粒子数量的0.5次方。",
 			'62': "使级别的元折算基于前往超新星的次数而延迟出现,",
-			'63': "Non-bonus Tickspeed is 25x effective.",
-			'64': "移除质量获取速度的八重软上限.",
-			'65': "使挑战12的次数上限增加1000次.",
-			'66': "镧(57La)的效果变为原来的1.1次方.",
-			'67': "钬(67Ho)的效果变得更强.",
-			'68': "Meta-Tickspeed start 2x later.",
-			'69': `坍缩星辰加成它本身的效果.`,
-			'70': "使挑战12的次数上限增加1000次.",
-			'71': "使黑洞质量增益软上限基于六重阶层的数值而弱化.",
-			'72': "使三重阶层的需求减少15%，如果你在大撕裂中或者六重阶层不低于100，此效果会生效两次.",
-			'73': "使挑战12的次数上限增加1000次.如果你在大撕裂中,使[缪中微子]的软上限更弱.",
-			'74': `使三重阶层的超级折算弱化10%.`,
-			'75': "移除质量获取速度的九重软上限.",
+			'63': "使非加成的时间速度效果变为原来的25倍。",
+			'64': "移除质量获取速度的八重软上限。",
+			'65': "使挑战12的次数上限增加1000次。",
+			'66': "镧(57La)的效果变为原来的1.1次方。",
+			'67': "钬(67Ho)的效果变得更强。",
+			'68': "使时间速度的元折算延迟2倍出现。",
+			'69': `坍缩星辰加成它本身的效果。`,
+			'70': "使挑战12的次数上限增加1000次。",
+			'71': "使黑洞质量增益软上限基于六重阶层的数值而弱化。",
+			'72': "使三重阶层的需求减少15%，如果你在大撕裂中或者六重阶层不低于100，此效果会生效两次。",
+			'73': "使挑战12的次数上限增加1000次。如果你在大撕裂中,使[缪中微子]的软上限更弱。",
+			'74': `使三重阶层的超级折算弱化10%。`,
+			'75': "移除质量获取速度的九重软上限。",
 			'76': "坍塌星辰的效果增强25%",
-			'78': `使超新星的元折算弱化5%.`,
-			'80': "移除级别和时间速度元折算之前的所有折算.",
-			'82': "移除黑洞压缩器和宇宙射线元折算之前的所有折算.",
-			'84': "钋(84Po)的效果始终为100%.",
-			'86': "使时间速度倍率平方.",
-			'88': "使时间速度的元折算延迟100倍出现.",
-			'90': "钍(90Th)的效果变为原来的1.1次方.",
-			'92': "使疯狂挑战的折算效果弱化25%，除了挑战9.",
+			'78': `使超新星的元折算弱化5%。`,
+			'80': "移除级别和时间速度元折算之前的所有折算。",
+			'82': "移除黑洞压缩器和宇宙射线元折算之前的所有折算。",
+			'84': "钋(84Po)的效果始终为100%。",
+			'86': "使时间速度倍率平方。",
+			'88': "使时间速度的元折算延迟100倍出现。",
+			'90': "钍(90Th)的效果变为原来的1。1次方。",
+			'92': "使疯狂挑战的折算效果弱化25%，除了挑战9。",
 			'93': "镎(93Np)的效果基数是100%而不是66.7%",
-			'95': "移除质量升级和阶层超究折算之前的所有折算.",
-			'97': `熵消耗的效果基数增加0.1.`,
-			'98': "移除超新星元折算之前的所有折算.",
-			'99': `移除光子升级3效果之前的所有软上限.`,
-			'103': `鿭(113Nh)的效果基数是2.1而不是2.`,
-			'104': "使挑战12的次数上限增加2000次.",
-			'110': "使挑战12的次数上限增加2000次.",
-			'114': `熵加倍使用更好的公式.`,
-			'115': `使质量膨胀升级增强5%.`,
-			'116': "𫟷(116Lv)的效果变得更强.",
-			'119': "使元素119的效果平方.",
-			'120': "使质量的溢出延迟10次方出现.",
-			'123': "使时间速度的元折算基于加速器的数量而延迟出现.",
-			'124': "使加速器的倍率基于购买时间速度的数量而增加.",
-			'125': "使六重阶层加成熵获取速度.",
-			'126': "使六重阶层加成加速器的倍率.",
-			'127': "使六重阶层加成无限质量.",
-			'129': "在大撕裂中，使量子挑战“阶层超量”的效果弱化50%.",
-			'135': "在大撕裂中，使量子挑战“极端折算”的效果弱化40%.",
-			'140': "使加速器的倍率基于挑战2完成的次数而增加.",
-			'238': "移除三重阶层的超级折算.",
-			'300': "使质量升级的超究折算弱化2%.",
-			'777': "使级别的的元折算弱化99.99999999%.",
-			'888': "使级别的的元折算弱化99.99999999%.",
-			'999': "使级别的的元折算弱化99.99999999%.",
-			'1005': "使级别的元折算基于七重阶层的数值而弱化.",
+			'95': "移除质量升级和阶层超究折算之前的所有折算。",
+			'97': `熵消耗的效果基数增加0.1。`,
+			'98': "移除超新星元折算之前的所有折算。",
+			'99': `移除光子升级3效果之前的所有软上限。`,
+			'103': `鿭(113Nh)的效果基数是2.1而不是2。`,
+			'104': "使挑战12的次数上限增加2000次。",
+			'110': "使挑战12的次数上限增加2000次。",
+			'114': `熵加倍使用更好的公式。`,
+			'115': `使质量膨胀升级增强5%。`,
+			'116': "𫟷(116Lv)的效果变得更强。",
+			'119': "使元素119的效果平方。",
+			'120': "使质量的溢出延迟10次方出现。",
+			'123': "使时间速度的元折算基于加速器的数量而延迟出现。",
+			'124': "使加速器的倍率基于购买时间速度的数量而增加。",
+			'125': "使六重阶层加成熵获取速度。",
+			'126': "使六重阶层加成加速器的倍率。",
+			'127': "使六重阶层加成无限质量。",
+			'129': "在大撕裂中，使量子挑战“阶层超量”的效果弱化50%。",
+			'135': "在大撕裂中，使量子挑战“极端折算”的效果弱化40%。",
+			'140': "使加速器的倍率基于挑战2完成的次数而增加。",
+			'238': "移除三重阶层的超级折算。",
+			'300': "使质量升级的超究折算弱化2%。",
+			'777': "使级别的的元折算弱化99.99999999%。",
+			'888': "使级别的的元折算弱化99.99999999%。",
+			'999': "使级别的的元折算弱化99.99999999%。",
+			'1005': "使级别的元折算基于七重阶层的数值而弱化。",
         },
         hept: {
             '1': "使质量的溢出基于七重阶层的数值而弱化.",
@@ -1871,14 +1871,14 @@ function updateRanksHTML() {
                     }
                 }
     
-                tmp.el["ranks_scale_"+x].setTxt(getScalingName(rn))
-                tmp.el["ranks_amt_"+x].setTxt(format(player.ranks[rn],0))
+                tmp.el["ranks_scale_"+x].setHTML(getScalingName(rn))
+                tmp.el["ranks_amt_"+x].setHTML(format(player.ranks[rn],0))
                 tmp.el["ranks_"+x].setClasses({btn: true, reset: true, locked: !tmp.ranks[rn].can})
-                tmp.el["ranks_desc_"+x].setTxt(desc)
+                tmp.el["ranks_desc_"+x].setHTML(desc)
                 tmp.el["ranks_desc1_"+x].setDisplay(!hasPrestige(3,38))
-                tmp.el["ranks_req_"+x].setTxt(x==0?formatMass(tmp.ranks[rn].req):RANKS.fullNames[x-1]+" "+format(tmp.ranks[rn].req,0))
+                tmp.el["ranks_req_"+x].setHTML(x==0?formatMass(tmp.ranks[rn].req):RANKS.fullNames[x-1]+" "+format(tmp.ranks[rn].req,0))
                 tmp.el["ranks_auto_"+x].setDisplay(RANKS.autoUnl[rn]())
-                tmp.el["ranks_auto_"+x].setTxt(player.auto_ranks[rn]?"ON":"OFF")
+                tmp.el["ranks_auto_"+x].setHTML(player.auto_ranks[rn]?"ON":"OFF")
             }
         }
 		if(hasPrestige(3,38))tmp.el.ranks_amt_2.setHTML("级别"+format(player.ranks.rank,0)+"<br>阶层"+format(player.ranks.tier,0)+"<br>三重阶层"+format(player.ranks.tetr,0));
@@ -1912,20 +1912,20 @@ function updateRanksHTML() {
                     }
                 }
 
-                tmp.el["pres_scale_"+x].setTxt(getScalingName("prestige"+x))
-                tmp.el["pres_amt_"+x].setTxt(format(p,0))
+                tmp.el["pres_scale_"+x].setHTML(getScalingName("prestige"+x))
+                tmp.el["pres_amt_"+x].setHTML(format(p,0))
                 tmp.el["pres_"+x].setClasses({btn: true, reset: true, locked: x==0?tmp.prestiges.base.lt(tmp.prestiges.req[x]):player.prestiges[x-1].lt(tmp.prestiges.req[x])})
-                tmp.el["pres_desc_"+x].setTxt(desc)
-                tmp.el["pres_req_"+x].setTxt(x==0?format(tmp.prestiges.req[x],0)+"转生基础值":PRESTIGES.fullNames[x-1]+" "+format(tmp.prestiges.req[x],0))
+                tmp.el["pres_desc_"+x].setHTML(desc)
+                tmp.el["pres_req_"+x].setHTML(x==0?format(tmp.prestiges.req[x],0)+"转生基础值":PRESTIGES.fullNames[x-1]+" "+format(tmp.prestiges.req[x],0))
                 tmp.el["pres_auto_"+x].setDisplay(false)
-                tmp.el["pres_auto_"+x].setTxt(false?"ON":"OFF")
+                tmp.el["pres_auto_"+x].setHTML(false?"ON":"OFF")
             }
         }
 		
 		if (player.prestiges[1].gte(10)){
 			tmp.el["pres_mass"].setDisplay(true);
-			tmp.el["pres_mass2"].setTxt(formatMass(player.prestigeMass,0)+" "+formatGain(player.prestigeMass, tmp.prestigeMassGain, true))
-			tmp.el["pres_mass3"].setTxt(format(E(1).sub(prestigeMassEffect()).mul(100))+"%");
+			tmp.el["pres_mass2"].setHTML(formatMass(player.prestigeMass,0)+" "+formatGain(player.prestigeMass, tmp.prestigeMassGain, true))
+			tmp.el["pres_mass3"].setHTML(format(E(1).sub(prestigeMassEffect()).mul(100))+"%");
 			tmp.el["pres_mass4"].setDisplay(hasPrestige(2,1));
 		}else{
 			tmp.el["pres_mass"].setDisplay(false);
@@ -1933,45 +1933,45 @@ function updateRanksHTML() {
 		
 		if (player.prestiges[2].gte(165)){
 			tmp.el["pres_rp"].setDisplay(true);
-			tmp.el["pres_rp2"].setTxt(format(player.prestigeRP,0)+" "+formatGain(player.prestigeRP, tmp.prestigeRPGain))
-			tmp.el["pres_rp3"].setTxt(format(prestigeRPEffect()));
+			tmp.el["pres_rp2"].setHTML(format(player.prestigeRP,0)+" "+formatGain(player.prestigeRP, tmp.prestigeRPGain))
+			tmp.el["pres_rp3"].setHTML(format(prestigeRPEffect()));
 		}else{
 			tmp.el["pres_rp"].setDisplay(false);
 		}
 		
 		if (player.prestiges[3].gte(34)){
 			tmp.el["pres_bh"].setDisplay(true);
-			tmp.el["pres_bh2"].setTxt(formatMass(player.prestigeBH)+" "+formatGain(player.prestigeBH, tmp.prestigeBHGain, true))
-			tmp.el["pres_bh3"].setTxt(format(prestigeBHEffect()));
+			tmp.el["pres_bh2"].setHTML(formatMass(player.prestigeBH)+" "+formatGain(player.prestigeBH, tmp.prestigeBHGain, true))
+			tmp.el["pres_bh3"].setHTML(format(prestigeBHEffect()));
 		}else{
 			tmp.el["pres_bh"].setDisplay(false);
 		}
 		
 		if (player.prestiges[3].gte(37)){
 			tmp.el["pres_dm"].setDisplay(true);
-			tmp.el["pres_dm2"].setTxt(format(player.prestigeDM,0)+" "+formatGain(player.prestigeDM, tmp.prestigeDMGain))
-			tmp.el["pres_dm3"].setTxt(format(E(1).sub(prestigeDMEffect()).mul(100))+"%");
+			tmp.el["pres_dm2"].setHTML(format(player.prestigeDM,0)+" "+formatGain(player.prestigeDM, tmp.prestigeDMGain))
+			tmp.el["pres_dm3"].setHTML(format(E(1).sub(prestigeDMEffect()).mul(100))+"%");
 		}else{
 			tmp.el["pres_dm"].setDisplay(false);
 		}
 
 		if (hasChargedElement(234)){
 			tmp.el["pres_at"].setDisplay(true);
-			tmp.el["pres_at2"].setTxt(format(player.prestigeAT,0)+" "+formatGain(player.prestigeAT, tmp.prestigeATGain))
-			tmp.el["pres_at3"].setTxt(format(E(1).sub(prestigeATEffect()).mul(100))+"%");
+			tmp.el["pres_at2"].setHTML(format(player.prestigeAT,0)+" "+formatGain(player.prestigeAT, tmp.prestigeATGain))
+			tmp.el["pres_at3"].setHTML(format(E(1).sub(prestigeATEffect()).mul(100))+"%");
 		}else{
 			tmp.el["pres_at"].setDisplay(false);
 		}     
         if (hasChargedElement(251)&&player.exotic.boosts.reduce((acc, boost) => acc.add(boost)).gte(425) ){
 			tmp.el["pres_qk"].setDisplay(true);
-			tmp.el["pres_qk2"].setTxt(format(player.prestigeQK,0)+" "+formatGain(player.prestigeQK, tmp.prestigeQKGain))
-			tmp.el["pres_qk3"].setTxt(format(prestigeQKEffect()));
+			tmp.el["pres_qk2"].setHTML(format(player.prestigeQK,0)+" "+formatGain(player.prestigeQK, tmp.prestigeQKGain))
+			tmp.el["pres_qk3"].setHTML(format(prestigeQKEffect()));
 		}else{
 			tmp.el["pres_qk"].setDisplay(false);
 		}      
         if (hasChargedElement(259) ){
 			tmp.el["pres_st"].setDisplay(true);
-			tmp.el["pres_st2"].setTxt(format(player.prestigeST,0)+" "+formatGain(player.prestigeST, tmp.prestigeSTGain))
+			tmp.el["pres_st2"].setHTML(format(player.prestigeST,0)+" "+formatGain(player.prestigeST, tmp.prestigeSTGain))
 			
 		}else{
 			tmp.el["pres_st"].setDisplay(false);
@@ -1996,20 +1996,20 @@ function updateRanksHTML() {
                     }
                 }
 
-                tmp.el["as_scale_"+x].setTxt(getScalingName("ascension"+x))
-                tmp.el["as_amt_"+x].setTxt(format(p,0))
+                tmp.el["as_scale_"+x].setHTML(getScalingName("ascension"+x))
+                tmp.el["as_amt_"+x].setHTML(format(p,0))
                 tmp.el["as_"+x].setClasses({btn: true, reset: true, locked: x==0?tmp.ascensions.base.lt(tmp.ascensions.req[x]):player.ascensions[x-1].lt(tmp.ascensions.req[x])})
-                tmp.el["as_desc_"+x].setTxt(desc)
-                tmp.el["as_req_"+x].setTxt(x==0?format(tmp.ascensions.req[x],0)+" of Ascension Base":ASCENSIONS.fullNames[x-1]+" "+format(tmp.ascensions.req[x],0))
+                tmp.el["as_desc_"+x].setHTML(desc)
+                tmp.el["as_req_"+x].setHTML(x==0?format(tmp.ascensions.req[x],0)+" of Ascension Base":ASCENSIONS.fullNames[x-1]+" "+format(tmp.ascensions.req[x],0))
                 tmp.el["as_auto_"+x].setDisplay(false)
-                tmp.el["as_auto_"+x].setTxt(false?"ON":"OFF")
+                tmp.el["as_auto_"+x].setHTML(false?"ON":"OFF")
             }
         }
 		
 		if (player.ascensions[1].gte(3)){
 			tmp.el["as_mass"].setDisplay(true);
-			tmp.el["as_mass2"].setTxt(formatMass(player.ascensionMass,0)+" "+formatGain(player.ascensionMass, tmp.ascensionMassGain, true))
-			tmp.el["as_mass3"].setTxt(format(ascensionMassEffect()));
+			tmp.el["as_mass2"].setHTML(formatMass(player.ascensionMass,0)+" "+formatGain(player.ascensionMass, tmp.ascensionMassGain, true))
+			tmp.el["as_mass3"].setHTML(format(ascensionMassEffect()));
 			tmp.el["as_mass4"].setDisplay(false);
 		}else{
 			tmp.el["as_mass"].setDisplay(false);
@@ -2035,20 +2035,20 @@ function updateRanksHTML() {
                     }
                 }
 
-                tmp.el["as_scale_"+x].setTxt(getScalingName("ascension"+x))
-                tmp.el["as_amt_"+x].setTxt(format(p,0))
+                tmp.el["as_scale_"+x].setHTML(getScalingName("ascension"+x))
+                tmp.el["as_amt_"+x].setHTML(format(p,0))
                 tmp.el["as_"+x].setClasses({btn: true, reset: true, locked: x==0?tmp.ascensions.base.lt(tmp.ascensions.req[x]):player.ascensions[x-1].lt(tmp.ascensions.req[x])})
-                tmp.el["as_desc_"+x].setTxt(desc)
-                tmp.el["as_req_"+x].setTxt(x==0?format(tmp.ascensions.req[x],0)+" of Ascension Base":ASCENSIONS.fullNames[x-1]+" "+format(tmp.ascensions.req[x],0))
+                tmp.el["as_desc_"+x].setHTML(desc)
+                tmp.el["as_req_"+x].setHTML(x==0?format(tmp.ascensions.req[x],0)+" of Ascension Base":ASCENSIONS.fullNames[x-1]+" "+format(tmp.ascensions.req[x],0))
                 tmp.el["as_auto_"+x].setDisplay(false)
-                tmp.el["as_auto_"+x].setTxt(false?"ON":"OFF")
+                tmp.el["as_auto_"+x].setHTML(false?"ON":"OFF")
             }
         }
 		
 		if (player.ascensions[1].gte(3)){
 			tmp.el["as_mass"].setDisplay(true);
-			tmp.el["as_mass2"].setTxt(formatMass(player.ascensionMass,0)+" "+formatGain(player.ascensionMass, tmp.ascensionMassGain, true))
-			tmp.el["as_mass3"].setTxt(format(ascensionMassEffect()));
+			tmp.el["as_mass2"].setHTML(formatMass(player.ascensionMass,0)+" "+formatGain(player.ascensionMass, tmp.ascensionMassGain, true))
+			tmp.el["as_mass3"].setHTML(format(ascensionMassEffect()));
 			tmp.el["as_mass4"].setDisplay(false);
 		}else{
 			tmp.el["as_mass"].setDisplay(false);
