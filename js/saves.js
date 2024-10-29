@@ -363,6 +363,11 @@ function getPlayerData() {
 			},
             tree: [],
 		},
+        sun: {
+			points: E(0),
+			times: E(0),
+			
+		},
 		superCluster: E(0),
 		stardust: E(0),
 		stellar: E(0),

@@ -1846,7 +1846,8 @@ function updateRanksTemp() {
 function updateRanksHTML() {
     tmp.el.rank_tabs.setDisplay(hasUpgrade('br',9))
     tmp.el.rank_tab2_btn.setDisplay(hasPrestige(3,23) || hasAscension(0,1))
-    for (let x = 0; x < 3; x++) {
+    tmp.el.rank_tab3_btn.setDisplay(hasChargedElement(259))
+    for (let x = 0; x < 4; x++) {
         tmp.el["rank_tab"+x].setDisplay(tmp.rank_tab == x)
     }
 
@@ -1978,6 +1979,45 @@ function updateRanksHTML() {
     }
     if (tmp.rank_tab == 2) {
         tmp.el.as_base.setHTML(`${tmp.ascensions.baseMul.format(0)}<sup>${format(tmp.ascensions.baseExp)}</sup> = ${tmp.ascensions.base.format(0)}`)
+
+        for (let x = 0; x < AS_LEN; x++) {
+            let unl = ASCENSIONS.unl[x]?ASCENSIONS.unl[x]():true
+
+            tmp.el["as_div_"+x].setDisplay(unl)
+
+            if (unl) {
+                let p = player.ascensions[x] || E(0)
+                let keys = Object.keys(ASCENSIONS.rewards[x])
+                let desc = ""
+                for (let i = 0; i < keys.length; i++) {
+                    if (p.lt(keys[i])) {
+                        desc = ` At ${ASCENSIONS.fullNames[x]} ${format(keys[i],0)}, ${ASCENSIONS.rewards[x][keys[i]]}`
+                        break
+                    }
+                }
+
+                tmp.el["as_scale_"+x].setTxt(getScalingName("ascension"+x))
+                tmp.el["as_amt_"+x].setTxt(format(p,0))
+                tmp.el["as_"+x].setClasses({btn: true, reset: true, locked: x==0?tmp.ascensions.base.lt(tmp.ascensions.req[x]):player.ascensions[x-1].lt(tmp.ascensions.req[x])})
+                tmp.el["as_desc_"+x].setTxt(desc)
+                tmp.el["as_req_"+x].setTxt(x==0?format(tmp.ascensions.req[x],0)+" of Ascension Base":ASCENSIONS.fullNames[x-1]+" "+format(tmp.ascensions.req[x],0))
+                tmp.el["as_auto_"+x].setDisplay(false)
+                tmp.el["as_auto_"+x].setTxt(false?"ON":"OFF")
+            }
+        }
+		
+		if (player.ascensions[1].gte(3)){
+			tmp.el["as_mass"].setDisplay(true);
+			tmp.el["as_mass2"].setTxt(formatMass(player.ascensionMass,0)+" "+formatGain(player.ascensionMass, tmp.ascensionMassGain, true))
+			tmp.el["as_mass3"].setTxt(format(ascensionMassEffect()));
+			tmp.el["as_mass4"].setDisplay(false);
+		}else{
+			tmp.el["as_mass"].setDisplay(false);
+		}
+		
+    }
+    if (tmp.rank_tab == 3) {
+
 
         for (let x = 0; x < AS_LEN; x++) {
             let unl = ASCENSIONS.unl[x]?ASCENSIONS.unl[x]():true

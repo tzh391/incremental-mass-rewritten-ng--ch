@@ -115,7 +115,7 @@ const TREE_UPGS = {
         c: {
             req() { return player.supernova.times.gte(1) },
             reqDesc: `1次超新星。`,
-            desc: `每秒产生1中子星（不受离线产能影响） .`,
+            desc: `每秒产生1中子星（不受离线产能影响）.`,
             cost: E(0),
         },
         sn1: {
@@ -964,7 +964,7 @@ const TREE_UPGS = {
             qf: true,
             branch: ["unl3"],
             unl() { return hasElement(118) },
-            desc: `自动获取量子泡沫和量子次数的效率变为原来的10倍.`,
+            desc: `自动获取10倍的量子次和量子泡沫数.`,
             cost: E(1e118),
         },
         qu_qol12: {
@@ -1671,7 +1671,7 @@ const TREE_UPGS = {
             branch: ["ax1"],
             req() { return (hasTree('ax2')&&hasTree('ax5')) || (hasTree('ax3')&&hasTree('ax4')) },
             reqDesc() { return `Buy 4 Row 1 Axionic Tree Upgrades.` },
-            desc: `Gain 26% more Axionic Space. Multiply X & Y Axion Generators Power by 10.`,
+            desc: `Gain 28% more Axionic Space. Multiply X & Y Axion Generators Power by 10.`,
             cost: E(2500),
         },
         ax7: {
@@ -1736,7 +1736,7 @@ const TREE_UPGS = {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax11"],
-            desc: `'26%' in [ax6] is now 70%.`,
+            desc: `'28%' in [ax6] is now 75%.`,
             cost: E(7500),
         },
         ax13: {
@@ -1798,7 +1798,7 @@ const TREE_UPGS = {
             branch: ["ax12"],
             req() { return player.exotic.tree.length>=16 },
             reqDesc() { return `Buy 16 Axionic Tree Upgrades.` },
-            desc: `'70%' in [ax6] is now 100%.`,
+            desc: `'75%' in [ax6] is now 105%.`,
             cost: E(4200),
         },
         ax19: {
@@ -1879,7 +1879,7 @@ const TREE_UPGS = {
             branch: ["ax18"],
             req() { return player.exotic.tree.length>=23 },
             reqDesc() { return `Buy 23 Axionic Tree Upgrades.` },
-            desc: `'100%' in [ax6] is now 175%.`,
+            desc: `'105%' in [ax6] is now 180%.`,
             cost: E(100000),
         },
         ax28: {
@@ -1897,7 +1897,7 @@ const TREE_UPGS = {
             branch: ["ax25","ax27"],
             req() { return player.exotic.tree.length>=26 },
             reqDesc() { return `Buy 26 Axionic Tree Upgrades.` },
-            desc: `'175%' in [ax6] is now 300%.`,
+            desc: `'180%' in [ax6] is now 310%.`,
             cost: E(100000),
         },
         ax30: {
@@ -1997,7 +1997,7 @@ const TREE_UPGS = {
             branch: ["ax29","ax34"],
             req() { return player.exotic.tree.length>=36 },
             reqDesc() { return `Buy 36 Axionic Tree Upgrades.` },
-            desc: `'300%' in [ax6] is now 350%.`,
+            desc: `'310%' in [ax6] is now 365%.`,
             cost: E(1255500),
         },
         ax40: {
@@ -2054,7 +2054,7 @@ function setupTreeHTML() {
             for (let k = 0; k < TREE_IDS[i][j].length; k++) {
                 let id = TREE_IDS[i][j][k]
                 let option = id == "" ? `style="visibility: hidden"` : ``
-let img = (TREE_UPGS.ids[id] && !id.startsWith("ax") && !id.startsWith("qp") && !id.startsWith("pm") && !id.startsWith("im") && !["s5", "sn6", "qu_qol11", "qu_qol12", "qu_qol13", "qu_qol7a","qu_qol10","chal9","chal10", "chal11", "chal12", "chal13", "chal14", "fn13", "fn14", "fn15", "fn16", "fn17", "fn18", "prim3a", "qc8", "en2", "br2", "prim5", "qc5", "prim6", "prim7", "prim8", "qu12", "br3", "qc6", "qc7"].includes(id))?`<img src="images/tree/${id}.png">`:`<img src="images/tree/placeholder.png">`
+let img = (TREE_UPGS.ids[id] && !id.startsWith("ax") && !id.startsWith("qp") && !id.startsWith("pm") && !id.startsWith("im") && !["s5", "sn6", "qu_qol11", "qu_qol12", "qu_qol13", "qu_qol7a","qu_qol10","chal9","chal10", "chal11", "chal12", "chal13", "chal14", "fn13", "fn14", "fn15", "fn16", "fn17", "fn18", "prim3a", "qc8", "en2", "br2", "prim5", "qc5", "prim6", "prim7", "prim8", "qu12", "br3", "qc6", "qc7"].includes(id))?`<img src="images/tree/${id}.png">`:""
                 table += `<button id="treeUpg_${id}" class="btn_tree" onclick="TREE_UPGS.buy('${id}'); tmp.supernova.tree_choosed = '${id}'" ${option}>${img}</button>`
             }
             table += `</div>`
