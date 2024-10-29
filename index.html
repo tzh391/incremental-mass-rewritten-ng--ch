@@ -261,6 +261,9 @@
                     </div><div class="resources sml" id="stardust_div" style="color:#00ffff;">
                         <div tooltip="Stardust" t-size="small"><img class="res_img" src="images/sd.png"></div>
                         <span style="margin-left: 5px; text-align: left;" id="stardustAmt">X</span>
+                    </div><div class="resources sml" id="stardust_div" style="color:#dcd814;">
+                        <div tooltip="太阳碎片" t-size="small"><img class="res_img" src="images/sunshard.png"></div>
+                        <span style="margin-left: 5px; text-align: left;" id="sunAmt">X</span>
                     </div>
                 </div>
             </div>
@@ -278,6 +281,8 @@
                         <button onclick="tmp.rank_tab = 1" class="btn_tab">Prestiges</button>
                     </div><div style="width: 145px" id="rank_tab2_btn">
                         <button onclick="tmp.rank_tab = 2" class="btn_tab">Ascensions</button>
+                    </div><div style="width: 145px" id="rank_tab3_btn">
+                        <button onclick="tmp.rank_tab = 3" class="btn_tab">行星层级</button>
                     </div>
                 </div>
                 <div id="rank_tab0">
@@ -296,7 +301,10 @@
                     Your Ascension base is <span id="as_base"></span> (based on products of Prestige tiers)<br><br>
                     <div id="as_table" class="table_center" style="min-height: 180px;"></div><br>
 					<div id="as_mass">您拥有  <span id="as_mass2">X</span>飞升质量(获取速度基于飞升基础值、飞升等级、超越<span id="as_mass4"> 和荣耀</span>)<br>转生基础值指数+<span id="as_mass3"></span></div>
+                </div><div id="rank_tab3">
+
                </div>
+
                 <br><br><div id="beyond_ranks"></div><br>
                 <div id="mass_upgs_table"></div><br><br>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="tickspeed_div">
