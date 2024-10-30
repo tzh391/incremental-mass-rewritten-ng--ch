@@ -2035,7 +2035,7 @@ function updateRanksHTML() {
                     }
                 }
 
-                tmp.el["as_scale_"+x].setHTML(getScalingName("ascension"+x))
+                tmp.el["as_scale_"+x].setTxt(getScalingName("ascension"+x))
                 tmp.el["as_amt_"+x].setHTML(format(p,0))
                 tmp.el["as_"+x].setClasses({btn: true, reset: true, locked: x==0?tmp.ascensions.base.lt(tmp.ascensions.req[x]):player.ascensions[x-1].lt(tmp.ascensions.req[x])})
                 tmp.el["as_desc_"+x].setHTML(desc)
