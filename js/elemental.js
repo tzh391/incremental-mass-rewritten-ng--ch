@@ -3985,14 +3985,14 @@ function hasChargedElement(x) { return player.atom.chargedElements.includes(x) }
 
 function setupElementsHTML() {
     let elements_table = new Element("elements_table")
-	let table = "<table>"
+	let table = ""
     let num = 0
     for (let k = 1; k <= MAX_ELEM_TIERS; k++) {
         let n = 0, p = (k+3)**2*2, xs = ELEMENTS.exp[k-1], xe = ELEMENTS.exp[k]
         table += `<div id='elemTier${k}_div'><div class='table_center'>`
         for (let i = 0; i < ELEMENTS.map[k-1].length; i++) {
             let m = ELEMENTS.map[k-1][i]
-            if (m=='v') table += '</div><tr><div class="table_center">'
+            if (m=='v') table += '</div><table><tr><div class="table_center">'
             else if (m=='_' || !isNaN(Number(m))) table += `<td><div ${ELEMENTS.la[m]!==undefined&&k==1?`id='element_la_${m}'`:""} style="width: 50px; height: 50px">${ELEMENTS.la[m]!==undefined?"<br>"+ELEMENTS.la[m]:""}</div></td>`
             else if (m=='x') {
                 num++
