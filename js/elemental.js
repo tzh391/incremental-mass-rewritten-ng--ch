@@ -2,6 +2,7 @@ const ELEMENTS = {
     map: [`x_________________xvxx___________xxxxxxvxx___________xxxxxxvxxx_xxxxxxxxxxxxxxxvxxx_xxxxxxxxxxxxxxxvxxx1xxxxxxxxxxxxxxxvxxx2xxxxxxxxxxxxxxxv_v___3xxxxxxxxxxxxxx_v___4xxxxxxxxxxxxxx_`],
     la: [null,'*','**','*','**'],
     exp: [0,118,218,362,558,814,1138],
+    max_hsize: [19],
     names: [
         null,
         'H','He','Li','Be','B','C','N','O','F','Ne',
