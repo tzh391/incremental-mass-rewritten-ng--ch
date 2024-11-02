@@ -3988,21 +3988,24 @@ function setupElementsHTML() {
 	let table = ""
     let num = 0
     for (let k = 1; k <= MAX_ELEM_TIERS; k++) {
+        let hs = `style="width: ${50*ELEMENTS.max_hsize[k-1]}px; margin: auto"`
         let n = 0, p = (k+3)**2*2, xs = ELEMENTS.exp[k-1], xe = ELEMENTS.exp[k]
-        table += `<div id='elemTier${k}_div'><div class='table_center'>`
+        table += `<div id='elemTier${k}_div'><div ${hs}><div class='table_center'>`
         for (let i = 0; i < ELEMENTS.map[k-1].length; i++) {
             let m = ELEMENTS.map[k-1][i]
-            if (m=='v') table += '</div><table><tr><div class="table_center">'
-            else if (m=='_' || !isNaN(Number(m))) table += `<td><div ${ELEMENTS.la[m]!==undefined&&k==1?`id='element_la_${m}'`:""} style="width: 50px; height: 50px">${ELEMENTS.la[m]!==undefined?"<br>"+ELEMENTS.la[m]:""}</div></td>`
+            if (m=='v') table += `</div><div class="table_center">`
+            else if (m=='_' || !isNaN(Number(m))) table += `<div ${ELEMENTS.la[m]!==undefined&&k==1?`id='element_la_${m}'`:""} style="width: 50px; height: 50px">${ELEMENTS.la[m]!==undefined?"<br>"+ELEMENTS.la[m]:""}</div>`
             else if (m=='x') {
                 num++
-                table += ELEMENTS.upgs[num]===undefined?`<td><div style="width: 50px; height: 50px"></div></td></tr>`
-                :`<td><button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="ELEMENTS.buyUpg(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0"><div style="font-size: 12px;">${num}</div>${ELEMENTS.names[num]}</button></td>`
+                table += ELEMENTS.upgs[num]===undefined?`<div style="width: 50px; height: 50px"></div>`
+                :`<button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="buyElement(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0">
+                <div style="font-size: 12px;">${num}</div><sup class="muon-symbol"></sup>${ELEMENTS.names[num]}
+                </button>`
                 if (k == 1) {
-                    if (num==57 || num==89) num += 14
-                    else if (num==71) num += 18
-                    else if (num==118) num = 57
-                    else if (num==103) num = 118
+                    if (num==56 || num==88) num += 14
+                    else if (num==70) num += 18
+                    else if (num==118) num = 56
+                    else if (num==102) num = 118
                 } else {
                     //console.log(num,p)
                     if (n == 0) {
@@ -4022,11 +4025,24 @@ function setupElementsHTML() {
                 }
             }
         }
-        table += "</div></div></table>"
+        table += "</div></div></div>"
     }
 	elements_table.setHTML(table)
-}
 
+    let elem_tier = new Element("elemTierDiv")
+    table = ""
+
+    for (let i = 1; i <= MAX_ELEM_TIERS; i++) {
+        table += `
+        <button class="btn" id="elemTier_btn${i}" onclick="player.atom.elemTier[player.atom.elemLayer] = ${i}">
+            Tier ${i}<br>
+            <span style="font-size: 10px">[${ELEMENTS.exp[i-1]+1} - ${ELEMENTS.exp[i]}]</span>
+        </button>
+        `
+    }
+
+    elem_tier.setHTML(table)
+}
 function updateElementsHTML() {
     let tElem = tmp.elements
 
