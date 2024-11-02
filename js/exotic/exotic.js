@@ -246,7 +246,7 @@ const EXOTIC = {
 		x = x.mul(player.exotic.ax[1].add(10).log10());
 		x = x.mul(player.exotic.ax[2].add(10).log10());
 		x = x.mul(player.exotic.ax[3].add(10).log10());
-		if(hasTree('ax6'))x = x.mul(hasTree('ax39')?4.65:hasTree('ax29')?4.1:hasTree('ax27')?2.8:hasTree('ax18')?2.05:hasTree('ax12')?1.75:1.28);
+		if(hasTree('ax6'))x = x.mul(hasTree('ax39')?5:hasTree('ax29')?4.5:hasTree('ax27')?3:hasTree('ax18')?2.25:hasTree('ax12')?1.9:1.35);
 		return x;
     },
     axsRem(){

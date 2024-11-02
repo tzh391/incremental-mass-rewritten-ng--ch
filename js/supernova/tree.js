@@ -1671,7 +1671,7 @@ const TREE_UPGS = {
             branch: ["ax1"],
             req() { return (hasTree('ax2')&&hasTree('ax5')) || (hasTree('ax3')&&hasTree('ax4')) },
             reqDesc() { return `Buy 4 Row 1 Axionic Tree Upgrades.` },
-            desc: `Gain 28% more Axionic Space. Multiply X & Y Axion Generators Power by 10.`,
+            desc: `Gain 35% more Axionic Space. Multiply X & Y Axion Generators Power by 10.`,
             cost: E(2500),
         },
         ax7: {
@@ -1736,7 +1736,7 @@ const TREE_UPGS = {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax11"],
-            desc: `'28%' in [ax6] is now 75%.`,
+            desc: `'35%' in [ax6] is now 90%.`,
             cost: E(7500),
         },
         ax13: {
@@ -1798,7 +1798,7 @@ const TREE_UPGS = {
             branch: ["ax12"],
             req() { return player.exotic.tree.length>=16 },
             reqDesc() { return `Buy 16 Axionic Tree Upgrades.` },
-            desc: `'75%' in [ax6] is now 105%.`,
+            desc: `'90%' in [ax6] is now 125%.`,
             cost: E(4200),
         },
         ax19: {
@@ -1879,7 +1879,7 @@ const TREE_UPGS = {
             branch: ["ax18"],
             req() { return player.exotic.tree.length>=23 },
             reqDesc() { return `Buy 23 Axionic Tree Upgrades.` },
-            desc: `'105%' in [ax6] is now 180%.`,
+            desc: `'125%' in [ax6] is now 200%.`,
             cost: E(100000),
         },
         ax28: {
@@ -1897,7 +1897,7 @@ const TREE_UPGS = {
             branch: ["ax25","ax27"],
             req() { return player.exotic.tree.length>=26 },
             reqDesc() { return `Buy 26 Axionic Tree Upgrades.` },
-            desc: `'180%' in [ax6] is now 310%.`,
+            desc: `'200%' in [ax6] is now 350%.`,
             cost: E(100000),
         },
         ax30: {
@@ -1997,7 +1997,7 @@ const TREE_UPGS = {
             branch: ["ax29","ax34"],
             req() { return player.exotic.tree.length>=36 },
             reqDesc() { return `Buy 36 Axionic Tree Upgrades.` },
-            desc: `'310%' in [ax6] is now 365%.`,
+            desc: `'350%' in [ax6] is now 400%.`,
             cost: E(1255500),
         },
         ax40: {

@@ -148,7 +148,7 @@ const SUPERNOVA_GALAXY = {
 		},
 		qs(){
 			if(player.superGal.lt(1))return 0;
-			return player.superGal.min(10).toNumber()*40+8;
+			return 408;
 		},
 		qut(){
 			if(player.chal.active == 21)return new Decimal(10);
@@ -164,7 +164,7 @@ const SUPERNOVA_GALAXY = {
 			return Decimal.mul(0.5, player.superGal);
 		},
 		gqk(){
-			return player.superGal.add(1);
+			return (player.superGal.add(1).pow(0.75)).floor();
 		},		
 		em(){
 			if(!hasElement(467))return 1;
