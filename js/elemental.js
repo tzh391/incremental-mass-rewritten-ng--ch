@@ -3961,7 +3961,7 @@ function WE(a,b) { return 2*(a**2-(a-b)**2) }
 
 for (let x = 2; x <= MAX_ELEM_TIERS; x++) {
     let [ts,te] = [ELEMENTS.exp[x-1],ELEMENTS.exp[x]]
-
+    ELEMENTS.max_hsize[x-1] = 11 + 4*x
     let m = 'xx1xxxxxxxxxxxxxxxxvxx2xxxxxxxxxxxxxxxxv_v'
 
     for (let y = x; y >= 1; y--) {
