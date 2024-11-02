@@ -3985,19 +3985,19 @@ function hasChargedElement(x) { return player.atom.chargedElements.includes(x) }
 
 function setupElementsHTML() {
     let elements_table = new Element("elements_table")
-	let table = ""
+	let table = "<table>"
     let num = 0
     for (let k = 1; k <= MAX_ELEM_TIERS; k++) {
         let n = 0, p = (k+3)**2*2, xs = ELEMENTS.exp[k-1], xe = ELEMENTS.exp[k]
         table += `<div id='elemTier${k}_div'><div class='table_center'>`
         for (let i = 0; i < ELEMENTS.map[k-1].length; i++) {
             let m = ELEMENTS.map[k-1][i]
-            if (m=='v') table += '</div><div class="table_center">'
-            else if (m=='_' || !isNaN(Number(m))) table += `<div ${ELEMENTS.la[m]!==undefined&&k==1?`id='element_la_${m}'`:""} style="width: 50px; height: 50px">${ELEMENTS.la[m]!==undefined?"<br>"+ELEMENTS.la[m]:""}</div>`
+            if (m=='v') table += '</div><tr><div class="table_center">'
+            else if (m=='_' || !isNaN(Number(m))) table += `<td><div ${ELEMENTS.la[m]!==undefined&&k==1?`id='element_la_${m}'`:""} style="width: 50px; height: 50px">${ELEMENTS.la[m]!==undefined?"<br>"+ELEMENTS.la[m]:""}</div></td>`
             else if (m=='x') {
                 num++
-                table += ELEMENTS.upgs[num]===undefined?`<div style="width: 50px; height: 50px"></div>`
-                :`<button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="ELEMENTS.buyUpg(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0"><div style="font-size: 12px;">${num}</div>${ELEMENTS.names[num]}</button>`
+                table += ELEMENTS.upgs[num]===undefined?`<td><div style="width: 50px; height: 50px"></div></td></tr>`
+                :`<td><button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="ELEMENTS.buyUpg(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0"><div style="font-size: 12px;">${num}</div>${ELEMENTS.names[num]}</button></td>`
                 if (k == 1) {
                     if (num==57 || num==89) num += 14
                     else if (num==71) num += 18
@@ -4022,7 +4022,7 @@ function setupElementsHTML() {
                 }
             }
         }
-        table += "</div></div>"
+        table += "</div></div></table>"
     }
 	elements_table.setHTML(table)
 }
