@@ -881,24 +881,25 @@ function formatGain(amt, gain, isMass=false) {
     let f = isMass?formatMass:format
     let next = amt.add(gain)
     let rate
+    let FPS = 1000 / diff
     let ooms = next.max(1).log10().div(amt.max(1).log10())
     if (((ooms.gte(10) && amt.gte('ee100')) || ooms.gte(10**0.05) && amt.gte('ee1000')) && (!isMass || player.mass_display == 1 || player.mass_display == 2)) {
-        ooms = ooms.log10().mul(20)
+        ooms = ooms.log10().mul(FPS)
         rate = "(+"+format(ooms) + "二重数量级/秒)"
     }else{
 		ooms = next.div(amt)
 		if ((ooms.gte(10) && amt.gte(1e100)) || (isMass && player.mass_display == 3)) {
-        ooms = ooms.log10().mul(20)
+        ooms = ooms.log10().mul(FPS)
         if (isMass && ((amt.gte(mlt(1)) && ooms.gte(1e6)) || player.mass_display == 3) && player.mass_display != 1 && player.mass_display != 2){
 			let mlt_amt = getMltValue(amt)
-			let mlt_next = getMltValue(amt.add(gain.div(20)))
-			rate = "(+"+formatARV(mlt_next.sub(mlt_amt).mul(20),true) + "/秒)"
+			let mlt_next = getMltValue(amt.add(gain.div(FPS)))
+			rate = "(+"+formatARV(mlt_next.sub(mlt_amt).mul(FPS),true) + "/秒)"
 		}
         else rate = "(+"+format(ooms) + "数量级/秒)"
 		if (player.mass_display == 0 && isMass){
 			let arv_amt = getMltValue(amt).log10().div(15);
-			let arv_next = getMltValue(amt.add(gain.div(20))).log10().div(15);
-			if (getMltValue(gain).log10().div(15).gte(1000) || arv_next.sub(arv_amt).gte(10))rate = "(+"+format(arv_next.sub(arv_amt).mul(20)) + " arvs/sec)"
+			let arv_next = getMltValue(amt.add(gain.div(FPS))).log10().div(15);
+			if (getMltValue(gain).log10().div(15).gte(1000) || arv_next.sub(arv_amt).gte(10))rate = "(+"+format(arv_next.sub(arv_amt).mul(FPS)) + " arvs/sec)"
 		}
     }
     else rate = "(+"+f(gain)+"/秒)"
