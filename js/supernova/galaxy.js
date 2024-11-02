@@ -166,6 +166,9 @@ const SUPERNOVA_GALAXY = {
 		gqk(){
 			return (player.superGal.add(1).pow(0.75)).floor();
 		},		
+		matter(){
+			return (player.superGal.add(1).div(37250));
+		},		
 		em(){
 			if(!hasElement(467))return 1;
 			return player.superGal.add(1);
@@ -419,7 +422,7 @@ function updateSupernovaGalaxyHTML() {
 		if(player.superGal.gte(11))html += "<br>重置时保留转生";
 		if(player.superGal.gte(13))html += "<br>重置时保留挑战13-20的完成次数";
 		if(hasElement(467))html += "<br>奇异物质和雕文质量获取x"+format(SUPERNOVA_GALAXY.effects.em());
-		if(hasChargedElement(256)&&tmp.stars.effectExpPower.gte(7.11111))html += "<br>物质指数+"+format(SUPERNOVA_GALAXY.effects.gqk().div(37250));
+		if(hasChargedElement(256)&&tmp.stars.effectExpPower.gte(7.11111))html += "<br>物质指数+"+format(SUPERNOVA_GALAXY.effects.matter());
 		
 		tmp.el.superGalEff.setHTML(html)
 	}else tmp.el.galPowNext.setTxt(1);
