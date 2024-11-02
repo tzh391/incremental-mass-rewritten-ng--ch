@@ -68,6 +68,9 @@ const ELEMENTS = {
             player.atom.chargedElements.push(x)
         }
     },
+    buyAllElements() {
+	    for (let i in ELEMENTS) ELEMENTS.buyUpg(i)
+    },
     upgs: [
         null,
         {
@@ -3999,9 +4002,7 @@ function setupElementsHTML() {
             else if (m=='x') {
                 num++
                 table += ELEMENTS.upgs[num]===undefined?`<div style="width: 50px; height: 50px"></div>`
-                :`<button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="buyElement(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0">
-                <div style="font-size: 12px;">${num}</div><sup class="muon-symbol"></sup>${ELEMENTS.names[num]}
-                </button>`
+                :`<button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="ELEMENTS.buyUpg(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0"><div style="font-size: 12px;">${num}</div>${ELEMENTS.names[num]}</button>`
                 if (k == 1) {
                     if (num==56 || num==88) num += 14
                     else if (num==70) num += 18
@@ -4035,7 +4036,7 @@ function setupElementsHTML() {
 
     for (let i = 1; i <= MAX_ELEM_TIERS; i++) {
         table += `
-        <button class="btn" id="elemTier_btn${i}" onclick="player.atom.elemTier[player.atom.elemLayer] = ${i}">
+        <button class="btn" id="elemTier_btn${i}" onclick="player.atom.elemTier = ${i}">
             Tier ${i}<br>
             <span style="font-size: 10px">[${ELEMENTS.exp[i-1]+1} - ${ELEMENTS.exp[i]}]</span>
         </button>
@@ -4051,7 +4052,6 @@ function updateElementsHTML() {
 	if (tElem.unl_length<=218)player.atom.elemTier=Math.min(player.atom.elemTier,2)
 	if (tElem.unl_length<=362)player.atom.elemTier=Math.min(player.atom.elemTier,3)
     tmp.el.elemTierDiv.setDisplay(hasUpgrade("atom",16) || player.superGal.gte(1))
-    tmp.el.elemTier.setHTML("Element Tier "+player.atom.elemTier)
 
     let ch = tElem.choosed
     tmp.el.elem_ch_div.setVisible(ch>0)
