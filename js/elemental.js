@@ -4004,10 +4004,10 @@ function setupElementsHTML() {
                 table += ELEMENTS.upgs[num]===undefined?`<div style="width: 50px; height: 50px"></div>`
                 :`<button class="elements ${num == 118 ? 'final' : ''}" id="elementID_${num}" onclick="ELEMENTS.buyUpg(${num}); ssf[0]('${ELEMENTS.names[num]}')" onmouseover="tmp.elements.choosed = ${num}" onmouseleave="tmp.elements.choosed = 0"><div style="font-size: 12px;">${num}</div>${ELEMENTS.names[num]}</button>`
                 if (k == 1) {
-                    if (num==56 || num==88) num += 14
-                    else if (num==70) num += 18
-                    else if (num==118) num = 56
-                    else if (num==102) num = 118
+                    if (num==57 || num==89) num += 14
+                    else if (num==71) num += 18
+                    else if (num==118) num = 57
+                    else if (num==103) num = 118
                 } else {
                     //console.log(num,p)
                     if (n == 0) {
