@@ -4,13 +4,14 @@ const EXOTIC_BOOST = {
     gain() {
 		let x = player.exotic.points.add(1).log10().div(3);
 		x = x.add(EXOTIC_BOOST.fgain())
-		if (player.exotic.times.gte(1000))x = x.add(1)
-		if (player.exotic.times.gte(1000000))x = x.add(1)
-		if (player.exotic.times.gte(1e10))x = x.add(1)	
+		
         return x.floor()
     },
     fgain() {
 		let x = SUPERNOVA_CLUSTER.effects.eff3()
+		if (player.exotic.times.gte(1000))x = x.add(1)
+		if (player.exotic.times.gte(1000000))x = x.add(1)
+		if (player.exotic.times.gte(1e10))x = x.add(1)	
         return x
     },
     used_bp() {
