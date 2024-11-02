@@ -1141,7 +1141,7 @@ const UPGS = {
                     player.mainUpg.br.push(x)
                 }
             },
-            auto_unl() { return false },
+            auto_unl() { return hasUpgrade('inf',19) },
             lens: 25,
             1: {
                 desc: `Start with Hydrogen-1 unlocked in Big Rip.`,
@@ -1303,10 +1303,10 @@ const UPGS = {
                     player.mainUpg.inf.push(x)
                 }
             },
-            auto_unl() { return false },
+            auto_unl() { return hasUpgrade('exotic',1)  },
             lens: 25,
             1: {
-                desc: `使量子次数乘以(200+无限次数)。无限质量加成量子泡沫获取速度。该升级只花费1毫克无限质量。`,
+                desc: `使量子次数乘以(200+无限次数)。无限质量加成量子泡沫获取速度,自动购买大撕裂升级。该升级只花费1毫克无限质量。`,
                 cost: E(1e-3),
                 effect() {
                     let x = player.inf.points.add(1).pow(2);
@@ -1485,7 +1485,7 @@ const UPGS = {
             auto_unl() { return false },
             lens: 25,
             1: {
-                desc: `Multiply your Eternity times gain by (200+Exotic reset times). Remove Mass and Star Overflow.`,
+                desc: `Multiply your Eternity times gain by (200+Exotic reset times). Remove Mass and Star Overflow，自动购买无限升级.`,
                 cost: E(1),
             },
             2: {
