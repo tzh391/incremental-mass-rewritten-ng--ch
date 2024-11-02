@@ -22,7 +22,7 @@ const TREE_IDS = [
         ['qol2','qol3','qol4','qu_qol2','qu_qol3','qu_qol4','qu_qol5','qu_qol6'],
         ['chal2','chal4a','chal4b','chal3'],
         ['bs5','bs2','fn1','bs3','qf2','qf3','rad2','rad3'],
-        ['prim3a','qu1','qu2','qu3','qc8'],
+        ['qu1','qu2','qu3'],
         ['qp38','qp1','qp10','qp39'],
 		['ax25','ax21','ax17','ax10','ax6','ax9','ax16','ax22','ax26'],
     ],[
@@ -30,7 +30,7 @@ const TREE_IDS = [
         ['qol5','qol6','qol7','','qu_qol7a','qu_qol7','',''],
         ['chal4','chal7a'],
         ['fn4','fn3','fn9','fn2','fn5','qf4','rad4','rad5'],
-        ['prim3','prim2','prim1','qu4','qc1','qc2','qc3'],
+        ['prim3a','prim3','prim2','prim1','qu4','qc1','qc2','qc3','qc8'],
         ['qp21','qp6','qp2','qp3','qp4','qp5','qp22'],
 		['ax29','ax27','ax18','ax12','ax11','ax13','ax19','ax28','ax30'],
     ],[
@@ -38,7 +38,7 @@ const TREE_IDS = [
         ['qol9','unl1','qol8','unl2','unl3','qu_qol8','qu_qol9','unl4'],
         ['chal5','chal6','chal7','chal8'],
         ['fn12','fn11','fn6','fn10','rad6',''],
-        ['prim4','en2','en1','qu5','br1','br2','qc4'],
+        ['','','','prim4','en2','en1','qu5','br1','br2','qc4','qc5','qc6','qc7'],
         ['qp23','qp9','qp7','qp8','qp11','qp24'],
 		['ax39','ax34','ax32','ax23','ax20','ax24','ax31','ax35','ax38'],
     ],[
@@ -46,7 +46,7 @@ const TREE_IDS = [
         ['','','','qu_qol10','qu_qol11','qu_qol8a','qu_qol13','qu_qol12'],
         ['chal9','chal10','chal11','chal12'],
         ['fn13','fn14','fn7','fn8','pm1',''],
-        ['prim5','qu6','qu7','qu8','qu9','qu10','qu11','qc5'],
+        ['','','prim5','','','qu6','qu7','qu8','qu9','qu10','qu11'],
         ['qp40','qp16','qp14','qp12','qp13','qp15','qp41'],
 		['ax40','ax36','ax33','ax37','ax41'],
     ],[
@@ -54,7 +54,7 @@ const TREE_IDS = [
         [],
         ['chal13','chal14'],
         ['fn18','fn16','fn17','fn15','pm2','im1'],
-        ['prim6','prim7','prim8','qu12','br3','qc7','qc6'],
+        ['prim6','prim7','prim8','','','','','','','qu12','br3'],
         ['qp30','qp25','qp19','qp18','qp26','qp33'],
 		['ax42'],
     ],[
@@ -1601,7 +1601,7 @@ const TREE_UPGS = {
         qp42: {
             unl() { return hasTree('ax42') },
             qf: true,
-            branch: ["qp28","qp35"],
+            branch: ["qp28","qp35","qp31"],
             desc: `飞升基础值指数基于星尘而增加，星系费米子的超级折算削弱99%.`,
             cost: E('ee311'),
             effect() {

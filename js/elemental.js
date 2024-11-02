@@ -198,7 +198,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "+"+format(x) },
-            cdesc: `The 7th challenge's effect is better`,
+            cdesc: `The 7th challenge's 的效果变得更好`,
             ccost: E("ee4.8e12"),
         },
         {
@@ -244,7 +244,7 @@ const ELEMENTS = {
             ccost: E("ee5.4e12"),
         },
         {
-            desc: `2nd Neutron's effect is better.`,
+            desc: `使中子的第2个效果变得更好.`,
             cost: E(1e50),
             cdesc: `2nd Neutron's effect is squared.`,
             ccost: E("ee5.75e12"),
@@ -252,7 +252,7 @@ const ELEMENTS = {
         {
             desc: `Adds 50 more C7 maximum completions.`,
             cost: E(1e53),
-            cdesc: `The 7th challenge's effect is better`,
+            cdesc: `The 7th challenge's 的效果变得更好`,
             ccost: E("ee5.9e12"),
         },
         {
@@ -275,7 +275,7 @@ const ELEMENTS = {
             ccost: E("ee6.3e12"),
         },
         {
-            desc: `The Atomic Power effect is better.`,
+            desc: `使原子能量的效果变得更好.`,
             cost: E(1e65),
             cdesc: `这个元素的效果变得更好.`,
             ccost: E("ee6.9e12"),
@@ -333,13 +333,13 @@ const ELEMENTS = {
             ceffDesc(x) { return "^"+format(x) },
         },
         {
-            desc: `Proton powers effect is better.`,
+            desc: `使质子能量的效果变得更好.`,
             cost: E(1e100),
             cdesc: `Proton powers effect is squared.`,
             ccost: E("ee9.3e12"),
         },
         {
-            desc: `Electron powers effect is better. Passively gain 10% of each particle you would assign quarks.`,
+            desc: `使电子能量的效果变得更好。自动获得每种粒子，数量为分配夸克时增加数量的10%.`,
             cost: E(1e107),
             cdesc: `Electron powers effect is squared.`,
             ccost: E("ee9.7e12"),
@@ -469,7 +469,7 @@ const ELEMENTS = {
         {
             desc: `Add 50 more C7 maximum completions.`,
             cost: E('e315'),
-            cdesc: `The 7th challenge's effect is better`,
+            cdesc: `The 7th challenge's 的效果变得更好`,
             ccost: E("ee3.1e13"),
         },
         {
@@ -526,7 +526,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(player.ranks.hex.gte(46))return "^"+format(x);return format(x)+"x" },
-            cdesc: `Collapsed star's effect is better.`,
+            cdesc: `Collapsed star's 的效果变得更好.`,
             ccost: E('ee3.6e13'),
         },
         {
@@ -538,7 +538,7 @@ const ELEMENTS = {
         {
             desc: `Collapsed stars effect is 10% stronger.`,
             cost: E('e800'),
-            cdesc: `Collapsed star's effect is better.`,
+            cdesc: `Collapsed star's 的效果变得更好.`,
             ccost: E('ee3.8e13'),
         },
         {
@@ -688,19 +688,19 @@ const ELEMENTS = {
         {
             desc: `Rewards from Challenges 3-4 & 8 are 50% effective.`,
             cost: E('e5e5'),
-            cdesc: `C3-4 Rewards are better`,
+            cdesc: `C3-4 Rewards 变得更好`,
             ccost: E("ee3.4e14"),
         },
         {
             desc: `Add 200 more C7 & c8 maximum completions.`,
             cost: E('e8e5'),
-            cdesc: `C7-8 Rewards are better`,
+            cdesc: `C7-8 Rewards 变得更好`,
             ccost: E("ee3.7e14"),
         },
         {
             desc: `Lanthanum's effect is twice stronger.`,
             cost: E('e1.1e6'),
-            cdesc: `Lanthanum's effect is better`,
+            cdesc: `Lanthanum's 的效果变得更好`,
             ccost: E("ee4.4e14"),
         },
         {
@@ -731,7 +731,7 @@ const ELEMENTS = {
         {
             desc: `Add 200 more C7 & c8 maximum completions.`,
             cost: E('e6.9e7'),
-            cdesc: `C7-8 Rewards are better`,
+            cdesc: `C7-8 Rewards 变得更好`,
             ccost: E('ee6.1e14'),
         },
         {
@@ -760,7 +760,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "+"+format(x,0) },
-            cdesc: `Effects of C5,C8 are better.`,
+            cdesc: `Effects of C5,C8 变得更好.`,
             ccost: E('ee9.5e14'),
         },
         {
@@ -772,19 +772,19 @@ const ELEMENTS = {
         {
             desc: `Remove 2 softcaps from Atomic Power's effect.`,
             cost: E('e3.9e9'),
-            cdesc: `Atomic Power's effect is better.`,
+            cdesc: `Atomic Power's 的效果变得更好.`,
             ccost: E('ee1.3e15'),
         },
         {
             desc: `Collapsed Star's effect is 25% stronger.`,
             cost: E('e3.75e10'),
-            cdesc: `Collapsed Star's effect is better.`,
+            cdesc: `Collapsed Star's 的效果变得更好.`,
             ccost: E('ee1.4e15'),
         },
         {
             desc: `Softcap^3 from mass gain is 17.5% weaker.`,
             cost: E('e4e11'),
-            cdesc: `Stronger Overflow is weaker.`,
+            cdesc: `使强化器的溢出弱化.`,
             ccost: E('ee1.9e15'),
         },
         {
@@ -802,7 +802,7 @@ const ELEMENTS = {
         {
             desc: `使强化器和时间速度的效果变为原来的25倍.`,
             cost: E('e1.4e13'),
-            cdesc: `Stronger Overflow is weaker.`,
+            cdesc: `使强化器的溢出弱化.`,
             ccost: E('ee7.7777e15'),
         },
         {
@@ -843,7 +843,7 @@ const ELEMENTS = {
         {
             desc: `Stronger’s Power softcap starts 3x later, is 10% weaker.`,
             cost: E('e7.5e15'),
-            cdesc: `Stronger Overflow is weaker.`,
+            cdesc: `使强化器的溢出弱化.`,
             ccost: E('ee1.9e16'),
         },
         {
@@ -930,7 +930,7 @@ const ELEMENTS = {
         {
             desc: `Epsilon Particles are worked in Big Rip, but 90% weaker.`,
             cost: E("e34500"),
-            cdesc: `Multiply Epsilon Particles effects by 10. Epsilon Particle's effect is better if you're not in QC.`,
+            cdesc: `Multiply Epsilon Particles effects by 10. Epsilon Particle's 的效果变得更好 if you're not in QC.`,
             ccost: E('ee2e17'),
         },
         {
@@ -954,7 +954,7 @@ const ELEMENTS = {
         {
             desc: `Remove softcap^3 from Photon Upgrade 3 effect, its softcap^2 is weaker.`,
             cost: E('e2.15e7'),
-            cdesc: `Photon Upgrades are better.`,
+            cdesc: `Photon Upgrades 变得更好.`,
             ccost: E('ee7.5e17'),
         },
         {
@@ -1010,7 +1010,7 @@ const ELEMENTS = {
         {
             desc: `Add 200 more C9-12 maximum completions.`,
             cost: E('e1.2e9'),
-            cdesc: `C9-12 effect is better.`,
+            cdesc: `C9-12 的效果变得更好.`,
             ccost: E('ee1.5e19'),
         },
         {
@@ -1028,7 +1028,7 @@ const ELEMENTS = {
         {
             desc: `Beta Particles are twice effective.`,
             cost: E('e1.45e10'),
-            cdesc: `Beta Particles are better.`,
+            cdesc: `Beta Particles 变得更好.`,
             ccost: E('ee6.9e19'),
         },
         {
@@ -1050,7 +1050,7 @@ const ELEMENTS = {
         {
             desc: `Mass gain softcap^4 is 50% weaker (only 20% in Big Rip).`,
             cost: E('e6e10'),
-            cdesc: `Stronger Overflow is weaker`,
+            cdesc: `使强化器的溢出弱化`,
             ccost: E('ee1.6666e20'),
         },
         {
@@ -1068,7 +1068,7 @@ const ELEMENTS = {
         {
             desc: `[sn4] effect is increased by 2.`,
             cost: E('e3e12'),
-            cdesc: `[sn4] effect is better.`,
+            cdesc: `[sn4] 的效果变得更好.`,
             ccost: E('ee4e20'),
         },
         {
@@ -1286,7 +1286,7 @@ const ELEMENTS = {
 		{
 			desc: `Uncap C12 completions.`,
 			cost: E("1.9890000001e33"),
-            cdesc: `C12 effect is better.`,
+            cdesc: `C12 的效果变得更好.`,
             ccost: uni("e9050000"),
 		},
 		{
@@ -1660,7 +1660,7 @@ const ELEMENTS = {
 		{
 			desc: `挑战13和16的次数上限增加100。`,
 			cost: E(9e284),
-            cdesc: `C13 effect is better.`,
+            cdesc: `C13 的效果变得更好.`,
             ccost: uni("e3.5e8"),
 		},
 		{
@@ -1686,7 +1686,7 @@ const ELEMENTS = {
 		{
 			desc: `挑战13和15的次数上限增加300。`,
 			cost: E(6e299),
-            cdesc: `C15 effect is better.`,
+            cdesc: `C15 的效果变得更好.`,
             ccost: uni("e4.4e8"),
 		},
 		{
@@ -1712,7 +1712,7 @@ const ELEMENTS = {
 		{
 			desc: `挑战13和16的次数上限增加200。`,
 			cost: E("6e310"),
-            cdesc: `C13 effect is better.`,
+            cdesc: `C13 的效果变得更好.`,
             ccost: uni("e5.7e8"),
 		},
 		{
@@ -1748,7 +1748,7 @@ const ELEMENTS = {
 		{
 			desc: `挑战13的次数上限增加200。`,
 			cost: E("3e393"),
-            cdesc: `C13 effect is better.`,
+            cdesc: `C13 的效果变得更好.`,
             ccost: uni("e7.25e8"),
 		},
 		{
@@ -1823,21 +1823,21 @@ const ELEMENTS = {
 		{
 			desc: `挑战13的次数上限增加1000。`,
 			cost: E("1.5e674"),
-            cdesc: `C13 effect is better.`,
+            cdesc: `C13 的效果变得更好.`,
             ccost: uni("e9.4e8"),
 		},
 		{
 			desc: `Unlock the 18th Challenge.`,
 			cost: uni(2e123),
 			et: true,
-			cdesc: `C18 effect is better.`,
+			cdesc: `C18 的效果变得更好.`,
 			ccost: uni("e1530000"),
 		},
 		{
 			desc: `挑战14和16的次数上限增加100。`,
 			cost: E("7.5e193"),
 			et: true,
-			cdesc: `C14 effect is better.`,
+			cdesc: `C14 的效果变得更好.`,
 			ccost: uni("e1590000"),
 		},
 		{
@@ -1856,20 +1856,20 @@ const ELEMENTS = {
 			desc: `Unlock the 19th Challenge.`,
 			cost: uni(1e158),
 			et: true,
-			cdesc: `C19 effect is better.`,
+			cdesc: `C19 的效果变得更好.`,
 			ccost: uni("e1650000"),
 		},
 		{
 			desc: `挑战14和17的次数上限增加100。`,
 			cost: E("9e224"),
 			et: true,
-			cdesc: `C14 effect is better.`,
+			cdesc: `C14 的效果变得更好.`,
 			ccost: uni("e1660000"),
 		},
 		{
 			desc: `无限升级3的效果变为原来的1.2次方。`,
 			cost: E("1.5e955"),
-			cdesc: `Infinity Upgrade 3 effect is better.`,
+			cdesc: `Infinity Upgrade 3 的效果变得更好.`,
 			ccost: mlt(1.155),
 		},
 		{
@@ -1889,7 +1889,7 @@ const ELEMENTS = {
 			desc: `挑战15和16的次数上限增加200。`,
 			cost: uni(2e198),
 			et: true,
-			cdesc: `C15 effect is better.`,
+			cdesc: `C15 的效果变得更好.`,
 			ccost: uni("e1960000"),
 		},
 		{
@@ -1963,7 +1963,7 @@ const ELEMENTS = {
 			ccost: E("e6180000000"),
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e533"),
 			et: true,
 			cdesc: `鲨鱼吃掉了辉煌的超究折算，降伏器和星系费米子的超级折算，顺便吃掉了锻体器和助推器.`,
@@ -1984,7 +1984,7 @@ const ELEMENTS = {
 
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e560"),
 			et: true,
 			cdesc: `鲨鱼的境界提升至潮汐级初等，使时间碎片的效果^1.2.`,
@@ -2089,7 +2089,7 @@ const ELEMENTS = {
 			ccost: E("e7800000000"),
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e671"),
 			et: true,
 			cdesc: `鲨鱼深渊化了，使深渊之渍3的效果变得更好.`,
@@ -2159,7 +2159,7 @@ const ELEMENTS = {
 			ceffDesc(x) {if(!hasChargedElement(232)) return "您还没有鲨鱼战力"
 				else if(hasChargedElement(232)) return  "弱化"+format(x)+"倍"
 			},
-			cdesc: `鲨鱼战力使超新星的元折算弱化(需:e1123奇异物质).`,
+			cdesc: `鲨鱼战力使超新星的元折算弱化(需:e1120奇异物质).`,
 		    ccost: E("e8685000000"),		
 		},
 		{
@@ -2382,21 +2382,21 @@ const ELEMENTS = {
 			cost: E("1.5e9356"),
 		},
 		{
-			desc: `Galactic Shards Effect affects Galactic Dark Energy.`,
+			desc: `星系碎片的效果也可以对 affects Galactic Dark Energy.`,
 			cost: E("1e34"),
 			galQk: true,
 		},
 		{
-			desc: `Plutonium-94 is always active at 100% efficiency.`,
+			desc: `钚(94Pu)的效果现在是100%.`,
 			cost: E("1.5e900"),
 			et: true,
 		},
 		{
-			desc: `Elements 173 and 174 are better.`,
+			desc: `元素173和174的效果变得更好.`,
 			cost: E("1.5e9836"),
 		},
 		{
-			desc: `Unlock 2 new types of Galactic Fermions.`,
+			desc: `解锁2个星系费米子类型.`,
 			cost: E("1e35"),
 			galQk: true,
 		},
@@ -2406,25 +2406,25 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Auto-Complete Challenge 13.`,
+			desc: `自动完成挑战13.`,
 			cost: E("1.5e10056"),
 		},
 		{
-			desc: `Galactic Shards Effect affects Galactic Atoms.`,
+			desc: `星系碎片的效果也可以对 affects Galactic Atoms.`,
 			cost: E("1e36"),
 			galQk: true,
 		},
 		{
-			desc: `Photon & Gluon Upgrade 3 are better.`,
+			desc: `Photon & Gluon Upgrade 3 变得更好.`,
 			cost: E("1.5e1006"),
 			et: true,
 		},
 		{
-			desc: `Uncap C14-15 max completions.`,
+			desc: `移除挑战14,15的次数上限.`,
 			cost: E("1.5e10656"),
 		},
 		{
-			desc: `Unlock a Galactic Challenge Option.`,
+			desc: `解锁一个星系挑战设置.`,
 			cost: E("1e38"),
 			galQk: true,
 		},
@@ -2443,12 +2443,12 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Unlock 2 new types of Galactic Fermions.`,
+			desc: `解锁2个星系费米子类型.`,
 			cost: E("1e41"),
 			galQk: true,
 		},
 		{
-			desc: `Element 239 is better.`,
+			desc: `元素239的效果变得更好.`,
 			cost: E("1.5e12366"),
 		},
 		{
@@ -2457,7 +2457,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Unlock a Galactic Challenge Option.`,
+			desc: `解锁一个星系挑战设置.`,
 			cost: E("5e42"),
 			galQk: true,
 		},
@@ -2476,16 +2476,16 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Reduce Galactic Challenge Goals.`,
+			desc: `降低星系挑战的目标.`,
 			cost: E("1e44"),
 			galQk: true,
 		},
 		{
-			desc: `Element 272 is better.`,
+			desc: `元素272的效果变得更好.`,
 			cost: E("1.5e12746"),
 		},
 		{
-			desc: `Auto-Complete Challenges 14-15, and uncap C16 completions.`,
+			desc: `自动完成挑战14和15,以及移除挑战16的次数上限.`,
 			cost: E("1.5e1071"),
 			et: true,
 		},
@@ -2499,7 +2499,7 @@ const ELEMENTS = {
 			cost: E("1.5e13676"),
 		},
 		{
-			desc: `Stronger Overflow is weaker.`,
+			desc: `使强化器的溢出弱化.`,
 			cost: E("1.5e1126"),
 			et: true,
 		},
@@ -2532,12 +2532,12 @@ const ELEMENTS = {
 			cost: E("1.5e15381"),
 		},
 		{
-			desc: `Element 232 is better.`,
+			desc: `元素232的效果变得更好.`,
 			cost: E("1.5e1196"),
 			et: true,
 		},
 		{
-			desc: `Passively gain 100% of each galactic particle you would assign galactic quarks.`,
+			desc: `自动获得每种星系粒子粒子，数量为分配星系夸克时增加数量的100%.`,
 			cost: E("3e50"),
 			galQk: true,
 		},
@@ -2546,12 +2546,12 @@ const ELEMENTS = {
 			cost: E("1.5e15756"),
 		},
 		{
-			desc: `Element 232 is better.`,
+			desc: `元素232的效果变得更好.`,
 			cost: E("1.5e1256"),
 			et: true,
 		},
 		{
-			desc: `Stronger Overflow is weaker.`,
+			desc: `使强化器的溢出弱化.`,
 			cost: E("1.5e17056"),
 		},
 		{
@@ -2560,7 +2560,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Galactic Shards Effect affects base Galactic Bosons gain.`,
+			desc: `星系碎片的效果也可以对 affects base Galactic Bosons gain.`,
 			cost: E("2e55"),
 			galQk: true,
 		},
@@ -2616,12 +2616,12 @@ const ELEMENTS = {
 			cost: E("1.5e28206"),
 		},
 		{
-			desc: `Elements 173 and 174 are better.`,
+			desc: `元素173和174的效果变得更好.`,
 			cost: E("1.5e1606"),
 			et: true,
 		},
 		{
-			desc: `Galactic Shards Effect affects Galactic U-Fermions gain.`,
+			desc: `星系碎片的效果也可以对 affects Galactic U-Fermions gain.`,
 			cost: E(5e67),
 			galQk: true,
 		},
@@ -2635,26 +2635,26 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Unlock a Galactic Challenge Option.`,
+			desc: `解锁一个星系挑战设置.`,
 			cost: E(1e69),
 			galQk: true,
 		},
 		{
-			desc: `Reduce Galactic Challenge Goals.`,
+			desc: `降低星系挑战的目标.`,
 			cost: E(1e69),
 			galQk: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e29906"),
 		},
 		{
-			desc: `Green Chroma effect is better.`,
+			desc: `Green Chroma 的效果变得更好.`,
 			cost: E("1.5e1666"),
 			et: true,
 		},
 		{
-			desc: `Reduce Galactic Challenge Goals.`,
+			desc: `降低星系挑战的目标.`,
 			cost: E(1e69),
 			galQk: true,
 		},
@@ -2692,7 +2692,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e32756"),
 		},
 		{
@@ -2701,16 +2701,16 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Galactic Shards Effect affects base Galactic Radiation gain.`,
+			desc: `星系碎片的效果也可以对 affects base Galactic Radiation gain.`,
 			cost: E("3e78"),
 			galQk: true,
 		},
 		{
-			desc: `Electron Power’s second effect is better.`,
+			desc: `Electron Power’s second 的效果变得更好.`,
 			cost: E("1.5e36556"),
 		},
 		{
-			desc: `Effects of Galactic Dark Energy and Galactic Bosons are better.`,
+			desc: `Effects of Galactic Dark Energy and Galactic Bosons 变得更好.`,
 			cost: E("3e81"),
 			galQk: true,
 		},
@@ -2724,12 +2724,12 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Galactic Shards Effect affects base Galactic Radiation gain.`,
+			desc: `星系碎片的效果也可以对 affects base Galactic Radiation gain.`,
 			cost: E("1e83"),
 			galQk: true,
 		},
 		{
-			desc: `C18 effect is better.`,
+			desc: `C18 的效果变得更好.`,
 			cost: E("1.5e38206"),
 		},
 		{
@@ -2747,7 +2747,7 @@ const ELEMENTS = {
 			cost: E("1.5e57386"),
 		},
 		{
-			desc: `Neutron Power’s second effect is better.`,
+			desc: `Neutron Power’s second 的效果变得更好.`,
 			cost: E("1.5e2156"),
 			et: true,
 		},
@@ -2757,7 +2757,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Tickspeed Effect is better.`,
+			desc: `Tickspeed 的效果变得更好.`,
 			cost: E("1.5e64256"),
 		},
 		{
@@ -2771,7 +2771,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Effects of elements 173 and 174 are better.`,
+			desc: `Effects of 元素173和174的效果变得更好.`,
 			cost: E("1.5e70056"),
 		},
 		{
@@ -2795,7 +2795,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e3556"),
 			et: true,
 		},
@@ -2805,7 +2805,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Effects of elements 173 and 174 are better.`,
+			desc: `Effects of 元素173和174的效果变得更好.`,
 			cost: E("1.5e134056"),
 		},
 		{
@@ -2814,7 +2814,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Effects of Galactic Particles are better.`,
+			desc: `Effects of Galactic Particles 变得更好.`,
 			cost: E("5e128"),
 			galQk: true,
 		},
@@ -2844,7 +2844,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Effect of Galactic Atoms are better.`,
+			desc: `Effect of Galactic Atoms 变得更好.`,
 			cost: E("1.5e142056"),
 		},
 		{
@@ -2853,7 +2853,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Effects of Galactic U-Fermions are better. G-Fermion Tiers are cheaper.`,
+			desc: `Effects of Galactic U-Fermions 变得更好. G-Fermion Tiers are cheaper.`,
 			cost: E("5e141"),
 			galQk: true,
 		},
@@ -2863,7 +2863,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e3856"),
 			et: true,
 		},
@@ -2950,7 +2950,7 @@ const ELEMENTS = {
 			cost: E("1.5e221356"),
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("ee1.9e13"),
 			qk: true,
 		},
@@ -2980,16 +2980,16 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e270056"),
 		},
 		{
-			desc: `Remove Entropic Radiation^2 scaling. Some Entropy Effects are better.`,
+			desc: `Remove Entropic Radiation^2 scaling. Some Entropy Effects 变得更好.`,
 			cost: E("ee5e13"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e184"),
 			galQk: true,
 		},
@@ -3023,7 +3023,7 @@ const ELEMENTS = {
 		{
 			desc(){
 				if(!hasElement(404))return "404 Not Found";
-				return "Bosonic Upgrades are better.";
+				return "Bosonic Upgrades 变得更好.";
 			},
 			cost: E("ee5.5555e13"),
 			qk: true,
@@ -3054,7 +3054,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e378056"),
 		},
 		{
@@ -3063,17 +3063,17 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e205"),
 			galQk: true,
 		},
 		{
-			desc: `Some effects of Dark Shadow are better.`,
+			desc: `Some effects of Dark Shadow 变得更好.`,
 			cost: E("1e58"),
 			ds: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better. Neutron Power's first effect is squared.`,
+			desc: `Galactic Particles 的效果变得更好. Neutron Power's first effect is squared.`,
 			cost: E("1e213"),
 			galQk: true,
 		},
@@ -3093,7 +3093,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e457056"),
 		},
 		{
@@ -3102,7 +3102,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e235"),
 			galQk: true,
 		},
@@ -3137,7 +3137,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x later"; },
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e249"),
 			galQk: true,
 		},
@@ -3157,7 +3157,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e800056"),
 		},
 		{
@@ -3166,7 +3166,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e7981"),
 			et: true,
 		},
@@ -3176,7 +3176,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e888944"),
 		},
 		{
@@ -3195,7 +3195,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e9056"),
 			et: true,
 		},
@@ -3214,7 +3214,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("2e286"),
 			galQk: true,
 		},
@@ -3267,7 +3267,7 @@ const ELEMENTS = {
             effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("5e294"),
 			galQk: true,
 		},
@@ -3307,12 +3307,12 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd effect is better. Unlock a new effect of Dark Ray.`,
+			desc: `Dark Ray's 2nd 的效果变得更好. Unlock a new effect of Dark Ray.`,
 			cost: E("1e99"),
 			ds: true,
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: E("1.5e15056"),
 			et: true,
 		},
@@ -3322,7 +3322,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Elements 173-174 are better.`,
+			desc: `Elements 173-174 变得更好.`,
 			cost: E("1.5e1900056"),
 		},
 		{
@@ -3341,7 +3341,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e348"),
 			galQk: true,
 		},
@@ -3361,7 +3361,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("1.5e2100056"),
 		},
 		{
@@ -3375,12 +3375,12 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Dark Shadow's 7th effect is better.`,
+			desc: `Dark Shadow's 7th 的效果变得更好.`,
 			cost: E("1e109"),
 			ds: true,
 		},
 		{
-			desc: `Galactic Dark Matter and Galactic Bosons effects are better.`,
+			desc: `Galactic Dark Matter and Galactic Bosons effects 变得更好.`,
 			cost: E("1.5e20056"),
 			et: true,
 		},
@@ -3395,7 +3395,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Infinity Upgrade 24 effect is better.`,
+			desc: `Infinity Upgrade 24 的效果变得更好.`,
 			cost: E("1.5e2600056"),
 		},
 		{
@@ -3404,7 +3404,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e396"),
 			galQk: true,
 		},
@@ -3428,7 +3428,7 @@ const ELEMENTS = {
 			cost: E("1.5e2900056"),
 		},
 		{
-			desc: `Stronger Overflow is weaker.`,
+			desc: `使强化器的溢出弱化.`,
 			cost: E("ee1.25e22"),
 			qk: true,
 		},
@@ -3438,7 +3438,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd effect is better.`,
+			desc: `Dark Ray's 2nd 的效果变得更好.`,
 			cost: E("3e116"),
 			ds: true,
 		},
@@ -3462,7 +3462,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better. Galactic Quarks Post-1e100 boost Glyphic Mass gain.`,
+			desc: `Galactic Particles 的效果变得更好. Galactic Quarks Post-1e100 boost Glyphic Mass gain.`,
 			cost: E("5e447"),
 			galQk: true,
 			effect() {
@@ -3487,7 +3487,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: uni('e4900000'),
 		},
 		{
@@ -3496,7 +3496,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Collapsed Stars Effect is better.`,
+			desc: `Collapsed Stars 的效果变得更好.`,
 			cost: E("5e479"),
 			galQk: true,
 		},
@@ -3520,12 +3520,12 @@ const ELEMENTS = {
 			cost: uni('e6100000'),
 		},
 		{
-			desc: `Dark Shadow's 3rd effect is better.`,
+			desc: `Dark Shadow's 3rd 的效果变得更好.`,
 			cost: E("ee1.6666e25"),
 			qk: true,
 		},
 		{
-			desc: `Collapsed Stars Effect is better.`,
+			desc: `Collapsed Stars 的效果变得更好.`,
 			cost: E("1e515"),
 			galQk: true,
 		},
@@ -3548,13 +3548,13 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: uni('e9000000'),
 		},
 		{
 			desc(){
 				if(!hasElement(502))return "502 Bad Gateway";
-				return "Collapsed Stars Effect is better.";
+				return "Collapsed Stars 的效果变得更好.";
 			},
 			cost: E("ee5e27"),
 			qk: true,
@@ -3570,7 +3570,7 @@ const ELEMENTS = {
 		{
 			desc(){
 				if(!hasElement(504))return "504 Gateway Time-out";
-				return "Dark Ray's 2nd effect is better.";
+				return "Dark Ray's 2nd 的效果变得更好.";
 			},
 			cost: E("1e132"),
 			ds: true,
@@ -3586,7 +3586,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: uni('e10000000'),
 		},
 		{
@@ -3601,7 +3601,7 @@ const ELEMENTS = {
 			effDesc(x) { return "+"+format(x); },
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("3e612"),
 			galQk: true,
 		},
@@ -3631,16 +3631,16 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Dark Ray's 2nd effect is better.`,
+			desc: `Dark Ray's 2nd 的效果变得更好.`,
 			cost: E("1e221"),
 			exotic: true,
 		},
 		{
-			desc: `Collapsed Stars Effect is better.`,
+			desc: `Collapsed Stars 的效果变得更好.`,
 			cost: uni('e15555555'),
 		},
 		{
-			desc: `Stronger Overflow is weaker.`,
+			desc: `使强化器的溢出弱化.`,
 			cost: E("ee1.5e32"),
 			qk: true,
 		},
@@ -3650,7 +3650,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd effect is better.`,
+			desc: `Dark Ray's 2nd 的效果变得更好.`,
 			cost: E("2e152"),
 			ds: true,
 		},
@@ -3674,12 +3674,12 @@ const ELEMENTS = {
 			cost: uni('e22600000'),
 		},
 		{
-			desc: `Collapsed Stars Effect is better.`,
+			desc: `Collapsed Stars 的效果变得更好.`,
 			cost: E("ee1.6666e35"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("2e782"),
 			galQk: true,
 		},
@@ -3699,7 +3699,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: uni('e29000000'),
 		},
 		{
@@ -3732,7 +3732,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e1085"),
 			galQk: true,
 		},
@@ -3762,11 +3762,11 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Stronger Overflow is weaker.`,
+			desc: `使强化器的溢出弱化.`,
 			cost: uni('e69000000'),
 		},
 		{
-			desc: `C20 effect is better.`,
+			desc: `C20 的效果变得更好.`,
 			cost: E("ee1e46"),
 			qk: true,
 		},
@@ -3815,7 +3815,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e1440"),
 			galQk: true,
 		},
@@ -3825,7 +3825,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Timeshards effect is better.`,
+			desc: `Timeshards 的效果变得更好.`,
 			cost: uni("e455000"),
 			et: true,
 		},
@@ -3844,12 +3844,12 @@ const ELEMENTS = {
 			cost: uni('e2.4e8'),
 		},
 		{
-			desc: `C21 effect is better.`,
+			desc: `C21 的效果变得更好.`,
 			cost: E('ee3e61'),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles Effect is better.`,
+			desc: `Galactic Particles 的效果变得更好.`,
 			cost: E("1e1675"),
 			galQk: true,
 		},
@@ -3869,7 +3869,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Stronger Overflow is weaker.`,
+			desc: `使强化器的溢出弱化.`,
 			cost: mlt('1.91'),
 		},
 		{

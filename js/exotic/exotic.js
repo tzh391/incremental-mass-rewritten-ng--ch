@@ -42,7 +42,7 @@ const EXOTIC = {
 		if(hasChargedElement(120))x = x.mul(tmp.elements.ceffect[120]);
 		if(hasElement(486))x = x.mul(MATTERS.eff(0));
 		if(hasElement(534))x = x.mul(player.exotic.ax[0].add(1));
-		if (player.exotic.times.gte(1000))x = x.mul(player.exotic.times.add(10).log10());
+		
 		
 		if (player.ranks.enne.gte(9000)) x = x.mul(RANKS.effect.enne[9000]())
 		if (hasChargedElement(255)&&hasAscension(0,2245)) x = x.mul(tmp.elements.effect[255]);
@@ -64,7 +64,9 @@ const EXOTIC = {
         [E(10), `奇异重置时改为保持15个超新星星系, 以及保持挑战20完成次数.`],
         [E(50), `自动获取超新星星系且它不再重置任何东西.`],
 		[E(200), `奇异重置次数倍增转生狂怒能量获取.`],
-		[E(1000), `奇异重置次数的对数倍增奇异物质获取.`],
+		[E(1000), `获得1奇异推进点数.`],
+		[E(1000000), `获得1奇异推进点数.`],
+		[E(1e10), `获得1奇异推进点数.`],
     ],
     enter() {
         if (EXOTIC.gain().gte(1)) {
