@@ -69,7 +69,7 @@ const ELEMENTS = {
         }
     },
     buyAllElements() {
-	    for (let i in ELEMENTS) ELEMENTS.buyUpg(i)
+	    ELEMENTS.buyAllElements = ELEMENTS.buyUpg(Number(i)+1)
     },
     upgs: [
         null,
