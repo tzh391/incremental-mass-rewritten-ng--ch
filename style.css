@@ -825,3 +825,13 @@ h2 {
     50% {transform:scale(0); filter:blur(5px)}
     100% {transform:scale(1); filter:blur(0px)}
 }
+
+#elements_table {
+	width: 100%;
+	overflow-x: auto;
+}
+
+#elements_table > div {
+	padding: 25px 0px;
+}
+	
