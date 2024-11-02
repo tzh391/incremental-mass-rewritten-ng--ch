@@ -66,7 +66,7 @@ const MATTERS = {
 		if (hasTree('ax38')) x = x.add(0.1)
 		if(player.superCluster.gte(13))x = x.add(SUPERNOVA_CLUSTER.effects.eff6());
 		if(player.exotic.dark_run.upgs[15].gte(1))x = x.add(tmp.dark_run.upgs[15].eff);
-		if(hasChargedElement(256)&&tmp.stars.effectExpPower.gte(7.11111))x = x.add(SUPERNOVA_GALAXY.effects.gqk().div(37250))
+		if(hasChargedElement(256)&&tmp.stars.effectExpPower.gte(7.11111))x = x.add(SUPERNOVA_GALAXY.effects.matter().div(37250))
 		return x
     },
     extendPow() {
