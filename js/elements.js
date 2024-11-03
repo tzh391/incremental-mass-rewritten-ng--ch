@@ -61,7 +61,7 @@ function setupHTML() {
 			<button id="as_auto_${x}" class="btn" style="width: 80px;" onclick="RANKS.autoSwitch(${x})">OFF</button>
 			<span id="as_scale_${x}""></span>${ASCENSIONS.fullNames[x]} <span id="as_amt_${x}">X</span><br><br>
 			<button onclick="ASCENSIONS.reset(${x})" class="btn reset" id="as_${x}">
-				${x>0?"Reset your "+ASCENSIONS.fullNames[x-1]+"s":'Force an Exotic reset'}, but ${ASCENSIONS.fullNames[x]} up.<span id="as_desc_${x}"></span><br>
+				${x>0?"重置"+ASCENSIONS.fullNames[x-1]:'强制奇异重置'}, 但提升${ASCENSIONS.fullNames[x]}.<span id="as_desc_${x}"></span><br>
 				Req: <span id="as_req_${x}">X</span>
 			</button>
 		</div>`
@@ -162,7 +162,7 @@ function setupHTML() {
 		table += `<div id="as_reward_div_${x}">`
 		let keys = Object.keys(ASCENSIONS.rewards[x])
 		for (let y = 0; y < keys.length; y++) {
-			table += `<span id="as_reward_${x}_${y}"><b>${ASCENSIONS.fullNames[x]} ${keys[y]}:</b> ${ASCENSIONS.rewards[x][keys[y]]}${ASCENSIONS.rewardEff[x][keys[y]]?` Currently: <span id='as_eff_${x}_${y}'></span></span>`:""}<br>`
+			table += `<span id="as_reward_${x}_${y}"><b>${ASCENSIONS.fullNames[x]} ${keys[y]}:</b> ${ASCENSIONS.rewards[x][keys[y]]}${ASCENSIONS.rewardEff[x][keys[y]]?` 目前效果: <span id='as_eff_${x}_${y}'></span></span>`:""}<br>`
 		}
 		table += `</div>`
 	}

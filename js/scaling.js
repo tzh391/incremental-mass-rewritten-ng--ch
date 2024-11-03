@@ -885,7 +885,7 @@ function getScalingPower(type, name) {
 			if (player.ranks.enne.gte(666)) power = power.mul(0.0001)
 			if (player.ranks.enne.gte(3690)) power = power.mul(0.0001)
 			if (player.ranks.enne.gte(4480)) power = power.mul(0.001)
-			if (hasChargedElement(245)&&player.exotic.points.gte("e1120"))power = power.div(tmp.elements.ceffect[245]||1)	
+			if (hasChargedElement(245)&&player.exotic.points.gte("e1115"))power = power.div(tmp.elements.ceffect[245]||1)	
 								
 		}
 		if (name=="rank") {

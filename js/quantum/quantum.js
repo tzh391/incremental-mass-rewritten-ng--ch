@@ -183,10 +183,11 @@ const QUANTUM = {
         [E(1e303), `Meta-Pent starts 1e25x later.`],
         [E(Number.MAX_VALUE), `Quantum times add to Infinity Mass gain formula. Super Supernova Galaxies starts 5 later.`],
         [E('6.9e420'), `Entropic Evaporation^2 is 50% weaker.`],
+        [E("1e500"), `平方1e250量子次数里程碑效果.`],
         [E('1e600'), `Multiply the starting point of Meta-Pent scaling by (quantizes+1).`],
         [E('4.2e690'), `Green Chroma is applied to Pent.`],
         [E('1e900'), `Red Chroma is better.`],
-        [E("1e11800"), `量子次数的对数加成奇异物质获取.`],
+        [E("1e10000"), `量子次数的对数加成奇异物质获取.`],
     ],
     auto: {
         mode: ["Amount","Time"],

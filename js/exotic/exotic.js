@@ -4,7 +4,8 @@ const EXOTIC = {
         if (x.lt(1)) return E(0)
         x = x.max(0).pow((tmp.chal?(tmp.chal.eff[24]||E(0)):E(0)).add(hasUpgrade('exotic',22)?3:2))
 		if (player.qu.times.gte(1e250))x = x.mul(player.qu.times.add(10).log10().add(10).log10());
-		if (player.qu.times.gte(1e250))x = x.mul(player.qu.times.add(10).log10());
+		if (player.qu.times.gte(1e500))x = x.mul(player.qu.times.add(10).log10().add(10).log10());
+		if (player.qu.times.gte(1e10000))x = x.mul(player.qu.times.add(10).log10());
 		if (player.qu.times.gte(1e255) && player.exotic.times.gte(1))x = x.mul(3)
 		if (player.qu.times.gte(1e295) && player.exotic.times.gte(1))x = x.mul(5)
         if (hasPrestige(2,141)) x = x.mul(prestigeEff(2,141,E(1)));

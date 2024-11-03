@@ -68,9 +68,6 @@ const ELEMENTS = {
             player.atom.chargedElements.push(x)
         }
     },
-    buyAllElements() {
-	    ELEMENTS.buyAllElements = ELEMENTS.buyUpg(Number(i)+1)
-    },
     upgs: [
         null,
         {
@@ -2163,7 +2160,7 @@ const ELEMENTS = {
 			ceffDesc(x) {if(!hasChargedElement(232)) return "您还没有鲨鱼战力"
 				else if(hasChargedElement(232)) return  "弱化"+format(x)+"倍"
 			},
-			cdesc: `鲨鱼战力使超新星的元折算弱化(需:e1120奇异物质).`,
+			cdesc: `鲨鱼战力使超新星的元折算弱化(需:e1115奇异物质).`,
 		    ccost: E("e8685000000"),		
 		},
 		{
