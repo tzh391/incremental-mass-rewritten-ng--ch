@@ -364,7 +364,7 @@ function getPlayerData() {
             tree: [],
 		},
         sun: {
-			points: E(0),
+			shard: E(0),
 			times: E(0),
 			
 		},

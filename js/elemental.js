@@ -2878,7 +2878,7 @@ const ELEMENTS = {
 			cost: E("1.5e150056"),
 		},
 		{
-			desc: `Unlock Element Charging.`,
+			desc: `Unlock Element Charging(看元素阶层1).`,
 			cost: E("ee2.7777e12"),
 			qk: true,
 		},
@@ -3454,7 +3454,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `You can change Tier 2 Elements.`,
+			desc: `You can change Tier 2 Elements(看元素阶层2).`,
 			cost: E("1.5e3300056"),
 		},
 		{
