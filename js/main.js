@@ -732,6 +732,7 @@ const FORMS = {
             br: "Big Rip the Dimension, then go back",
             eternity: "需要量子之前所有资源获取速度超过1e2000和购买无限升级14才能永恒",
             exotic: "Require over eee12 g of mass to reset previous features for gain Exotic Matter",
+            sunshard: "需要质量超过eee128,超新星超过1.798e308,转生星辰超过1e6才能获得太阳碎片",
         },
         set(id) {
             if (id=="sn") {
@@ -753,6 +754,10 @@ const FORMS = {
             }
             if (id=="exotic") {
                 player.reset_msg = "需要质量超过"+formatMass(new Decimal("eee12"))+"才能获得奇异物质"
+                return
+            }
+            if (id=="sunshard") {
+                player.reset_msg = "需要质量超过eee128,超新星超过"+format(E(Number.MAX_VALUE))+",转生星辰超过1e6才能获得太阳碎片"
                 return
             }
             player.reset_msg = this.msgs[id]

@@ -167,7 +167,7 @@ const SUPERNOVA_GALAXY = {
 			return (player.superGal.add(1).pow(0.75)).floor();
 		},		
 		matter(){
-			return (player.superGal.add(1).div(37250));
+			return (player.superGal.add(1).div(33333));
 		},		
 		em(){
 			if(!hasElement(467))return 1;
