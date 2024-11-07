@@ -82,7 +82,8 @@ const MATTERS = {
 		return x;
 	},
 	fssReq(){
-		return E(40).mul(Decimal.pow(1.1,player.exotic.fss));
+		let x= E(40).mul(Decimal.pow(1.1,player.exotic.fss));
+		return x
 	},
 	fssEff(){
 		let x = MATTERS.fssBase().pow(player.exotic.fss).sqrt();

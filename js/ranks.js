@@ -2030,7 +2030,7 @@ function updateRanksHTML() {
                 let desc = ""
                 for (let i = 0; i < keys.length; i++) {
                     if (p.lt(keys[i])) {
-                        desc = ` At ${ASCENSIONS.fullNames[x]} ${format(keys[i],0)}, ${ASCENSIONS.rewards[x][keys[i]]}`
+                        desc = ` 在 ${ASCENSIONS.fullNames[x]} ${format(keys[i],0)}, ${ASCENSIONS.rewards[x][keys[i]]}`
                         break
                     }
                 }

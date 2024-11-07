@@ -2,7 +2,7 @@ const EXOTIC_BOOST_LENGTH = 7;
 
 const EXOTIC_BOOST = {
     gain() {
-		let x = player.exotic.points.add(1).log10().div(3);
+		let x = player.exotic.points.add(1).log(1000);
 		x = x.add(EXOTIC_BOOST.fgain())
 		
         return x.floor()
