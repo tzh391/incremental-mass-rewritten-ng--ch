@@ -17,6 +17,15 @@ const ST_NAMES = [
 const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
 
 const FORMS = {
+    sunshardGain() {
+        let x = player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
+        return x
+
+
+
+
+
+    },
     getPreQUGlobalSpeed() {
         let x = E(1)
         if (tmp.qu.mil_reached[1]) x = x.mul(10)
