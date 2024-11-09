@@ -371,7 +371,7 @@ function updateSupernovaGalaxyHTML() {
 	if(player.superGal.gte(1)){
 		var html="您的超新星星系提供了以下效果：";
 		html += "<br>量子之前所有资源获取速度变为原来的"+format(SUPERNOVA_GALAXY.effects.pqgs())+"倍";
-		html += "<br>质量获取变为原来的"+format(SUPERNOVA_GALAXY.effects.pqgs())+"倍";
+		html += "<br>质量获取变为原来的"+format(SUPERNOVA_GALAXY.effects.pqgs())+"次方";
 		html += "<br>狂怒能量获取变为原来的"+format(SUPERNOVA_GALAXY.effects.rp())+"次方";
 		if(player.superGal.gte(2))html += "<br>黑洞质量获取变为原来的"+format(SUPERNOVA_GALAXY.effects.bh())+"次方";
 		html += "<br>时间速度倍率乘以"+format(SUPERNOVA_GALAXY.effects.tsMult())+"后变为原来的"+format(SUPERNOVA_GALAXY.effects.ts())+"次方";

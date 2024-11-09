@@ -188,6 +188,7 @@ const QUANTUM = {
         [E('4.2e690'), `Green Chroma is applied to Pent.`],
         [E('1e900'), `Red Chroma is better.`],
         [E("1e10000"), `量子次数的对数加成奇异物质获取.`],
+        [E("1e69420"), `量子次数的双对数加成太阳碎片获取.`],
     ],
     auto: {
         mode: ["Amount","Time"],

@@ -18,7 +18,8 @@ const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exot
 
 const FORMS = {
     sunshardGain() {
-        let x = player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
+        let x =E(0) 
+        if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))x=player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
         return x
 
 
@@ -70,7 +71,7 @@ const FORMS = {
 
         x = x.mul(tmp.bosons.effect.pos_w[0])
 		
-        x = x.mul(SUPERNOVA_GALAXY.effects.pqgs())
+        x = x.pow(SUPERNOVA_GALAXY.effects.pqgs())
         if (!hasElement(105)) x = x.mul(tmp.atom.particles[0].powerEffect.eff1)
         else x = x.pow(tmp.atom.particles[0].powerEffect.eff1)
 

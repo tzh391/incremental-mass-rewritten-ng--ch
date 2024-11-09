@@ -4,8 +4,9 @@ const TREE_TAB = [
     {title: "Challenge"},
     {title: "Post-Supernova", unl() { return player.supernova.post_10 } },
     {title: "Quantum", unl() { return quUnl() } },
-    {title: "Quantum+", unl() { return hasChargedElement(118) } },
-    {title: "Axionic", unl() { return hasElement(556) } },
+    {title: "量子+", unl() { return hasChargedElement(118) } },
+    {title: "轴子", unl() { return hasElement(556) } },
+    {title: "星图", unl() { return player.prestigeST.gte(1e6) } },
 ]
 
 const TREE_IDS = [
@@ -17,6 +18,7 @@ const TREE_IDS = [
         ['qu0'],
 		['qp17'],
 		['ax15','ax8','ax4','ax2','ax1','ax3','ax5','ax7','ax14'],
+        ['','','grbs13','',''],
     ],[
         ['s1','m1','rp1','bh1','sn1'],
         ['qol2','qol3','qol4','qu_qol2','qu_qol3','qu_qol4','qu_qol5','qu_qol6'],
@@ -25,6 +27,7 @@ const TREE_IDS = [
         ['qu1','qu2','qu3'],
         ['qp38','qp1','qp10','qp39'],
 		['ax25','ax21','ax17','ax10','ax6','ax9','ax16','ax22','ax26'],
+        ['','','yedo3','yebs13',''],
     ],[
         ['s2','m2','t1','d1','bh2','gr1','sn2'],
         ['qol5','qol6','qol7','','qu_qol7a','qu_qol7','',''],
@@ -33,6 +36,7 @@ const TREE_IDS = [
         ['prim3a','prim3','prim2','prim1','qu4','qc1','qc2','qc3','qc8'],
         ['qp21','qp6','qp2','qp3','qp4','qp5','qp22'],
 		['ax29','ax27','ax18','ax12','ax11','ax13','ax19','ax28','ax30'],
+        ['','','rebs13','',''],
     ],[
         ['s3','m3','gr2','sn3'],
         ['qol9','unl1','qol8','unl2','unl3','qu_qol8','qu_qol9','unl4'],
@@ -41,6 +45,7 @@ const TREE_IDS = [
         ['','','','prim4','en2','en1','qu5','br1','br2','qc4','qc5','qc6','qc7'],
         ['qp23','qp9','qp7','qp8','qp11','qp24'],
 		['ax39','ax34','ax32','ax23','ax20','ax24','ax31','ax35','ax38'],
+        ['','','grbs12','',''],
     ],[
         ['s4','sn5','sn4'],
         ['','','','qu_qol10','qu_qol11','qu_qol8a','qu_qol13','qu_qol12'],
@@ -49,6 +54,7 @@ const TREE_IDS = [
         ['','','prim5','','','qu6','qu7','qu8','qu9','qu10','qu11'],
         ['qp40','qp16','qp14','qp12','qp13','qp15','qp41'],
 		['ax40','ax36','ax33','ax37','ax41'],
+        ['','','yedo2','','yebs11'],
     ],[
         ['s5','sn6'],
         [],
@@ -57,6 +63,7 @@ const TREE_IDS = [
         ['','','prim6','prim7','prim8','','','','','qu12','br3'],
         ['qp30','qp25','qp19','qp18','qp26','qp33'],
 		['ax42'],
+        ['yebs12','bldo2','blbs11','yedo1','rebs11','bldo1','grbs11'],
     ],[
         [],
         [],
@@ -65,6 +72,7 @@ const TREE_IDS = [
         [],
         ['qp32','qp29','qp27','qp20','qp28','qp31','qp34'],
 		[],
+        ['blbs13','','blkey1','yekey2','blkey2','',''],
     ],[
         [],
         [],
@@ -73,6 +81,7 @@ const TREE_IDS = [
         [],
         ['qp43','qp36','qp35','qp42'],
 		[],
+        ['blbs12','yekey1','bobo','yekey3','rebs12'],
     ],[
         [],
         [],
@@ -81,6 +90,7 @@ const TREE_IDS = [
         [],
         ['qp37'],
 		[],
+        ['lt'],
     ],
 ]
 
@@ -106,8 +116,9 @@ const TREE_UPGS = {
 		}
 		
         if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
-            if (this.ids[x].qf) player.qu.points = player.qu.points.sub(this.ids[x].cost).max(0)
-            else player.supernova.stars = player.supernova.stars.sub(this.ids[x].cost).max(0)
+            
+             if (this.ids[x].qf) player.qu.points = player.qu.points.sub(this.ids[x].cost).max(0)
+            else  player.supernova.stars = player.supernova.stars.sub(this.ids[x].cost).max(0)
             player.supernova.tree.push(x)
         }
     },
@@ -2027,6 +2038,191 @@ const TREE_UPGS = {
             desc: `Unlock 6 final upgrades in the Quantum+ tab of Neutron Tree.`,
             cost: E(1),
         },
+
+        yekey1: {
+            unl() { return true },
+            sunshard: true,
+          
+            desc: `获得1黄钥匙.`,
+            cost: E("eee999"),
+        },    
+        yekey2: {
+            unl() { return true },
+            sunshard: true,
+
+            desc: `获得1黄钥匙.`,
+            cost: E("eee999"),
+        },    
+        yekey3: {
+            unl() { return true },
+            sunshard: true,
+           
+            desc: `获得1黄钥匙.`,
+            cost: E("eee999"),
+        },    
+        blkey1: {
+            unl() { return true },
+            sunshard: true,
+         
+            desc: `获得1蓝钥匙.`,
+            cost: E("eee999"),
+        },      
+        blkey2: {
+            unl() { return true },
+            sunshard: true,
+         
+            desc: `获得1蓝钥匙.`,
+            cost: E("eee999"),
+        },     
+        bldo1: {
+            unl() { return true },
+            sunshard: true,
+            req() { return player.exotic.tree.length>=99 },
+            reqDesc() { return `1蓝钥匙.` },
+            desc: ``,
+            cost: E("eee999"),
+        },      
+        bldo2: {
+            unl() { return true },
+            sunshard: true,
+            req() { return player.exotic.tree.length>=99 },
+            reqDesc() { return `1蓝钥匙.` },
+            desc: ``,
+            cost: E("eee999"),
+        },   
+        yedo1: {
+            unl() { return true },
+            sunshard: true,
+            req() { return player.exotic.tree.length>=99 },
+          
+        
+            desc: `消耗1黄钥匙`,
+            cost: E("eee999"),
+        }, 
+        yedo2: {
+            unl() { return true },
+            sunshard: true,
+
+            req() { return player.exotic.tree.length>=99 },
+         
+            desc: `消耗1黄钥匙`,
+            cost: E("eee999"),
+        },
+        yedo3: {
+            unl() { return true },
+            sunshard: true,
+         
+            req() { return player.exotic.tree.length>=99 },
+            
+            desc: `消耗1黄钥匙`,
+            cost: E("eee999"),
+        },    
+        bobo: {
+            unl() { return true },
+            sunshard: true,
+          
+            desc: `如果你第一次获得了11太阳碎片，那么祝贺你，你的前期是比较成功的.`,
+            cost: E("eee999"),
+        },  
+        rebs11: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('yedo1') },
+            reqDesc() { return `开旁边的黄门.` },
+            desc: `奇异物质获取x5.`,
+            cost: E("eee999"),
+        },    
+        rebs12: {
+            unl() { return true },
+            sunshard: true,
+            desc: `暗射线获取x2.`,
+            cost: E("eee999"),
+        },     
+        rebs13: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('yedo2') },
+            reqDesc() { return `开下面的黄门.` },
+            desc: `雕文质量获取x3.`,
+            cost: E("eee999"),
+        }, 
+        blbs11: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('yedo1') },
+            reqDesc() { return `开旁边的黄门.` },
+            desc: `超新星的元折算弱化80%.`,
+            cost: E("eee999"),
+        },    
+        blbs12: {
+            unl() { return true },
+            sunshard: true,
+            desc: `六重阶层的元折算延迟1e10倍出现.`,
+            cost: E("eee999"),
+        },    
+        blbs13: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('bldo2') },
+            reqDesc() { return `开旁边的蓝门.` },
+            desc: `原子能量的软上限弱化2%.`,
+            cost: E("eee999"),
+        },   
+        grbs11: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('bldo1') },
+            reqDesc() { return `开旁边的蓝门.` },
+            desc: `行星重置时保留1e10奇异物质.`,
+            cost: E("eee999"),
+        }, 
+        grbs12: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('yedo2') },
+            reqDesc() { return `开下面的黄门.` },
+            desc: `行星重置时保留1e6奇异重置次数.`,
+            cost: E("eee999"),
+        },    
+        grbs13: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('yedo3') },
+            reqDesc() { return `开旁边的黄门.` },
+            desc: `行星重置时保留1e4暗射线.`,
+            cost: E("eee999"),
+        },   
+        yebs11: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('bldo1') },
+            reqDesc() { return `开旁边的蓝门.` },
+            desc: `自动购买奇异升级.`,
+            cost: E("eee999"),
+        }, 
+        yebs12: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('bldo2') },
+            reqDesc() { return `开旁边的蓝门.` },
+            desc: `自动购买奇异推进.`,
+            cost: E("eee999"),
+        }, 
+        yebs13: {
+            unl() { return true },
+            sunshard: true,
+            req() { return  hasTree('yedo3') },
+            reqDesc() { return `开旁边的黄门.` },
+            desc: `自动获得最终星辰碎片.`,
+            cost: E("eee999"),
+        }, 
+        lt: {
+            unl() { return true },
+            sunshard: true,
+           
+            desc: `当前区域黄钥匙消耗3太阳碎片，蓝钥匙消耗5太阳碎片.`,
+            cost: E("eee999"),
+        }, 
     },
 }
 
@@ -2156,7 +2352,7 @@ function changeTreeAnimation() {
 
 function updateTreeHTML() {
     tmp.el.neutronStar.setTxt(format(player.supernova.stars,2)+" "+formatGain(player.supernova.stars,tmp.supernova.star_gain.mul(tmp.preQUGlobalSpeed)))
-    tmp.el.treeResName.setTxt("Neutron star")
+    tmp.el.treeResName.setTxt("中子星")
     let req = ""
     let t_ch = TREE_UPGS.ids[tmp.supernova.tree_choosed]
     if (tmp.supernova.tree_choosed != "") req = t_ch.req?`<span class="${t_ch.req()?"green":"red"}">${t_ch.reqDesc?"需满足："+(typeof t_ch.reqDesc == "function"?t_ch.reqDesc():t_ch.reqDesc):""}</span>`:""
@@ -2164,7 +2360,7 @@ function updateTreeHTML() {
         tmp.supernova.tree_choosed == "" ? `<div style="font-size: 12px; font-weight: bold;"><span class="gray">(click any tree upgrade to show)</span></div>`
         : `<div style="font-size: 12px; font-weight: bold;"><span class="gray">(click again to buy if affordable)</span>${req}</div>
         <span class="sky"><b>[${tmp.supernova.tree_choosed}]</b>${t_ch.desc}</span><br>
-        <span>Cost: ${t_ch.ax?formatSpace(t_ch.cost):format(t_ch.cost,2)} ${t_ch.ax?'Axionic Space':t_ch.qf?'Quantum foam':'Neutron star'}</span><br>
+        <span>Cost: ${t_ch.ax?formatSpace(t_ch.cost):format(t_ch.cost,2)} ${t_ch.sunshard?'太阳碎片':t_ch.ax?'Axionic Space':t_ch.qf?'Quantum foam':'Neutron star'}</span><br>
         <span class="green">${t_ch.effDesc?"目前效果："+t_ch.effDesc(tmp.supernova.tree_eff[tmp.supernova.tree_choosed]):""}</span>
         `
     )
@@ -2187,6 +2383,11 @@ function updateTreeHTML() {
 	if (tmp.tree_tab == 6){
         tmp.el.neutronStar.setHTML(formatSpace(EXOTIC.axsRem())+" / "+formatSpace(EXOTIC.axsVal()))
         tmp.el.treeResName.setTxt("Axionic Space")
-        tmp.el.resetAxionicTree.setDisplay(true)
-	}else tmp.el.resetAxionicTree.setDisplay(false)
+        tmp.el.resetAxionicTree.setDisplay(true)  
+	}
+    if (tmp.tree_tab == 7){
+        tmp.el.neutronStar.setTxt(format(player.sunshard)),
+        tmp.el.treeResName.setTxt("太阳碎片")
+    }
+    else tmp.el.resetAxionicTree.setDisplay(false)
 }

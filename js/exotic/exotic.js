@@ -152,6 +152,7 @@ const EXOTIC = {
             return {pow: pow, eff: x}
         },
     },
+	
     drGain(){
         let x = E(1);
 		if(hasUpgrade('exotic', 15)){
