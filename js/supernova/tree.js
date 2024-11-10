@@ -2380,14 +2380,15 @@ function updateTreeHTML() {
         tmp.el.neutronStar.setTxt(format(player.qu.points,2))
         tmp.el.treeResName.setTxt("Quantum foam")
 	}
-	if (tmp.tree_tab == 6){
+	
+     if (tmp.tree_tab == 7){
+        tmp.el.neutronStar.setTxt(format(player.sunshard)),
+        tmp.el.treeResName.setTxt("太阳碎片")
+    }
+    if (tmp.tree_tab == 6){
         tmp.el.neutronStar.setHTML(formatSpace(EXOTIC.axsRem())+" / "+formatSpace(EXOTIC.axsVal()))
         tmp.el.treeResName.setTxt("Axionic Space")
         tmp.el.resetAxionicTree.setDisplay(true)  
 	}
-    if (tmp.tree_tab == 7){
-        tmp.el.neutronStar.setTxt(format(player.sunshard)),
-        tmp.el.treeResName.setTxt("太阳碎片")
-    }
-    else tmp.el.resetAxionicTree.setDisplay(false)
+    else  tmp.el.resetAxionicTree.setDisplay(false)
 }
