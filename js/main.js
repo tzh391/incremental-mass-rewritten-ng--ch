@@ -15,18 +15,61 @@ const ST_NAMES = [
 	]
 ]
 const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
-
-const FORMS = {
-    sunshardGain() {
+const SUNSHARD = {
+    Gain() {
         let x =E(0) 
         if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))x=player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
         return x
-
-
-
-
-
     },
+    doReset(force=false) {
+        player.exotic.points=new Decimal(0)
+        player.exotic.times=new Decimal(0)
+        player.exotic.rcb=[E(0),E(0),E(0),E(0)]
+        player.exotic.dr=new Decimal(0)
+        player.exotic.ds=new Decimal(0)
+        player.exotic.ab=new Decimal(0)
+        player.exotic.bp=new Decimal(0)
+        player.exotic.boosts=[E(0),E(0),E(0),E(0),E(0),E(0),E(0)]
+        player.exotic.dark_run.upgs=[E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0)];
+        player.exotic.dark_run.points=new Decimal(0)
+        player.exotic.matters=[E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0),E(0)];
+        player.exotic.fss=new Decimal(0)
+        player.exotic.axg=[E(0),E(0),E(0),E(0)]
+        player.exotic.ax=[E(0),E(0),E(0),E(0)]
+        player.Quantum.tree= [];
+        player.exotic.tree = [];
+        player.exotic.tree.length=new Decimal(0)
+        player.superCluster=new Decimal(0)
+		player.superGal=new Decimal(0)
+		player.galQk=new Decimal(0)
+	    player.gc.shard=new Decimal(0)
+		player.galParticles=[new Decimal(0),new Decimal(0),new Decimal(0)]
+		player.galPow=[E(0),E(0),E(0),E(0),E(0),E(0),E(0)]
+        player.atom.chargedelements=0
+        for (let x = 0; x < 363; x++)
+        player.atom.elements=[x]
+		player.supernova.fermions.tiers[3]=[E(0),E(0),E(0),E(0),E(0),E(0)]
+        player.mainUpg.exotic = []
+        player.ascensionMassUpg=[E(0),E(0),E(0),E(0),E(0)]
+        player.ascensionMass=new Decimal(0)
+        player.prestigeST=new Decimal(0)
+        player.stellar_gen=new Decimal(0)
+        player.stellar=new Decimal(0)
+        player.stardust=new Decimal(0)
+        player.chal.comps[21] = E(0)
+		player.chal.comps[22] = E(0)
+		player.chal.comps[23] = E(0)
+		player.chal.comps[24] = E(0)
+        SUPERNOVA_CLUSTER.reset(true)
+        EXOTIC.reset(true)
+    }, 
+
+
+
+}
+const FORMS = {
+    
+
     getPreQUGlobalSpeed() {
         let x = E(1)
         if (tmp.qu.mil_reached[1]) x = x.mul(10)

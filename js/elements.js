@@ -315,7 +315,7 @@ function updateUpperHTML() {
 	if (unl) tmp.el.stardustAmt.setHTML(format(player.stardust,0)+"<br>"+player.stardust.formatGain(SUPERNOVA_CLUSTER.stardustGain(),0))
 	unl = player.prestigeST.gte(1e6)
 	tmp.el.sunshard_div.setDisplay(unl)
-	if (unl) tmp.el.sunAmt.setHTML(format(player.sunshard,0)+"<br>(+"+format(FORMS.sunshardGain(),0)+")")
+	if (unl) tmp.el.sunAmt.setHTML(format(player.SUNSHARD,0)+"<br>(+"+format(SUNSHARD.Gain(),0)+")")
 }
 
 function updateMassUpgradesHTML() {
@@ -544,6 +544,8 @@ function updateOptionsHTML() {
 		:CONFIRMS[x] == "exotic"
 		?(player.exotic.times.gte(1))
 		:(player[CONFIRMS[x]].unl || player.superGal.gte(1))
+		
+			
 
 		tmp.el["confirm_div_"+x].setDisplay(unl)
 		tmp.el["confirm_btn_"+x].setTxt(player.confirms[CONFIRMS[x]] ? "ON":"OFF")

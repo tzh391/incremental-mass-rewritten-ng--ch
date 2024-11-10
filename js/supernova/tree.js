@@ -2389,6 +2389,6 @@ function updateTreeHTML() {
         tmp.el.neutronStar.setHTML(formatSpace(EXOTIC.axsRem())+" / "+formatSpace(EXOTIC.axsVal()))
         tmp.el.treeResName.setTxt("Axionic Space")
         tmp.el.resetAxionicTree.setDisplay(true)  
-	}
+	}  
     else  tmp.el.resetAxionicTree.setDisplay(false)
 }
