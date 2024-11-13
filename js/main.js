@@ -75,13 +75,15 @@ const sunshard = {
         player.et.points=new Decimal(1)
         player.et.times=new Decimal(1)
         player.qu.qc.shard=new Decimal(408)
+        player.prestigeRP = E(0);
         player.prestigeBH = E(0);
 		player.prestigeBHC = E(0);
 		player.prestigeDM = E(0);
 		player.prestigeAT= E(0);
 		player.prestigeQK= E(0);
         player.atom.quarks=new Decimal(1e100)
-      
+        player.supernova.times= E(100);
+
         player.rp.unl = true;
         player.bh.unl = true;
         player.atom.unl = true;}

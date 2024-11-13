@@ -1846,7 +1846,7 @@ function updateRanksTemp() {
 function updateRanksHTML() {
     tmp.el.rank_tabs.setDisplay(hasUpgrade('br',9))
     tmp.el.rank_tab2_btn.setDisplay(hasPrestige(3,23) || hasAscension(0,1))
-    tmp.el.rank_tab3_btn.setDisplay(player.prestigeST.gte(1e6))
+    tmp.el.rank_tab3_btn.setDisplay(player.prestigeST.gte(1e6)|| player.sunshard>=(1))
     for (let x = 0; x < 4; x++) {
         tmp.el["rank_tab"+x].setDisplay(tmp.rank_tab == x)
     }
@@ -1969,7 +1969,7 @@ function updateRanksHTML() {
 		}else{
 			tmp.el["pres_qk"].setDisplay(false);
 		}      
-        if (hasChargedElement(259) ){
+        if (hasChargedElement(259)){
 			tmp.el["pres_st"].setDisplay(true);
 			tmp.el["pres_st2"].setHTML(format(player.prestigeST,0)+" "+formatGain(player.prestigeST, tmp.prestigeSTGain))
 			

@@ -114,13 +114,20 @@ const TREE_UPGS = {
 			}
 			return;
 		}
+        if(this.ids[x].sunshard){
 		
+			if(hasTree(x))return;
+			if(tmp.supernova.tree_choosed != x)return;
+			player.sunshard-(this.ids[x].cost)
+			return;
+		}
         if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
-            
+           
              if (this.ids[x].qf) player.qu.points = player.qu.points.sub(this.ids[x].cost).max(0)
             else  player.supernova.stars = player.supernova.stars.sub(this.ids[x].cost).max(0)
             player.supernova.tree.push(x)
         }
+     
     },
     ids: {
         c: {
