@@ -6,7 +6,7 @@ const TREE_TAB = [
     {title: "Quantum", unl() { return quUnl() } },
     {title: "量子+", unl() { return hasChargedElement(118) } },
     {title: "轴子", unl() { return hasElement(556) } },
-    {title: "星图", unl() { return player.prestigeST.gte(1e6) } },
+    {title: "星图", unl() { return player.prestigeST.gte(1e6)||player.sunshard>=(1) } },
 ]
 
 const TREE_IDS = [

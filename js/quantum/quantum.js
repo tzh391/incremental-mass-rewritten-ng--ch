@@ -346,7 +346,7 @@ function updateQuantumHTML() {
     tmp.el.gs1_div.setDisplay(unl)
     if (unl) tmp.el.preQGSpeed.setHTML(formatMult(tmp.preQUGlobalSpeed))
 
-    unl = hasTree("unl4") && player.exotic.times.lt(1)
+    unl = hasTree("unl4") || player.sunshard>=(1)
     tmp.el.br_div.setDisplay(unl)
     if (unl) tmp.el.brAmt.setHTML(player.qu.rip.amt.format(0)+"<br>"+((player.qu.rip.active || (hasTree('qu_qol12') && gain2))?gain2?player.qu.rip.amt.formatGain(tmp.rip.gain.div(10)):`(+${tmp.rip.gain.format(0)})`:"(inactive)"))
 	if (tmp.rip.gain.gte(Number.MAX_VALUE)){

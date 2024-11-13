@@ -15,15 +15,16 @@ const ST_NAMES = [
 	]
 ]
 const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
-const SUNSHARD = {
+const sunshard = {
     Gain() {
         let x =E(0) 
         if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))x=player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
         return x
     },
-    doReset(force=false) {
+    reset(force=false) {
+        if (sunshard.Gain()>=(1))  {player.sunshard=11
         player.exotic.points=new Decimal(0)
-        player.exotic.times=new Decimal(0)
+        player.exotic.times=new Decimal(1)
         player.exotic.rcb=[E(0),E(0),E(0),E(0)]
         player.exotic.dr=new Decimal(0)
         player.exotic.ds=new Decimal(0)
@@ -36,22 +37,24 @@ const SUNSHARD = {
         player.exotic.fss=new Decimal(0)
         player.exotic.axg=[E(0),E(0),E(0),E(0)]
         player.exotic.ax=[E(0),E(0),E(0),E(0)]
-        player.Quantum.tree= [];
-        player.exotic.tree = [];
         player.exotic.tree.length=new Decimal(0)
+    
+        player.supernova.tree.length=new Decimal(0)
         player.superCluster=new Decimal(0)
 		player.superGal=new Decimal(0)
 		player.galQk=new Decimal(0)
 	    player.gc.shard=new Decimal(0)
 		player.galParticles=[new Decimal(0),new Decimal(0),new Decimal(0)]
 		player.galPow=[E(0),E(0),E(0),E(0),E(0),E(0),E(0)]
-        player.atom.chargedelements=0
-        for (let x = 0; x < 363; x++)
-        player.atom.elements=[x]
+        player.atom.chargedElements=[]
+        player.atom.elements=[]
+        player.supernova.fermions.tiers[2]=[E(0),E(0),E(0),E(0),E(0),E(0)]
 		player.supernova.fermions.tiers[3]=[E(0),E(0),E(0),E(0),E(0),E(0)]
         player.mainUpg.exotic = []
         player.ascensionMassUpg=[E(0),E(0),E(0),E(0),E(0)]
+        player.ascensionMassUpg=[E(0),E(0),E(0),E(0),E(0)]
         player.ascensionMass=new Decimal(0)
+
         player.prestigeST=new Decimal(0)
         player.stellar_gen=new Decimal(0)
         player.stellar=new Decimal(0)
@@ -60,8 +63,28 @@ const SUNSHARD = {
 		player.chal.comps[22] = E(0)
 		player.chal.comps[23] = E(0)
 		player.chal.comps[24] = E(0)
-        SUPERNOVA_CLUSTER.reset(true)
-        EXOTIC.reset(true)
+        player.ascensions[0] = E(0)
+        player.ascensions[1] = E(0)
+        player.ascensions[2] = E(0)
+        SUPERNOVA_GALAXY.reset(true)
+        player.superGal=new Decimal(10)
+        player.qu.points=new Decimal("1e308")
+        player.qu.times=new Decimal(1e25)
+        player.inf.points=new Decimal(1e10)
+        player.inf.times=new Decimal(1e5)
+        player.et.points=new Decimal(1)
+        player.et.times=new Decimal(1)
+        player.qu.qc.shard=new Decimal(408)
+        player.prestigeBH = E(0);
+		player.prestigeBHC = E(0);
+		player.prestigeDM = E(0);
+		player.prestigeAT= E(0);
+		player.prestigeQK= E(0);
+        player.atom.quarks=new Decimal(1e100)
+      
+        player.rp.unl = true;
+        player.bh.unl = true;
+        player.atom.unl = true;}
     }, 
 
 

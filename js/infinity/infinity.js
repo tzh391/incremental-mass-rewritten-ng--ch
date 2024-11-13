@@ -313,7 +313,7 @@ function updateInfinityTemp() {
 
     tmp.et.shard_gen_can = player.et.points.gte(tmp.et.shard_gen_cost)
     tmp.et.shard_gen_eff = ETERNITY_LAYER.shard_gen.eff()
-	
+
 	if(hasElement(220))player.et.shard_gen = player.et.shard_gen.max(tmp.et.shard_gen_bulk)
 }
 
