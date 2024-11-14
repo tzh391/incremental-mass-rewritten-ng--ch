@@ -16,13 +16,15 @@ const ST_NAMES = [
 ]
 const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
 const sunshard = {
-    Gain() {
+    gain() {
         let x =E(0) 
         if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))x=player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
         return x
     },
     reset(force=false) {
-        if (sunshard.Gain()>=(1))  {player.sunshard=11
+        if(sunshard.gain().gte(1)){
+        player.sun.shard=player.sun.shard.add(11)
+        SUPERNOVA_CLUSTER.reset(true);
         player.exotic.points=new Decimal(0)
         player.exotic.times=new Decimal(1)
         player.exotic.rcb=[E(0),E(0),E(0),E(0)]
@@ -66,6 +68,8 @@ const sunshard = {
         player.ascensions[0] = E(0)
         player.ascensions[1] = E(0)
         player.ascensions[2] = E(0)
+        player.superGal=new Decimal(10)
+        EXOTIC.doReset();
         SUPERNOVA_GALAXY.reset(true)
         player.superGal=new Decimal(10)
         player.qu.points=new Decimal("1e308")
@@ -86,7 +90,9 @@ const sunshard = {
 
         player.rp.unl = true;
         player.bh.unl = true;
-        player.atom.unl = true;}
+        player.atom.unl = true;
+
+    }
     }, 
 
 

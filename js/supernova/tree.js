@@ -6,7 +6,7 @@ const TREE_TAB = [
     {title: "Quantum", unl() { return quUnl() } },
     {title: "量子+", unl() { return hasChargedElement(118) } },
     {title: "轴子", unl() { return hasElement(556) } },
-    {title: "星图", unl() { return player.prestigeST.gte(1e6)||player.sunshard>=(1) } },
+    {title: "星图", unl() { return player.prestigeST.gte(1e6)||player.sun.shard.gte(1)   } },
 ]
 
 const TREE_IDS = [
@@ -118,7 +118,7 @@ const TREE_UPGS = {
 		
 			if(hasTree(x))return;
 			if(tmp.supernova.tree_choosed != x)return;
-			player.sunshard-(this.ids[x].cost)
+			player.sun.shard-(this.ids[x].cost)
 			return;
 		}
         if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
@@ -2389,7 +2389,7 @@ function updateTreeHTML() {
 	}
 	
      if (tmp.tree_tab == 7){
-        tmp.el.neutronStar.setTxt(format(player.sunshard)),
+        tmp.el.neutronStar.setTxt(format(player.sun.shard)),
         tmp.el.treeResName.setTxt("太阳碎片")
     }
     if (tmp.tree_tab == 6){

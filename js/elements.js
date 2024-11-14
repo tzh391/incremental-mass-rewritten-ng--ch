@@ -313,9 +313,9 @@ function updateUpperHTML() {
 	unl = player.superCluster.gte(21)
 	tmp.el.stardust_div.setDisplay(unl)
 	if (unl) tmp.el.stardustAmt.setHTML(format(player.stardust,0)+"<br>"+player.stardust.formatGain(SUPERNOVA_CLUSTER.stardustGain(),0))
-	unl = player.prestigeST.gte(1e6)||player.sunshard>=(1)
+	unl = player.prestigeST.gte(1e6)||player.sun.shard.gte(1)
 	tmp.el.sunshard_div.setDisplay(unl)
-	if (unl) tmp.el.sunAmt.setHTML(format(player.sunshard,0)+"<br>(+"+format(sunshard.Gain(),0)+")")
+	if (unl) tmp.el.sunAmt.setHTML(format(player.sun.shard,0)+"<br>(+"+format(sunshard.gain(),0)+")")
 }
 
 function updateMassUpgradesHTML() {

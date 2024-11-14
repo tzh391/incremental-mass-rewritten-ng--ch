@@ -1846,7 +1846,7 @@ function updateRanksTemp() {
 function updateRanksHTML() {
     tmp.el.rank_tabs.setDisplay(hasUpgrade('br',9))
     tmp.el.rank_tab2_btn.setDisplay(hasPrestige(3,23) || hasAscension(0,1))
-    tmp.el.rank_tab3_btn.setDisplay(player.prestigeST.gte(1e6)|| player.sunshard>=(1))
+    tmp.el.rank_tab3_btn.setDisplay(player.prestigeST.gte(1e6)|| player.sun.shard.gte(1))
     for (let x = 0; x < 4; x++) {
         tmp.el["rank_tab"+x].setDisplay(tmp.rank_tab == x)
     }

@@ -121,7 +121,7 @@ function calc(dt, dt_offline) {
             for (let x = 0; x < 3; x++) player.atom.powers[x] = player.atom.powers[x].add(tmp.atom.particles[x].powerGain.mul(du_gs))
         }
         if (hasTree("qol1")) for (let x = 1; x <= tmp.elements.unl_length && x <= 118; x++) if (x<=tmp.elements.upg_length) ELEMENTS.buyUpg(x,1)
-            if (player.sunshard>=1) for (let x = 1; x <= tmp.elements.unl_length && x <= 362; x++) if (x<=tmp.elements.upg_length) ELEMENTS.buyUpg(x,1)
+            if (player.sun.shard.gte(1) )for (let x = 1; x <= tmp.elements.unl_length && x <= 362; x++) if (x<=tmp.elements.upg_length) ELEMENTS.buyUpg(x,1)
         player.md.mass = player.md.mass.add(tmp.md.mass_gain.mul(du_gs))
         if (hasTree("qol3")) player.md.particles = player.md.particles.add(player.md.active ? tmp.md.rp_gain.mul(du_gs) : tmp.md.passive_rp_gain.mul(du_gs))
         if (hasTree("qol4")) STARS.generators.unl(true)
