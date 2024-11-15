@@ -7,6 +7,7 @@ const EXOTIC = {
 		if (player.qu.times.gte(1e500))x = x.mul(player.qu.times.add(10).log10().add(10).log10());
 		if (player.qu.times.gte(1e10000))x = x.mul(player.qu.times.add(10).log10());
 		if (player.qu.times.gte(1e255) && player.exotic.times.gte(1))x = x.mul(3)
+	
 		if (player.qu.times.gte(1e295) && player.exotic.times.gte(1))x = x.mul(5)
         if (hasPrestige(2,141)) x = x.mul(prestigeEff(2,141,E(1)));
         if (hasPrestige(3,21)) x = x.mul(prestigeEff(3,21,E(1)));
@@ -51,9 +52,11 @@ const EXOTIC = {
     },
     gainTimes() {
         let x = E(1)
+		if (player.sun.shard.gte(1))x = x.mul(5)
 		if (hasElement(402)) x = x.mul(tmp.ex.rcb_eff[3]?(tmp.ex.rcb_eff[3].eff||1):1);
 		if (hasChargedElement(243)&&player.galQk.gte("1e6118")) x = x.mul(tmp.elements.effect[243]);
 		if(player.superCluster.gte(8))x = x.mul(SUPERNOVA_CLUSTER.effects.eff1());
+		
         return x
     },
     mils: [
@@ -249,6 +252,7 @@ const EXOTIC = {
 		x = x.mul(player.exotic.ax[2].add(10).log10());
 		x = x.mul(player.exotic.ax[3].add(10).log10());
 		if(hasTree('ax6'))x = x.mul(hasTree('ax39')?5:hasTree('ax29')?4.5:hasTree('ax27')?3:hasTree('ax18')?2.25:hasTree('ax12')?1.9:1.35);
+	
 		return x;
     },
     axsRem(){

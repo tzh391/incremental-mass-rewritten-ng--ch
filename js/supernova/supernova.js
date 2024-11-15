@@ -135,7 +135,7 @@ function calcSupernova(dt, dt_offline) {
             .max(tmp.fermions.tiers[i][j])
           
         }
-         if (hasChargedElement(246)&&player.inf.points.gte("1e9250000000")) for (let i = 2; i < 4; i++) for (let j = 5; j < 6; j++) if (j < FERMIONS.getUnlLength()) {
+         if ((hasChargedElement(246)&&player.inf.points.gte("1e9250000000"))|| player.sun.shard.gte(1))for (let i = 2; i < 4; i++) for (let j = 5; j < 6; j++) if (j < FERMIONS.getUnlLength()) {
             su.fermions.tiers[i][j] = su.fermions.tiers[i][j]
             .max(tmp.fermions.tiers[i][j])   
         }

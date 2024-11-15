@@ -14,6 +14,7 @@ const SUPERNOVA_GALAXY = {
 		if(hasElement(467))ret /= 40;
 		if(hasAscension(1,19))ret /= 2;
 		if(hasElement(539))ret /= 125;
+		if(player.sun.shard.gte(1))ret = 1
 		return ret;
 	},
 	req(){
@@ -286,6 +287,7 @@ const SUPERNOVA_GALAXY = {
 	galQkGain(){
 		if(player.superGal.lt(10))return E(0);
 		let ret=player.supernova.fermions.points[0].add(1).log10().add(1).log10().add(1).log10();
+
 		if(hasElement(386))ret=player.supernova.fermions.points[0].add(1).log10().add(1).log10().add(1).log10().max(player.supernova.fermions.points[0].add(1).log10().add(1).log10().pow(0.1));
 		if(hasElement(374))ret=ret.mul(player.atom.quarks.add(1).log10().add(1).log10().pow(0.1));
 		else ret=ret.mul(player.atom.quarks.add(1).log10().add(1).log10().add(1).log10());

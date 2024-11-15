@@ -18,12 +18,12 @@ const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exot
 const sunshard = {
     gain() {
         let x =E(0) 
-        if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))x=player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9)
+        if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))x=Math.floor(player.mass.add(1).log10().add(1).log10().add(1).log10().sub(127).pow(0.5).mul(player.supernova.times.add(1).log10().sub(307.25).pow(0.1)).mul(player.prestigeST.div(1e6).pow(0.2)).add(9))
         return x
     },
     reset(force=false) {
         if(sunshard.gain().gte(1)){
-        player.sun.shard=player.sun.shard.add(11)
+        player.sun.shard=player.sun.shard.add(sunshard.gain())
         SUPERNOVA_CLUSTER.reset(true);
         player.exotic.points=new Decimal(0)
         player.exotic.times=new Decimal(1)
@@ -71,6 +71,12 @@ const sunshard = {
         player.superGal=new Decimal(10)
         EXOTIC.doReset();
         SUPERNOVA_GALAXY.reset(true)
+        player.mainUpg.rp = []
+        player.mainUpg.bh = []
+        player.mainUpg.atom = []
+        player.mainUpg.br = [9]
+        player.mainUpg.inf = []
+        player.mainUpg.exotic = []
         player.superGal=new Decimal(10)
         player.qu.points=new Decimal("1e308")
         player.qu.times=new Decimal(1e25)
@@ -122,7 +128,7 @@ const FORMS = {
 		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
 			
 		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
-			
+	
 		if (CHALS.inChal(20) && !hasElement(558)) x = x.min("ee50")
 		return x
     },

@@ -83,6 +83,7 @@ const INFINITY_LAYER = {
         if (player.ranks.hex.gte(127)) x = x.mul(RANKS.effect.hex[127]())
         if (player.ranks.oct.gte(10)) x = x.mul(RANKS.effect.oct[10]())
 		x = x.mul(SUPERNOVA_GALAXY.effects.inf())
+		
         return x
     },
     gainTimes() {
@@ -177,6 +178,7 @@ const ETERNITY_LAYER = {
         if (player.ranks.oct.gte(10)) x = x.mul(RANKS.effect.oct[10]())
 		x = x.mul(SUPERNOVA_GALAXY.effects.inf())
 		if (hasElement(436)) x = x.mul(EXOTIC.abEff().em);
+		
         return x
     },
     gainTimes() {

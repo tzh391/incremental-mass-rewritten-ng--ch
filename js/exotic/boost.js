@@ -12,6 +12,7 @@ const EXOTIC_BOOST = {
 		if (player.exotic.times.gte(1000))x = x.add(1)
 		if (player.exotic.times.gte(1000000))x = x.add(1)
 		if (player.exotic.times.gte(1e10))x = x.add(1)	
+
         return x
     },
     used_bp() {

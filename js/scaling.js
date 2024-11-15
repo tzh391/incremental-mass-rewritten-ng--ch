@@ -708,6 +708,7 @@ function getScalingPower(type, name) {
 		}
 		if (name=="superGal") {
 			if(hasElement(503))power = power.mul(tmp.fermions.effs2[3][4]||E(1))
+			
 			if (hasChargedElement(246)&&player.mass.gte("ee4.4e123")) power = power.mul((tmp.prestigeATEffect||E(1)))	
 		}
 		if (name=="gfTier") {
