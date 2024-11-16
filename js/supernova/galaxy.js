@@ -287,7 +287,7 @@ const SUPERNOVA_GALAXY = {
 	galQkGain(){
 		if(player.superGal.lt(10))return E(0);
 		let ret=player.supernova.fermions.points[0].add(1).log10().add(1).log10().add(1).log10();
-
+		
 		if(hasElement(386))ret=player.supernova.fermions.points[0].add(1).log10().add(1).log10().add(1).log10().max(player.supernova.fermions.points[0].add(1).log10().add(1).log10().pow(0.1));
 		if(hasElement(374))ret=ret.mul(player.atom.quarks.add(1).log10().add(1).log10().pow(0.1));
 		else ret=ret.mul(player.atom.quarks.add(1).log10().add(1).log10().add(1).log10());
@@ -326,6 +326,7 @@ const SUPERNOVA_GALAXY = {
 		if(hasElement(486))ret = ret.mul(MATTERS.eff(3));
 		if(player.superCluster.gte(21))ret = ret.mul(tmp.stellar.eff);
 		ret=ret.mul((SUPERNOVA_GALAXY.effects.gqk()))
+		if (player.sun.shard.gte(1))ret = ret.div(1e20)
 		if(hasChargedElement(251))ret = ret.pow(tmp.prestigeQKEffect)
 		return ret;
 	},

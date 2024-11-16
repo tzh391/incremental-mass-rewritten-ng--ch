@@ -7,7 +7,7 @@ const EXOTIC = {
 		if (player.qu.times.gte(1e500))x = x.mul(player.qu.times.add(10).log10().add(10).log10());
 		if (player.qu.times.gte(1e10000))x = x.mul(player.qu.times.add(10).log10());
 		if (player.qu.times.gte(1e255) && player.exotic.times.gte(1))x = x.mul(3)
-	
+		
 		if (player.qu.times.gte(1e295) && player.exotic.times.gte(1))x = x.mul(5)
         if (hasPrestige(2,141)) x = x.mul(prestigeEff(2,141,E(1)));
         if (hasPrestige(3,21)) x = x.mul(prestigeEff(3,21,E(1)));

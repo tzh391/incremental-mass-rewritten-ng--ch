@@ -183,7 +183,6 @@ const QUANTUM = {
         [E(1e303), `Meta-Pent starts 1e25x later.`],
         [E(Number.MAX_VALUE), `Quantum times add to Infinity Mass gain formula. Super Supernova Galaxies starts 5 later.`],
         [E('6.9e420'), `Entropic Evaporation^2 is 50% weaker.`],
-        [E("1e500"), `平方1e250量子次数里程碑效果.`],
         [E('1e600'), `Multiply the starting point of Meta-Pent scaling by (quantizes+1).`],
         [E('4.2e690'), `Green Chroma is applied to Pent.`],
         [E('1e900'), `Red Chroma is better.`],
@@ -224,7 +223,7 @@ function getQUSave() {
         times: E(0),
         bp: E(0),
         cosmic_str: E(0),
-
+        tree: [],
         chr_get: [],
         chroma: [E(0),E(0),E(0)],
 

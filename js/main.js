@@ -22,7 +22,7 @@ const sunshard = {
         return x
     },
     reset(force=false) {
-        if(sunshard.gain().gte(1)){
+        if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6)){
         player.sun.shard=player.sun.shard.add(sunshard.gain())
         SUPERNOVA_CLUSTER.reset(true);
         player.exotic.points=new Decimal(0)
@@ -42,6 +42,7 @@ const sunshard = {
         player.exotic.tree.length=new Decimal(0)
     
         player.supernova.tree.length=new Decimal(0)
+     
         player.superCluster=new Decimal(0)
 		player.superGal=new Decimal(0)
 		player.galQk=new Decimal(0)
@@ -49,7 +50,7 @@ const sunshard = {
 		player.galParticles=[new Decimal(0),new Decimal(0),new Decimal(0)]
 		player.galPow=[E(0),E(0),E(0),E(0),E(0),E(0),E(0)]
         player.atom.chargedElements=[]
-        player.atom.elements=[]
+        player.atom.elements=[291]
         player.supernova.fermions.tiers[2]=[E(0),E(0),E(0),E(0),E(0),E(0)]
 		player.supernova.fermions.tiers[3]=[E(0),E(0),E(0),E(0),E(0),E(0)]
         player.mainUpg.exotic = []
@@ -75,7 +76,7 @@ const sunshard = {
         player.mainUpg.bh = []
         player.mainUpg.atom = []
         player.mainUpg.br = [9]
-        player.mainUpg.inf = []
+        player.mainUpg.inf = [11]
         player.mainUpg.exotic = []
         player.superGal=new Decimal(10)
         player.qu.points=new Decimal("1e308")
@@ -123,7 +124,7 @@ const FORMS = {
         if (hasPrestige(0,5)) x = x.pow(2)
 		x = x.pow(calcShardsEffect())
         if (hasChargedElement(103)) x = x.pow(tmp.elements.ceffect[103])
-	
+   
         if (QCs.active()) x = x.div(tmp.qu.qc_eff[1])
 		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
 			

@@ -368,7 +368,7 @@ function getPlayerData() {
 			shard: E(0),
             shardgain: E(0),
 			times: E(0),
-			
+            tree: [],
 		},
 		superCluster: E(0),
 		stardust: E(0),
