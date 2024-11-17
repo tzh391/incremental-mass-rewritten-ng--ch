@@ -760,7 +760,7 @@ const TREE_UPGS = {
             unl() { return quUnl() },
             qf: true,
             desc: `Good luck with new era!`,
-            cost: E("eee999"),
+            cost: E("0"),
         },
         qu1: {
             qf: true,
