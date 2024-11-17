@@ -290,7 +290,7 @@ const ELEMENTS = {
 				return x
             },
             effDesc(x) { return hasPrestige(0,40) ? "^"+format(x) : format(x)+"x" },
-            cdesc: `Passively gain 100% of the Exotic Matter you would get from resetting each second.`,
+            cdesc: `Passively gain 100% of the 奇异物质加成黑暗射线resetting each second.`,
             ccost: E("ee7.5e12"),
         },
         {
@@ -1388,7 +1388,7 @@ const ELEMENTS = {
 		{
 			desc: `使高于1.8e308的熵加成基础无限质量获取。`,
 			cost: uni(1),
-            cdesc: `Exotic Matter Post-1.8e308 added to base Infinity Mass gain formula.`,
+            cdesc: `奇异物质加成黑暗射线to base Infinity Mass gain formula.`,
             ccost: uni("e56000000"),
 		},
 		{
@@ -1508,7 +1508,7 @@ const ELEMENTS = {
 		{
 			desc: `使高于1.8e308的转生基础值加成基础无限质量获取。`,
 			cost: uni(6e35),
-            cdesc: `Abyssal Blot Post-1.8e308 added to base Infinity Mass gain formula.`,
+            cdesc: `深渊之渍 Post-1.8e308 added to base Infinity Mass gain formula.`,
             ccost: uni("e107000000"),
 		},
 		{
@@ -1649,7 +1649,7 @@ const ELEMENTS = {
 			desc: `如果你不在大撕裂中，绿色色度的效果变为原来的1.5次方。`,
 			cost: uni(1e36),
 			et: true,
-            cdesc: `Green Chroma's softcap starts weaker.`,
+            cdesc: `绿色色度's softcap starts weaker.`,
             ccost: uni("e570000"),
 		},
 		{
@@ -1756,7 +1756,7 @@ const ELEMENTS = {
 			desc: `每秒获得永恒质量和永恒次数，数量为重置时获取量的100%。`,
 			cost: uni(1e71),
 			et: true,
-            cdesc: `Eternal Mass gain formula is better.`,
+            cdesc: `永恒质量 gain formula is better.`,
             ccost: uni("e1.15e6"),
 		},
 		{
@@ -1870,7 +1870,7 @@ const ELEMENTS = {
 		{
 			desc: `无限升级3的效果变为原来的1.2次方。`,
 			cost: E("1.5e955"),
-			cdesc: `Infinity Upgrade 3 的效果变得更好.`,
+			cdesc: `无限升级 3 的效果变得更好.`,
 			ccost: mlt(1.155),
 		},
 		{
@@ -1964,7 +1964,7 @@ const ELEMENTS = {
 			ccost: E("e6180000000"),
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片 的效果变得更好.`,
 			cost: E("1.5e533"),
 			et: true,
 			cdesc: `鲨鱼吃掉了辉煌的超究折算，降伏器和星系费米子的超级折算，顺便吃掉了锻体器和助推器.`,
@@ -1985,7 +1985,7 @@ const ELEMENTS = {
 
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片 的效果变得更好.`,
 			cost: E("1.5e560"),
 			et: true,
 			cdesc: `鲨鱼的境界提升至潮汐级初等，使时间碎片的效果^1.2.`,
@@ -2090,7 +2090,7 @@ const ELEMENTS = {
 			ccost: E("e7800000000"),
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片 的效果变得更好.`,
 			cost: E("1.5e671"),
 			et: true,
 			cdesc: `鲨鱼深渊化了，使深渊之渍3的效果变得更好.`,
@@ -2402,7 +2402,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Meta-Prestige Level starts 3.5x later.`,
+			desc: `声望等级的元折算延迟3.5倍开始.`,
 			cost: E("1.5e926"),
 			et: true,
 		},
@@ -2411,12 +2411,12 @@ const ELEMENTS = {
 			cost: E("1.5e10056"),
 		},
 		{
-			desc: `星系碎片的效果也可以对 affects Galactic Atoms.`,
+			desc: `星系碎片的效果也可以对星系夸克生效.`,
 			cost: E("1e36"),
 			galQk: true,
 		},
 		{
-			desc: `Photon & Gluon Upgrade 3 变得更好.`,
+			desc: `光子和胶子的升级3变得更好.`,
 			cost: E("1.5e1006"),
 			et: true,
 		},
@@ -2430,16 +2430,16 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Break the maximum Supernova Limit, and reduce Supernova Galaxy requirement.`,
+			desc: `打破超新星上限并减少超新星星系的需求.`,
 			cost: E("5e39"),
 			galQk: true,
 		},
 		{
-			desc: `Remove a softcap of Stronger.`,
+			desc: `移除强化器的软上限.`,
 			cost: E("1.5e11936"),
 		},
 		{
-			desc: `Ultra Glory starts 2 later.`,
+			desc: `荣耀的超究折算延迟2次开始.`,
 			cost: E("1.5e1031"),
 			et: true,
 		},
@@ -2453,7 +2453,7 @@ const ELEMENTS = {
 			cost: E("1.5e12366"),
 		},
 		{
-			desc: `Neptunium-93's softcap is weaker.`,
+			desc: `93号元素镎的软上限更弱.`,
 			cost: E("1.5e1056"),
 			et: true,
 		},
@@ -2463,7 +2463,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Green Chroma affects Pent at a reduced rate.`,
+			desc: `绿色色度以削弱的效果对六重折算生效.`,
 			cost: E("1.5e12546"),
 			effect() {
 				let x = (tmp.qu.chroma_eff[1]||E(0)).add(10).log10().sqrt();
@@ -2472,7 +2472,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Green Chroma's softcap is weaker.`,
+			desc: `绿色色度的软上限更弱.`,
 			cost: E("1.5e1066"),
 			et: true,
 		},
@@ -2491,12 +2491,12 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Super Galactic Fermion Tier starts 1.5x later.`,
+			desc: `星系费米子的折算延迟1.5倍开始.`,
 			cost: E("5e44"),
 			galQk: true,
 		},
 		{
-			desc: `Eternal Mass is added to base Infinity Mass gain formula.`,
+			desc: `永恒质量获得基于无限质量的加成.`,
 			cost: E("1.5e13676"),
 		},
 		{
@@ -2505,7 +2505,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Galactic Quarks boost Prestige Mass gain.`,
+			desc: `星系夸克加成转生质量.`,
 			cost: E("1e47"),
 			galQk: true,
 			effect() {
@@ -2515,21 +2515,21 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Green Chroma's softcap is weaker.`,
+			desc: `绿色色度的软上限更弱.`,
 			cost: E("1.5e15036"),
 		},
 		{
-			desc: `Uncap C17 completions. Infinity Upgrade 3 is unsoftcapped.`,
+			desc: `移除挑战17的上限. 移除无限升级3的软上限.`,
 			cost: E("1.5e1186"),
 			et: true,
 		},
 		{
-			desc: `Super Galactic Fermion Tier starts 1.5x later.`,
+			desc: `星系费米子的折算延迟1.5倍开始.`,
 			cost: E("5e49"),
 			galQk: true,
 		},
 		{
-			desc: `Blue Chroma's softcap is weaker. Unsoftcap C3,C4,C8 effects.`,
+			desc: `蓝色色度的软上限更弱. 移除挑战3，4，8效果的软上限.`,
 			cost: E("1.5e15381"),
 		},
 		{
@@ -2543,7 +2543,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Big Rip Upgrade 20 is better.`,
+			desc: `大撕裂升级20变得更好.`,
 			cost: E("1.5e15756"),
 		},
 		{
@@ -2556,45 +2556,45 @@ const ELEMENTS = {
 			cost: E("1.5e17056"),
 		},
 		{
-			desc: `Uncap C18-19 completions.`,
+			desc: `移除挑战18，19的上限.`,
 			cost: E("1.5e1306"),
 			et: true,
 		},
 		{
-			desc: `星系碎片的效果也可以对 affects base Galactic Bosons gain.`,
+			desc: `星系碎片的效果也可以对星系玻色子生效.`,
 			cost: E("2e55"),
 			galQk: true,
 		},
 		{
-			desc: `Auto-Complete C16-18.`,
+			desc: `自动完成挑战16-18.`,
 			cost: E("1.5e21056"),
 		},
 		{
-			desc: `Remove Green Chroma's softcap.`,
+			desc: `移除绿色色度的软上限.`,
 			cost: E("1.5e1406"),
 			et: true,
 		},
 		{
-			desc: `[G-Tau]'s effect is raised by 1.75.`,
+			desc: `[G-陶子]'的效果增强1.75倍.`,
 			cost: E("5e61"),
 			galQk: true,
 		},
 		{
-			desc: `Infinity Upgrade 2 is raised by 5.`,
+			desc: `无限升级2的效果提升5.`,
 			cost: E("1.5e24506"),
 		},
 		{
-			desc: `Auto-Complete C19.`,
+			desc: `自动完成挑战19.`,
 			cost: E("1.5e1506"),
 			et: true,
 		},
 		{
-			desc: `Reduce Supernova Galaxy Requirement.`,
+			desc: `减少超新星星系的需求.`,
 			cost: E("1e64"),
 			galQk: true,
 		},
 		{
-			desc: `Remove Meta-Tetr scaling. Radiation Booster 'Meta-Rank Boost' affects Meta-Pent at a reduced rate.`,
+			desc: `移除元阶层的折算. 辐射波的'元级别加成'以削弱的倍率削弱六重阶层的元折算.`,
 			cost: E("1.5e25956"),
 			effect() {
 				let x = tmp.radiation.bs.eff[14].add(1).log10().add(1).log10().add(1).pow(0.5);
@@ -2603,17 +2603,17 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x later"; },
 		},
 		{
-			desc: `Meta-Hex starts 1.5x later.`,
+			desc: `七重阶层的元折算延迟1.5倍开始.`,
 			cost: E("1.5e1556"),
 			et: true,
 		},
 		{
-			desc: `The effect softcap of Galactic Power is weaker.`,
+			desc: `削弱星系能量的软上限T.`,
 			cost: E(2e66),
 			galQk: true,
 		},
 		{
-			desc: `Remove First Black Hole Overflow effect.`,
+			desc: `移除黑洞的一重溢出.`,
 			cost: E("1.5e28206"),
 		},
 		{
@@ -2622,16 +2622,16 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `星系碎片的效果也可以对 affects Galactic U-Fermions gain.`,
+			desc: `星系碎片的效果也可以对星系U-费米子生效.`,
 			cost: E(5e67),
 			galQk: true,
 		},
 		{
-			desc: `Remove some softcaps of Star Boost's formula.`,
+			desc: `移除一些星系加成的软上限.`,
 			cost: E("1.5e28906"),
 		},
 		{
-			desc: `Remove Stronger Softcap.`,
+			desc: `移除强化器的软上限.`,
 			cost: E("1.5e1626"),
 			et: true,
 		},
@@ -2646,11 +2646,11 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e29906"),
 		},
 		{
-			desc: `Green Chroma 的效果变得更好.`,
+			desc: `绿色色度的效果变得更好.`,
 			cost: E("1.5e1666"),
 			et: true,
 		},
@@ -2660,16 +2660,16 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Remove some Cosmic Ray softcaps.`,
+			desc: `移除宇宙射线的一些软上限.`,
 			cost: E("1.5e30156"),
 		},
 		{
-			desc: `Meta-Prestige Level starts 2x later.`,
+			desc: `声望的元折算延迟2倍开始.`,
 			cost: E("1.5e1669"),
 			et: true,
 		},
 		{
-			desc: `Galactic Shards boost Galactic Quarks.`,
+			desc: `星系碎片加成星系夸克.`,
 			cost: E(1e72),
 			galQk: true,
 			effect() {
@@ -2679,16 +2679,16 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Remove [Neutrino]'s softcaps.`,
+			desc: `R移除 [中微子]的软上限.`,
 			cost: E("1.5e31056"),
 		},
 		{
-			desc: `Infinity Upgrade 9 is better.`,
+			desc: `无限升级9的效果变得更好.`,
 			cost: E("1.5e1756"),
 			et: true,
 		},
 		{
-			desc: `Super Galactic Fermion Tier starts 1.5x later.`,
+			desc: `星系费米子的折算延迟1.5倍开始.`,
 			cost: E("1e75"),
 			galQk: true,
 		},
@@ -2697,35 +2697,35 @@ const ELEMENTS = {
 			cost: E("1.5e32756"),
 		},
 		{
-			desc: `Meta-Hex starts 1.5x later.`,
+			desc: `七重阶层的元折算延迟1.5倍开始.`,
 			cost: E("1.5e1836"),
 			et: true,
 		},
 		{
-			desc: `星系碎片的效果也可以对 affects base Galactic Radiation gain.`,
+			desc: `星系碎片的效果也可以对星系辐射波的基数生效.`,
 			cost: E("3e78"),
 			galQk: true,
 		},
 		{
-			desc: `Electron Power’s second 的效果变得更好.`,
+			desc: `电子的第二个效果变得更好.`,
 			cost: E("1.5e36556"),
 		},
 		{
-			desc: `Effects of Galactic Dark Energy and Galactic Bosons 变得更好.`,
+			desc: `星系黑暗能量和星系玻色子的效果变得更好.`,
 			cost: E("3e81"),
 			galQk: true,
 		},
 		{
-			desc: `C1, C5 and C7 effects are changed.`,
+			desc: `改变挑战1，5，7的效果.`,
 			cost: E("1.5e37556"),
 		},
 		{
-			desc: `Element 161 is cubed.`,
+			desc: `元素161的效果立方.`,
 			cost: E("1.5e2056"),
 			et: true,
 		},
 		{
-			desc: `星系碎片的效果也可以对 affects base Galactic Radiation gain.`,
+			desc: `星系碎片的效果也可以对星系辐射波的基数生效.`,
 			cost: E("1e83"),
 			galQk: true,
 		},
@@ -2734,93 +2734,93 @@ const ELEMENTS = {
 			cost: E("1.5e38206"),
 		},
 		{
-			desc: `Entropic Evaporation^2 is 75% weaker. Remove some Entropic softcaps.`,
+			desc: `熵消耗^2削弱75%. 移除一些熵的软上限.`,
 			cost: E("1.5e2056"),
 			et: true,
 		},
 		{
-			desc: `The effect softcap of Galactic Power is weaker.`,
+			desc: `星系能量的软上限更弱.`,
 			cost: E("2e84"),
 			galQk: true,
 		},
 		{
-			desc: `Particle Power’s first effects are squared.`,
+			desc: `粒子能量的第一个效果平方.`,
 			cost: E("1.5e57386"),
 		},
 		{
-			desc: `Neutron Power’s second 的效果变得更好.`,
+			desc: `中子能量的第二个效果变得更好.`,
 			cost: E("1.5e2156"),
 			et: true,
 		},
 		{
-			desc: `The Entropy Cap boost of Supernova Galaxies is better.`,
+			desc: `熵折算加成超新星星系.`,
 			cost: E("4e85"),
 			galQk: true,
 		},
 		{
-			desc: `Tickspeed 的效果变得更好.`,
+			desc: `时间加速的效果变得更好.`,
 			cost: E("1.5e64256"),
 		},
 		{
-			desc: `Atomic Power softcaps are weaker.`,
+			desc: `原子能量的软上限更弱.`,
 			cost: E("1.5e2216"),
 			et: true,
 		},
 		{
-			desc: `Unlock a new layer.`,
+			desc: `解锁新的层级.`,
 			cost: E("5e86"),
 			galQk: true,
 		},
 		{
-			desc: `Effects of 元素173和174的效果变得更好.`,
+			desc: `元素173和174的效果变得更好.`,
 			cost: E("1.5e70056"),
 		},
 		{
-			desc: `Meta-Hex starts 1.5x later.`,
+			desc: `七重阶层的元折算延迟1.5倍开始.`,
 			cost: E("1.5e2556"),
 			et: true,
 		},
 		{
-			desc: `Softcap of effect of Beta Particles in Galactic Challange starts later. Double Galactic Shards gain.`,
+			desc: `贝塔粒子效果的软上限在星系挑战中削弱.获得双倍星系碎片.`,
 			cost: E("1e100"),
 			galQk: true,
 		},
 		{
-			desc: `Exotic Boost 'Atom Boost' boost Quarks.`,
+			desc: `奇异助推中的'原子助推'加成夸克获取.`,
 			cost: E("eee12"),
 			qk: true,
 		},
 		{
-			desc: `Element 231 is better.`,
+			desc: `元素231效果更好.`,
 			cost: E("2e127"),
 			galQk: true,
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片的效果变得更好.`,
 			cost: E("1.5e3556"),
 			et: true,
 		},
 		{
-			desc: `Exotic Boosts are 20% stronger.`,
+			desc: `奇异物质助推器增强20%.`,
 			cost: E("2e21"),
 			exotic: true,
 		},
 		{
-			desc: `Effects of 元素173和174的效果变得更好.`,
+			desc: `元素173和174的效果变得更好.`,
 			cost: E("1.5e134056"),
 		},
 		{
-			desc: `Proton Power's second effect ^2.`,
+			desc: `中子的第二个效果平方.`,
 			cost: E("ee1.5e12"),
 			qk: true,
 		},
 		{
-			desc: `Effects of Galactic Particles 变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("5e128"),
 			galQk: true,
 		},
 		{
-			desc: `Pre-Quantum Global Speed boost Dark Shadow gain.`,
+			desc: `量子前的速度加成黑暗阴影.`,
 			cost: E("1e10"),
 			ds: true,
 			effect() {
@@ -2830,12 +2830,12 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Meta-Prestige Level starts 1.25x later.`,
+			desc: `声望的元折算延迟2倍开始.`,
 			cost: E("1.5e3756"),
 			et: true,
 		},
 		{
-			desc: `Exotic Matter boost Dark Ray gain.`,
+			desc: `奇异物质加成黑暗射线.`,
 			cost: E("2e23"),
 			exotic: true,
 			effect() {
@@ -2845,45 +2845,45 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Effect of Galactic Atoms 变得更好.`,
+			desc: `星系原子的效果变得更好.`,
 			cost: E("1.5e142056"),
 		},
 		{
-			desc: `Galactic Quark gain from Quarks is better.`,
+			desc: `夸克对星系夸克的获取变得更好.`,
 			cost: E("ee2e12"),
 			qk: true,
 		},
 		{
-			desc: `Effects of Galactic U-Fermions 变得更好. G-Fermion Tiers are cheaper.`,
+			desc: `星系U-费米子的效果变得更好. 星系费米子的需求变得更低.`,
 			cost: E("5e141"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Dark Shadow.`,
+			desc: `为黑暗之影解锁一个新的效果.`,
 			cost: E("1e20"),
 			ds: true,
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片的效果变得更好.`,
 			cost: E("1.5e3856"),
 			et: true,
 		},
 		{
-			desc: `Double Prestige Overpower Power.`,
+			desc: `加倍转生降幅器效果.`,
 			cost: E("2e24"),
 			exotic: true,
 		},
 		{
-			desc: `Remove Hardened and Insane scalings of C1-C19.`,
+			desc: `移除挑战1-19的硬化和疯狂折算.`,
 			cost: E("1.5e150056"),
 		},
 		{
-			desc: `Unlock Element Charging(看元素阶层1).`,
+			desc: `解锁元素充能(看元素阶层1,请点变色的,下面的黄字是需求).`,
 			cost: E("ee2.7777e12"),
 			qk: true,
 		},
 		{
-			desc: `Charged Elements boost Galactic Quark gain.`,
+			desc: `充能元素加成星系夸克.`,
 			cost: E("5e148"),
 			galQk: true,
 			effect() {
@@ -2893,36 +2893,36 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Unlock a new effect of Dark Shadow.`,
+			desc: `解锁黑暗阴影的一个新的效果.`,
 			cost: E("1e24"),
 			ds: true,
 		},
 		{
-			desc: `Keep Eternal Mass and Eternities when Galactic or Exotic reset. The cost of this element is 6.9e4200 uni of Eternal Mass, Nice.<br>(If you found this element is hard to bought, please check your Exotic Boosts)`,
+			desc: `在星系或奇异重置时，保留永恒质量与永恒次数。这b玩意仅需6.9e4200uni的永恒质量，快来抢购吧！（如果你发现元素很难买，记得看看奇异助推器）)`,
 			cost: E("1.035e4257"),
 			et: true,
 		},
 		{
-			desc: `Exotic Boosts are 10% stronger.`,
+			desc: `奇异物质助推器增强10%.`,
 			cost: E("2e28"),
 			exotic: true,
 		},
 		{
-			desc: `Particle Power's first effects are squared.`,
+			desc: `粒子能量的第一个效果平方.`,
 			cost: E("1.5e173056"),
 		},
 		{
-			desc: `Galactic Quark gain from U-Quarks is better.`,
+			desc: `星系夸克对于U-夸克的加成变得更好.`,
 			cost: E("ee1e13"),
 			qk: true,
 		},
 		{
-			desc: `Unlock Supernova Clusters.`,
+			desc: `解锁超新星星团.`,
 			cost: E("1e167"),
 			galQk: true,
 		},
 		{
-			desc: `Death Shards boost Dark Shadow gain.`,
+			desc: `死寂碎片加成黑暗阴影的获取.`,
 			cost: E("1e35"),
 			ds: true,
 			effect() {
@@ -2932,7 +2932,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Eternal Mass boost Dark Ray gain.`,
+			desc: `永恒质量加成黑暗射线的获取.`,
 			cost: E("1.5e4656"),
 			et: true,
 			effect() {
@@ -2942,31 +2942,31 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Exotic Meta-Boost is better.`,
+			desc: `奇异助推器的元折算变得更弱.`,
 			cost: E("1e34"),
 			exotic: true,
 		},
 		{
-			desc: `Accelerator Effect Softcap^2 is weaker.`,
+			desc: `加速器效果的二重软上限变得更弱.`,
 			cost: E("1.5e221356"),
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("ee1.9e13"),
 			qk: true,
 		},
 		{
-			desc: `You can automatically complete C20.`,
+			desc: `自动完成挑战20.`,
 			cost: E("3e173"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Dark Shadow.`,
+			desc: `解锁黑暗之影一个新的效果.`,
 			cost: E("1e45"),
 			ds: true,
 		},
 		{
-			desc: `Eternal Mass boost Exotic Matter gain.`,
+			desc: `永恒质量加成奇异物质和黑暗射线的获取.`,
 			cost: E("1.5e4906"),
 			et: true,
 			effect() {
@@ -2976,31 +2976,31 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Reduce Supernova Galaxy Requirements.`,
+			desc: `减少超新星星系的需求.`,
 			cost: E("3e39"),
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e270056"),
 		},
 		{
-			desc: `Remove Entropic Radiation^2 scaling. Some Entropy Effects 变得更好.`,
+			desc: `移除熵辐射^2的折算. 一些熵效果变得更好.`,
 			cost: E("ee5e13"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e184"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Dark Shadow.`,
+			desc: `解锁黑暗之影一个新的效果.`,
 			cost: E("1e50"),
 			ds: true,
 		},
 		{
-			desc: `Eternal Mass boost Dark Shadow gain.`,
+			desc: `永恒质量加成黑暗之影的获取.`,
 			cost: E("1.5e5106"),
 			et: true,
 			effect() {
@@ -3010,27 +3010,27 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Unlock Exotic Count Booster.`,
+			desc: `解锁奇异次数加成器.`,
 			cost: E("2e41"),
 			exotic: true,
 		},
 		{
 			desc(){
 				if(!hasElement(403))return "403 Forbidden";
-				return "Meta-Prestige Level starts 1.05x later.";
+				return "声望的元折算延迟2倍开始.";
 			},
 			cost: E("1.5e300056"),
 		},
 		{
 			desc(){
 				if(!hasElement(404))return "404 Not Found";
-				return "Bosonic Upgrades 变得更好.";
+				return "玻色子升级的效果变得更好.";
 			},
 			cost: E("ee5.5555e13"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Quarks boost Dark Shadow gain.`,
+			desc: `星系夸克加成黑暗阴影的获取.`,
 			cost: E("1e190"),
 			galQk: true,
 			effect() {
@@ -3040,94 +3040,94 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Unlock a new effect of Dark Ray.`,
+			desc: `解锁黑暗射线的一个新的效果.`,
 			cost: E("1e55"),
 			ds: true,
 		},
 		{
-			desc: `Hyper Galactic Fermion Tiers starts 1.5x later.`,
+			desc: `星系费米子的究极折算延迟1.5倍开始.`,
 			cost: E("1.5e5406"),
 			et: true,
 		},
 		{
-			desc: `Exotic Boosts are 10% stronger.`,
+			desc: `奇异助推效果增强10%.`,
 			cost: E("2e47"),
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e378056"),
 		},
 		{
-			desc: `Super Overpower is 4% weaker.`,
+			desc: `降幅器的超级折算削弱4%.`,
 			cost: E("ee2.3e14"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e205"),
 			galQk: true,
 		},
 		{
-			desc: `Some effects of Dark Shadow 变得更好.`,
+			desc: `黑暗之影的一些效果变得更好.`,
 			cost: E("1e58"),
 			ds: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好. Neutron Power's first effect is squared.`,
+			desc: `星系粒子的效果变得更好. 中子的第一个效果平方.`,
 			cost: E("1e213"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock Abyssal Blots.`,
+			desc: `解锁深渊之渍.`,
 			cost: E("1e60"),
 			ds: true,
 		},
 		{
-			desc: `Meta Fermion Tier scaling is 99% weaker.`,
+			desc: `费米子的元折算弱化99%.`,
 			cost: E("1.5e6106"),
 			et: true,
 		},
 		{
-			desc: `Exotic Meta-Boost is 1.5x stronger.`,
+			desc: `奇异元助推的效果x1.5.`,
 			cost: E("1e53"),
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e457056"),
 		},
 		{
-			desc: `Meta-Tickspeeds starts ^10 later.`,
+			desc: `时间加速的元折算延迟至原来的10次方.`,
 			cost: E("ee1.6e15"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e235"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Abyssal Blot.`,
+			desc: `解锁深渊之渍一个新的效果.`,
 			cost: E("2e70"),
 			ds: true,
 		},
 		{
-			desc: `Change the effect of C1. Meta-Pent starts 1e100x later.`,
+			desc: `改变挑战1的效果.六重阶层的元折算延迟1e100倍开始.`,
 			cost: E("1.5e7331"),
 			et: true,
 		},
 		{
-			desc: `Reduce Supernova Galaxy Requirements.`,
+			desc: `减少超新星星系的需求.`,
 			cost: E("1e59"),
 			exotic: true,
 		},
 		{
-			desc: `Unlock a new Galactic Challenge modifier. Gain 1 g mass per second and +1 Pre-Quantum Global Speed (doesn't affected by anything) when you're in Galactic Challenge.`,
+			desc: `解锁星系挑战一个新的挑战设置.当你在星系挑战时,每秒获得1g质量与1量子前的全局速度加成 (不会受到任何东西的影响).`,
 			cost: E("1.5e684056"),
 		},
 		{
-			desc: `Meta-Pent starts later based on Tier.`,
+			desc: `六重阶层的元折算基于阶层推迟.`,
 			cost: E("ee1.6666e16"),
 			qk: true,
 			effect() {
@@ -3138,50 +3138,50 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x later"; },
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e249"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Abyssal Blot.`,
+			desc: `解锁深渊之渍一个新的效果.`,
 			cost: E("1e73"),
 			ds: true,
 		},
 		{
-			desc: `Beta Particle's Effect is multiplied by 10.`,
+			desc: `贝塔[B]粒子的效果x10.`,
 			cost: E("1.5e7706"),
 			et: true,
 		},
 		{
-			desc: `Dark Ray's 2nd effect ^2.5`,
+			desc: `黑暗射线的第二个效果变为^2.5`,
 			cost: E("1e65"),
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e800056"),
 		},
 		{
-			desc: `Remove Infinity Upgrade 5's softcap.`,
+			desc: `移除无限升级5的软上限.`,
 			cost: E("ee3.3333e16"),
 			qk: true,
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片的效果变得更好.`,
 			cost: E("1.5e7981"),
 			et: true,
 		},
 		{
-			desc: `Exotic Boosts are 10% stronger.`,
+			desc: `奇异物质助推器增强10%.`,
 			cost: E("4e73"),
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `C20的效果变得更好.`,
 			cost: E("1.5e888944"),
 		},
 		{
-			desc: `Accelerator Effect Softcap^2 is weaker.`,
+			desc: `弱化加速器效果的二重软上限.`,
 			cost: E("ee1e17"),
 			qk: true,
 		},
@@ -3191,12 +3191,12 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Abyssal Blot.`,
+			desc: `解锁深渊之渍一个新的效果.`,
 			cost: E("1e82"),
 			ds: true,
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片的效果变得更好.`,
 			cost: E("1.5e9056"),
 			et: true,
 		},
@@ -3215,12 +3215,12 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("2e286"),
 			galQk: true,
 		},
 		{
-			desc: `Each bought element multiply Abyssal Blot gain by 1.1.`,
+			desc: `Each bought element multiply 深渊之渍 gain by 1.1.`,
 			cost: E("6e83"),
 			ds: true,
 			effect() {
@@ -3234,12 +3234,12 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Exotic Boost 'Star Boost' affects Star Generators.`,
+			desc: `奇异物质助推器 'Star Boost' affects Star Generators.`,
 			cost: E("1e78"),
 			exotic: true,
 		},
 		{
-			desc: `Eternal Mass boost Abyssal Blot gain.`,
+			desc: `永恒质量增加深渊之渍的获取.`,
 			cost: E("1.5e10181"),
 			et: true,
 			effect() {
@@ -3254,11 +3254,11 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Infinity Upgrade 24 is better.`,
+			desc: `无限升级 24 is better.`,
 			cost: E("1.5e1130056"),
 		},
 		{
-			desc: `Exotic Prestige Level is weaker based on Exotic Matter (Increased Effect above 1e80 EM).`,
+			desc: `Exotic Prestige Level is weaker based on 奇异物质加成黑暗射线bove 1e80 EM).`,
 			cost: E("ee5e17"),
 			qk: true,
 			effect() {
@@ -3268,7 +3268,7 @@ const ELEMENTS = {
             effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("5e294"),
 			galQk: true,
 		},
@@ -3278,7 +3278,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Eternal Mass boost Glyphic Mass gain.`,
+			desc: `永恒质量 boost Glyphic Mass gain.`,
 			cost: E("1.5e10656"),
 			et: true,
 			effect() {
@@ -3308,12 +3308,12 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd 的效果变得更好. Unlock a new effect of Dark Ray.`,
+			desc: `Dark Ray's 2nd 的效果变得更好. 解锁黑暗射线的一个新的效果.`,
 			cost: E("1e99"),
 			ds: true,
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片的效果变得更好.`,
 			cost: E("1.5e15056"),
 			et: true,
 		},
@@ -3342,7 +3342,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e348"),
 			galQk: true,
 		},
@@ -3352,7 +3352,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Exotic Matter boost Glyphic Mass gain.`,
+			desc: `奇异物质加成黑暗射线获取.`,
 			cost: E("1e108"),
 			exotic: true,
 			effect() {
@@ -3362,7 +3362,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e2100056"),
 		},
 		{
@@ -3386,8 +3386,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Meta-Hex starts later based on Exotic Matter.`,
-			cost: E("6e116"),
+			desc: `Meta-Hex starts later based on 奇异物质加成黑暗射线6`,
 			exotic: true,
 			effect() {
 				let x = player.exotic.points.add(10).log10();
@@ -3396,7 +3395,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Infinity Upgrade 24 的效果变得更好.`,
+			desc: `无限升级24的效果变得更好.`,
 			cost: E("1.5e2600056"),
 		},
 		{
@@ -3405,12 +3404,12 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e396"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Dark Shadow.`,
+			desc: `解锁黑暗之影一个新的效果.`,
 			cost: E("5e113"),
 			ds: true,
 		},
@@ -3425,7 +3424,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Reduce C21 goal.`,
+			desc: `削弱挑战21的目标.`,
 			cost: E("1.5e2900056"),
 		},
 		{
@@ -3463,7 +3462,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好. Galactic Quarks Post-1e100 boost Glyphic Mass gain.`,
+			desc: `星系粒子的效果变得更好. Galactic Quarks Post-1e100 boost Glyphic Mass gain.`,
 			cost: E("5e447"),
 			galQk: true,
 			effect() {
@@ -3478,7 +3477,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Unlock the Exotic Matter's effect in The Matters tab.`,
+			desc: `Unlock the 奇异物质加成黑暗射线ters tab.`,
 			cost: uni('e25150'),
 			et: true,
 		},
@@ -3488,7 +3487,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `C20的效果变得更好.`,
 			cost: uni('e4900000'),
 		},
 		{
@@ -3502,7 +3501,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Dark Shadow.`,
+			desc: `解锁黑暗之影一个新的效果.`,
 			cost: E("5e124"),
 			ds: true,
 		},
@@ -3517,7 +3516,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Double the Exotic Matter's effect in The Matters tab.`,
+			desc: `Double the 奇异物质加成黑暗射线ters tab.`,
 			cost: uni('e6100000'),
 		},
 		{
@@ -3549,7 +3548,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: uni('e9000000'),
 		},
 		{
@@ -3587,7 +3586,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: uni('e10000000'),
 		},
 		{
@@ -3602,7 +3601,7 @@ const ELEMENTS = {
 			effDesc(x) { return "+"+format(x); },
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("3e612"),
 			galQk: true,
 		},
@@ -3617,12 +3616,12 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Abyssal Blot.`,
+			desc: `解锁深渊之渍一个新的效果.`,
 			cost: E("2e142"),
 			ds: true,
 		},
 		{
-			desc: `Eternal Mass boost Magenta Matter gain.`,
+			desc: `永恒质量 boost Magenta Matter gain.`,
 			cost: uni("e61500"),
 			et: true,
 			effect() {
@@ -3680,12 +3679,12 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("2e782"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock a new effect of Dark Ray.`,
+			desc: `解锁黑暗射线的一个新的效果.`,
 			cost: E("5e156"),
 			ds: true,
 		},
@@ -3700,7 +3699,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `C20的效果变得更好.`,
 			cost: uni('e29000000'),
 		},
 		{
@@ -3733,12 +3732,12 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e1085"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock X-Axion Generators.`,
+			desc: `解锁x轴生成器.`,
 			cost: E("1e174"),
 			ds: true,
 		},
@@ -3753,7 +3752,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Exotic Matter boost X-Axion Generators Power.`,
+			desc: `奇异物质加成黑暗射线ators Power.`,
 			cost: E("1e356"),
 			exotic: true,
 			effect() {
@@ -3767,7 +3766,7 @@ const ELEMENTS = {
 			cost: uni('e69000000'),
 		},
 		{
-			desc: `C20 的效果变得更好.`,
+			desc: `C20的效果变得更好.`,
 			cost: E("ee1e46"),
 			qk: true,
 		},
@@ -3816,7 +3815,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e1440"),
 			galQk: true,
 		},
@@ -3826,12 +3825,12 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Timeshards 的效果变得更好.`,
+			desc: `时间碎片的效果变得更好.`,
 			cost: uni("e455000"),
 			et: true,
 		},
 		{
-			desc: `Exotic Boosts are stronger based on bought elements, except Meta-Boost. Exotic Meta-Boost is 50% weaker.`,
+			desc: `奇异物质助推器s are stronger based on bought elements, except Meta-Boost. Exotic Meta-Boost is 50% weaker.`,
 			cost: E("1e452"),
 			exotic: true,
 			effect() {
@@ -3845,12 +3844,12 @@ const ELEMENTS = {
 			cost: uni('e2.4e8'),
 		},
 		{
-			desc: `C21 的效果变得更好.`,
+			desc: `挑战21的效果变得更好.`,
 			cost: E('ee3e61'),
 			qk: true,
 		},
 		{
-			desc: `Galactic Particles 的效果变得更好.`,
+			desc: `星系粒子的效果变得更好.`,
 			cost: E("1e1675"),
 			galQk: true,
 		},

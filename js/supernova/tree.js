@@ -114,8 +114,8 @@ const TREE_UPGS = {
 			}
 			return;
 		}
-        if(tmp.tree_tab == 7){
-          
+        if(this.ids[x].shard){
+            if(auto)return;
 			if(hasTree(x))return;
 			if(tmp.supernova.tree_choosed != x)return;
             if (player.sun.shard.gte(this.ids[x].cost)){player.sun.shard-(this.ids[x].cost)}
@@ -134,7 +134,7 @@ const TREE_UPGS = {
             req() { return player.supernova.times.gte(1) },
             reqDesc: `1次超新星。`,
             desc: `每秒产生1中子星（不受离线产能影响）.`,
-            cost: E(0),
+            cost: E("0"),
         },
         sn1: {
             branch: ["c"],
@@ -760,7 +760,7 @@ const TREE_UPGS = {
             unl() { return quUnl() },
             qf: true,
             desc: `Good luck with new era!`,
-            cost: E(0),
+            cost: E("eee999"),
         },
         qu1: {
             qf: true,
@@ -2087,7 +2087,7 @@ const TREE_UPGS = {
             req() { return player.exotic.tree.length>=99 },
             reqDesc() { return `1蓝钥匙.` },
             desc: ``,
-            cost: E(0),
+            cost: E("eee999"),
         },      
         bldo2: {
             unl() { return true },
@@ -2095,7 +2095,7 @@ const TREE_UPGS = {
             req() { return player.exotic.tree.length>=99 },
             reqDesc() { return `1蓝钥匙.` },
             desc: ``,
-            cost: E(0),
+            cost: E("eee999"),
         },   
         yedo1: {
             unl() { return true },
@@ -2104,7 +2104,7 @@ const TREE_UPGS = {
           
         
             desc: `消耗1黄钥匙`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
         yedo2: {
             unl() { return true },
@@ -2113,7 +2113,7 @@ const TREE_UPGS = {
             req() { return player.exotic.tree.length>=99 },
          
             desc: `消耗1黄钥匙`,
-            cost: E(0),
+            cost: E("eee999"),
         },
         yedo3: {
             unl() { return true },
@@ -2122,14 +2122,14 @@ const TREE_UPGS = {
             req() { return player.exotic.tree.length>=99 },
             
             desc: `消耗1黄钥匙`,
-            cost: E(0),
+            cost: E("eee999"),
         },    
         bobo: {
             unl() { return true },
             sunshard: true,
           
             desc: `如果你第一次获得了11太阳碎片，那么祝贺你，你的前期是比较成功的.`,
-            cost: E(0),
+            cost: E("eee999"),
         },  
         rebs11: {
             unl() { return true },
@@ -2137,13 +2137,13 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo1') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `奇异物质获取x5.`,
-            cost: E(0),
+            cost: E("eee999"),
         },    
         rebs12: {
             unl() { return true },
             sunshard: true,
             desc: `暗射线获取x2.`,
-            cost: E(0),
+            cost: E("eee999"),
         },     
         rebs13: {
             unl() { return true },
@@ -2151,7 +2151,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo2') },
             reqDesc() { return `开下面的黄门.` },
             desc: `雕文质量获取x3.`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
         blbs11: {
             unl() { return true },
@@ -2159,13 +2159,13 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo1') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `超新星的元折算弱化80%.`,
-            cost: E(0),
+            cost: E("eee999"),
         },    
         blbs12: {
             unl() { return true },
             sunshard: true,
             desc: `六重阶层的元折算延迟1e10倍出现.`,
-            cost: E(0),
+            cost: E("eee999"),
         },    
         blbs13: {
             unl() { return true },
@@ -2173,7 +2173,7 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo2') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `原子能量的软上限弱化2%.`,
-            cost: E(0),
+            cost: E("eee999"),
         },   
         grbs11: {
             unl() { return true },
@@ -2181,7 +2181,7 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo1') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `行星重置时保留1e10奇异物质.`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
         grbs12: {
             unl() { return true },
@@ -2189,7 +2189,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo2') },
             reqDesc() { return `开下面的黄门.` },
             desc: `行星重置时保留1e6奇异重置次数.`,
-            cost: E(0),
+            cost: E("eee999"),
         },    
         grbs13: {
             unl() { return true },
@@ -2197,7 +2197,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo3') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `行星重置时保留1e4暗射线.`,
-            cost: E(0),
+            cost: E("eee999"),
         },   
         yebs11: {
             unl() { return true },
@@ -2205,7 +2205,7 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo1') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `自动购买奇异升级.`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
         yebs12: {
             unl() { return true },
@@ -2213,7 +2213,7 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo2') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `自动购买奇异推进.`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
         yebs13: {
             unl() { return true },
@@ -2221,14 +2221,14 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo3') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `自动获得最终星辰碎片.`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
         lt: {
             unl() { return true },
             sunshard: true,
            
             desc: `当前区域黄钥匙消耗3太阳碎片，蓝钥匙消耗5太阳碎片.`,
-            cost: E(0),
+            cost: E("eee999"),
         }, 
     },
 }
