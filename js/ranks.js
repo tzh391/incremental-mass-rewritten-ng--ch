@@ -649,7 +649,7 @@ const RANKS = {
             8(x) { return "延迟"+format(x)+"次方出现" },
         },
         hex: {
-            5(x) { return "+"+format(x)},
+         5(x) { return "+"+format(x)},
             62(x) { return "延迟"+ format(x)+"倍出现" },
             71(x) { return "弱化"+format(E(1).sub(x).mul(100))+"%" },
             123(x) { return format(x)+"倍出现" },
@@ -1738,9 +1738,9 @@ function updateRanksTemp() {
 
     fp = E(1)
     pow = 1.5
-    tmp.ranks.hex.req = player.ranks.hex.scaleEvery('hex').div(fp).pow(pow).add(25).floor()
+    tmp.ranks.hex.req = player.ranks.hex.scaleEvery('hex').div(fp).pow(pow).add(25).floor() 
     tmp.ranks.hex.bulk = player.ranks.pent.sub(25).gte(0)?player.ranks.pent.sub(25).max(0).root(pow).mul(fp).scaleEvery('hex',true).add(1).floor():E(0);
-
+ 
     fp = E(0.1)
 	if (hasElement(150)) fp = fp.mul(1.6)
 	if(hasPrestige(4,35)) fp = fp.mul(1.25)
@@ -1760,6 +1760,7 @@ function updateRanksTemp() {
 	if(hasAscension(2,4)) fp = fp.mul(1.28)
 	if(hasAscension(2,5)) fp = fp.mul(1.25)
     pow = 1.5
+    if (player.sun.shard.gte(1)) pow = 10
     tmp.ranks.enne.req = player.ranks.enne.scaleEvery('enne').div(fp).pow(pow).add(100).floor()
     tmp.ranks.enne.bulk = player.ranks.oct.sub(100).gte(0)?player.ranks.oct.sub(100).max(0).root(pow).mul(fp).scaleEvery('enne',true).add(1).floor():E(0);
 

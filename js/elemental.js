@@ -2942,7 +2942,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `奇异助推器的元折算变得更弱.`,
+			desc: `奇异元助推的效果变得更强.`,
 			cost: E("1e34"),
 			exotic: true,
 		},
@@ -3030,7 +3030,7 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `星系夸克加成黑暗阴影的获取.`,
+			desc: `星系夸克加成黑暗之影的获取.`,
 			cost: E("1e190"),
 			galQk: true,
 			effect() {
@@ -3177,7 +3177,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `C20的效果变得更好.`,
+			desc: `挑战20的效果变得更好.`,
 			cost: E("1.5e888944"),
 		},
 		{
@@ -3352,7 +3352,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `奇异物质加成黑暗射线获取.`,
+			desc: `奇异物质加成雕文质量获取.`,
 			cost: E("1e108"),
 			exotic: true,
 			effect() {
@@ -3388,6 +3388,7 @@ const ELEMENTS = {
 		{
 			desc: `Meta-Hex starts later based on 奇异物质加成黑暗射线6`,
 			exotic: true,
+			cost: E("1.5e106"),
 			effect() {
 				let x = player.exotic.points.add(10).log10();
 				return x
