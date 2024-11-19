@@ -1760,7 +1760,7 @@ function updateRanksTemp() {
 	if(hasAscension(2,4)) fp = fp.mul(1.28)
 	if(hasAscension(2,5)) fp = fp.mul(1.25)
     pow = 1.5
-    if (player.sun.shard.gte(1)) pow = 10
+  
     tmp.ranks.enne.req = player.ranks.enne.scaleEvery('enne').div(fp).pow(pow).add(100).floor()
     tmp.ranks.enne.bulk = player.ranks.oct.sub(100).gte(0)?player.ranks.oct.sub(100).max(0).root(pow).mul(fp).scaleEvery('enne',true).add(1).floor():E(0);
 
