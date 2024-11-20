@@ -43,6 +43,7 @@ function updateChalHTML() {
 			if(player.chal.choosed == 7)tmp.el.chal_ch_reward.setHTML("Reward: "+chal.reward())
 			if(player.chal.choosed == 14)tmp.el.chal_ch_reward.setHTML("Reward: "+chal.reward())
 			if(player.chal.choosed == 15)tmp.el.chal_ch_reward.setHTML("Reward: "+chal.reward())
+                if(player.chal.choosed == 25)tmp.el.chal_ch_reward.setHTML("Reward: "+chal.reward())
             tmp.el.chal_ch_eff.setHTML("Currently: "+chal.effDesc(tmp.chal.eff[player.chal.choosed]))
         }
     }
@@ -121,15 +122,23 @@ const CHALS = {
 				QUANTUM.enter(false,true,true)
 				player.prestigeMass = E(0);
 			}
-		}else{
+		}else if (x < 25){
 			EXOTIC.doReset();
+            updateTemp();
 			updateTemp();
 			updateTemp();
 			updateTemp();
 			updateTemp();
+		}else{
+            sunshard.reset(true);
+            updateTemp();
 			updateTemp();
-		}
+			updateTemp();
+			updateTemp();
+			updateTemp();
+        }
     },
+    
     exit(auto=false) {
         if (!player.chal.active == 0) {
             if (tmp.chal.canFinish) {
@@ -157,15 +166,18 @@ const CHALS = {
     getResource(x, y) {
 		if (x == 20 && y == 1 && hasElement(558)) return player.mass.add(1).log10().mul(FORMS.getPreQUGlobalSpeed().add(1))
 		if (x == 20 && y == 1) return player.mass.add(1).log10()
-        if (x < 5 || x > 8) return player.mass
+        if (x < 5 || x > 8&&x < 25) return player.mass
+        if (x == 25) return player.prestigeMass
         return player.bh.mass
     },
     getResName(x) {
-        if (x < 5 || x > 8) return ''
+        if (x < 5 || x > 8&&x < 25) return ''
+        if (x == 25) return '转生质量'
         return '黑洞质量'
     },
     getFormat(x) {
-        return formatMass
+          return formatMass
+       
     },
     getReset(x) {
         if (x < 5) return "进入挑战时将同时进行暗物质重置！"
@@ -173,7 +185,8 @@ const CHALS = {
         if (x < 13) return "进入挑战时将同时在未成为超新星的前提下重置！"
         if (x < 17) return "进入挑战时将强制进行无限重置！"
 		if (x < 21) return "进入挑战时将强制进行永恒重置！"
-		return "进入挑战时将强制进行奇异物质重置！"
+		if (x < 25) return "进入挑战时将强制进行奇异物质重置！"
+        return "进入挑战时将强制进行行星重置！"
     },
     getMax(i) {
         if (hasPrestige(1,25) && (i<=11)) return EINF
@@ -388,6 +401,7 @@ const CHALS = {
         return {goal: goal, bulk: bulk}
     },
     1: {
+      
         title: "即时折算",
         desc: "Super Ranks, Mass Upgrades starts at 25. In addtional, Super Tickspeed start at 50.",
         reward() {
@@ -405,6 +419,7 @@ const CHALS = {
         },
         effDesc(x) { if(hasElement(348))return format(x.rank.add(1),0)+"x later";return "+"+format(x.rank,0)+" later to Super Ranks, Super Tickspeed scaling "+format(E(1).sub(x.tick).mul(100))+"% weaker" },
     },
+  
     2: {
         unl() { return player.chal.comps[1].gte(1) || player.atom.unl },
         title: "反对时速",
@@ -856,7 +871,25 @@ const CHALS = {
         },
         effDesc(x) { return "+"+format(x) },
     },
-    cols: 24,
+    25: {
+        unl() { return player.sun.shard.gte(1) },
+        title: "转生黑矮星(该挑战在当前版本不可能完成）",
+        desc: "使所有星辰相关资源的获取速度指数变为原来的0.5次方,使星辰发生器的效果指数变为原来的0.5次方.   +充能挑战1:六重阶层^0.5,七重阶层/10,八重阶层/5,九重阶层/2.",
+        reward() {
+		return `每次完成获得1转生量子碎片,转生星辰获取基于挑战完成次数增加.`
+			
+		},
+        max: E(100),
+        inc: E('ee10'),
+        pow: E(10),
+        start:E('ee10'),
+        effect(x) {
+            let ret = x.add(1).pow(4)
+            return ret
+        },
+        effDesc(x) { return  "x"+format(x) },
+    },
+    cols: 25,
 }
 
 /*

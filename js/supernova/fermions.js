@@ -16,7 +16,7 @@ const FERMIONS = {
         for (let j = 0; j < FERMIONS.types[i].length; j++) x = x.mul(base.pow(player.supernova.fermions.tiers[i][j]))
         if (hasTree("fn1") && tmp.supernova) x = x.mul(tmp.supernova.tree_eff.fn1)
 		x = x.pow(SUPERNOVA_GALAXY.galPow4_eff())
-	if(player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active)x = GCeffect(x)
+	if(player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active)x = GCeffect(x)
         return x
     },
     backNormal() {

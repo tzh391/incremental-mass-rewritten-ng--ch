@@ -18,7 +18,7 @@ const STARS = {
 				
 			if (FERMIONS.onActive("33"))x = x.add(1).log10()
 	
-		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+		if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
 	
 		tmp.starOverflowPower = E(0.8)
 		if (player.ranks.hept.gte(2))tmp.starOverflowPower = tmp.starOverflowPower.pow(RANKS.effect.hept[2]())
@@ -112,7 +112,7 @@ const STARS = {
                 if (hasTree("s3")) pow = pow.mul(tmp.supernova.tree_eff.s3)
             }
             if (QCs.active() && pow.gte(1)) pow = pow.pow(tmp.qu.qc_eff[0][1])
-
+                if (CHALS.inChal(25)) pow = expMult(pow,0.5)
             let x = E(player.stars.unls > i ? 1 : 0).add(player.stars.generators[i+1]||0).pow(pow)
         
 
@@ -133,6 +133,7 @@ const STARS = {
                 if(hasChargedElement(254)&&player.exotic.dr.gte(1e160)) x = expMult(x,player.superCluster.add(1).pow(0.05))
 			if(hasElement(444) && x.gte(10))x = expMult(x,tmp.ex.exb_eff[3])
             if (QCs.active()) x = expMult(x,tmp.qu.qc_eff[0][0])
+            if (CHALS.inChal(25)) x = expMult(expMult(x,0.5),0.5)
 				if(hasTree('qp33') && x.gte(10))x = expMult(x,treeEff('qp31'))
             return x
         },

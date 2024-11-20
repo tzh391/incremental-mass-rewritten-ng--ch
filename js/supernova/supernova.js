@@ -78,7 +78,7 @@ const SUPERNOVA = {
 			if(hasTree('qp13') && x.gte(10))x = expMult(x,1.1)
 				if(hasTree('qp33') && x.gte(10))x = expMult(x,treeEff('qp31'))
 	
-	if(player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active)x = GCeffect(x)
+	if(player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active)x = GCeffect(x)
         return x
     },
     req(x=player.supernova.times) {

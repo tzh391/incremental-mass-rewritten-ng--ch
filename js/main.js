@@ -22,7 +22,7 @@ const sunshard = {
         return x
     },
     reset(force=false) {
-        if(player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6)){
+        if((player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))||player.chal.active >= 25){
         player.sun.shard=player.sun.shard.add(sunshard.gain())
         SUPERNOVA_CLUSTER.reset(true);
         player.exotic.points=new Decimal(0)
@@ -126,9 +126,9 @@ const FORMS = {
         if (hasChargedElement(103)) x = x.pow(tmp.elements.ceffect[103])
    
         if (QCs.active()) x = x.div(tmp.qu.qc_eff[1])
-		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+		if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
 			
-		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
+		if((player.gc.active || player.chal.active >= 21&&player.chal.active <= 24) && hasElement(423))x = x.add(1)
 	
 		if (CHALS.inChal(20) && !hasElement(558)) x = x.min("ee50")
 		return x
@@ -203,7 +203,7 @@ const FORMS = {
 		if(hasElement(530))x = expMult(x,tmp.stars.effectExpPower||E(1))
 		
 		if (CHALS.inChal(20)) x = x.add(1).log10()
-        if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)		
+        if (player.gc.active || (player.chal.active >= 21&&player.chal.active <= 24) || player.exotic.dark_run.active) x = GCeffect(x)		
 		
 	
 		tmp.massOverflowStart = E("ee84")
@@ -221,7 +221,7 @@ const FORMS = {
 		tmp.massOverflow = overflow(x,tmp.massOverflowStart,tmp.massOverflowPower).log(x);
 		if (!hasUpgrade('exotic',1))x = overflow(x,tmp.massOverflowStart,tmp.massOverflowPower);
 			
-		if((player.gc.active || player.chal.active >= 21) && hasElement(423))x = x.add(1)
+		if((player.gc.active || player.chal.active >= 21&&player.chal.active <= 24) && hasElement(423))x = x.add(1)
        
        
             if (x>= "eee100")tmp.masscholestasispower =  E(x.add(10).slog().max(0).sub(4.301).max(0))
@@ -608,7 +608,7 @@ const FORMS = {
 		
 			if (FERMIONS.onActive("23"))gain = gain.add(1).log10()
 				
-			if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) gain = GCeffect(gain)
+			if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) gain = GCeffect(gain)
 			return gain.floor()
         },
         reset() {
@@ -654,7 +654,7 @@ const FORMS = {
 			if (FERMIONS.onActive("32"))gain = gain.add(1).log10().pow(5)
 				
 			
-			if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) gain = GCeffect(gain)
+			if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) gain = GCeffect(gain)
 				
             return gain.floor()
         },
@@ -694,7 +694,7 @@ const FORMS = {
 			if (FERMIONS.onActive("31")) x = x.add(1).log10().pow(100)
 			
 		
-			if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+			if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
 				
 			tmp.bhOverflowStart = E("e1e34")
 			if (hasUpgrade('bh',16))tmp.bhOverflowStart = tmp.bhOverflowStart.pow(10)

@@ -24,7 +24,7 @@ const ATOM = {
         if (FERMIONS.onActive("10")) x = expMult(x,0.625)
 			
 		if (FERMIONS.onActive("34")) x = x.add(1).log10().pow(3000)
-		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+		if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
 			
         return x.floor()
     },
@@ -55,7 +55,7 @@ const ATOM = {
 		if (FERMIONS.onActive("30")) x = x.add(1).log10()
 		
 		
-		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+		if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
 			
         return x.floor();
     },
@@ -99,7 +99,7 @@ const ATOM = {
             
 			if (FERMIONS.onActive("20")) x = x.add(1).log10()
 			
-			if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+			if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
 				
 			if (hasUpgrade('atom',24)) return x;
 			tmp.atomicOverflowPower = E(0.8)
@@ -203,7 +203,7 @@ const ATOM = {
             if (player.mainUpg.atom.includes(7)) x = x.mul(tmp.upgs.main?tmp.upgs.main[3][7].effect:E(1))
             if (QCs.active()) x = x.pow(tmp.qu.qc_eff[4])
 			x = x.pow(player.galParticles[i].add(1).log10().add(1).pow(3));
-		if (player.gc.active || player.chal.active >= 21 || player.exotic.dark_run.active) x = GCeffect(x)
+		if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
             return x
         },
         powerEffect: [

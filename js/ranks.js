@@ -1738,29 +1738,33 @@ function updateRanksTemp() {
 
     fp = E(1)
     pow = 1.5
+    if (CHALS.inChal(25)) pow =3
     tmp.ranks.hex.req = player.ranks.hex.scaleEvery('hex').div(fp).pow(pow).add(25).floor() 
     tmp.ranks.hex.bulk = player.ranks.pent.sub(25).gte(0)?player.ranks.pent.sub(25).max(0).root(pow).mul(fp).scaleEvery('hex',true).add(1).floor():E(0);
  
     fp = E(0.1)
+    if (CHALS.inChal(25)) fp =fp.div(2)
 	if (hasElement(150)) fp = fp.mul(1.6)
 	if(hasPrestige(4,35)) fp = fp.mul(1.25)
 	if (hasChargedElement(150)) fp = fp.mul(2.5)
     pow = 1.5
+
     tmp.ranks.hept.req = player.ranks.hept.scaleEvery('hept').div(fp).pow(pow).add(hasPrestige(4,35)?100:200).floor()
     tmp.ranks.hept.bulk = player.ranks.hex.sub(hasPrestige(4,35)?100:200).gte(0)?player.ranks.hex.sub(hasPrestige(4,35)?100:200).max(0).root(pow).mul(fp).scaleEvery('hept',true).add(1).floor():E(0);
 
     fp = E(0.16)
+    if (CHALS.inChal(25)) fp =fp.div(2)
 	if(hasPrestige(4,35)) fp = fp.mul(1.25)
     pow = 1.5
     tmp.ranks.oct.req = player.ranks.oct.scaleEvery('oct').div(fp).pow(pow).add(hasPrestige(4,35)?100:200).floor()
     tmp.ranks.oct.bulk = player.ranks.hept.sub(hasPrestige(4,35)?100:200).gte(0)?player.ranks.hept.sub(hasPrestige(4,35)?100:200).max(0).root(pow).mul(fp).scaleEvery('oct',true).add(1).floor():E(0);
 
     fp = E(0.1)
+    if (CHALS.inChal(25)) fp =fp.div(2)
 	if(hasAscension(1,26)) fp = fp.mul(1.25)
 	if(hasAscension(2,4)) fp = fp.mul(1.28)
 	if(hasAscension(2,5)) fp = fp.mul(1.25)
     pow = 1.5
-  
     tmp.ranks.enne.req = player.ranks.enne.scaleEvery('enne').div(fp).pow(pow).add(100).floor()
     tmp.ranks.enne.bulk = player.ranks.oct.sub(100).gte(0)?player.ranks.oct.sub(100).max(0).root(pow).mul(fp).scaleEvery('enne',true).add(1).floor():E(0);
 
