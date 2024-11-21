@@ -489,8 +489,8 @@ const UPGS = {
                 }
             }
         },
-        ids: [null, 'rp', 'bh', 'atom', 'br', 'inf', 'exotic'],
-        cols: 6,
+        ids: [null, 'rp', 'bh', 'atom', 'br', 'inf', 'exotic', 'st'],
+        cols: 7,
         over(x,y) { player.main_upg_msg = [x,y] },
         reset() { player.main_upg_msg = [0,0] },
         1: {
@@ -1141,7 +1141,7 @@ const UPGS = {
                     player.mainUpg.br.push(x)
                 }
             },
-            auto_unl() { return hasUpgrade('inf',19) },
+            auto_unl() { return hasUpgrade('inf',1) },
             lens: 25,
             1: {
                 desc: `Start with Hydrogen-1 unlocked in Big Rip.`,
@@ -1471,8 +1471,8 @@ const UPGS = {
             },
         },
         6: {
-            title: "Exotic Upgrades",
-            res: "Exotic Matter",
+            title: "奇异升级",
+            res: "奇异物质",
             getRes() { return player.exotic.points },
             unl() { return player.exotic.times.gte(1) },
             can(x) { return player.exotic.points.gte(this[x].cost) && !player.mainUpg.exotic.includes(x) },
@@ -1621,7 +1621,49 @@ const UPGS = {
                 cost: E(1e30),
             },
         },
-      
+        7: {
+            title: "星尘升级",
+            res: "星尘",
+            getRes() { return player.stellar },
+            unl() { return player.sun.shard.gte(1) },
+            can(x) { return player.stellar.gte(this[x].cost) && !player.mainUpg.st.includes(x) },
+            buy(x) {
+                if (this.can(x)) {
+                    player.stellar = player.stellar.sub(this[x].cost)
+                    player.mainUpg.st.push(x)
+                }
+            },
+            auto_unl() { return false },
+            lens: 3,
+            1: {
+                unl() { return player.sun.shard.gte(1)},
+                desc: `轴空间获取基于星尘而增加.`,
+                effect(){
+					return player.stellar.add(1).log10().div(2500).add(1);
+				},
+                effDesc(x=this.effect()) { return "x"+format(x) },
+                cost: E(1e50),
+            },
+            2: {
+                unl() { return player.sun.shard.gte(1)},
+                desc: `暗射线获取基于星尘而增加.`,
+                effect(){
+					return player.stellar.add(1).log10();
+				},
+                effDesc(x=this.effect()) { return "x"+format(x) },
+                cost: E(1e80),
+            },
+            3: {
+                unl() { return player.sun.shard.gte(1)},
+                desc: `转生星辰获取获取基于星尘而增加.`,
+                effect(){
+					return player.stellar.add(1).log10().pow(0.25);
+				},
+                effDesc(x=this.effect()) { return "x"+format(x) },
+                cost: E(1e150),
+            },
+          
+        },
     },
 }
 
