@@ -2151,7 +2151,7 @@ function prestigeSTGain(){
 		return E(0);
 	}
 	let x =player.prestigeAT.add(1).log10().add(player.prestigeQK.add(10).log10()).div(2);
-    if(hasUpgrade('st',3))x = x.mul(player.stellar.add(1).log10().pow(0.25))
+    if(hasUpgrade('st',3))x = x.mul(player.stardust.add(1).log10().pow(0.25))
 	return x;
 }
 function prestigeMassEffect(){

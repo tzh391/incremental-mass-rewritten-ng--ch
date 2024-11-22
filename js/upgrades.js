@@ -1624,12 +1624,12 @@ const UPGS = {
         7: {
             title: "星尘升级",
             res: "星尘",
-            getRes() { return player.stellar },
+            getRes() { return player.stardust },
             unl() { return player.sun.shard.gte(1) },
-            can(x) { return player.stellar.gte(this[x].cost) && !player.mainUpg.st.includes(x) },
+            can(x) { return player.stardust.gte(this[x].cost) && !player.mainUpg.st.includes(x) },
             buy(x) {
                 if (this.can(x)) {
-                    player.stellar = player.stellar.sub(this[x].cost)
+                    player.stardust = player.stardust.sub(this[x].cost)
                     player.mainUpg.st.push(x)
                 }
             },
@@ -1639,28 +1639,28 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `轴空间获取基于星尘而增加.`,
                 effect(){
-					return player.stellar.add(1).log10().div(10000).add(1);
+					return player.stardust.add(1).log10().div(10000).add(1);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
-                cost: E(1e50),
+                cost: E(1e65),
             },
             2: {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `暗射线获取基于星尘而增加.`,
                 effect(){
-					return player.stellar.add(1).log10();
+					return player.stardust.add(1).log10();
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
-                cost: E(1e80),
+                cost: E(1e100),
             },
             3: {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `转生星辰获取获取基于星尘而增加.`,
                 effect(){
-					return player.stellar.add(1).log10().pow(0.25);
+					return player.stardust.add(1).log10().pow(0.25);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
-                cost: E(1e150),
+                cost: E(1e154),
             },
           
         },
