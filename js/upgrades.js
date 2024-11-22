@@ -1639,7 +1639,7 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `轴空间获取基于星尘而增加.`,
                 effect(){
-					return player.stellar.add(1).log10().div(2500).add(1);
+					return player.stellar.add(1).log10().div(10000).add(1);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
                 cost: E(1e50),

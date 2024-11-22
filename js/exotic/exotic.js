@@ -176,7 +176,7 @@ const EXOTIC = {
 		if(hasElement(486))x = x.mul(MATTERS.eff(12));
 		if(hasElement(540))x = x.mul(player.exotic.ax[1].add(1));
 		if (player.ranks.enne.gte(250)) x = x.mul(RANKS.effect.enne[250]())
-		if(hasUpgrade('st',2))x = x.mul.player.stellar.add(1).log10();
+		if(hasUpgrade('st',2))x = x.mul(player.stellar.add(1).log10())
 		return x;
     },
     dsGain(){
@@ -253,7 +253,7 @@ const EXOTIC = {
 		x = x.mul(player.exotic.ax[2].add(10).log10());
 		x = x.mul(player.exotic.ax[3].add(10).log10());
 		if(hasTree('ax6'))x = x.mul(hasTree('ax39')?5:hasTree('ax29')?4.5:hasTree('ax27')?3:hasTree('ax18')?2.25:hasTree('ax12')?1.9:1.35);
-		if(hasUpgrade('st',1))x = x.mul.player.stellar.add(1).log10().div(2500).add(1);
+		if(hasUpgrade('st',1))x = x.mul(player.stellar.add(1).log10().div(10000).add(1))
 		return x;
     },
     axsRem(){
