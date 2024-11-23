@@ -53,7 +53,7 @@ const sunshard = {
         player.atom.elements=[291]
         player.supernova.fermions.tiers[2]=[E(0),E(0),E(0),E(0),E(0),E(0)]
 		player.supernova.fermions.tiers[3]=[E(0),E(0),E(0),E(0),E(0),E(0)]
-        player.mainUpg.exotic = []
+  
         player.ascensionMassUpg=[E(0),E(0),E(0),E(0),E(0)]
         player.ascensionMassUpg=[E(0),E(0),E(0),E(0),E(0)]
         player.ascensionMass=new Decimal(0)
@@ -94,7 +94,7 @@ const sunshard = {
 		player.prestigeQK= E(0);
         player.atom.quarks=new Decimal(1e100)
         player.supernova.times= E(100);
-
+        player.supernova.tree=["qu_qol1"];
         player.rp.unl = true;
         player.bh.unl = true;
         player.atom.unl = true;

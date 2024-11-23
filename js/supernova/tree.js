@@ -2166,7 +2166,7 @@ const TREE_UPGS = {
         blbs12: {
             unl() { return true },
             sunshard: true,
-            desc: `六重阶层的元折算延迟1e10倍出现.`,
+            desc: `六重阶层的元折算延迟1000倍出现.`,
             cost: E("0"),
         },    
         blbs13: {
