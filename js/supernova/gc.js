@@ -80,6 +80,7 @@ function updateGCTemp() {
 	if(player.chal.active == 24)tmp.gc.nerf = 2;
 	
 	if(player.exotic.dark_run.upgs[6].gte(1))tmp.gc.nerf *= tmp.dark_run?(tmp.dark_run.upgs[6].eff || 1):1;
+	if(hasUpgrade('st',4)) tmp.gc.nerf-=(player.stardust.add(1).log10().div(100000).min(0.1))
 	tmp.gc.shards = E(0);
 	if(player.supernova.times.gte(GC.goal()) && !(player.chal.active >= 21&&player.chal.active <= 24) && !player.exotic.dark_run.active){
 		tmp.gc.shards = player.supernova.times.min(1e100).log10().sub(E(GC.goal()).log10()).mul(10**(player.gc.depth*0.9+1.1)).add(1).pow(player.gc.depth);

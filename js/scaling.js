@@ -459,6 +459,7 @@ function getScalingStart(type, name) {
             if (hasPrestige(4,1))start = start.mul(1000)
             if (hasPrestige(4,2))start = start.mul(10)
             if (hasElement(421) && !hasElement(519))start = start.mul(CHALS[5].effect(FERMIONS.onActive("05")?E(0):player.chal.comps[5].mul(tmp.qu.chroma_eff[2])))
+			if (hasTree('blbs12'))start = start.mul(1e10)
             if (hasPrestige(4,7))start = start.mul(1e10)
             if (hasElement(454))start = start.mul(tmp.bd.upgs[4].eff)
             if (hasElement(460))start = start.mul(tmp.elements.effect[460])

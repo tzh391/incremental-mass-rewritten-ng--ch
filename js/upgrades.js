@@ -1634,7 +1634,7 @@ const UPGS = {
                 }
             },
             auto_unl() { return false },
-            lens: 3,
+            lens: 5,
             1: {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `轴空间获取基于星尘而增加.`,
@@ -1648,21 +1648,35 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `暗射线获取基于星尘而增加.`,
                 effect(){
-					return player.stardust.add(1).log10();
+					return player.stardust.add(1).log10().pow(0.5);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
                 cost: E(1e100),
             },
             3: {
                 unl() { return player.sun.shard.gte(1)},
-                desc: `转生星辰获取获取基于星尘而增加.`,
+                desc: `转生星辰获取基于星尘而增加.`,
                 effect(){
-					return player.stardust.add(1).log10().pow(0.25);
+					return player.stardust.add(1).log10().pow(0.2);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
                 cost: E(1e154),
             },
-          
+            4: {
+                unl() { return player.sun.shard.gte(1)},
+                desc: `星系挑战的效果基于星尘而减少，在挑战23中增加原子推进的效果.`,
+                effect(){
+					return player.stardust.add(1).log10().div(100000).min(0.1);
+				},
+                effDesc(x=this.effect()) { return "-"+format(x) },
+                cost: E(1e165),
+            }, 
+            5: {
+                unl() { return player.sun.shard.gte(1)},
+                desc: `解锁？？？,在行星重置时保留前5块中子树升级.`,
+             
+                cost: E(7e177),
+            }, 
         },
     },
 }

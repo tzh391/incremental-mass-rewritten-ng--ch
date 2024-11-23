@@ -96,13 +96,15 @@ const TREE_IDS = [
 
 var tree_canvas,tree_ctx,tree_update=true
 
-const NO_REQ_QU = ['qol1','qol2','qol3','qol4','qol5',
+const NO_REQ_SP = ['qol1','qol2','qol3','qol4','qol5',
 'qol6','qol7','qol8','qol9','unl1',
 'c','s2','s3','s4','sn3',
 'sn4','t1','bh2','gr1','chal1',
 'chal2','chal3','bs1','fn2','fn3',
 'fn5','fn6']
-
+const NO_REQ_QU = ['qu_qol1','qu_qol2','qu_qol4','qu_qol5','qu_qol6',
+    'qu_qol7','qu_qol8','qu_qol9','unl2','unl3',
+    'qc2','qc3','br1']
 const TREE_UPGS = {
     buy(x, auto=false) {
 		if(this.ids[x].ax){
@@ -114,11 +116,12 @@ const TREE_UPGS = {
 			}
 			return;
 		}
-        if(this.ids[x].shard){
+        if(TREE_UPGS.ids[sunshard]){
             if(auto)return;
 			if(hasTree(x))return;
 			if(tmp.supernova.tree_choosed != x)return;
             if (player.sun.shard.gte(this.ids[x].cost)){player.sun.shard-(this.ids[x].cost)}
+            player.sunshard.tree.push(x)
 			return;
 		}
         if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
@@ -2051,35 +2054,35 @@ const TREE_UPGS = {
             sunshard: true,
           
             desc: `获得1黄钥匙.`,
-            cost: E(3),
+            cost: E(99),
         },    
         yekey2: {
             unl() { return true },
             sunshard: true,
-
+           
             desc: `获得1黄钥匙.`,
-            cost: E(3),
+            cost: E(99),
         },    
         yekey3: {
             unl() { return true },
             sunshard: true,
            
             desc: `获得1黄钥匙.`,
-            cost: E(3),
+            cost: E(99),
         },    
         blkey1: {
             unl() { return true },
             sunshard: true,
          
             desc: `获得1蓝钥匙.`,
-            cost: E(5),
+            cost: E(99),
         },      
         blkey2: {
             unl() { return true },
             sunshard: true,
          
             desc: `获得1蓝钥匙.`,
-            cost: E(5),
+            cost: E(99),
         },     
         bldo1: {
             unl() { return true },
@@ -2095,13 +2098,12 @@ const TREE_UPGS = {
             req() { return player.exotic.tree.length>=99 },
             reqDesc() { return `1蓝钥匙.` },
             desc: ``,
-            cost: E("eee999"),
+            cost: E("0"),
         },   
         yedo1: {
             unl() { return true },
             sunshard: true,
             req() { return player.exotic.tree.length>=99 },
-          
         
             desc: `消耗1黄钥匙`,
             cost: E("eee999"),
@@ -2129,7 +2131,7 @@ const TREE_UPGS = {
             sunshard: true,
           
             desc: `如果你第一次获得了11太阳碎片，那么祝贺你，你的前期是比较成功的.`,
-            cost: E("eee999"),
+            cost: E("0"),
         },  
         rebs11: {
             unl() { return true },
@@ -2143,7 +2145,7 @@ const TREE_UPGS = {
             unl() { return true },
             sunshard: true,
             desc: `暗射线获取x2.`,
-            cost: E("eee999"),
+            cost: E("0"),
         },     
         rebs13: {
             unl() { return true },
@@ -2165,7 +2167,7 @@ const TREE_UPGS = {
             unl() { return true },
             sunshard: true,
             desc: `六重阶层的元折算延迟1e10倍出现.`,
-            cost: E("eee999"),
+            cost: E("0"),
         },    
         blbs13: {
             unl() { return true },
@@ -2228,7 +2230,7 @@ const TREE_UPGS = {
             sunshard: true,
            
             desc: `当前区域黄钥匙消耗3太阳碎片，蓝钥匙消耗5太阳碎片.`,
-            cost: E("eee999"),
+            cost: E("0"),
         }, 
     },
 }
@@ -2382,7 +2384,7 @@ function updateTreeHTML() {
             let id = tmp.supernova.tree_had2[i][x]
             let unl = tmp.supernova.tree_unlocked[id]
             tmp.el["treeUpg_"+id].setVisible(unl)
-            if (unl) tmp.el["treeUpg_"+id].setClasses({btn_tree: true, ax_tree: TREE_UPGS.ids[id].ax, qu_tree: TREE_UPGS.ids[id].qf, locked: !tmp.supernova.tree_afford[id], bought: hasTree(id), choosed: id == tmp.supernova.tree_choosed})
+            if (unl) tmp.el["treeUpg_"+id].setClasses({btn_tree: true,sunshard_tree: TREE_UPGS.ids[id].sunshard, ax_tree: TREE_UPGS.ids[id].ax, qu_tree: TREE_UPGS.ids[id].qf, locked: !tmp.supernova.tree_afford[id], bought: hasTree(id), choosed: id == tmp.supernova.tree_choosed})
         }
     }
 	if (tmp.tree_tab == 4 || tmp.tree_tab == 5){

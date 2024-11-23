@@ -149,6 +149,7 @@ function resetTemp() {
                     tmp.supernova.tree_had2[j].push(id)
                     tmp.supernova.tree_had.push(id)
                     if (!TREE_UPGS.ids[id].qf) tmp.supernova.auto_tree.push(id)
+                    if (!TREE_UPGS.ids[id].sunshard) tmp.supernova.auto_tree.push(id)   
                 }
             }
         }

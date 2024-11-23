@@ -176,7 +176,8 @@ const EXOTIC = {
 		if(hasElement(486))x = x.mul(MATTERS.eff(12));
 		if(hasElement(540))x = x.mul(player.exotic.ax[1].add(1));
 		if (player.ranks.enne.gte(250)) x = x.mul(RANKS.effect.enne[250]())
-		if(hasUpgrade('st',2))x = x.mul(player.stardust.add(1).log10())
+		if(hasUpgrade('st',2))x = x.mul(player.stardust.add(1).log10().pow(0.5))
+		if (hasTree('rebs12'))x = x.mul(2)	
 		return x;
     },
     dsGain(){
