@@ -3388,7 +3388,7 @@ const ELEMENTS = {
 		{
 			desc: `Meta-Hex starts later based on 奇异物质加成黑暗射线6`,
 			exotic: true,
-			cost: E("1.5e106"),
+			cost: E("6e116"),
 			effect() {
 				let x = player.exotic.points.add(10).log10();
 				return x

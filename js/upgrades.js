@@ -679,12 +679,12 @@ const UPGS = {
             },
             21: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Super Overpower starts 1.08x later.",
+                desc: "降伏器的超级折算延迟至1.08倍出现.",
                 cost: E('ee1.04e14'),
             },
             22: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Rage Power boost Tickspeed Power.",
+                desc: "狂怒能量加成时间速度倍率.",
                 cost: E('ee1.25e14'),
                 effect() {
                     let ret = expMult(player.rp.points.add(1e10),player.rp.points.add(1e10).log10().add(1).log10().add(1).log10().div(500).add(0.001).min(0.07));
@@ -699,17 +699,17 @@ const UPGS = {
             },
             23: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "The softcap of Rage Upgrade 12 is weaker.",
+                desc: "弱化狂怒升级12的软上限.",
                 cost: E('ee1.5e14'),
             },
             24: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Rage Upgrade 18 boost Galactic Quarks.",
+                desc: "狂怒升级18加成星系夸克获取.",
                 cost: E('ee2.22222222e14'),
             },
             25: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Rage Power Upgrade 20 is better.",
+                desc: "狂怒升级20变得更好.",
                 cost: E('ee4.5e14'),
             },
         },
@@ -894,7 +894,7 @@ const UPGS = {
             },
             21: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Dark Matter boost BH Condenser Power.",
+                desc: "暗物质加成黑洞压缩器倍率.",
                 cost: E('ee1.22e14'),
                 effect() {
                     let ret = expMult(player.bh.dm.add(1e10),player.bh.dm.add(1e10).log10().add(1).log10().add(1).log10().div(500).add(0.001));
@@ -906,22 +906,22 @@ const UPGS = {
             },
             22: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Dark Matter Upgrade 18 boost Galactic Quarks.",
+                desc: "暗物质升级18加成星系夸克获取.",
                 cost: E('ee1.5e14'),
             },
             23: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Black Hole Overflow is weaker.",
+                desc: "弱化黑洞溢出.",
                 cost: E('ee2.33333333e14'),
             },
             24: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Change the effect of [Neut-Tau], and the Meta scaling of BH Condensers and Cosmic Rays are affected by [Neut-Tau]. Improve the effect of Entropic Multiplier.",
+                desc: "改变[陶中微子]的效果,它能对黑洞压缩器和宇宙射线元折算的所有折算生效.熵加倍的效果变得更好.",
                 cost: E('ee3.6e14'),
             },
             25: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Mass of Black Hole boost Exotic Matter gain.",
+                desc: "黑洞质量加成奇异物质获取.",
                 cost: E('ee4.7e14'),
                 effect() {
                     let ret = player.bh.mass.add(1e10).slog();
@@ -1105,27 +1105,27 @@ const UPGS = {
             },
             21: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Quark gain formula is better, and raise Electron Power's 2nd effect by 4.",
+                desc: "夸克获取公式变得更好,电子能量第二个效果^4.",
                 cost: E('ee1.92e11'),
             },
             22: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Boost Star Generators gain.",
+                desc: "增加星辰生成器获取.",
                 cost: E('ee2.1e11'),
             },
             23: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Atom Upgrade 18 Boost Galactic Quarks.",
+                desc: "原子升级18对星系夸克生效.",
                 cost: E('ee3e11'),
             },
             24: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Remove Atomic Overflow.",
+                desc: "移除原子溢出.",
                 cost: E('ee4.2e11'),
             },
             25: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Unlock Element Tier 4.",
+                desc: "解锁元素阶层4.",
                 cost: E('ee1e12'),
             },
         },
@@ -1263,17 +1263,17 @@ const UPGS = {
             },
             21: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Remove Death Shard gain softcap.",
+                desc: "移除死寂碎片获取的软上限.",
                 cost: E('e1.8e13'),
             },
             22: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Change the effect of C14.",
+                desc: "改变挑战14的效果.",
                 cost: E('e1.5e14'),
             },
             23: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Death Shards boost Exotic Matter gain.",
+                desc: "死寂碎片加成奇异物质获取.",
                 cost: E('e4e14'),
 				effect(){
 					return player.qu.rip.amt.add(1e10).slog().pow(2.5);
@@ -1282,12 +1282,12 @@ const UPGS = {
             },
             24: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "The Impossible scaling of All Challenges is 20% weaker.",
+                desc: "所有挑战折算弱化20%.",
                 cost: E('e6e14'),
             },
             25: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Base Quantum Foam gain ^(16/9)",
+                desc: "量子泡沫获取基数^(16/9)",
                 cost: E('e2.4e15'),
             },
         },
@@ -1439,22 +1439,22 @@ const UPGS = {
             },
             21: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Reduce Supernova Galaxies Requirements.",
+                desc: "降低超新星星系要求.",
                 cost: E('e110000'),
             },
             22: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Infinity Upgrade 5's softcap is weaker.",
+                desc: "弱化无限升级5的软上限.",
                 cost: E('e120000'),
             },
             23: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Infinity Upgrade 4 is better.",
+                desc: "无限升级4变得更好.",
                 cost: E('e123000'),
             },
             24: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Infinity Mass boost Exotic Matter.",
+                desc: "无限质量加成奇异物质获取.",
                 cost: E('e126000'),
                 effect() {
                     let x = player.inf.points.add(1).log10().add(1).log10();
@@ -1466,7 +1466,7 @@ const UPGS = {
             },
             25: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Infinity Upgrade 24 boost Galactic Quarks.",
+                desc: "无限升级24对星系夸克生效.",
                 cost: E('e141000'),
             },
         },

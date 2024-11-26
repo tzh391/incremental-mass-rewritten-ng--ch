@@ -120,7 +120,7 @@ const TREE_UPGS = {
             if(auto)return;
 			if(hasTree(x))return;
 			if(tmp.supernova.tree_choosed != x)return;
-            if (player.sun.shard.gte(this.ids[x].cost)){player.sun.shard-(this.ids[x].cost)}
+            if (player.sun.shard.gte(this.ids[x].cost)){player.sun.shard=player.sun.shard-(this.ids[x].cost).max(0)}
             player.sunshard.tree.push(x)
 			return;
 		}
@@ -2054,7 +2054,7 @@ const TREE_UPGS = {
             sunshard: true,
           
             desc: `获得1黄钥匙.`,
-            cost: E(99),
+            cost: E(3),
         },    
         yekey2: {
             unl() { return true },
@@ -2261,7 +2261,7 @@ function setupTreeHTML() {
             for (let k = 0; k < TREE_IDS[i][j].length; k++) {
                 let id = TREE_IDS[i][j][k]
                 let option = id == "" ? `style="visibility: hidden"` : ``
-let img = (TREE_UPGS.ids[id] && !id.startsWith("ax") && !id.startsWith("qp") && !id.startsWith("pm") && !id.startsWith("im") && !["s5", "sn6", "qu_qol11", "qu_qol12", "qu_qol13", "qu_qol7a","qu_qol10","chal9","chal10", "chal11", "chal12", "chal13", "chal14", "fn13", "fn14", "fn15", "fn16", "fn17", "fn18", "prim3a", "qc8", "en2", "br2", "prim5", "qc5", "prim6", "prim7", "prim8", "qu12", "br3", "qc6", "qc7"].includes(id))?`<img src="images/tree/${id}.png">`:`<img src="images/tree/placeholder.png">`
+let img = (TREE_UPGS.ids[id] && !id.startsWith("ax") && !id.startsWith("qp") && !id.startsWith("pm") && !id.startsWith("im") && !["en2","br2","prim5","prim6","prim7"].includes(id))?`<img src="images/tree/${id}.png">`:`<img src="images/tree/placeholder.png">`
                 table += `<button id="treeUpg_${id}" class="btn_tree" onclick="TREE_UPGS.buy('${id}'); tmp.supernova.tree_choosed = '${id}'" ${option}>${img}</button>`
             }
             table += `</div>`

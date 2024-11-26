@@ -392,7 +392,7 @@ function updateSupernovaGalaxyHTML() {
 		if(player.superGal.gte(2))html += "<br>初始时就解锁色度";
 		if(player.superGal.gte(2))html += "<br>初始时就有"+format(SUPERNOVA_GALAXY.effects.qut())+"量子次数";
 		if(player.superGal.gte(2))html += "<br>量子次数、无限次数、永恒次数获取变为原来的"+format(SUPERNOVA_GALAXY.effects.qut2())+"倍";
-		if(player.superGal.gte(2))html += "<br>购买中子树升级不需要完成它们的额外条件";
+		if(player.superGal.gte(2))html += "<br>购买需要量子的中子树升级不需要完成它们的额外条件";
 		if(player.superGal.gte(3))html += "<br>加速器效果的软上限和二重软上限延迟"+format(SUPERNOVA_GALAXY.effects.aesc())+"倍出现";
 
 		tmp.el.galPow0.setTxt(format(player.galPow[0])+player.galPow[0].formatGain(SUPERNOVA_GALAXY.galPow0_gain()))
