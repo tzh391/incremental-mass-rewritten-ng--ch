@@ -985,7 +985,7 @@ const TREE_UPGS = {
             qf: true,
             branch: ["unl3"],
             unl() { return hasElement(118) },
-            desc: `自动获取10倍的量子次和量子泡沫数.`,
+            desc: `自动获取10倍的量子次数和量子泡沫.`,
             cost: E(1e118),
         },
         qu_qol12: {

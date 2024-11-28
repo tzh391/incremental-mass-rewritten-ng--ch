@@ -1485,28 +1485,28 @@ const UPGS = {
             auto_unl() { return false },
             lens: 25,
             1: {
-                desc: `Multiply your Eternity times gain by (200+Exotic reset times). Remove Mass and Star Overflow，自动购买无限升级.`,
+                desc: `永恒次数x(200+奇异次数).移除质量和星辰溢出，自动购买无限升级.`,
                 cost: E(1),
             },
             2: {
-                desc: `Super Supernova Galaxies starts 5 later.`,
+                desc: `超新星的超级折算延迟5次出现.`,
                 cost: E(5),
             },
             3: {
-                desc: `Unlock Mass Upgrade 4.`,
+                desc: `解锁质量升级4.`,
                 cost: E(15),
             },
             4: {
-                desc: `Unlock Prestige Mass Upgrade 4.`,
+                desc: `解锁转生质量升级4.`,
                 cost: E(30),
             },
             5: {
-                desc: `Unlock Reset Count Booster.`,
+                desc: `解锁次数强化.`,
                 cost: E(150),
             },
             6: {
                 unl() { return hasUpgrade('exotic',5) },
-                desc: "Prestige Overpower provide free Overpower.",
+                desc: "转生降伏器赠送免费的降伏器.",
                 cost: E(750),
                 effect() {
                     let ret = player.prestigeMassUpg[4].div(40);
@@ -1518,82 +1518,82 @@ const UPGS = {
                     return ret.floor()
                 },
                 effDesc(x=this.effect()) {
-                    return "+"+format(x,0)+" Overpower"
+                    return "+"+format(x,0)+"降伏器"
                 },
             },
             7: {
                 unl() { return hasUpgrade('exotic',5) },
-                desc: "Double the effect of Exotic Upgrade 6.",
+                desc: "奇异升级6的效果翻倍.",
                 cost: E(10000)
             },
             8: {
                 unl() { return hasUpgrade('exotic',5) },
-                desc: "Hawking Radiation gain is better.",
+                desc: "黑洞辐射的获取变得更好.",
                 cost: E(25000)
             },
             9: {
                 unl() { return hasUpgrade('exotic',5) },
-                desc: "Multiply the effect of Exotic Upgrade 6 by 2.5.",
+                desc: "奇异升级6的效果变为原来的2.5倍.",
                 cost: E(50000)
             },
             10: {
                 unl() { return hasUpgrade('exotic',5) },
-                desc: "Unlock Exotic Boosts.",
+                desc: "解锁奇异推进.",
                 cost: E(200000)
             },
             11: {
                 unl() { return hasUpgrade('exotic',10) },
-                desc: "Unlock a new Exotic Boost type.",
+                desc: "解锁一个新的奇异推进类型.",
                 cost: E(800000)
             },
             12: {
                 unl() { return hasUpgrade('exotic',10) },
-                desc: "Break Dilation Upgrade 5 affects Meta-Pent.",
+                desc: "撕裂膨胀升级5对五重阶层的元折算生效.",
                 cost: E(2000000)
             },
             13: {
                 unl() { return hasUpgrade('exotic',10) },
-                desc: "Raise Neutron and Electron Power effects by 5.",
+                desc: "中子能量和电子能量的效果变为原来的5次方.",
                 cost: E(4000000)
             },
             14: {
                 unl() { return hasUpgrade('exotic',10) },
-                desc: "Double the effect of Exotic Upgrade 6.",
+                desc: "奇异升级6的效果翻倍.",
                 cost: E(10000000)
             },
             15: {
                 unl() { return hasUpgrade('exotic',10) },
-                desc: "Unlock Darkness.",
+                desc: "解锁黑暗效果.",
                 cost: E(1e8)
             },
             16: {
                 unl() { return hasUpgrade('exotic',15) },
-                desc: "Double the effect of Exotic Upgrade 6.",
+                desc: "奇异升级6的效果翻倍.",
                 cost: E(1e9)
             },
             17: {
                 unl() { return hasUpgrade('exotic',15) },
-                desc: "Multiply Exotic Matter gain by (1+Exotic reset times).",
+                desc: "奇异次数获取x(1+奇异次数).",
                 cost: E(1e10)
             },
             18: {
                 unl() { return hasUpgrade('exotic',15) },
-                desc: "Unlock a new Exotic Boost type.",
+                desc: "解锁一个新的奇异推进类型.",
                 cost: E(3e11)
             },
             19: {
                 unl() { return hasUpgrade('exotic',15) },
-                desc: "Permanently keep all upgrades, and unlock more upgrades.",
+                desc: "在下层重置前保留所有升级,解锁新的升级.",
                 cost: E(3e12)
             },
             20: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Unlock a new Exotic Boost type.",
+                desc: "解锁一个新的奇异推进类型.",
                 cost: E(1e14)
             },
             21: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Meta-Pent starts later based on Exotic Matter.",
+                desc: "奇异物质延迟五重阶层的元折算.",
                 cost: E(2e15),
 				effect(){
 					return overflow(player.exotic.points.add(1),1e10,hasAscension(1,8)?2.5:2);
@@ -1602,22 +1602,22 @@ const UPGS = {
             },
             22: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Exotic Matter gain formula is better.",
+                desc: "奇异物质获取公式变得更好.",
                 cost: E(2e16),
             },
             23: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Double the effect of Exotic Upgrade 6.",
+                desc: "奇异升级6的效果翻倍.",
                 cost: E(2e20),
             },
             24: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Unlock a new Exotic Boost type.",
+                desc: "解锁一个新的奇异推进类型.",
                 cost: E(1e25),
             },
             25: {
                 unl() { return hasUpgrade('exotic',19) },
-                desc: "Unlock the final Exotic Boost type, Exotic Boost Importing and Exotic Boost Exporting.",
+                desc: "解锁最后一个奇异推进类型,和奇异推进的导入和导出.",
                 cost: E(1e30),
             },
         },
