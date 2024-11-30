@@ -1573,7 +1573,7 @@ const UPGS = {
             },
             17: {
                 unl() { return hasUpgrade('exotic',15) },
-                desc: "奇异次数获取x(1+奇异次数).",
+                desc: "奇异物质获取x(1+奇异次数).",
                 cost: E(1e10)
             },
             18: {
@@ -1639,7 +1639,7 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `轴空间获取基于星尘而增加.`,
                 effect(){
-					return player.stardust.add(1).log10().div(10000).add(1);
+					return player.stardust.add(10).log10().div(10000).add(1);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
                 cost: E(1e65),
@@ -1648,7 +1648,7 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `暗射线获取基于星尘而增加.`,
                 effect(){
-					return player.stardust.add(1).log10().pow(0.5);
+					return player.stardust.add(10).log10().pow(0.5);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
                 cost: E(1e100),
@@ -1657,7 +1657,7 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `转生星辰获取基于星尘而增加.`,
                 effect(){
-					return player.stardust.add(1).log10().pow(0.2);
+					return player.stardust.add(10).log10().pow(0.2);
 				},
                 effDesc(x=this.effect()) { return "x"+format(x) },
                 cost: E(1e154),
@@ -1666,7 +1666,7 @@ const UPGS = {
                 unl() { return player.sun.shard.gte(1)},
                 desc: `星系挑战的效果基于星尘而减少，在挑战23中增加原子推进的效果.`,
                 effect(){
-					return player.stardust.add(1).log10().div(100000).min(0.1);
+					return player.stardust.add(10).log10().div(100000).min(0.1);
 				},
                 effDesc(x=this.effect()) { return "-"+format(x) },
                 cost: E(1e165),

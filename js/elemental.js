@@ -2711,7 +2711,7 @@ const ELEMENTS = {
 			cost: E("1.5e36556"),
 		},
 		{
-			desc: `星系黑暗能量和星系玻色子的效果变得更好.`,
+			desc: `星系暗能量和星系玻色子的效果变得更好.`,
 			cost: E("3e81"),
 			galQk: true,
 		},
@@ -2725,7 +2725,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `星系碎片的效果也可以对星系辐射波的基数生效.`,
+			desc: `星系碎片的效果再次对星系辐射波的基数生效.`,
 			cost: E("1e83"),
 			galQk: true,
 		},
@@ -2820,7 +2820,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `量子前的速度加成黑暗阴影.`,
+			desc: `量子之前所有资源获取速度加成黑暗之影.`,
 			cost: E("1e10"),
 			ds: true,
 			effect() {
@@ -2893,7 +2893,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `解锁黑暗阴影的一个新的效果.`,
+			desc: `解锁黑暗之影的一个新的效果.`,
 			cost: E("1e24"),
 			ds: true,
 		},
