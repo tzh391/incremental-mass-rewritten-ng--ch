@@ -47,9 +47,9 @@ const EXOTIC_BOOST = {
         if (hasTree("qp2") && i == 0)ret = ret.mul(treeEff("qp2"))
         if (hasTree("qp3") && i == 1)ret = ret.mul(treeEff("qp3"))
         if (hasTree("qp4") && i == 2)ret = ret.mul(treeEff("qp4"))
-		if(hasUpgrade('st',4) &&(CHALS.inChal(23))&& i == 2)ret = ret.mul(1.375);
+		if(hasUpgrade('st',5) &&(CHALS.inChal(23))&& i == 1)ret = ret.mul(1.025);	
+		if(hasUpgrade('st',5) &&(CHALS.inChal(23))&& i == 2)ret = ret.mul(2);
 		if(hasTree("ax2") && i <= 4)ret = ret.mul(1.2);
-		if(hasTree("ax4") && i >= 5)ret = ret.mul(1.02);
 		if(hasTree("ax10"))ret = ret.mul(treeEff("ax10"))
 		if(player.exotic.dark_run.upgs[11].gte(1))ret = ret.mul(tmp.dark_run?(tmp.dark_run.upgs[11].eff||1):1);
 		ret = ret.mul(EXOTIC.abEff().exb);

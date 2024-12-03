@@ -1482,7 +1482,7 @@ const UPGS = {
                     player.mainUpg.exotic.push(x)
                 }
             },
-            auto_unl() { return false },
+            auto_unl() { return hasTree('yebs11') },
             lens: 25,
             1: {
                 desc: `永恒次数x(200+奇异次数).移除质量和星辰溢出，自动购买无限升级.`,
@@ -1664,7 +1664,7 @@ const UPGS = {
             },
             4: {
                 unl() { return player.sun.shard.gte(1)},
-                desc: `星系挑战的效果基于星尘而减少，在挑战23中增加原子推进的效果.`,
+                desc: `星系挑战的效果基于星尘而减少.`,
                 effect(){
 					return player.stardust.add(10).log10().div(100000).min(0.1);
 				},
@@ -1673,7 +1673,7 @@ const UPGS = {
             }, 
             5: {
                 unl() { return player.sun.shard.gte(1)},
-                desc: `解锁？？？,在行星重置时保留前5块中子树升级.`,
+                desc: `解锁腐化中子树和星界,在行星重置时保留前5块中子树升级（没做完）在挑战23中增加原子推进的效果.`,
              
                 cost: E(7e177),
             }, 

@@ -56,7 +56,7 @@ const ATOM = {
 		
 		
 		if (player.gc.active || player.chal.active >= 21&&player.chal.active <= 24 || player.exotic.dark_run.active) x = GCeffect(x)
-			
+		if (hasTree('feat1'))x=x.mul(player.exotic.matters[5].log10().add(1))	
         return x.floor();
     },
     canReset() { return tmp.atom.gain.gte(1) },
@@ -112,6 +112,7 @@ const ATOM = {
             if (!hasElement(337)) x = x.softcap(hasUpgrade("atom",13)?(player.prestiges[0].gte(50)?1.2e11:1e11):1e10,hasUpgrade("atom",19)?0.105:0.1,0)
             if (!hasChargedElement(234))x = overflow(x,"ee9",hasChargedElement(75)?0.65:hasChargedElement(23)?0.6:hasElement(358)?0.5:hasElement(337)?0.3:0.25);
             if (hasChargedElement(234)) x = overflow(x,"ee9",0.65+(1-tmp.prestigeATEffect)*0.35)
+            if (hasTree('blbs13'))x =expMult(x,1.02)
             return x.floor()
         },
     },

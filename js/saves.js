@@ -137,7 +137,8 @@ function calc(dt, dt_offline) {
         calcQuantum(dt, dt_offline)
 
         if (hasTree("qu_qol4")) SUPERNOVA.reset(false,false,true)
-
+        if (hasTree("yebs12")) 	SUPERNOVA_CLUSTER.reset(false,false,true)
+        if (hasTree("yebs13")) 	fss.reset(false,false,true)   
         if (hasTree("qol6")) CHALS.exit(true)
         if ((CHALS.inChal(0) || player.chal.active >= 13) && player.chal.active!=17&& player.chal.active!=19) {
     

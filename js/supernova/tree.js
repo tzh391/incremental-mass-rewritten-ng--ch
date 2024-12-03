@@ -11,7 +11,7 @@ const TREE_TAB = [
 
 const TREE_IDS = [
     [
-        ['c'],
+        ['c','feat1','feat2'],
         ['qol1','','','','qu_qol1',''],
         ['chal1'],
         ['bs4','bs1','','qf1','','rad1'],
@@ -54,7 +54,7 @@ const TREE_IDS = [
         ['','','prim5','','','qu6','qu7','qu8','qu9','qu10','qu11'],
         ['qp40','qp16','qp14','qp12','qp13','qp15','qp41'],
 		['ax40','ax36','ax33','ax37','ax41'],
-        ['','','yedo2','','yebs11'],
+        ['blbs13','','yedo2','','yebs11'],
     ],[
         ['s5','sn6'],
         [],
@@ -72,7 +72,7 @@ const TREE_IDS = [
         [],
         ['qp32','qp29','qp27','qp20','qp28','qp31','qp34'],
 		[],
-        ['blbs13','','blkey1','yekey2','blkey2','',''],
+        ['blbs12','bobo','rebs12'],
     ],[
         [],
         [],
@@ -81,7 +81,7 @@ const TREE_IDS = [
         [],
         ['qp43','qp36','qp35','qp42'],
 		[],
-        ['blbs12','yekey1','bobo','yekey3','rebs12'],
+        ['lt'],
     ],[
         [],
         [],
@@ -90,7 +90,7 @@ const TREE_IDS = [
         [],
         ['qp37'],
 		[],
-        ['lt'],
+        [],
     ],
 ]
 
@@ -107,6 +107,7 @@ const NO_REQ_QU = ['qu_qol1','qu_qol2','qu_qol4','qu_qol5','qu_qol6',
     'qc2','qc3','br1']
 const TREE_UPGS = {
     buy(x, auto=false) {
+     
 		if(this.ids[x].ax){
 			if(auto)return;
 			if(hasTree(x))return;
@@ -116,16 +117,9 @@ const TREE_UPGS = {
 			}
 			return;
 		}
-        if(TREE_UPGS.ids[sunshard]){
-            if(auto)return;
-			if(hasTree(x))return;
-			if(tmp.supernova.tree_choosed != x)return;
-            if (player.sun.shard.gte(this.ids[x].cost)){player.sun.shard=player.sun.shard-(this.ids[x].cost).max(0)}
-            player.sunshard.tree.push(x)
-			return;
-		}
+     
         if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
-           
+            if (this.ids[x].sunshard) player.sun.shard = player.sun.shard.sub(this.ids[x].cost).max(1)
              if (this.ids[x].qf) player.qu.points = player.qu.points.sub(this.ids[x].cost).max(0)
             else  player.supernova.stars = player.supernova.stars.sub(this.ids[x].cost).max(0)
             player.supernova.tree.push(x)
@@ -282,6 +276,27 @@ const TREE_UPGS = {
                 return x
             },
             effDesc(x) { return format(x)+"倍" },
+        },
+        feat1: {
+            unl() { return (hasUpgrade('st',5)) },
+            req() { return CHALS.inChal(23) && player.bh.mass.gte("1e60000")&&player.supernova.times.gte(1) },
+            reqDesc() {return `在挑战23中获得1e60000g黑洞质量和1次超新星`},
+            desc: `使所有物质获取和黑洞质量变为原来的平方,蓝色物质加成夸克获取(最后生效）.`,
+            cost: E("1e2825"),
+            effect() {
+                let x = player.exotic.matters[6].log10().add(1)
+                return x
+            },
+            effDesc(x) { return format(x)+"倍" },
+          
+        },
+        feat2: {
+            unl() { return (hasUpgrade('st',5)) },
+            req() { return CHALS.inChal(23) && player.bh.mass.gte("1e120000")&&player.supernova.times.gte(1000) },
+            reqDesc() {return `在挑战23中获得1e120000g黑洞质量和1000次超新星`},
+            desc: `在黑洞子选项卡下解锁了不稳定黑洞,可以增加黑洞质量获取速度（咕咕咕）`,
+            cost: E("1e2835"),
+          
         },
         s2: {
             branch: ["s1"],
@@ -2049,82 +2064,44 @@ const TREE_UPGS = {
             cost: E(1),
         },
 
-        yekey1: {
-            unl() { return true },
-            sunshard: true,
-          
-            desc: `获得1黄钥匙.`,
-            cost: E(3),
-        },    
-        yekey2: {
-            unl() { return true },
-            sunshard: true,
-           
-            desc: `获得1黄钥匙.`,
-            cost: E(99),
-        },    
-        yekey3: {
-            unl() { return true },
-            sunshard: true,
-           
-            desc: `获得1黄钥匙.`,
-            cost: E(99),
-        },    
-        blkey1: {
-            unl() { return true },
-            sunshard: true,
-         
-            desc: `获得1蓝钥匙.`,
-            cost: E(99),
-        },      
-        blkey2: {
-            unl() { return true },
-            sunshard: true,
-         
-            desc: `获得1蓝钥匙.`,
-            cost: E(99),
-        },     
+      
         bldo1: {
             unl() { return true },
             sunshard: true,
-            req() { return player.exotic.tree.length>=99 },
-            reqDesc() { return `1蓝钥匙.` },
+            req() { return  hasTree('yedo1') },
+            reqDesc() { return `你需要有一条能前往这里的路.` },
             desc: ``,
-            cost: E("eee999"),
+            cost: E("5"),
         },      
         bldo2: {
             unl() { return true },
             sunshard: true,
-            req() { return player.exotic.tree.length>=99 },
-            reqDesc() { return `1蓝钥匙.` },
+            req() { return  hasTree('yedo1') },
+            reqDesc() { return `你需要有一条能前往这里的路.` },
             desc: ``,
-            cost: E("0"),
+            cost: E("5"),
         },   
         yedo1: {
             unl() { return true },
             sunshard: true,
-            req() { return player.exotic.tree.length>=99 },
-        
-            desc: `消耗1黄钥匙`,
-            cost: E("eee999"),
+            desc: ``,
+            cost: E("3"),
         }, 
         yedo2: {
             unl() { return true },
             sunshard: true,
-
-            req() { return player.exotic.tree.length>=99 },
-         
-            desc: `消耗1黄钥匙`,
-            cost: E("eee999"),
+            req() { return  hasTree('yedo1') },
+            reqDesc() { return `你需要有一条能前往这里的路.` },
+            desc: ``,
+            cost: E("3"),
         },
         yedo3: {
             unl() { return true },
             sunshard: true,
-         
-            req() { return player.exotic.tree.length>=99 },
-            
-            desc: `消耗1黄钥匙`,
-            cost: E("eee999"),
+            req() { return  hasTree('yedo2') },
+            reqDesc() { return `你需要有一条能前往这里的路.` },
+            desc: ``,
+            cost: E("3"),
         },    
         bobo: {
             unl() { return true },
@@ -2139,7 +2116,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo1') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `奇异物质获取x5.`,
-            cost: E("eee999"),
+            cost: E("0"),
         },    
         rebs12: {
             unl() { return true },
@@ -2153,7 +2130,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo2') },
             reqDesc() { return `开下面的黄门.` },
             desc: `雕文质量获取x3.`,
-            cost: E("eee999"),
+            cost: E("0"),
         }, 
         blbs11: {
             unl() { return true },
@@ -2161,7 +2138,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo1') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `超新星的元折算弱化80%.`,
-            cost: E("eee999"),
+            cost: E("0"),
         },    
         blbs12: {
             unl() { return true },
@@ -2175,31 +2152,31 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo2') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `原子能量的软上限弱化2%.`,
-            cost: E("eee999"),
+            cost: E("0"),
         },   
         grbs11: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('bldo1') },
             reqDesc() { return `开旁边的蓝门.` },
-            desc: `行星重置时保留1e10奇异物质.`,
-            cost: E("eee999"),
+            desc: `行星重置时保留1e6奇异物质.`,
+            cost: E("0"),
         }, 
         grbs12: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('yedo2') },
             reqDesc() { return `开下面的黄门.` },
-            desc: `行星重置时保留1e6奇异重置次数.`,
-            cost: E("eee999"),
+            desc: `行星重置时保留1e4奇异重置次数.`,
+            cost: E("0"),
         },    
         grbs13: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('yedo3') },
             reqDesc() { return `开旁边的黄门.` },
-            desc: `行星重置时保留1e4暗射线.`,
-            cost: E("eee999"),
+            desc: `行星重置时保留100暗射线.`,
+            cost: E("0"),
         },   
         yebs11: {
             unl() { return true },
@@ -2207,15 +2184,15 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo1') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `自动购买奇异升级.`,
-            cost: E("eee999"),
+            cost: E("0"),
         }, 
         yebs12: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('bldo2') },
             reqDesc() { return `开旁边的蓝门.` },
-            desc: `自动购买奇异推进.`,
-            cost: E("eee999"),
+            desc: `自动获得超新星星团.`,
+            cost: E("0"),
         }, 
         yebs13: {
             unl() { return true },
@@ -2223,13 +2200,13 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo3') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `自动获得最终星辰碎片.`,
-            cost: E("eee999"),
+            cost: E("0"),
         }, 
         lt: {
             unl() { return true },
             sunshard: true,
            
-            desc: `当前区域黄钥匙消耗3太阳碎片，蓝钥匙消耗5太阳碎片.`,
+            desc: `当前区域黄门消耗3太阳碎片，蓝门消耗5太阳碎片.`,
             cost: E("0"),
         }, 
     },

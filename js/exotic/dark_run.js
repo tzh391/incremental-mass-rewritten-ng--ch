@@ -19,6 +19,7 @@ const DARK_RUN = {
     
         if(hasChargedElement(230))x = x.pow(tmp.chal?tmp.chal.eff[15]:1);
 		x = x.mul(SUPERNOVA_GALAXY.effects.em());
+        if (hasTree('rebs11'))x = x.mul(3)	
 		return x;
     },
     enter() {

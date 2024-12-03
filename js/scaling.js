@@ -560,6 +560,7 @@ function getScalingStart(type, name) {
 	if (name=='supernova') {
 		start = start.add(tmp.prim.eff[7])
 		start =start.min(Number.MAX_VALUE)
+		if (CHALS.inChal(23)) return E(1)
 	}
 	if ((name=="bh_condenser" || name=="gamma_ray" || name=="tickspeed") && hasUpgrade('atom',14)) start = start.mul(10)
 	if ((name=="bh_condenser" || name=="gamma_ray" || name=="tickspeed") && hasUpgrade('atom',14) && player.prestiges[0].gte(50)) start = start.mul(1.2)
@@ -887,7 +888,9 @@ function getScalingPower(type, name) {
 			if (player.ranks.enne.gte(666)) power = power.mul(0.0001)
 			if (player.ranks.enne.gte(3690)) power = power.mul(0.0001)
 			if (player.ranks.enne.gte(4480)) power = power.mul(0.001)
-			if (hasChargedElement(245)&&player.exotic.points.gte("e1115"))power = power.div(tmp.elements.ceffect[245]||1)	
+			if (hasChargedElement(245)&&player.exotic.points.gte("e1115"))power = power.div(tmp.elements.ceffect[245]||1)
+			if (hasTree('blbs11'))power = power.mul(0.2)	
+			if (CHALS.inChal(23)) return E(1)	
 								
 		}
 		if (name=="rank") {

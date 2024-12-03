@@ -98,7 +98,9 @@ const sunshard = {
         player.rp.unl = true;
         player.bh.unl = true;
         player.atom.unl = true;
-
+        if(hasTree('grbs11'))player.exotic.points=new Decimal(1e6);
+        if(hasTree('grbs12'))player.exotic.timess=new Decimal(1e4);
+        if(hasTree('grbs13'))player.exotic.timess=new Decimal(100);
     }
     }, 
 
@@ -711,7 +713,9 @@ const FORMS = {
 				x = Decimal.tetrate(10,x.slog().sub(hasTree('ax34')?4.2:4).div(hasTree('qp39')?1.05:1.1).add(hasTree('ax34')?4.2:4));
 			}
 			tmp.bhOverflow = x.log(x_original);
+          
 		    if(hasElement(327))tmp.bhOverflow = x.add(100).log10().log(x_original.add(100).log10());
+            if (hasTree('feat1'))x=x.pow(2)
 			return x
         },
         f() {

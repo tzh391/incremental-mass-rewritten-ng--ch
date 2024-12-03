@@ -6,11 +6,13 @@ const MATTERS = {
 		if(i==1 && hasTree('qp15'))x = x.mul(treeEff('qp15'));
 		if(i==2 && hasElement(513))x = x.mul(tmp.elements.effect[513]||1);
 		if(i<MATTERS_LENGTH-1 && hasElement(548))x = x.mul(player.exotic.matters[i+1].add(1).pow(MATTERS.extendPow()));
+		if (hasTree('feat1'))x=x.pow(2)
 		return x;
     },
     eff(i) {
 		let base=player.exotic.matters[i]
 		if(player.chal.active==23)base=E(0)
+		
 		if(i==0||i==3||i==11){
 			let x = base.add(1).cbrt();
 			if(x.gte(1e10))x = x.log10().pow(10);

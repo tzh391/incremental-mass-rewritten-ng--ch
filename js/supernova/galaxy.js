@@ -478,7 +478,7 @@ const SUPERNOVA_CLUSTER = {
 	req_base(){
 		let ret = 1.1;
 		if(hasChargedElement(240))ret=1.09789
-		if(hasChargedElement(250)&&player.exotic.matters[10].gte("1e1300000000"))ret=1.095
+		if(hasChargedElement(250)&&player.exotic.matters[9].gte("1e1300000000"))ret=1.095
 		return ret;
 	},
 	req(){

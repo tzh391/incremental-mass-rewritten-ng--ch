@@ -48,6 +48,7 @@ const EXOTIC = {
 		
 		if (player.ranks.enne.gte(9000)) x = x.mul(RANKS.effect.enne[9000]())
 		if (hasChargedElement(255)&&hasAscension(0,2245)) x = x.mul(tmp.elements.effect[255]);
+		if (hasTree('rebs11'))x = x.mul(5)	
         return x.floor()
     },
     gainTimes() {
