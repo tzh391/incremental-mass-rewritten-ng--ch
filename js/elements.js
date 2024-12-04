@@ -543,9 +543,9 @@ function updateOptionsHTML() {
 		?(player.superGal.gte(1))
 		:CONFIRMS[x] == "exotic"
 		?(player.exotic.times.gte(1))
-		:(player[CONFIRMS[x]].unl || player.superGal.gte(1))
-		
-			
+		:(player.sun.shard.gte(1))	
+		?(player.superGal.gte(1))
+		:CONFIRMS[x] == "sunshard"
 
 		tmp.el["confirm_div_"+x].setDisplay(unl)
 		tmp.el["confirm_btn_"+x].setTxt(player.confirms[CONFIRMS[x]] ? "ON":"OFF")

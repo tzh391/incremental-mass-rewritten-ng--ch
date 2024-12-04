@@ -490,7 +490,7 @@ const SUPERNOVA_CLUSTER = {
 	},
 	reset(force=false){
 		if(!force)if(player.superGal.lt(SUPERNOVA_CLUSTER.req()))return;
-		if(!force) if((confirm("Are you sure to reset for a Supernova Cluster? It will force an Exotic Reset!")?!confirm("ARE YOU SURE ABOUT IT???"):true)) return
+		
 		if(!force)player.superCluster = player.superCluster.add(1);
 		player.ascensions=[E(0), E(0), E(0), E(0)];
 		EXOTIC.doReset();

@@ -94,7 +94,7 @@ const MATTERS = {
 	},
 	fssReset(force=false){
 		if(!force)if(MATTERS.fssBase().lt(MATTERS.fssReq()))return;
-		if(!force)if((confirm("Are you sure to reset for a Final Star Shard? It will force an Exotic Reset, and reset your Exotic Matter!")?!confirm("ARE YOU SURE ABOUT IT???"):true)) return
+		
 		if(!force)player.exotic.fss = player.exotic.fss.add(1);
 		player.exotic.matters = getPlayerData().exotic.matters;
 		player.exotic.points = E(0);

@@ -14,7 +14,7 @@ const ST_NAMES = [
 		["","Hc","DHe","THt","TeH","PHc","HHe","HpH","OHt","EHc"]
 	]
 ]
-const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic']
+const CONFIRMS = ['rp', 'bh', 'atom', 'sn', 'qu', 'br', 'inf', 'et', 'sg', 'exotic', 'sunshard']
 const sunshard = {
     gain() {
         let x =E(0) 
@@ -23,6 +23,7 @@ const sunshard = {
     },
     reset(force=false) {
         if((player.mass.gte("eee128")&&player.supernova.times.gte(Number.MAX_VALUE)&&player.prestigeST.gte(1e6))||player.chal.active >= 25){
+		if(!force)if((confirm("迄今为止的一切都将重置，但可以获得太阳碎片！")?!confirm("你真的要重置吗???"):true)) return
         player.sun.shard=player.sun.shard.add(sunshard.gain())
         SUPERNOVA_CLUSTER.reset(true);
         player.exotic.points=new Decimal(0)
