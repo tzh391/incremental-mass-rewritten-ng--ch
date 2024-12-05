@@ -589,7 +589,7 @@ const CHALS = {
         max: E(100),
         inc: E('e2000'),
         pow: E(2),
-        start: E('e29000').mul(1.5e56),
+        start: E('e27500').mul(1.5e56),
         effect(x) {
 			if(hasChargedElement(104))return x.add(1)
             let ret = x.root(1.75).mul(0.01).add(1)
