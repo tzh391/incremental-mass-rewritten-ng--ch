@@ -47,6 +47,7 @@ const EXOTIC_BOOST = {
         if (hasTree("qp2") && i == 0)ret = ret.mul(treeEff("qp2"))
         if (hasTree("qp3") && i == 1)ret = ret.mul(treeEff("qp3"))
         if (hasTree("qp4") && i == 2)ret = ret.mul(treeEff("qp4"))
+	if(hasTree("ax4") && i >= 5)ret = ret.mul(1.02);	
 		if(hasUpgrade('st',5) &&(CHALS.inChal(23))&& i == 1)ret = ret.mul(1.025);	
 		if(hasUpgrade('st',5) &&(CHALS.inChal(23))&& i == 2)ret = ret.mul(2);
 		if(hasTree("ax2") && i <= 4)ret = ret.mul(1.2);
