@@ -529,7 +529,13 @@ function updateBlackHoleHTML() {
 function updateOptionsHTML() {
 	for (let x = 0; x < CONFIRMS.length; x++) {
 		let unl = 
-		CONFIRMS[x] == "sn"
+		CONFIRMS[x] == "rp"
+		?(player.rp.points.gte(1)) 
+		:CONFIRMS[x] == "bh"
+		?(player.bh.dm.gte(1))
+		:CONFIRMS[x] == "atom"
+		?(player.atom.points.gte(1))
+		:CONFIRMS[x] == "sn"
 		?(player.supernova.times.gte(1) || quUnl() || player.superGal.gte(1))
 		:CONFIRMS[x] == "qu"
 		?(quUnl() || player.superGal.gte(1))
@@ -543,10 +549,9 @@ function updateOptionsHTML() {
 		?(player.superGal.gte(1))
 		:CONFIRMS[x] == "exotic"
 		?(player.exotic.times.gte(1))
-		:(player.sun.shard.gte(1))	
 		?(player.superGal.gte(1))
 		:CONFIRMS[x] == "sunshard"
-
+		:(player.sun.shard.gte(1))	
 		tmp.el["confirm_div_"+x].setDisplay(unl)
 		tmp.el["confirm_btn_"+x].setTxt(player.confirms[CONFIRMS[x]] ? "ON":"OFF")
 	}

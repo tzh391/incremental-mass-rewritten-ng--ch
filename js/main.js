@@ -42,8 +42,8 @@ const sunshard = {
         player.exotic.ax=[E(0),E(0),E(0),E(0)]
         player.exotic.tree.length=new Decimal(0)
     
-        player.supernova.tree.length=new Decimal(0)
-     
+       
+       
         player.superCluster=new Decimal(0)
 		player.superGal=new Decimal(0)
 		player.galQk=new Decimal(0)
@@ -399,7 +399,7 @@ const FORMS = {
             if (hasTree("t1")) step = step.pow(1.15)
             if (player.ranks.hex.gte(86)) step = step.pow(2)
 			if (hasElement(134) && hasElement(137)) step = step.pow(tmp.accelEffect.eff||1)
-			if (hasElement(156))step = step.pow(tmp.atom.particles[0].powerEffect.eff2)
+                if (hasElement(156))step = step.pow(tmp.atom.particles[0].powerEffect.eff2)
                
 		   
 			step = step.pow(SUPERNOVA_GALAXY.effects.ts())

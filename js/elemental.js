@@ -1452,7 +1452,7 @@ const ELEMENTS = {
             ccost: uni("e66666666"),
 		},
 		{
-			desc: `质子能量的效果变得更好。`,
+			desc: `质子能量的效果变得更好（请检查元素105是否点了）。`,
 			cost: uni(1e21),
             cdesc: `Effects of Protons Powers is better.`,
             ccost: uni("e67000000"),

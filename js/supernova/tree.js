@@ -105,6 +105,9 @@ const NO_REQ_SP = ['qol1','qol2','qol3','qol4','qol5',
 const NO_REQ_QU = ['qu_qol1','qu_qol2','qu_qol4','qu_qol5','qu_qol6',
     'qu_qol7','qu_qol8','qu_qol9','unl2','unl3',
     'qc2','qc3','br1']
+const QP = ['qp1','qp2','qp3','qp4','qp5',
+        'qp6','qp7','qp8','qp9','qp10',
+        'qp11','qp12','qp13']
 const TREE_UPGS = {
     buy(x, auto=false) {
      
@@ -118,11 +121,14 @@ const TREE_UPGS = {
 			return;
 		}
      
-        if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
-            if (this.ids[x].sunshard) player.sun.shard = player.sun.shard.sub(this.ids[x].cost).max(1)
+        if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]&&(!this.ids[x].sunshard)) {
              if (this.ids[x].qf) player.qu.points = player.qu.points.sub(this.ids[x].cost).max(0)
             else  player.supernova.stars = player.supernova.stars.sub(this.ids[x].cost).max(0)
             player.supernova.tree.push(x)
+        }
+        if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]&&this.ids[x].sunshard){
+            player.sun.shard = player.sun.shard.sub(this.ids[x].cost).max(1)
+            player.sunshard.tree.push(x)
         }
      
     },
@@ -2216,7 +2222,7 @@ function hasTree(id) {
    
 	if(TREE_UPGS.ids[id].ax)return player.exotic.tree.includes(id)
    
-    if(tmp.tree_tab <= 7)return player.supernova.tree.includes(id)  
+    if(TREE_UPGS.ids[id] && !id.startsWith("sunshard") )return player.supernova.tree.includes(id)  
 }
 
 function treeEff(id,def=1) { return tmp.supernova.tree_eff[id]||E(def) }
