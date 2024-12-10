@@ -1624,7 +1624,7 @@ const TREE_UPGS = {
             qf: true,
             branch: ["qp17","qp22"],
             desc: `Black Hole Overflow is weaker和移除强化器溢出.`,
-            cost: E('ee241'),
+            cost: E('ee240'),
         },
         qp40: {
             unl() { return hasTree('ax42') },
