@@ -436,40 +436,40 @@ function updateSupernovaGalaxyHTML() {
 	
 	
 	if(player.superCluster.gte(1)){
-		var html="Your Supernova Clusters gives you following effects:";
-		html += "<br>Multiply Galactic Quarks gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		html += "<br>Multiply Exotic Matter gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		html += "<br>Super Supernova Galaxies starts "+format(SUPERNOVA_CLUSTER.effects.eff2())+" later";
-		html += "<br>Add "+format(SUPERNOVA_CLUSTER.effects.eff3())+" Exotic Boosts";
-		html += "<br>Add "+format(SUPERNOVA_CLUSTER.effects.eff4())+" to base Infinity Mass gain exponent";
-		if(player.superCluster.gte(2))html += "<br>Ascension Level resets nothing";
-		if(player.superCluster.gte(3))html += "<br>Multiply Dark Shadow gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		if(player.superCluster.gte(4))html += "<br>Multiply Dark Ray gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		if(player.superCluster.gte(5))html += "<br>Automatically gain Ascension Level";
-		if(player.superCluster.gte(6))html += "<br>Automatically gain Valor";
-		if(player.superCluster.gte(7))html += "<br>Multiply Abyssal Blot gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		if(player.superCluster.gte(7))html += "<br>Multiply Glyphic Mass gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		if(player.superCluster.gte(8))html += "<br>Multiply Exotic Count gain by "+format(SUPERNOVA_CLUSTER.effects.eff1());
-		if(player.superCluster.gte(9))html += "<br>Galactic Power effect is better";
-		if(player.superCluster.gte(9))html += "<br>Unlock Galactic Mass";
+		var html="您的超新星星团提供了以下效果：";
+		html += "<br>星系夸克获取x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		html += "<br>奇异物质获取x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		html += "<br>超新星星系超级折算延迟"+format(SUPERNOVA_CLUSTER.effects.eff2())+"次出现";
+		html += "<br>增加"+format(SUPERNOVA_CLUSTER.effects.eff3())+"个奇异推进点数";
+		html += "<br>基础无限质量获取指数+"+format(SUPERNOVA_CLUSTER.effects.eff4());
+		if(player.superCluster.gte(2))html += "<br>飞升等级不再重置任何东西";
+		if(player.superCluster.gte(3))html += "<br>黑暗之影获取x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		if(player.superCluster.gte(4))html += "<br>暗射线获取x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		if(player.superCluster.gte(5))html += "<br>自动获得飞升等级";
+		if(player.superCluster.gte(6))html += "<br>自动获得英勇";
+		if(player.superCluster.gte(7))html += "<br>深渊之渍获取x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		if(player.superCluster.gte(7))html += "<br>雕文质量获取x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		if(player.superCluster.gte(8))html += "<br>奇异次数x"+format(SUPERNOVA_CLUSTER.effects.eff1());
+		if(player.superCluster.gte(9))html += "<br>星系能量的效果变得更好";
+		if(player.superCluster.gte(9))html += "<br>解锁星系质量";
 		if(player.superCluster.gte(9))tmp.el.galPow6.setTxt(formatMass(player.galPow[6])+player.galPow[6].formatGain(SUPERNOVA_GALAXY.galPow6_gain(),1))
 		if(player.superCluster.gte(9))tmp.el.galPow6_eff.setTxt(format(SUPERNOVA_GALAXY.galPow6_eff()))
-		if(player.superCluster.gte(10))html += "<br>Meta-Supernova is "+formatReduction(SUPERNOVA_CLUSTER.effects.eff5())+" weaker";
-		if(player.superCluster.gte(11))html += "<br>Transcension Level resets nothing";
-		if(player.superCluster.gte(12))html += "<br>Automatically gain Transcension Level";
-		if(player.superCluster.gte(13))html += "<br>Add "+format(SUPERNOVA_CLUSTER.effects.eff6())+" to Matter Exponent";
-		if(player.superCluster.gte(14))html += "<br>Unlock Stardust";
+		if(player.superCluster.gte(10))html += "<br>超新星次数的一阶元折算强度削弱"+formatReduction(SUPERNOVA_CLUSTER.effects.eff5());
+		if(player.superCluster.gte(11))html += "<br>超越等级不再重置任何东西";
+		if(player.superCluster.gte(12))html += "<br>自动获取超越等级";
+		if(player.superCluster.gte(13))html += "<br>物质获取公式指数+"+format(SUPERNOVA_CLUSTER.effects.eff6());
+		if(player.superCluster.gte(14))html += "<br>解锁星尘";
 		if(player.superCluster.gte(14))tmp.el.stardust.setTxt(format(player.stardust)+player.stardust.formatGain(SUPERNOVA_CLUSTER.stardustGain()))
 		if(player.superCluster.gte(14))tmp.el.stardustEff.setTxt(format(SUPERNOVA_CLUSTER.stardustEff()))
-		if(player.superCluster.gte(20))html += "<br>Recursion resets nothing";
-		if(player.superCluster.gte(20))html += "<br>Automatically gain Recursion";
-		if(player.superCluster.gte(20))html += "<br>Multiply X Axion Generator Power by "+format(SUPERNOVA_CLUSTER.effects.eff7());
-		if(player.superCluster.gte(20))html += "<br>Multiply Y Axion Generator Power by "+format(SUPERNOVA_CLUSTER.effects.eff7());
-		if(player.superCluster.gte(27))html += "<br>Multiply Z Axion Generator Power by "+format(SUPERNOVA_CLUSTER.effects.eff7());
-		if(player.superCluster.gte(21))html += "<br>Unlock Stellar Mass";
-		if(player.superCluster.gte(21))html += "<br>Unlock a Stardust buyable in Main Tab";
-		if(player.superCluster.gte(28))html += "<br>Multiply Entropy gain by "+format(SUPERNOVA_CLUSTER.effects.eff8());
-		if(player.superCluster.gte(30))html += "<br>Multiply Entropy cap by "+format(SUPERNOVA_CLUSTER.effects.eff8());
+		if(player.superCluster.gte(20))html += "<br>轮回等级不再重置任何东西";
+		if(player.superCluster.gte(20))html += "<br>自动获取轮回等级";
+		if(player.superCluster.gte(20))html += "<br>X轴生成器倍率x"+format(SUPERNOVA_CLUSTER.effects.eff7());
+		if(player.superCluster.gte(20))html += "<br>Y轴生成器倍率x"+format(SUPERNOVA_CLUSTER.effects.eff7());
+		if(player.superCluster.gte(27))html += "<br>Z轴生成器倍率x"+format(SUPERNOVA_CLUSTER.effects.eff7());
+		if(player.superCluster.gte(21))html += "<br>解锁恒星质量";
+		if(player.superCluster.gte(21))html += "<br>解锁主要状态栏内的星尘可购买项";
+		if(player.superCluster.gte(28))html += "<br>熵获取x"+format(SUPERNOVA_CLUSTER.effects.eff8());
+		if(player.superCluster.gte(30))html += "<br>熵上限x"+format(SUPERNOVA_CLUSTER.effects.eff8());
 		
 		tmp.el.superClusterEff.setHTML(html)
 	}
@@ -490,7 +490,7 @@ const SUPERNOVA_CLUSTER = {
 	},
 	reset(force=false){
 		if(!force)if(player.superGal.lt(SUPERNOVA_CLUSTER.req()))return;
-		
+		if(!force) if((confirm("Are you sure to reset for a Supernova Cluster? It will force an Exotic Reset!")?!confirm("ARE YOU SURE ABOUT IT???"):true)) return
 		if(!force)player.superCluster = player.superCluster.add(1);
 		player.ascensions=[E(0), E(0), E(0), E(0)];
 		EXOTIC.doReset();
