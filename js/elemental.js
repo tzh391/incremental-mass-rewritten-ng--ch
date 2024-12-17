@@ -925,7 +925,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "x"+x.format() },
-            cdesc: `使该元素的增加倍率从1.1倍(10%)变为1.2倍(20%)。`,
+            cdesc: `使该元素的增加倍率从1.1倍(增加10%)变为1.2倍(增加20%)。`,
             ccost: E('ee1.9e17'),
         },
         {
@@ -1938,7 +1938,7 @@ const ELEMENTS = {
 		{
 			desc: `中子树升级[sn6]变得更好。`,
 			cost: E(1e6),
-			cdesc: `第1幕目标：击败地宫养殖者————greenshayu88   作为见面礼，将中子树升级[sn6]的效果^9e15.`,
+			cdesc: `第1幕目标：击败地宫养殖者————greenshayu88   作为见面礼，将中子树升级[sn6]的效果^9e15。`,
 			ccost: E("e5850000000"),
 			galQk: true,
 			
@@ -1947,74 +1947,74 @@ const ELEMENTS = {
 			desc: `自动购买碎片生成器。`,
 			cost: E("1.5e516"),
 			et: true,
-			cdesc: `鲨鱼吸收了永恒质量，变得更强大了，使时间碎片的效果^2.`,
+			cdesc: `鲨鱼吸收了永恒质量，变得更强大了，使时间碎片的效果^2。`,
 			ccost: E("e6070000"),
 		},
 		{
 			desc: `128号元素的效果变为原来的1.63次方。`,
 			cost: E("1.5e2976"),
-			cdesc: `鲨鱼从地核捡到了128号元素，发现它的效果变成了原来的平方.`,
+			cdesc: `鲨鱼从地核捡到了128号元素，发现它的效果变成了原来的平方。`,
 			ccost: E("e5900000000"),
 		},
 		{
 			desc: `Uncap C13 completions.`,
 			cost: E(1e7),
 			galQk: true,
-			cdesc: `奇异鲨鱼用锋利的牙齿咬了一口挑战13效果的软上限（弱化）.`,
+			cdesc: `奇异鲨鱼用锋利的牙齿咬了一口挑战13效果的软上限（弱化）。`,
 			ccost: E("e6150000000"),
 		},
 		{
 			desc: `时间碎片 的效果变得更好.`,
 			cost: E("1.5e533"),
 			et: true,
-			cdesc: `鲨鱼吃掉了辉煌的超究折算，降伏器和星系费米子的超级折算，顺便吃掉了锻体器和助推器.`,
+			cdesc: `鲨鱼吃掉了辉煌的超究折算，降伏器和星系费米子的超级折算，顺便吃掉了锻体器和助推器。`,
 			ccost: E("e6360000"),			
 		},
 		{
 			desc: `移除辐射波加成“级别元折算加成”的1个软上限。`,
 			cost: E("1.5e3306"),
-			cdesc: `鲨鱼吃掉了[奇夸克],[顶夸克]和[陶子]效果的硬上限.`,
+			cdesc: `鲨鱼吃掉了[奇夸克],[顶夸克]和[陶子]效果的硬上限。`,
 			ccost: E("e6240000000"),	
 		},
 		{
 			desc: `削弱星系能量效果的软上限。`,
 			cost: E(2.5e7),
 			galQk: true,
-			cdesc: `鲨鱼进行了研究，使星系能量效果的软上限再次削弱.`,
+			cdesc: `鲨鱼进行了研究，使星系能量效果的软上限再次削弱。`,
 			ccost: E("e6280000000"),	
 
 		},
 		{
-			desc: `时间碎片 的效果变得更好.`,
+			desc: `时间碎片 的效果变得更好。`,
 			cost: E("1.5e560"),
 			et: true,
-			cdesc: `鲨鱼的境界提升至潮汐级初等，使时间碎片的效果^1.2.`,
+			cdesc: `鲨鱼的境界提升至潮汐级初等，使时间碎片的效果^1.2。`,
 			ccost: E("e6520000"),	
 		},
 		{
 			desc: `挑战17的次数上限增加300。`,
 			cost: E("1.5e3656"),
-			cdesc: `鲨鱼进进出出海洋，挑战22的次数上限增加300.`,
+			cdesc: `鲨鱼进进出出海洋，挑战22的次数上限增加300。`,
 			ccost: E("e6338000000"),				
 		},
 		{
 			desc: `削弱星系能量效果的软上限。`,
 			cost: E(1e8),
 			galQk: true,
-			cdesc: `鲨鱼要膨胀了，但移除膨胀质量溢出.`,
+			cdesc: `鲨鱼要膨胀了，但移除膨胀质量溢出。`,
 			ccost: E("e6335000000"),							
 		},
 		{
 			desc: `挑战20效果变为原来的立方。`,
 			cost: E("1.5e606"),
 			et: true,
-			cdesc: `鲨鱼不想打星系挑战了，所以星系碎片的公式变得更好但有硬上限（1e25）.`,
+			cdesc: `鲨鱼不想打星系挑战了，所以星系碎片的公式变得更好但有硬上限（1e25）。`,
 			ccost: E("e6630000"),							
 		},
 		{
 			desc: `修改挑战5的效果。`,
 			cost: E("1.5e3806"),
-			cdesc: `鲨鱼发现挑战15好像没用了，所以修改挑战15的效果.`,
+			cdesc: `鲨鱼发现挑战15好像没用了，所以修改挑战15的效果。`,
 			ccost: E("e6345555555"),										
 		},
 		{
@@ -2030,7 +2030,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x); },
-			cdesc: `这个元素的效果变得更好.`,
+			cdesc: `这个元素的效果变得更好。`,
 			ccost: E("e7060000000"),										
 		},
 		{
@@ -2043,7 +2043,7 @@ const ELEMENTS = {
 				if(hasElement(311))x = expMult(player.ranks.tier,0.6);
 				return x
 			},
-			effDesc(x) { return format(x)+"x later"
+			effDesc(x) { return "延迟"+format(x)+"倍出现"
 			},
 			ceffect() {
 				let x = player.ranks.tier.add(10).log10().sqrt().add(10).log10().pow(2).floor();
@@ -2051,13 +2051,13 @@ const ELEMENTS = {
 			},
 			ceffDesc(x) { return "当前战力"+format(x)
 			},
-			cdesc: `解锁鲨鱼战力，数值见下，(之后会有用).`,
+			cdesc: `解锁鲨鱼战力，数值见下，(之后会有用)。`,
 			ccost: E("e7730000"),									
 		},
 		{
 			desc: `挑战18效果变得更好。`,
 			cost: E("1.5e3816"),
-			cdesc: `鲨鱼觉得Alan Walker的歌太好听了，所以褪色物质的效果变得更好.`,
+			cdesc: `鲨鱼觉得Alan Walker的歌太好听了，所以褪色物质的效果变得更好。`,
 			ccost: E("e7050000000"),					
 		},
 						
@@ -2066,38 +2066,38 @@ const ELEMENTS = {
 			desc: `星系原子的效果变得更好。`,
 			cost: E(2.5e9),
 			galQk: true,
-			cdesc: `鲨鱼原子化了，解锁转生原子.`,
+			cdesc: `鲨鱼原子化了，解锁转生原子。`,
 			ccost: E("e7500000000"),				
 		},
 		{
-			desc: `使挑战19的次数上限增加300次.`,
+			desc: `使挑战19的次数上限增加300次。`,
 			cost: E("1.5e648"),
 			et: true,
-			cdesc: `转生质量好像没用了，那就用转生原子来代替吧，现在转生原子能弱化七重阶层的元折算了.`,
+			cdesc: `转生质量好像没用了，那就用转生原子来代替吧，现在转生原子能弱化七重阶层的元折算了。`,
 			ccost: E("e8380000"),
 		},
 		{
-			desc: `使挑战18的次数上限增加300次.`,
+			desc: `使挑战18的次数上限增加300次。`,
 			cost: E("1.5e4856"),
-			cdesc: `奇异之鲨想要更多物质，使挑战23的效果变得更好.`,
+			cdesc: `奇异之鲨想要更多物质，使挑战23的效果变得更好。`,
 			ccost: E("e7650000000"),
 		},
 		{
-			desc: `在超新星选项卡中解锁星系费米子.`,
+			desc: `在超新星选项卡中解锁星系费米子。`,
 			cost: E(6e9),
 			galQk: true,
-			cdesc: `转生原子还是没什么用，那就让它加成前面所有转生资源的获取.`,
+			cdesc: `转生原子还是没什么用，那就让它加成前面所有转生资源的获取。`,
 			ccost: E("e7750000000"),
 		},
 		{
-			desc: `时间碎片 的效果变得更好.`,
+			desc: `时间碎片 的效果变得更好。`,
 			cost: E("1.5e671"),
 			et: true,
-			cdesc: `鲨鱼深渊化了，使深渊之渍3的效果变得更好.`,
+			cdesc: `鲨鱼深渊化了，使深渊之渍3的效果变得更好。`,
 			ccost: E("e8650000"),
 		},
 		{
-			desc: `移除阶层的元折算. 辐射波加成'级别元折算加成'能以较弱的效果对三重阶层的元折算生效.`,
+			desc: `移除阶层的元折算. 辐射波加成'级别元折算加成'能以较弱的效果对三重阶层的元折算生效。`,
 			cost: E("1.5e5256"),
 			effect() {
 				let x = tmp.radiation.bs.eff[14].add(1).log10().add(1).log10();
@@ -2105,33 +2105,33 @@ const ELEMENTS = {
 				if(hasElement(295))x = tmp.radiation.bs.eff[14].add(1).log10().pow(0.5);
 				return x
 			},
-			effDesc(x) { return format(x)+"x later"; },
-			cdesc: `鲨鱼遁入黑暗，使黑暗之影5的效果变得更好.`,
+			effDesc(x) { return "延迟"+format(x)+"倍出现"; },
+			cdesc: `鲨鱼遁入黑暗，使黑暗之影5的效果变得更好。`,
 		    ccost: E("e7875000000"),		
 		},
 		
 		{
-			desc: `超新星星系加成狂怒能量获取的效果变得更好.`,
+			desc: `超新星星系加成狂怒能量获取的效果变得更好。`,
 			cost: E(3e10),
 			galQk: true,
-			cdesc: `鲨鱼碰到了 超级折算|充能元素需求 使从下一个开始的充能元素需要2种东西同时满足才生效(折算强制生效，作为补偿，降低超新星星团价格增长).`,
+			cdesc: `鲨鱼碰到了 超级折算|充能元素需求 使从下一个开始的充能元素需要2种东西同时满足才生效(折算强制生效，作为补偿，降低超新星星团价格增长)。`,
 		    ccost: E("e7940000000"),		
 		},
 		{
-			desc: `弱化第一个黑洞溢出.`,
+			desc: `弱化第一个黑洞溢出。`,
 			cost: E("1.5e704"),
 			et: true,
-			cdesc: `再这样下去质量都不膨胀了，所以使坍缩星辰第三个效果^100(需:eee126黑洞质量).`,
+			cdesc: `再这样下去质量都不膨胀了，所以使坍缩星辰第三个效果^100(需:eee126黑洞质量)。`,
 		    ccost: E("e9070000"),		
 		},
 		{
-			desc: `三重阶层的元折算延迟10倍出现.`,
+			desc: `三重阶层的元折算延迟10倍出现。`,
 			cost: E("1.5e5656"),
-			cdesc: `怎么loader写的九重阶层效果还没用完，使七重阶层的元折算延迟10倍出现(需:e1.5e373量子泡沫).`,
+			cdesc: `怎么loader写的九重阶层效果还没用完，使七重阶层的元折算延迟10倍出现(需:e1.5e373量子泡沫)。`,
 		    ccost: E("e8370000000"),		
 		},
 		{
-			desc: `使120号元素可以加成永恒次数，只是效果倍率降低.`,
+			desc: `使120号元素可以加成永恒次数，只是效果倍率降低。`,
 			cost: E("1.5e706"),
 			et: true,
 			effect() {
@@ -2139,17 +2139,17 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
-			cdesc: `奇异次数好像一直都没涨，所以使这个元素的效果加成它(需:e6118星系夸克).`,
+			cdesc: `奇异次数好像一直都没涨，所以使这个元素的效果加成它(需:e6118星系夸克)。`,
 		    ccost: E("e9220000"),		
 		},
 		{
-			desc: `元素173-174变得更好.`,
+			desc: `元素173-174变得更好。`,
 			cost: E("1.5e5796"),
-			cdesc: `鲨鱼不够英勇，使转生原子的效果可以对荣耀的奇异折算生效(需:ee2.3e128夸克).`,
+			cdesc: `鲨鱼不够英勇，使转生原子的效果可以对荣耀的奇异折算生效(需:ee2.3e128夸克)。`,
 		    ccost: E("e8566000000"),		
 		},
 		{
-			desc: `解锁2个星系费米子类型.`,
+			desc: `解锁2个星系费米子类型。`,
 			cost: E(1e11),
 			galQk: true,
 			ceffect() {
@@ -2167,24 +2167,24 @@ const ELEMENTS = {
 			desc: `所有玻色子基础获取x100`,
 			cost: E("1.5e721"),
 			et: true,
-			cdesc: `星系费米子好像有点问题？自动获得最后2个星系费米子(需:e9250000000无限质量).`,
+			cdesc: `星系费米子好像有点问题？自动获得最后2个星系费米子(需:e9250000000无限质量)。`,
 		    ccost: E("e10000000"),		
 		},
 		{
-			desc: `使挑战14的次数上限增加400次.`,
+			desc: `使挑战14的次数上限增加400次。`,
 			cost: E("1.5e6226"),
-			cdesc: `超新星星系的价格增长太快了，使转生原子的效果可以对超新星星系的超级折算生效(需:ee4.4e123质量).`,
+			cdesc: `超新星星系的价格增长太快了，使转生原子的效果可以对超新星星系的超级折算生效(需:ee4.4e123质量)。`,
 		    ccost: E("e9280000000"),		
 		},
 		{
-			desc: `弱化星系能量软上限的效果.`,
+			desc: `弱化星系能量软上限的效果。`,
 			cost: E(1e12),
 			galQk: true,
-			cdesc: `来点简单粗暴的加成，质量获取指数^10(需:3120超新星星系).`,
+			cdesc: `来点简单粗暴的加成，质量获取指数^10(需:3120超新星星系)。`,
 		    ccost: E("e9290000000"),		
 		},
 		{
-			desc: `使挑战18，19的次数上限增加100次.`,
+			desc: `使挑战18，19的次数上限增加100次。`,
 			cost: E("1.5e756"),
 			et: true,
 			ceffect() {
@@ -2194,41 +2194,41 @@ const ELEMENTS = {
 			},
 			ceffDesc(x) {   return "^"+format(x);
 			},
-			cdesc: `鲨鱼获得了8黑洞，使黑洞质量获取指数基于十一重阶层而增加(需:1e142恒星质量).`,
+			cdesc: `鲨鱼获得了8黑洞，使黑洞质量获取指数基于十一重阶层而增加(需:1e142恒星质量)。`,
 		    ccost: E("e10100000"),		
 		},
 		{
-			desc: `蓝色色度的效果变得更好.`,
+			desc: `蓝色色度的效果变得更好。`,
 			cost: E("1.5e6956"),
-			cdesc: `星团环绕着鲨鱼，再次降低超新星星团的要求(需:1e1300000000橙色物质).`,
+			cdesc: `星团环绕着鲨鱼，再次降低超新星星团的要求(需:1e1300000000橙色物质)。`,
 		    ccost: E("e9315000000"),		
 		},
 		{
-			desc: `你可以分配星系夸克. (在原子选项卡)`,
+			desc: `你可以分配星系夸克。 (在原子选项卡)`,
 			cost: E(1e13),
 			galQk: true,
-			cdesc: `（558+259=817……这是什么）解锁转生夸克(需:425奇异推进点数).`,
+			cdesc: `（558+259=817……这是什么）解锁转生夸克(需:425奇异推进点数)。`,
 		    ccost: E("e10200000000"),		
 		},
 		{
-			desc: `使挑战17-19的次数上限增加250次.`,
+			desc: `使挑战17-19的次数上限增加250次。`,
 			cost: E("9e779"),
 			et: true,
-			cdesc: `鲨鱼没活了，使挑战14,19,21的效果变得更好(需:e5e204量子之前所有资源获取速度）.`,
+			cdesc: `鲨鱼没活了，使挑战14,19,21的效果变得更好(需:e5e204量子之前所有资源获取速度）。`,
 		    ccost: E("e11100000"),		
 			
 		},
 		{
-			desc: `加速器效果的软上限弱化.`,
+			desc: `加速器效果的软上限弱化。`,
 			cost: E("1.5e7256"),
-			cdesc: `鲨鱼要加速了，加速器效果的软上限再次弱化(需:e235g雕文质量）.`,
+			cdesc: `鲨鱼要加速了，加速器效果的软上限再次弱化（需:e235g雕文质量）。`,
 		    ccost: E("e1.075e10"),		
 		},
 		{
-			desc: `超新星星系加成熵获取的效果变得更好.`,
+			desc: `超新星星系加成熵获取的效果变得更好。`,
 			cost: E(5e13),
 			galQk: true,
-			cdesc: `超新星要到无限了，但总有不好的预感，星辰生成器的效果指数基于超新星星团增加（需:e160暗射线）.`,
+			cdesc: `超新星要到无限了，但总有不好的预感，星辰生成器的效果指数基于超新星星团增加（需:e160暗射线）。`,
 		    ccost: E("e1.080e10"),	
 			ceffect() {
 				let x = (player.superCluster.add(1).pow(0.05))
@@ -2239,7 +2239,7 @@ const ELEMENTS = {
 			},
 		},
 		{
-			desc: `使购买元素数量加成转生质量获取.`,
+			desc: `使购买元素数量加成转生质量获取。`,
 			cost: E("1.5e786"),
 			et: true,
 			effect() {
@@ -2248,194 +2248,194 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
-			cdesc: `使这个元素的效果变得更好且加成奇异物质获取（需:2245飞升等级）.`,
+			cdesc: `使这个元素的效果变得更好且加成奇异物质获取（需:2245飞升等级）。`,
 		    ccost: E("e11300000"),	
 		},
 		{
-			desc: `使元素120的效果现在基于所有元素.`,
+			desc: `使元素120的效果现在基于所有元素。`,
 			cost: E("1.5e7606"),
-			cdesc:` 解锁一个超新星星系的效果（需:7.11111星辰第3效果）.`,
+			cdesc:` 解锁一个超新星星系的效果（需:7.11111星辰第3效果）。`,
 		    ccost: E("e1.105e10"),	
 		},
 		{
-			desc: `弱化星系能量软上限的效果.`,
+			desc: `弱化星系能量软上限的效果。`,
 			cost: E(1e24),
 			galQk: true,
-			cdesc:` 重置了最终星辰碎片后产能减少了？使转生原子和转生夸克获取x100（需:1e15625转生黑洞质量）.`,
+			cdesc:` 重置了最终星辰碎片后产能减少了？使转生原子和转生夸克获取x100（需:1e15625转生黑洞质量）。`,
 		    ccost: E("e11100000000"),	
 		},
 		{
-			desc: `使挑战17-19的次数上限增加250次.`,
+			desc: `使挑战17-19的次数上限增加250次。`,
 			cost: E("1.5e821"),
 			et: true,
-			cdesc:` 要到40超新星星团了，使挑战21的次数上限增加100次且降低它的目标（需:完成280次挑战22）.`,
+			cdesc:` 要到40超新星星团了，使挑战21的次数上限增加100次且降低它的目标（需:完成280次挑战22）。`,
 		    ccost: E("e11930000"),	
 		},
 		{
-			desc: `使转生质量的效果也可以对辉煌的究极折算和费米子阶层的元折算生效.`,
+			desc: `使转生质量的效果也可以对辉煌的究极折算和费米子阶层的元折算生效。`,
 			cost: E("1.5e7806"),
-			cdesc:`解锁转生星辰，质量获取指数^1.25（需:充能之前的所有元素或进行1次行星重置）.`,
+			cdesc:`解锁转生星辰，质量获取指数^1.25（需:充能之前的所有元素或进行1次行星重置）。`,
 		    ccost: E("e1.135e10"),	
 		},
 		{
-			desc: `星系夸克的获取变得更好.`,
+			desc: `星系夸克的获取变得更好。`,
 			cost: E(2e24),
 			galQk: true,
 		},
 		{
-			desc: `解锁2个星系费米子类型.`,
+			desc: `解锁2个星系费米子类型。`,
 			cost: E(2e29),
 			galQk: true,
 		},
 		{
-			desc: `第一个黑洞溢出的效果弱化.`,
+			desc: `第一个黑洞溢出的效果弱化。`,
 			cost: E("1.5e824"),
 			et: true,
 		},
 		{
-			desc: `中子树升级[br3]的60%变为50%.`,
+			desc: `中子树升级[br3]的60%变为50%。`,
 			cost: E("1.5e8006"),
 		},
 		{
-			desc: `元素231的效果变得更好.`,
+			desc: `元素231的效果变得更好。`,
 			cost: E(4e30),
 			galQk: true,
 		},
 		{
-			desc: `改变挑战5的效果.`,
+			desc: `改变挑战5的效果。`,
 			cost: E("1.5e834"),
 			et: true,
 		},
 		{
-			desc: `熵压缩^2和熵辐射^2的折算弱化90%.`,
+			desc: `熵压缩^2和熵辐射^2的折算弱化90%。`,
 			cost: E("1.5e8116"),
 		},
 		{
-			desc: `解锁星系挑战.`,
+			desc: `解锁星系挑战。`,
 			cost: E(1e31),
 			galQk: true,
 		},
 		{
-			desc: `熵获取变得更好.`,
+			desc: `熵获取变得更好。`,
 			cost: E("1.5e839"),
 			et: true,
 		},
 		{
-			desc: `弱化熵加速的软上限.`,
+			desc: `弱化熵加速的软上限。`,
 			cost: E("1.5e8326"),
 		},
 		{
-			desc: `星系玻色子的效果变得更好.`,
+			desc: `星系玻色子的效果变得更好。`,
 			cost: E(2e31),
 			galQk: true,
 		},
 		{
-			desc: `元素161的效果变得更好.`,
+			desc: `元素161的效果变得更好。`,
 			cost: E("1.5e842"),
 			et: true,
 		},
 		{
-			desc: `三重阶层的数值延迟五重阶层的元折算.`,
+			desc: `三重阶层的数值延迟五重阶层的元折算。`,
 			cost: E("1.5e8526"),
 			effect() {
 				let x = player.ranks.tetr.add(10).log10().sqrt();
 				if(hasElement(301))x = x.pow(2);
 				return x
 			},
-			effDesc(x) { return format(x)+"x later"; },
+			effDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
-			desc: `减少星系费米子的目标.`,
+			desc: `减少星系费米子的目标。`,
 			cost: E(5e31),
 			galQk: true,
 		},
 		{
-			desc: `弱化绿色色度软上限的效果.`,
+			desc: `弱化绿色色度软上限的效果。`,
 			cost: E("1.5e854"),
 			et: true,
 		},
 		{
-			desc: `解锁2个星系费米子类型.`,
+			desc: `解锁2个星系费米子类型。`,
 			cost: E(5e32),
 			galQk: true,
 		},
 		{
-			desc: `元素232和239的效果变得更好.`,
+			desc: `元素232和239的效果变得更好。`,
 			cost: E("1.5e856"),
 			et: true,
 		},
 		{
-			desc: `挑战20的次数上限增加100次. 且它的效果变得更好.`,
+			desc: `挑战20的次数上限增加100次. 且它的效果变得更好。`,
 			cost: E("1.5e8856"),
 		},
 		{
-			desc: `元素231的效果变得更好.`,
+			desc: `元素231的效果变得更好。`,
 			cost: E("1.5e33"),
 			galQk: true,
 		},
 		{
-			desc: `暗物质升级19的效果变得更好.`,
+			desc: `暗物质升级19的效果变得更好。`,
 			cost: E("1.5e886"),
 			et: true,
 		},
 		{
-			desc: `挑战17到挑战19的次数上限增加500次.`,
+			desc: `挑战17到挑战19的次数上限增加500次。`,
 			cost: E("1.5e9356"),
 		},
 		{
-			desc: `星系碎片的效果也可以对 affects Galactic Dark Energy.`,
+			desc: `星系碎片的效果也可以对星系暗能量的获取速度生效。`,
 			cost: E("1e34"),
 			galQk: true,
 		},
 		{
-			desc: `钚(94Pu)的效果现在是100%.`,
+			desc: `钚(94Pu)的效果现在是100%。`,
 			cost: E("1.5e900"),
 			et: true,
 		},
 		{
-			desc: `元素173和174的效果变得更好.`,
+			desc: `元素173和174的效果变得更好。`,
 			cost: E("1.5e9836"),
 		},
 		{
-			desc: `解锁2个星系费米子类型.`,
+			desc: `解锁2个星系费米子类型。`,
 			cost: E("1e35"),
 			galQk: true,
 		},
 		{
-			desc: `声望等级的元折算延迟3.5倍开始.`,
+			desc: `声望等级的元折算延迟3.5倍开始。`,
 			cost: E("1.5e926"),
 			et: true,
 		},
 		{
-			desc: `自动完成挑战13.`,
+			desc: `自动完成挑战13。`,
 			cost: E("1.5e10056"),
 		},
 		{
-			desc: `星系碎片的效果也可以对星系夸克生效.`,
+			desc: `星系碎片的效果也可以对星系夸克生效。`,
 			cost: E("1e36"),
 			galQk: true,
 		},
 		{
-			desc: `光子和胶子的升级3变得更好.`,
+			desc: `光子和胶子的升级3变得更好。`,
 			cost: E("1.5e1006"),
 			et: true,
 		},
 		{
-			desc: `移除挑战14,15的次数上限.`,
+			desc: `移除挑战14,15的次数上限。`,
 			cost: E("1.5e10656"),
 		},
 		{
-			desc: `解锁一个星系挑战设置.`,
+			desc: `解锁一个星系挑战设置。`,
 			cost: E("1e38"),
 			galQk: true,
 		},
 		{
-			desc: `打破超新星上限并减少超新星星系的需求.`,
+			desc: `打破超新星上限并减少超新星星系的需求。`,
 			cost: E("5e39"),
 			galQk: true,
 		},
 		{
-			desc: `移除强化器的软上限.`,
+			desc: `移除强化器的软上限。`,
 			cost: E("1.5e11936"),
 		},
 		{
@@ -2688,7 +2688,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `星系费米子的折算延迟1.5倍开始.`,
+			desc: `星系费米子阶层的折算延迟1.5倍开始.`,
 			cost: E("1e75"),
 			galQk: true,
 		},
@@ -2730,11 +2730,11 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `C18 的效果变得更好.`,
+			desc: `挑战18的效果变得更好.`,
 			cost: E("1.5e38206"),
 		},
 		{
-			desc: `熵消耗^2削弱75%. 移除一些熵的软上限.`,
+			desc: `熵消耗<sup>2</sup>削弱75%. 移除一些熵的软上限.`,
 			cost: E("1.5e2056"),
 			et: true,
 		},
@@ -2786,7 +2786,7 @@ const ELEMENTS = {
 			galQk: true,
 		},
 		{
-			desc: `奇异助推中的'原子助推'加成夸克获取.`,
+			desc: `奇异推进中的'原子推进'加成夸克获取.`,
 			cost: E("eee12"),
 			qk: true,
 		},
@@ -2801,7 +2801,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `奇异物质助推器增强20%.`,
+			desc: `奇异推进增强20%.`,
 			cost: E("2e21"),
 			exotic: true,
 		},
@@ -2830,12 +2830,12 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `声望的元折算延迟2倍开始.`,
+			desc: `转生等级的元折算延迟1.25倍开始。`,
 			cost: E("1.5e3756"),
 			et: true,
 		},
 		{
-			desc: `奇异物质加成黑暗射线.`,
+			desc: `奇异物质加成暗射线获取。`,
 			cost: E("2e23"),
 			exotic: true,
 			effect() {
@@ -2845,45 +2845,45 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `星系原子的效果变得更好.`,
+			desc: `星系原子的效果变得更好。`,
 			cost: E("1.5e142056"),
 		},
 		{
-			desc: `夸克对星系夸克的获取变得更好.`,
+			desc: `夸克对星系夸克的获取变得更好。`,
 			cost: E("ee2e12"),
 			qk: true,
 		},
 		{
-			desc: `星系U-费米子的效果变得更好. 星系费米子的需求变得更低.`,
+			desc: `星系U-费米子的效果变得更好. 星系费米子阶层的需求变得更低。`,
 			cost: E("5e141"),
 			galQk: true,
 		},
 		{
-			desc: `为黑暗之影解锁一个新的效果.`,
+			desc: `解锁黑暗之影的一个新的效果。`,
 			cost: E("1e20"),
 			ds: true,
 		},
 		{
-			desc: `时间碎片的效果变得更好.`,
+			desc: `时间碎片的效果变得更好。`,
 			cost: E("1.5e3856"),
 			et: true,
 		},
 		{
-			desc: `加倍转生降幅器效果.`,
+			desc: `双倍转生降伏器效果。`,
 			cost: E("2e24"),
 			exotic: true,
 		},
 		{
-			desc: `移除挑战1-19的硬化和疯狂折算.`,
+			desc: `移除挑战1-19的硬化和疯狂折算。`,
 			cost: E("1.5e150056"),
 		},
 		{
-			desc: `解锁元素充能(看元素阶层1,请点变色的,下面的黄字是需求).`,
+			desc: `解锁元素充能(看元素阶层1,请点变色的,下面的黄字是需求)。`,
 			cost: E("ee2.7777e12"),
 			qk: true,
 		},
 		{
-			desc: `充能元素加成星系夸克.`,
+			desc: `充能元素加成星系夸克。`,
 			cost: E("5e148"),
 			galQk: true,
 			effect() {
@@ -2893,36 +2893,36 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `解锁黑暗之影的一个新的效果.`,
+			desc: `解锁黑暗之影的一个新的效果。`,
 			cost: E("1e24"),
 			ds: true,
 		},
 		{
-			desc: `在星系或奇异重置时，保留永恒质量与永恒次数。这b玩意仅需6.9e4200uni的永恒质量，快来抢购吧！（如果你发现元素很难买，记得看看奇异助推器）)`,
+			desc: `在星系或奇异重置时，保留永恒质量与永恒次数。这b玩意仅需6.9e4200uni的永恒质量，快来抢购吧！（如果你发现元素很难买，记得看看奇异助推器）`,
 			cost: E("1.035e4257"),
 			et: true,
 		},
 		{
-			desc: `奇异物质助推器增强10%.`,
+			desc: `奇异推进增强10%。`,
 			cost: E("2e28"),
 			exotic: true,
 		},
 		{
-			desc: `粒子能量的第一个效果平方.`,
+			desc: `粒子能量的第一个效果平方。`,
 			cost: E("1.5e173056"),
 		},
 		{
-			desc: `星系夸克对于U-夸克的加成变得更好.`,
+			desc: `星系夸克对于U-夸克的加成变得更好。`,
 			cost: E("ee1e13"),
 			qk: true,
 		},
 		{
-			desc: `解锁超新星星团.`,
+			desc: `解锁超新星星团。`,
 			cost: E("1e167"),
 			galQk: true,
 		},
 		{
-			desc: `死寂碎片加成黑暗阴影的获取.`,
+			desc: `死寂碎片加成黑暗之影的获取。`,
 			cost: E("1e35"),
 			ds: true,
 			effect() {
@@ -2932,7 +2932,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `永恒质量加成黑暗射线的获取.`,
+			desc: `永恒质量加成暗射线的获取。`,
 			cost: E("1.5e4656"),
 			et: true,
 			effect() {
@@ -2942,31 +2942,31 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `奇异元助推的效果变得更强.`,
+			desc: `奇异元助推的效果变得更强。`,
 			cost: E("1e34"),
 			exotic: true,
 		},
 		{
-			desc: `加速器效果的二重软上限变得更弱.`,
+			desc: `加速器效果的二重软上限变得更弱。`,
 			cost: E("1.5e221356"),
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("ee1.9e13"),
 			qk: true,
 		},
 		{
-			desc: `自动完成挑战20.`,
+			desc: `自动完成挑战20。`,
 			cost: E("3e173"),
 			galQk: true,
 		},
 		{
-			desc: `解锁黑暗之影一个新的效果.`,
+			desc: `解锁黑暗之影一个新的效果。`,
 			cost: E("1e45"),
 			ds: true,
 		},
 		{
-			desc: `永恒质量加成奇异物质和黑暗射线的获取.`,
+			desc: `永恒质量加成奇异物质和暗射线的获取。`,
 			cost: E("1.5e4906"),
 			et: true,
 			effect() {
@@ -2976,31 +2976,31 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `减少超新星星系的需求.`,
+			desc: `减少超新星星系的需求。`,
 			cost: E("3e39"),
 			exotic: true,
 		},
 		{
-			desc: `挑战20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("1.5e270056"),
 		},
 		{
-			desc: `移除熵辐射^2的折算. 一些熵效果变得更好.`,
+			desc: `移除熵辐射<sup>2</sup>的折算. 一些熵效果变得更好。`,
 			cost: E("ee5e13"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e184"),
 			galQk: true,
 		},
 		{
-			desc: `解锁黑暗之影一个新的效果.`,
+			desc: `解锁黑暗之影一个新的效果。`,
 			cost: E("1e50"),
 			ds: true,
 		},
 		{
-			desc: `永恒质量加成黑暗之影的获取.`,
+			desc: `永恒质量加成黑暗之影的获取。`,
 			cost: E("1.5e5106"),
 			et: true,
 			effect() {
@@ -3010,27 +3010,27 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `解锁奇异次数加成器.`,
+			desc: `解锁奇异次数加成器。`,
 			cost: E("2e41"),
 			exotic: true,
 		},
 		{
 			desc(){
 				if(!hasElement(403))return "403 Forbidden";
-				return "声望的元折算延迟2倍开始.";
+				return "转生等级的元折算延迟1.05倍开始。";
 			},
 			cost: E("1.5e300056"),
 		},
 		{
 			desc(){
 				if(!hasElement(404))return "404 Not Found";
-				return "玻色子升级的效果变得更好.";
+				return "玻色子升级的效果变得更好。";
 			},
 			cost: E("ee5.5555e13"),
 			qk: true,
 		},
 		{
-			desc: `星系夸克加成黑暗之影的获取.`,
+			desc: `星系夸克加成黑暗之影的获取。`,
 			cost: E("1e190"),
 			galQk: true,
 			effect() {
@@ -3040,94 +3040,94 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `解锁黑暗射线的一个新的效果.`,
+			desc: `解锁暗射线的一个新的效果。`,
 			cost: E("1e55"),
 			ds: true,
 		},
 		{
-			desc: `星系费米子的究极折算延迟1.5倍开始.`,
+			desc: `星系费米子阶层的究极折算延迟1.5倍开始。`,
 			cost: E("1.5e5406"),
 			et: true,
 		},
 		{
-			desc: `奇异助推效果增强10%.`,
+			desc: `奇异助推效果增强10%。`,
 			cost: E("2e47"),
 			exotic: true,
 		},
 		{
-			desc: `挑战20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("1.5e378056"),
 		},
 		{
-			desc: `降幅器的超级折算削弱4%.`,
+			desc: `降伏器的超级折算削弱4%。`,
 			cost: E("ee2.3e14"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e205"),
 			galQk: true,
 		},
 		{
-			desc: `黑暗之影的一些效果变得更好.`,
+			desc: `黑暗之影的一些效果变得更好。`,
 			cost: E("1e58"),
 			ds: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好. 中子的第一个效果平方.`,
+			desc: `星系粒子的效果变得更好。中子的第一个效果平方。`,
 			cost: E("1e213"),
 			galQk: true,
 		},
 		{
-			desc: `解锁深渊之渍.`,
+			desc: `解锁深渊之渍。`,
 			cost: E("1e60"),
 			ds: true,
 		},
 		{
-			desc: `费米子的元折算弱化99%.`,
+			desc: `费米子的元折算弱化99%。`,
 			cost: E("1.5e6106"),
 			et: true,
 		},
 		{
-			desc: `奇异元助推的效果x1.5.`,
+			desc: `奇异元助推的效果x1.5。`,
 			cost: E("1e53"),
 			exotic: true,
 		},
 		{
-			desc: `挑战20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("1.5e457056"),
 		},
 		{
-			desc: `时间加速的元折算延迟至原来的10次方.`,
+			desc: `时间加速的元折算延迟至原来的10次方。`,
 			cost: E("ee1.6e15"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e235"),
 			galQk: true,
 		},
 		{
-			desc: `解锁深渊之渍一个新的效果.`,
+			desc: `解锁深渊之渍一个新的效果。`,
 			cost: E("2e70"),
 			ds: true,
 		},
 		{
-			desc: `改变挑战1的效果.六重阶层的元折算延迟1e100倍开始.`,
+			desc: `改变挑战1的效果。六重阶层的元折算延迟1e100倍开始。`,
 			cost: E("1.5e7331"),
 			et: true,
 		},
 		{
-			desc: `减少超新星星系的需求.`,
+			desc: `减少超新星星系的需求。`,
 			cost: E("1e59"),
 			exotic: true,
 		},
 		{
-			desc: `解锁星系挑战一个新的挑战设置.当你在星系挑战时,每秒获得1g质量与1量子前的全局速度加成 (不会受到任何东西的影响).`,
+			desc: `解锁星系挑战一个新的挑战设置。当你在星系挑战时，获得1g质量与1量子前的全局速度加成 (不会受到任何东西的影响)。`,
 			cost: E("1.5e684056"),
 		},
 		{
-			desc: `六重阶层的元折算基于阶层推迟.`,
+			desc: `六重阶层的元折算基于阶层推迟。`,
 			cost: E("ee1.6666e16"),
 			qk: true,
 			effect() {
@@ -3135,92 +3135,92 @@ const ELEMENTS = {
 				if(hasElement(439))x = x.mul(E("e3e8").pow(player.ranks.tier.add(10).log10().add(10).log10()));
 				return x
 			},
-			effDesc(x) { return format(x)+"x later"; },
+			effDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e249"),
 			galQk: true,
 		},
 		{
-			desc: `解锁深渊之渍一个新的效果.`,
+			desc: `解锁深渊之渍一个新的效果。`,
 			cost: E("1e73"),
 			ds: true,
 		},
 		{
-			desc: `贝塔[B]粒子的效果x10.`,
+			desc: `贝塔[B]粒子的效果x10。`,
 			cost: E("1.5e7706"),
 			et: true,
 		},
 		{
-			desc: `黑暗射线的第二个效果变为^2.5`,
+			desc: `暗射线的第二个效果变为^2.5。`,
 			cost: E("1e65"),
 			exotic: true,
 		},
 		{
-			desc: `挑战20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("1.5e800056"),
 		},
 		{
-			desc: `移除无限升级5的软上限.`,
+			desc: `移除无限升级5的软上限。`,
 			cost: E("ee3.3333e16"),
 			qk: true,
 		},
 		{
-			desc: `时间碎片的效果变得更好.`,
+			desc: `时间碎片的效果变得更好。`,
 			cost: E("1.5e7981"),
 			et: true,
 		},
 		{
-			desc: `奇异物质助推器增强10%.`,
+			desc: `奇异推进增强10%。`,
 			cost: E("4e73"),
 			exotic: true,
 		},
 		{
-			desc: `挑战20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("1.5e888944"),
 		},
 		{
-			desc: `弱化加速器效果的二重软上限.`,
+			desc: `弱化加速器效果的二重软上限。`,
 			cost: E("ee1e17"),
 			qk: true,
 		},
 		{
-			desc: `Unlock a new Galactic Challenge modifier. +5 to Galactic Challenge Difficulty Cap. Square Galactic Shard effect.`,
+			desc: `解锁新的星系挑战选项。增加5级星系挑战难度上限。使星系碎片的获取变为原来的平方。`,
 			cost: E("3e271"),
 			galQk: true,
 		},
 		{
-			desc: `解锁深渊之渍一个新的效果.`,
+			desc: `解锁深渊之渍一个新的效果。`,
 			cost: E("1e82"),
 			ds: true,
 		},
 		{
-			desc: `时间碎片的效果变得更好.`,
+			desc: `时间碎片的效果变得更好。`,
 			cost: E("1.5e9056"),
 			et: true,
 		},
 		{
-			desc: `Unlock the 21st Challenge.`,
+			desc: `解锁挑战21。`,
 			cost: E("3e75"),
 			exotic: true,
 		},
 		{
-			desc: `Element 424 is better.`,
+			desc: `元素424的效果变得更好。`,
 			cost: E("1.5e1000056"),
 		},
 		{
-			desc: `Exotic Prestige Level is 5% weaker.`,
+			desc: `转生等级的奇异折算弱化5%。`,
 			cost: E("ee2.1e17"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("2e286"),
 			galQk: true,
 		},
 		{
-			desc: `Each bought element multiply 深渊之渍 gain by 1.1.`,
+			desc: `每购买一个元素，使深渊之渍的获取x1.1。`,
 			cost: E("6e83"),
 			ds: true,
 			effect() {
@@ -3234,12 +3234,12 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `奇异物质助推器 'Star Boost' affects Star Generators.`,
+			desc: `奇异助推中的'星辰助推'加成星辰发生器。`,
 			cost: E("1e78"),
 			exotic: true,
 		},
 		{
-			desc: `永恒质量增加深渊之渍的获取.`,
+			desc: `永恒质量增加深渊之渍的获取。`,
 			cost: E("1.5e10181"),
 			et: true,
 			effect() {
@@ -3249,36 +3249,36 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x" },
 		},
 		{
-			desc: `Exotic Meta-Boost is 1.2x stronger.`,
+			desc: `奇异元推进的效果x1.2。`,
 			cost: E("1e78"),
 			exotic: true,
 		},
 		{
-			desc: `无限升级 24 is better.`,
+			desc: `无限升级24变得更好。`,
 			cost: E("1.5e1130056"),
 		},
 		{
-			desc: `Exotic Prestige Level is weaker based on 奇异物质加成黑暗射线bove 1e80 EM).`,
+			desc: `基于奇异物质减弱转生等级的奇异折算(奇异物质达到1e80以上时效果增强)。`,
 			cost: E("ee5e17"),
 			qk: true,
 			effect() {
 				if(player.exotic.points.gte(1e80))return E(0.97).pow(player.exotic.points.add(10).log10().div(24.185));
 				return E(0.97).pow(player.exotic.points.add(10).log10().pow(0.273));
 			},
-            effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
+            effDesc(x) { return "削弱"+format(E(1).sub(x).mul(100))+"%" },
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("5e294"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock Dark Run.`,
+			desc: `解锁黑暗狂奔(在奇异层级状态栏)。`,
 			cost: E("1e87"),
 			ds: true,
 		},
 		{
-			desc: `永恒质量 boost Glyphic Mass gain.`,
+			desc: `永恒质量加成雕文质量获取。`,
 			cost: E("1.5e10656"),
 			et: true,
 			effect() {
@@ -3289,70 +3289,70 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Permanently Remove Meta-Pent scaling.`,
+			desc: `移除五重阶层的元折算。`,
 			cost: E("1e87"),
 			exotic: true,
 		},
 		{
-			desc: `Reduce C21 goal.`,
+			desc: `减少挑战21的目标。`,
 			cost: E("1.5e1279056"),
 		},
 		{
-			desc: `Break Dilation Upgrade 5 is applied to Meta-Hex scaling.`,
+			desc: `撕裂膨胀升级5影响六重阶层的元折算。`,
 			cost: E("ee2.4444e18"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Quarks is added to base Infinity Mass gain formula.`,
+			desc: `星系夸克加成基础无限质量获取。`,
 			cost: E(Number.MAX_VALUE),
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd 的效果变得更好. 解锁黑暗射线的一个新的效果.`,
+			desc: `暗射线的第二个效果变得更好. 解锁暗射线的一个新的效果。`,
 			cost: E("1e99"),
 			ds: true,
 		},
 		{
-			desc: `时间碎片的效果变得更好.`,
+			desc: `时间碎片的效果变得更好。`,
 			cost: E("1.5e15056"),
 			et: true,
 		},
 		{
-			desc: `Exotic Meta-Boost is better.`,
+			desc: `奇异元推进的效果变得更好。`,
 			cost: E("2e98"),
 			exotic: true,
 		},
 		{
-			desc: `Elements 173-174 变得更好.`,
+			desc: `元素173-174变得更好。`,
 			cost: E("1.5e1900056"),
 		},
 		{
-			desc: `[G-Neutrino] affects Meta-Hex at a reduced rate.`,
+			desc: `[G-中微子]以较低的倍率影响六重阶层的元折算。`,
 			cost: E("ee8e19"),
 			qk: true,
 			effect() {
 				let x = player.supernova.fermions.tiers[3][3].add(1).pow(2);
 				return x
 			},
-			effDesc(x) { return format(x)+"x later"; },
+			effDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
-			desc: `Accelerator Power Softcap^2 is weaker.`,
+			desc: `弱化加速器的二重软上限。`,
 			cost: E("ee8.1e19"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e348"),
 			galQk: true,
 		},
 		{
-			desc: `Element 451 is better.`,
+			desc: `使元素451的效果变得更好。`,
 			cost: E("1.5e16856"),
 			et: true,
 		},
 		{
-			desc: `奇异物质加成雕文质量获取.`,
+			desc: `奇异物质加成雕文质量获取。`,
 			cost: E("1e108"),
 			exotic: true,
 			effect() {
@@ -3362,55 +3362,55 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `挑战20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("1.5e2100056"),
 		},
 		{
-			desc: `Exotic Prestige Level starts +42,000 later.`,
+			desc: `使转生等级的奇异折算延迟42000次出现。`,
 			cost: E("ee3.3333e20"),
 			qk: true,
 		},
 		{
-			desc: `Divide Supernova Galaxies Requirement by 40. Unlock a new effect of Supernova Galaxies.`,
+			desc: `将超新星星系的需求除以40。解锁超新星星系的一个新的效果。`,
 			cost: E("2e367"),
 			galQk: true,
 		},
 		{
-			desc: `Dark Shadow's 7th 的效果变得更好.`,
+			desc: `黑暗之影的第七个效果变得更好。`,
 			cost: E("1e109"),
 			ds: true,
 		},
 		{
-			desc: `Galactic Dark Matter and Galactic Bosons effects 变得更好.`,
+			desc: `星系暗能量和星系玻色子的效果变得更好。`,
 			cost: E("1.5e20056"),
 			et: true,
 		},
 		{
-			desc: `Meta-Hex starts later based on 奇异物质加成黑暗射线6`,
+			desc: `六重阶层的元折算基于奇异物质延迟出现。`,
 			exotic: true,
 			cost: E("6e116"),
 			effect() {
 				let x = player.exotic.points.add(10).log10();
 				return x
 			},
-			effDesc(x) { return format(x)+"x"; },
+			effDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
-			desc: `无限升级24的效果变得更好.`,
+			desc: `无限升级24的效果变得更好。`,
 			cost: E("1.5e2600056"),
 		},
 		{
-			desc: `Tickspeed Power multiply Booster Power.`,
+			desc: `时间速度倍率加成助推器倍率。`,
 			cost: E("ee2e21"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e396"),
 			galQk: true,
 		},
 		{
-			desc: `解锁黑暗之影一个新的效果.`,
+			desc: `解锁黑暗之影一个新的效果。`,
 			cost: E("5e113"),
 			ds: true,
 		},
@@ -3420,50 +3420,50 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Unlock the 22nd Challenge.`,
+			desc: `解锁挑战22。`,
 			cost: E("2e124"),
 			exotic: true,
 		},
 		{
-			desc: `削弱挑战21的目标.`,
+			desc: `削弱挑战21的目标。`,
 			cost: E("1.5e2900056"),
 		},
 		{
-			desc: `使强化器的溢出弱化.`,
+			desc: `使强化器的溢出弱化。`,
 			cost: E("ee1.25e22"),
 			qk: true,
 		},
 		{
-			desc: `Galactic Power boost Rage Power gain.`,
+			desc: `星系能量加成狂怒能量获取速度。`,
 			cost: E("1e425"),
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd 的效果变得更好.`,
+			desc: `暗射线的第二个效果变得更好。`,
 			cost: E("3e116"),
 			ds: true,
 		},
 		{
-			desc: `The softcap of Element 93 is weaker.`,
+			desc: `减弱93号元素的软上限。`,
 			cost: E("1.5e22456"),
 			et: true,
 		},
 		{
-			desc: `In C22, Atom gain is based on Mass instead of Black Hole.`,
+			desc: `在挑战22中，原子的获取将基于质量而非黑洞质量。`,
 			cost: E("3e132"),
 			exotic: true,
 		},
 		{
-			desc: `You can change Tier 2 Elements(看元素阶层2).`,
+			desc: `您可以进行元素阶层2的充能了!(看元素阶层2).`,
 			cost: E("1.5e3300056"),
 		},
 		{
-			desc: `Galactic Shards gain formula is better.`,
+			desc: `星系碎片的获取公式变得更好。`,
 			cost: E("ee1.8888e22"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好. Galactic Quarks Post-1e100 boost Glyphic Mass gain.`,
+			desc: `星系粒子的效果变得更好。使高于1e100的星系夸克加成雕文质量的获取。`,
 			cost: E("5e447"),
 			galQk: true,
 			effect() {
@@ -3473,65 +3473,65 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Unlock The Matters.`,
+			desc: `解锁物质(在奇异层级状态栏内)。`,
 			cost: E("5e118"),
 			ds: true,
 		},
 		{
-			desc: `Unlock the 奇异物质加成黑暗射线ters tab.`,
+			desc: `解锁物质状态栏内奇异物质的效果。`,
 			cost: uni('e25150'),
 			et: true,
 		},
 		{
-			desc: `Exotic Meta-Boost is better.`,
+			desc: `奇异元推进的效果变得更好。`,
 			cost: E("1e145"),
 			exotic: true,
 		},
 		{
-			desc: `C20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: uni('e4900000'),
 		},
 		{
-			desc: `Add 0.4 to Matter Exponent.`,
+			desc: `物质获取公式的指数增加0.4。`,
 			cost: E("ee9e23"),
 			qk: true,
 		},
 		{
-			desc: `Collapsed Stars 的效果变得更好.`,
+			desc: `坍缩星辰的效果变得更好。`,
 			cost: E("5e479"),
 			galQk: true,
 		},
 		{
-			desc: `解锁黑暗之影一个新的效果.`,
+			desc: `解锁黑暗之影一个新的效果。`,
 			cost: E("5e124"),
 			ds: true,
 		},
 		{
-			desc: `Add 0.3 to Matter Exponent.`,
+			desc: `物质获取公式的指数增加0.3。`,
 			cost: uni('e27950'),
 			et: true,
 		},
 		{
-			desc: `Exotic Meta-Boost is better.`,
+			desc: `奇异元推进的效果变得更好。`,
 			cost: E("1e158"),
 			exotic: true,
 		},
 		{
-			desc: `Double the 奇异物质加成黑暗射线ters tab.`,
+			desc: `将奇异物质在物质状态栏里的效果x2。`,
 			cost: uni('e6100000'),
 		},
 		{
-			desc: `Dark Shadow's 3rd 的效果变得更好.`,
+			desc: `黑暗之影的第三个效果变得更好。`,
 			cost: E("ee1.6666e25"),
 			qk: true,
 		},
 		{
-			desc: `Collapsed Stars 的效果变得更好.`,
+			desc: `坍缩星辰的效果变得更好。`,
 			cost: E("1e515"),
 			galQk: true,
 		},
 		{
-			desc: `Double 9th Dark Shadow Effect.`,
+			desc: `将黑暗之影的第九个效果x2。`,
 			cost: E("1e127"),
 			ds: true,
 		},
@@ -3543,19 +3543,19 @@ const ELEMENTS = {
 		{
 			desc(){
 				if(!hasElement(500))return "500 Internal Server Error";
-				return "Exotic Meta-Boost is better.";
+				return "奇异元推进的效果变得更好。";
 			},
 			cost: E("1e171"),
 			exotic: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: uni('e9000000'),
 		},
 		{
 			desc(){
 				if(!hasElement(502))return "502 Bad Gateway";
-				return "Collapsed Stars 的效果变得更好.";
+				return "坍缩星辰的效果变得更好。";
 			},
 			cost: E("ee5e27"),
 			qk: true,
@@ -3563,7 +3563,7 @@ const ELEMENTS = {
 		{
 			desc(){
 				if(!hasElement(503))return "503 Service Unavailable";
-				return "Each Galactic Fermion gain an additional effect when its tier is above 100.";
+				return "高于100阶层的星系费米子都将获得额外的效果(写在原效果下面)。";
 			},
 			cost: E("1e567"),
 			galQk: true,
@@ -3571,27 +3571,27 @@ const ELEMENTS = {
 		{
 			desc(){
 				if(!hasElement(504))return "504 Gateway Time-out";
-				return "Dark Ray's 2nd 的效果变得更好.";
+				return "暗射线的第二个效果变得更好。";
 			},
 			cost: E("1e132"),
 			ds: true,
 		},
 		{
-			desc: `Super Galactic Fermion Tiers starts 1.2x later.`,
+			desc: `星系费米子阶层的超级折算延迟1.2倍开始。`,
 			cost: uni("e47500"),
 			et: true,
 		},
 		{
-			desc: `Exotic Meta-Boost is better.`,
+			desc: `奇异元推进的效果变得更好。`,
 			cost: E("1e200"),
 			exotic: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: uni('e10000000'),
 		},
 		{
-			desc: `Each bought element after 500 add Matter Exponent by 0.02.`,
+			desc: `每一个购买的500号以后的元素使物质获取公式的指数+0.02。`,
 			cost: E("ee5.4e28"),
 			qk: true,
 			effect() {
@@ -3602,27 +3602,27 @@ const ELEMENTS = {
 			effDesc(x) { return "+"+format(x); },
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("3e612"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock more Neutron Tree upgrades.`,
+			desc: `解锁更多的中子树升级(更多的量子+)。`,
 			cost: E("2e137"),
 			ds: true,
 		},
 		{
-			desc: `Super Galactic Fermion Tiers Starts 1.25x later`,
+			desc: `星系费米子阶层的超级折算延迟1.25倍开始。`,
 			cost: E("5e621"),
 			galQk: true,
 		},
 		{
-			desc: `解锁深渊之渍一个新的效果.`,
+			desc: `解锁深渊之渍一个新的效果。`,
 			cost: E("2e142"),
 			ds: true,
 		},
 		{
-			desc: `永恒质量 boost Magenta Matter gain.`,
+			desc: `永恒质量加成品红色物质的获取速度。`,
 			cost: uni("e61500"),
 			et: true,
 			effect() {
@@ -3632,60 +3632,60 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `Dark Ray's 2nd 的效果变得更好.`,
+			desc: `暗射线的第二个效果变得更好。`,
 			cost: E("1e221"),
 			exotic: true,
 		},
 		{
-			desc: `Collapsed Stars 的效果变得更好.`,
+			desc: `坍缩星辰的效果变得更好。`,
 			cost: uni('e15555555'),
 		},
 		{
-			desc: `使强化器的溢出弱化.`,
+			desc: `使强化器的溢出弱化。`,
 			cost: E("ee1.5e32"),
 			qk: true,
 		},
 		{
-			desc: `Purple Matter boost Stardust gain.`,
+			desc: `紫色物质加成星尘获取速度。`,
 			cost: E("1e727"),
 			galQk: true,
 		},
 		{
-			desc: `Dark Ray's 2nd 的效果变得更好.`,
+			desc: `暗射线的第二个效果变得更好。`,
 			cost: E("2e152"),
 			ds: true,
 		},
 		{
-			desc: `Change the effect of C5.`,
+			desc: `修改挑战5的效果。`,
 			cost: uni("e84000"),
 			et: true,
 		},
 		{
-			desc: `Meta-Fermion Tier scales later based on Primordium Theorems.`,
+			desc: `费米子阶层的元折算基于原基定理延迟出现。`,
 			cost: E("5e268"),
 			exotic: true,
 			effect() {
 				let x = player.qu.prim.theorems.div(1e7).add(1);
 				return x
 			},
-			effDesc(x) { return format(x)+"x later"; },
+			effDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
-			desc: `Stronger Overflow is better.`,
+			desc: `削弱强化器的溢出。`,
 			cost: uni('e22600000'),
 		},
 		{
-			desc: `Collapsed Stars 的效果变得更好.`,
+			desc: `坍缩星辰的效果变得更好。`,
 			cost: E("ee1.6666e35"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("2e782"),
 			galQk: true,
 		},
 		{
-			desc: `解锁黑暗射线的一个新的效果.`,
+			desc: `解锁暗射线的一个新的效果。`,
 			cost: E("5e156"),
 			ds: true,
 		},
@@ -3695,36 +3695,36 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Remove the softcaps of Rage Power Upgrades 8, 11 and 12. Rage Power Upgrade 22 is better.`,
+			desc: `移除狂怒升级8、11、12的软上限。狂怒升级22的效果变得更好。`,
 			cost: E("4e282"),
 			exotic: true,
 		},
 		{
-			desc: `C20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: uni('e29000000'),
 		},
 		{
-			desc: `Meta-Fermion Tier is weaker based on Primordium Theorems.`,
+			desc: `费米子阶层的元折算强度基于原基定理而减弱。`,
 			cost: E("ee2e37"),
 			qk: true,
 			effect() {
 				let x = player.qu.prim.theorems.add(1).pow(-1);
 				return x
 			},
-			effDesc(x) { return "Strength of Meta-Fermion Tier scaling /"+format(x.pow(-1)); },
+			effDesc(x) { return "费米子阶层的元折算强度/"+format(x.pow(-1)); },
 		},
 		{
-			desc: `Remove a softcap of Beta Particles Effect.`,
+			desc: `移除贝塔[B]粒子效果的一个软上限。`,
 			cost: uni("e110000"),
 			et: true,
 		},
 		{
-			desc: `Collapsed Stars gain a new effect.`,
+			desc: `解锁坍缩星辰一个新的效果。`,
 			cost: E("4e282"),
 			exotic: true,
 		},
 		{
-			desc: `Increase Collapsed Star's first effect. Collapsed Star's first and second effects are permanently maxed.`,
+			desc: `增强坍缩星辰的第一个效果。永久增加坍缩星辰第一个和第二个效果的最大值。`,
 			cost: uni('e37500000'),
 		},
 		{
@@ -3733,17 +3733,17 @@ const ELEMENTS = {
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e1085"),
 			galQk: true,
 		},
 		{
-			desc: `解锁x轴生成器.`,
+			desc: `解锁x轴生成器。`,
 			cost: E("1e174"),
 			ds: true,
 		},
 		{
-			desc: `Pre-Quantum Global Speed boost X-Axion Generators Power.`,
+			desc: `量子之前所有资源获取速度加成x轴生成器倍率。`,
 			cost: uni("e207000"),
 			et: true,
 			effect() {
@@ -3753,7 +3753,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `奇异物质加成黑暗射线ators Power.`,
+			desc: `奇异物质加成x轴生成器倍率。`,
 			cost: E("1e356"),
 			exotic: true,
 			effect() {
@@ -3763,21 +3763,21 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x"; },
 		},
 		{
-			desc: `使强化器的溢出弱化.`,
+			desc: `使强化器的溢出弱化。`,
 			cost: uni('e69000000'),
 		},
 		{
-			desc: `C20的效果变得更好.`,
+			desc: `挑战20的效果变得更好。`,
 			cost: E("ee1e46"),
 			qk: true,
 		},
 		{
-			desc: `Divide Supernova Galaxies Requirement by 125.`,
+			desc: `使超新星星系的需求/125。`,
 			cost: E("1e1127"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock Y-Axion Generators.`,
+			desc: `解锁y轴生成器。`,
 			cost: E("2e176"),
 			ds: true,
 		},
@@ -3787,7 +3787,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Unlock Final Star Shards.`,
+			desc: `解锁最终星辰碎片（在物质状态栏内）。`,
 			cost: E("5e391"),
 			exotic: true,
 		},
@@ -3797,7 +3797,7 @@ const ELEMENTS = {
 			et: true,
 		},
 		{
-			desc: `Final Star Shards boost Matter Exponent.`,
+			desc: `最终星辰碎片数量加成物质获取公式指数。`,
 			cost: E("1e404"),
 			exotic: true,
 			effect() {
@@ -3807,74 +3807,74 @@ const ELEMENTS = {
 			effDesc(x) { return "+"+format(x); },
 		},
 		{
-			desc: `Unlock the 23rd Challenge.`,
+			desc: `解锁挑战23。`,
 			cost: uni('e123456789'),
 		},
 		{
-			desc: `2nd Black Hole Overflow effect is weaker.`,
+			desc: `削弱黑洞质量的二重溢出。`,
 			cost: E("ee7.7777e52"),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e1440"),
 			galQk: true,
 		},
 		{
-			desc: `Add (next matter)^y to matter gain formula, y is based on FSS.`,
+			desc: `给物质获取公式添加(后一物质)^y，其中y取决于最终星辰碎片数量。`,
 			cost: E("1e218"),
 			ds: true,
 		},
 		{
-			desc: `时间碎片的效果变得更好.`,
+			desc: `时间碎片的效果变得更好。`,
 			cost: uni("e455000"),
 			et: true,
 		},
 		{
-			desc: `奇异物质助推器s are stronger based on bought elements, except Meta-Boost. Exotic Meta-Boost is 50% weaker.`,
+			desc: `奇异推进基于已购买元素数量而增强，除了'奇异元推进'。它获得的效果会减少50%。`,
 			cost: E("1e452"),
 			exotic: true,
 			effect() {
 				let x = player.atom.elements.length/2500+1;
 				return x
 			},
-			effDesc(x) { return format(player.atom.elements.length/25)+"% stronger" },
+			effDesc(x) { return "增强"+format(player.atom.elements.length/25)+"%" },
 		},
 		{
-			desc: `Accelerator Effect Softcap is weaker.`,
+			desc: `使加速器的效果软上限减弱。`,
 			cost: uni('e2.4e8'),
 		},
 		{
-			desc: `挑战21的效果变得更好.`,
+			desc: `挑战21的效果变得更好。`,
 			cost: E('ee3e61'),
 			qk: true,
 		},
 		{
-			desc: `星系粒子的效果变得更好.`,
+			desc: `星系粒子的效果变得更好。`,
 			cost: E("1e1675"),
 			galQk: true,
 		},
 		{
-			desc: `Unlock more Neutron Tree Upgrades, Z Axion Generators and Axionic Space.`,
+			desc: `解锁更多中子树升级(量子+)，z轴生成器，以及轴空间(在奇异轴状态栏内)。`,
 			cost: E("2e226"),
 			ds: true,
 		},
 		{
-			desc: `Reduce Supernova Requirements. Quantum Challenge Modifier 'Extreme Scaling' doesn't apply to Supernova. Remove Beta Particle effect softcap in Galactic Challenge.`,
+			desc: `减少超新星星系的需求。量子挑战8的削弱将不再影响超新星的折算，移除贝塔[B]粒子在星系挑战内的效果软上限。`,
 			cost: uni("e580000"),
 			et: true,
 		},
 		{
-			desc: `Unlock Axionic Tree. (in Neutron Tree)`,
+			desc: `解锁轴空间树(中子树的一种)。`,
 			cost: E("1e500"),
 			exotic: true,
 		},
 		{
-			desc: `使强化器的溢出弱化.`,
+			desc: `使强化器的溢出弱化。`,
 			cost: mlt('1.91'),
 		},
 		{
-			desc: `Remove Pre-Quantum Global Speed cap in C20. Auto-Completions of C20 is better.`,
+			desc: `移除挑战20中量子之前所有资源获取速度的硬上限。挑战20的自动完成效果将变得更好。`,
 			cost: E('eee82'),
 			qk: true,
 		},
@@ -4042,6 +4042,7 @@ function setupElementsHTML() {
 
     elem_tier.setHTML(table)
 }
+
 function updateElementsHTML() {
     let tElem = tmp.elements
 
