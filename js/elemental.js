@@ -152,7 +152,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(x)+"x" },
-            cdesc: `Boost this element's effect based on the number of elements charged.`,
+            cdesc: `基于已充能元素的数量增强该元素的效果。`,
             ccost: E("ee3.2e12"),
             ceffect() {
                 let x = E(player.atom.chargedElements.length+1)
@@ -163,31 +163,31 @@ const ELEMENTS = {
         {
             desc: `C2's reward's softcap is 75% weaker.`,
             cost: E(1e21),
-            cdesc: `C13's reward's softcap starts later.`,
+            cdesc: `延迟挑战13的奖励软上限。`,
             ccost: E("ee3.2e12"),
         },
         {
             desc: `The Tetr requirement is 15% weaker.`,
             cost: E(6.5e21),
-            cdesc: `The Tier requirement is broken.`,
+            cdesc: `使阶层的需求大幅降低。`,
             ccost: E("ee3.7e12"),
         },
         {
             desc: `使挑战3和挑战4的折算弱化。`,
             cost: E(1e24),
-            cdesc: `C20 scaling is weakened.`,
+            cdesc: `使挑战20的折算弱化。`,
             ccost: E("ee3.9e12"),
         },
         {
             desc: `Nitrogen's multiplier is squared.`,
             cost: E(1e27),
-            cdesc: `Nitrogen's multiplier is cubed.`,
+            cdesc: `使氮(7N)的效果变为原来的立方。`,
             ccost: E("ee4.65e12"),
         },
         {
             desc: `Power's gain from each particle formula is better.`,
             cost: E(1e29),
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee4.65e12"),
         },
         {
@@ -199,19 +199,19 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "+"+format(x) },
-            cdesc: `The 7th challenge's 的效果变得更好`,
+            cdesc: `使挑战7的效果变得更好。`,
             ccost: E("ee4.8e12"),
         },
         {
             desc: `Passively gain 5% of the quarks you would get from resetting each second.`,
             cost: E(1e33),
-            cdesc: `Passively gain 100% of the Dark Ray you would get from resetting each second.`,
+            cdesc: `每秒获得暗射线，数量为重置时获取数量的100%。`,
             ccost: E("ee5e12"),
         },
         {
             desc: `Super BH Condenser & Cosmic Ray scales 20% weaker.`,
             cost: E(1e34),
-            cdesc: `Remove Meta-Cosmic Ray scaling.`,
+            cdesc: `移除宇宙射线的元折算。`,
             ccost: E("ee5.2e12"),
         },
         {
@@ -223,13 +223,13 @@ const ELEMENTS = {
                 return Number(x)
             },
             effDesc(x) { return "+"+format(x*100)+"%" },
-            cdesc: `This element's effect boost Silicon's Charged Effect.`,
+            cdesc: `该元素的效果将同样影响硅(Si14)的充能效果。`,
             ccost: E("ee5.2e12"),
         },
         {
             desc: `Raise Atom's gain by 1.1.`,
             cost: E(1e40),
-            cdesc: `Raise Atom's gain exponent by 1.01.`,
+            cdesc: `使原子的获取指数变为原来的1.01次方。`,
             ccost: E("ee5.3e12"),
         },
         {
@@ -241,25 +241,25 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "^"+format(x) },
-            cdesc: `Argon's effect boost Normal Mass gain.`,
+            cdesc: `使氩(Ar18)的效果可以加成质量获取速度。`,
             ccost: E("ee5.4e12"),
         },
         {
             desc: `使中子的第2个效果变得更好.`,
             cost: E(1e50),
-            cdesc: `2nd Neutron's effect is squared.`,
+            cdesc: `使中子的第2个效果变为原来的平方。`,
             ccost: E("ee5.75e12"),
         },
         {
             desc: `Adds 50 more C7 maximum completions.`,
             cost: E(1e53),
-            cdesc: `The 7th challenge's 的效果变得更好`,
+            cdesc: `挑战7的效果变得更好。`,
             ccost: E("ee5.9e12"),
         },
         {
             desc: `Unlock Mass Dilation.`,
             cost: E(1e56),
-            cdesc: `Dilated Overflow is weaker.`,
+            cdesc: `弱化膨胀溢出。`,
             ccost: E("ee6e12"),
         },
         {
@@ -272,13 +272,13 @@ const ELEMENTS = {
                 return x.min('eee15')
             },
             effDesc(x) { return format(x)+"x"+(x.gte('eee15')?" <span class='soft'>(hardcapped)</span>":"")  },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee6.3e12"),
         },
         {
             desc: `使原子能量的效果变得更好.`,
             cost: E(1e65),
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee6.9e12"),
         },
         {
@@ -290,13 +290,13 @@ const ELEMENTS = {
 				return x
             },
             effDesc(x) { return hasPrestige(0,40) ? "^"+format(x) : format(x)+"x" },
-            cdesc: `Passively gain 100% of the 奇异物质加成黑暗射线resetting each second.`,
+            cdesc: `每秒获得奇异物质，数量为重置时获取数量的100%。`,
             ccost: E("ee7.5e12"),
         },
         {
             desc: `Adds 1 base of Mass Dilation upgrade 1 effect.`,
             cost: E(1e80),
-            cdesc: `Adds 1 base of Mass Dilation upgrade 3 effect.`,
+            cdesc: `使质量膨胀升级3的基础效果增加1倍。`,
             ccost: E("ee7.7e12"),
         },
         {
@@ -308,7 +308,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
-            cdesc: `Impossible Challenge scaling weaker for each element charged.`,
+            cdesc: `使无望挑战的折算效果基于购买的充能元素数量而弱化。`,
             ccost: E("ee7.7e12"),
             ceffect() {
                 let x = E(0.999).pow(E(player.atom.chargedElements.length))
@@ -319,13 +319,13 @@ const ELEMENTS = {
         {
             desc: `Hyper/Ultra Rank & Tickspeed scales 25% weaker.`,
             cost: E(1e90),
-            cdesc: `Meta Tickspeed scales 99% weaker.`,
+            cdesc: `使时间速度的元折算弱化99%。`,
             ccost: E("ee8.8e12"),
         },
         {
             desc: `Mass gain is raised to the power of 1.5th if you dilated mass.`,
             cost: E(1e97),
-            cdesc: `Dilated Mass boost Mass gain.`,
+            cdesc: `使膨胀质量可以加成质量获取速度。`,
             ccost: E("ee8.9e12"),
             ceffect() {
                 let x = player.md.mass.add(10).log10();
@@ -336,13 +336,13 @@ const ELEMENTS = {
         {
             desc: `使质子能量的效果变得更好.`,
             cost: E(1e100),
-            cdesc: `Proton powers effect is squared.`,
+            cdesc: `使质子能量的效果变为原来的平方。`,
             ccost: E("ee9.3e12"),
         },
         {
             desc: `使电子能量的效果变得更好。自动获得每种粒子，数量为分配夸克时增加数量的10%.`,
             cost: E(1e107),
-            cdesc: `Electron powers effect is squared.`,
+            cdesc: `使电子能量的效果变为原来的平方。`,
             ccost: E("ee9.7e12"),
         },
         {
@@ -353,7 +353,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(player.ranks.hex.gte(31))return "^"+format(x)+", "+format(player.md.mass.add(1).pow(0.0125))+"x";return format(player.md.mass.add(1).pow(0.0125))+"x" },
-            cdesc: `Dilated mass boost Relativistic mass gain.`,
+            cdesc: `使膨胀质量可以加成相对论质量获取速度。`,
             ccost: E("ee1.1e13"),
             ceffect() {
                 let x = player.md.mass.add(1).log10().add(1).log10().add(1).log10().add(1);
@@ -364,13 +364,13 @@ const ELEMENTS = {
         {
             desc: `Increase dilated mass gain exponent by 5%.`,
             cost: E(1e140),
-            cdesc: `Multiply dilated mass gain exponent by 10.`,
+            cdesc: `使膨胀质量获取速度的指数乘以10。`,
             ccost: E("ee1.5e13"),
         },
         {
             desc: `Add 50 more C8 maximum completions.`,
             cost: E(1e155),
-            cdesc: `The effect of Challenge 8 is better.`,
+            cdesc: `使挑战8的效果变得更好。`,
             ccost: E("ee1.5e13"),
         },
         {
@@ -382,7 +382,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(player.ranks.hex.gte(34))return "^"+format(x);return format(x)+"x" },
-            cdesc: `This element's effect boost Relativistic mass gain.`,
+            cdesc: `该元素的效果将同样加成相对论质量获取速度。`,
             ccost: E("ee1.6e13"),
             ceffect() {
                 let x = player.rp.points.add(1).log10().add(1).log10().add(1).log10().add(1);
@@ -399,7 +399,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(player.ranks.hex.gte(35))return "^"+format(x);return format(x)+"x" },
-            cdesc: `This element's effect boost Relativistic mass gain.`,
+            cdesc: `该元素的效果将同样加成相对论质量获取速度。`,
             ccost: E("ee1.6e13"),
             ceffect() {
                 let x = player.bh.mass.add(1).log10().add(1).log10().add(1).log10().add(1).sqrt();
@@ -410,7 +410,7 @@ const ELEMENTS = {
         {
             desc: `Unlock Stars.`,
             cost: E(1e225),
-            cdesc: `Collapsed Star gain exponent ^1.1`,
+            cdesc: `坍缩星辰获取速度的指数变为原来的1.1次方。`,
             ccost: E("ee1.6e13"),
         },
         {
@@ -422,13 +422,13 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
-            cdesc: `Meta-Hex scale weaker based on Tetr.`,
+            cdesc: `使六重阶层的元折算基于三重阶层的数值而弱化。`,
             ccost: E("ee2.6e13"),
             ceffect() {
                 let x = E(0.9).pow(player.ranks.tetr.add(1).log10().add(1).log10().add(1).log10());
                 return x
             },
-            ceffDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
+            ceffDesc(x) { return "降低"+format(E(1).sub(x).mul(100))+"%" },
         },
         {
             desc: `Cosmic Ray's free tickspeeds now adds to RU7.`,
@@ -441,13 +441,13 @@ const ELEMENTS = {
                 return x.div(6).floor()
             },
             effDesc(x) { return "+"+format(x,0)+" to Rage Power Upgrade 7" },
-            cdesc: `Cosmic Ray's free tickspeeds now adds to BH Condensers.`,
+            cdesc: `使通过宇宙射线获得的免费时间速度计入黑洞压缩器。`,
             ccost: E("ee2.7e13"),
         },
         {
             desc: `Remove softcap from C2 & C6 effects.`,
             cost: E(1e285),
-            cdesc: `C13 effect softcap starts later.`,
+            cdesc: `延迟挑战13的奖励软上限。`,
             ccost: E("ee2.7e13"),
         },
         {
@@ -459,7 +459,7 @@ const ELEMENTS = {
                 return x.min('ee3e13')
             },
             effDesc(x) { return format(x)+"x"+(x.gte('ee3e13')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `Collapsed star boost Relativistic mass gain.`,
+            cdesc: `使坍缩星辰可以加成相对论质量获取速度。`,
             ccost: E("ee3e13"),
             ceffect() {
                 let x = player.stars.points.add(1).log10().add(1).log10().add(1).log10().add(1);
@@ -470,7 +470,7 @@ const ELEMENTS = {
         {
             desc: `Add 50 more C7 maximum completions.`,
             cost: E('e315'),
-            cdesc: `The 7th challenge's 的效果变得更好`,
+            cdesc: `使挑战7的效果变得更好`,
             ccost: E("ee3.1e13"),
         },
         {
@@ -492,13 +492,13 @@ const ELEMENTS = {
         {
             desc: `You can now automatically buy mass dilation upgrades if you purchased any first. They no longer spent dilated mass.`,
             cost: E('e360'),
-            cdesc: `You can now automatically buy Reset Count Boosters. They no longer spent Exotic Matter.`,
+            cdesc: `您可以自动购买奇异次数强化，且他们将不再消耗奇异物质。`,
             ccost: E("ee3.3e13"),
         },
         {
             desc: `The Tetr requirement is broken.`,
             cost: E('e380'),
-            cdesc: `The Tier requirement is broken.`,
+            cdesc: `使阶层的需求大幅降低。`,
             ccost: E('ee3.4e13'),
         },
         {
@@ -510,7 +510,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(player.ranks.hex.gte(45))return "^"+format(x);return format(x)+"x" },
-            cdesc: `This element's effect boost Relativistic Energy gain.`,
+            cdesc: `该元素的效果将同样加成相对论能量获取速度。`,
             ccost: E('ee3.5e13'),
             ceffect() {
                 let x = player.stars.points.add(1).log10().add(1).log10().add(1).log10().add(1).sqrt();
@@ -527,19 +527,19 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(player.ranks.hex.gte(46))return "^"+format(x);return format(x)+"x" },
-            cdesc: `Collapsed star's 的效果变得更好.`,
+            cdesc: `使坍缩星辰的效果变得更好.`,
             ccost: E('ee3.6e13'),
         },
         {
             desc: `使夸克获取速度变为原来的1.1次方.`,
             cost: E('e610'),
-            cdesc: `Quarks gain exponent ^1.02`,
+            cdesc: `使夸克获取速度指数变为原来的1.02次方。`,
             ccost: E('ee3.6e13'),
         },
         {
             desc: `Collapsed stars effect is 10% stronger.`,
             cost: E('e800'),
-            cdesc: `Collapsed star's 的效果变得更好.`,
+            cdesc: `使坍缩星辰的效果变得更好。`,
             ccost: E('ee3.8e13'),
         },
         {
@@ -552,19 +552,19 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(x)+"x"+(x.gte('eee10')?" <span class='soft'>(hardcapped)</span>":x.gte('ee40000')?" <span class='soft'>(softcapped)</span>":"") },
-            cdesc: `Star generator gain exponent ^1.02`,
+            cdesc: `使星辰发生器的获取速度指数变为原来的1.02次方。`,
             ccost: E("ee4.7e13"),
         },
         {
             desc: `Star generator is now ^1.05 stronger.`,
             cost: E('e1750'),
-            cdesc: `Star generator gain exponent ^1.02`,
+            cdesc: `使星辰发生器的获取速度指数变为原来的1.02次方。`,
             ccost: E("ee5.3e13"),
         },
         {
             desc: `Mass gain softcap^2 is 10% weaker.`,
             cost: E('e2400'),
-            cdesc: `Mass gain exponent ^1.005`,
+            cdesc: `使质量获取速度指数变为原来的1.005次方。`,
             ccost: E("ee5.4e13"),
         },
         {
@@ -579,13 +579,13 @@ const ELEMENTS = {
             effDesc(x) { 
 				if(hasChargedElement(52))return "^"+format(x);
 					return format(x)+"x"+(x.gte('eee10')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `这个元素的效果变得更好`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee5.5e13"),
         },
         {
             desc: `Mass Dilation upgrade 6 is 75% stronger.`,
             cost: E('e4600'),
-            cdesc: `Remove the softcap of Break Dilation upgrade 1.`,
+            cdesc: `移除撕裂膨胀升级1的软上限。`,
             ccost: E("ee5.7e13"),
         },
         {
@@ -599,19 +599,19 @@ const ELEMENTS = {
             effDesc(x) { 
 				if(hasChargedElement(54))return "^"+format(x);
 			return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee5.8e13"),
         },
         {
             desc: `Hyper/Ultra BH Condenser & Cosmic Ray scale 25% weaker.`,
             cost: E('e1.6e4'),
-            cdesc: `Remove Meta-BH Condenser scaling.`,
+            cdesc: `移除黑洞压缩器的元折算。`,
             ccost: E("ee5.9e13"),
         },
         {
             desc: `Add 200 more C8 maximum completions.`,
             cost: E('e2.2e4'),
-            cdesc: `The effect of C8 is better.`,
+            cdesc: `使挑战8的效果变得更好。`,
             ccost: E("ee9.9e13"),
         },
         {
@@ -626,7 +626,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee1e14"),
         },
         {
@@ -638,30 +638,30 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
-            cdesc: `Meta-Hex scales weaker based on Tier.`,
+            cdesc: `使六重阶层的元折算基于阶层的数值而弱化。`,
             ccost: E("ee1.7e14"),
             ceffect() {
                 let x = E(0.9).pow(player.ranks.tier.add(1).log10().add(1).log10().add(1).log10());
                 return x
             },
-            ceffDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
+            ceffDesc(x) { return "降低"+format(E(1).sub(x).mul(100))+"%" },
         },
         {
             desc: `The power from the mass of the BH formula is increased to 0.45.`,
             cost: E('e6.6e4'),
-            cdesc: `The power from the mass of the BH formula is increased to 1, and uncap Radiation Booster "BH-Exponent Boost".`,
+            cdesc: `黑洞质量公式中，使指数增加为1。同时，解除辐射波中“黑洞指数加成”的上限。`,
             ccost: E("ee1.8e14"),
         },
         {
             desc: `Add 100 more C7 maximum completions.`,
             cost: E('e7.7e4'),
-            cdesc: `C7 reward is better`,
+            cdesc: `使挑战7的奖励变得更好。`,
             ccost: E("ee1.9e14"),
         },
         {
             desc: `Multiply Particle Powers gain by ^0.5 of its Particle's amount after softcap.`,
             cost: E('e1.5e5'),
-            cdesc: `Remove Particle Powers gain softcaps.`,
+            cdesc: `移除粒子能量获取速度的软上限。`,
             ccost: E("ee2e14"),
         },
         {
@@ -672,36 +672,36 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return format(x,0)+" later" },
-            cdesc: `Meta-Pent starts later based on Supernova.`,
+            cdesc: `使五重阶层的元折算基于超新星次数而延迟出现。`,
             ccost: E("ee2.1e14"),
             ceffect() {
                 let x = player.supernova.times.add(10).pow(2)
                 return x
             },
-            ceffDesc(x) { return "x"+format(x,0)+" later" },
+            ceffDesc(x) { return "延迟"+format(x,0)+"次出现" },
         },
         {
             desc: `Non-bonus Tickspeed is 25x effective.`,
             cost: E('e3e5'),
-            cdesc: `Accelerator Effect Softcap^2 is weaker.`,
+            cdesc: `使加速器的二重软上限弱化。`,
             ccost: E("ee3.1e14"),
         },
         {
             desc: `Rewards from Challenges 3-4 & 8 are 50% effective.`,
             cost: E('e5e5'),
-            cdesc: `C3-4 Rewards 变得更好`,
+            cdesc: `使挑战3和挑战4的奖励变得更好。`,
             ccost: E("ee3.4e14"),
         },
         {
             desc: `Add 200 more C7 & c8 maximum completions.`,
             cost: E('e8e5'),
-            cdesc: `C7-8 Rewards 变得更好`,
+            cdesc: `使挑战7和挑战8的奖励变得更好。`,
             ccost: E("ee3.7e14"),
         },
         {
             desc: `Lanthanum's effect is twice stronger.`,
             cost: E('e1.1e6'),
-            cdesc: `Lanthanum's 的效果变得更好`,
+            cdesc: `使镧(57La)的效果变得更好。`,
             ccost: E("ee4.4e14"),
         },
         {
@@ -714,25 +714,25 @@ const ELEMENTS = {
                 return x.softcap('e3e15',0.85,2).min('eee10')
             },
             effDesc(x) { if(player.ranks.hex.gte(67) || hasChargedElement(67))return "^"+format(x);return format(x)+"x"+(x.gte('eee10')?" <span class='soft'>(hardcapped)</span>":"")  },
-            cdesc: `这个元素的效果变得更好`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("ee4.5e14"),
         },
         {
             desc: `Meta-Tickspeed start 2x later.`,
             cost: E('e4.8e6'),
-            cdesc: `Meta-Tickspeed start ^2 later.`,
+            cdesc: `使时间速度的元折算延迟2次方出现。`,
             ccost: E('ee5e14'),
         },
         {
             desc: `Pent is now added in mass gain formula from collapsed stars.`,
             cost: E('e3.6e7'),
-            cdesc: `Hept is now added in mass gain formula from collapsed stars.`,
+            cdesc: `使坍缩星辰的质量获取速度公式根据七重阶层的数值变得更好。`,
             ccost: E('ee5.4e14'),
         },
         {
             desc: `Add 200 more C7 & c8 maximum completions.`,
             cost: E('e6.9e7'),
-            cdesc: `C7-8 Rewards 变得更好`,
+            cdesc: `使挑战7和挑战8的奖励变得更好。`,
             ccost: E('ee6.1e14'),
         },
         {
@@ -743,13 +743,13 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "^"+format(x)+" later" },
-            cdesc: `Black Hole Upgrade 19 is better.`,
+            cdesc: `使黑洞升级19的效果变得更好。`,
             ccost: E('ee6.2e14'),
         },
         {
             desc: `Tetrs are 15% cheaper.`,
             cost: E('e5.75e8'),
-            cdesc: `The Tetr requirement is broken.`,
+            cdesc: `使三重阶层的需求大幅降低。`,
             ccost: E('ee9e14'),
         },
         {
@@ -761,61 +761,61 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "+"+format(x,0) },
-            cdesc: `Effects of C5,C8 变得更好.`,
+            cdesc: `使挑战5和挑战8的效果变得更好。`,
             ccost: E('ee9.5e14'),
         },
         {
             desc: `Super Tetr scales 25% weaker.`,
             cost: E('e2.6e9'),
-            cdesc: `The Tetr requirement is broken.`,
+            cdesc: `使三重阶层的需求大幅降低。`,
             ccost: E('ee1.2e15'),
         },
         {
             desc: `Remove 2 softcaps from Atomic Power's effect.`,
             cost: E('e3.9e9'),
-            cdesc: `Atomic Power's 的效果变得更好.`,
+            cdesc: `使原子能量的效果变得更好。`,
             ccost: E('ee1.3e15'),
         },
         {
             desc: `Collapsed Star's effect is 25% stronger.`,
             cost: E('e3.75e10'),
-            cdesc: `Collapsed Star's 的效果变得更好.`,
+            cdesc: `使坍缩星辰的效果变得更好。`,
             ccost: E('ee1.4e15'),
         },
         {
             desc: `Softcap^3 from mass gain is 17.5% weaker.`,
             cost: E('e4e11'),
-            cdesc: `使强化器的溢出弱化.`,
+            cdesc: `使强化器的溢出弱化。`,
             ccost: E('ee1.9e15'),
         },
         {
             desc: `Meta-Supernova scales 20% weaker.`,
             cost: E('e3.4e12'),
-            cdesc: `Meta-Supernova scales 50% weaker.`,
+            cdesc: `使超新星的元折算弱化50%。`,
             ccost: E('ee3e15'),
         },
         {
             desc: `Neutronium-0 affects Aluminium-13 & Tantalum-73.`,
             cost: E('e4.8e12'),
-            cdesc: `Neutronium-0 is better.`,
+            cdesc: `使零号中子的效果变得更好。`,
             ccost: E('ee6e15'),
         },
         {
             desc: `使强化器和时间速度的效果变为原来的25倍.`,
             cost: E('e1.4e13'),
-            cdesc: `使强化器的溢出弱化.`,
+            cdesc: `使强化器的溢出弱化。`,
             ccost: E('ee7.7777e15'),
         },
         {
             desc: `Stronger is ^1.1 stronger.`,
             cost: E('e2.8e13'),
-            cdesc: `Stronger is ^2 stronger.`,
+            cdesc: `使强化器的效果变为原来的2次方。`,
             ccost: E('ee1e16'),
         },
         {
             desc: `Strontium-38 is thrice effective.`,
             cost: E('e4e13'),
-            cdesc: `Strontium-38's effect is squared.`,
+            cdesc: `使锶(38Sr)的效果变为原来的平方。`,
             ccost: E('ee1.1111e16'),
         },
         {
@@ -833,36 +833,36 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return formatReduction(x)+" weaker" },
-            cdesc: `Super Overpower scales weaker based on Cosmic Ray's free tickspeeds.`,
+            cdesc: `使降伏器的超级折算基于宇宙射线的免费时间速度数量而弱化。`,
             ccost: E('ee1.8e16'),
             ceffect() {
                 let x = tmp.atom?E(0.999).pow(tmp.atom.atomicEff.add(1).log10().add(1).log10().add(1).log10()):E(1)
                 return x
             },
-            ceffDesc(x) { return formatReduction(x)+" weaker" },
+            ceffDesc(x) { return "降低"+formatReduction(x) },
         },
         {
             desc: `Stronger’s Power softcap starts 3x later, is 10% weaker.`,
             cost: E('e7.5e15'),
-            cdesc: `使强化器的溢出弱化.`,
+            cdesc: `使强化器的溢出弱化。`,
             ccost: E('ee1.9e16'),
         },
         {
             desc: `Tickspeed’s Power softcap starts ^2 later, scales 50% weaker.`,
             cost: E('e2e16'),
-            cdesc: `Accelerator effect softcap^2 starts 2x later.`,
+            cdesc: `使加速器效果的二重软上限延迟2倍出现。`,
             ccost: E('ee2.5e16'),
         },
         {
             desc: `Carbon-6’s effect is overpowered, but Sodium-11 don’t work.`,
             cost: E('e150'),
-            cdesc: `Square Carbon-6’s charged effect.`,
+            cdesc: `使碳(6C)的充能效果变为原来的平方。`,
             ccost: E('ee3.7e16'),
         },
         {
             desc: `All scaling from Tickspeed start 100x later (after nerf from 8th QC modifier).`,
             cost: E('e500'),
-            cdesc: `Meta-Tickspeeds starts ^2 later.`,
+            cdesc: `使时间速度的元折算延迟2次方出现。`,
             ccost: E('ee5e16'),
         },
         {
@@ -873,7 +873,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "^"+x.format() },
-            cdesc: `The 2nd Black Hole Overflow effect is weaker.`,
+            cdesc: `使黑洞质量的二重溢出弱化。`,
             ccost: E('ee7.7777e16'),
         },
         {
@@ -886,7 +886,7 @@ const ELEMENTS = {
                 return x.min('ee15');
             },
             effDesc(x) { if(hasChargedElement(90))return "^"+format(x);return format(x)+"x"+(x.gte('ee15')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee1.35e17'),
             ceffect() {
 				if(hasChargedElement(90))return player.md.mass.add(1).log10().add(1).log10().add(1).log10().add(1).log10().add(1);
@@ -896,13 +896,13 @@ const ELEMENTS = {
         {
             desc: `Entropic Accelerator & Booster nerfing is 10% weaker.`,
             cost: E('e2700'),
-            cdesc: `Boost Entropic Condenser.`,
+            cdesc: `增强熵压缩的效果。`,
             ccost: E('ee1.6e17'),
         },
         {
             desc: `Insane Challenges scale 25% weaker.`,
             cost: E('e4800'),
-            cdesc: `Impossible Challenges scale 5% weaker`,
+            cdesc: `使挑战的无望折算弱化5%。`,
             ccost: E('ee1.6e17'),
         },
         {
@@ -914,7 +914,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "x"+x.format()+(x.gte('e1e4')?" <span class='soft'>(softcapped)</span>":"")  },
-            cdesc: `Softcap of this element is weaker.`,
+            cdesc: `使该元素的软上限弱化。`,
             ccost: E('ee1.8e17'),
         },
         {
@@ -925,37 +925,37 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "x"+x.format() },
-            cdesc: `The base of this element is 1.2, instead of 1.1.`,
+            cdesc: `使该元素的增加倍率从1.1倍(10%)变为1.2倍(20%)。`,
             ccost: E('ee1.9e17'),
         },
         {
             desc: `Epsilon Particles are worked in Big Rip, but 90% weaker.`,
             cost: E("e34500"),
-            cdesc: `Multiply Epsilon Particles effects by 10. Epsilon Particle's 的效果变得更好 if you're not in QC.`,
+            cdesc: `使艾普西隆[E]粒子的效果变为原来的10倍。未进入量子挑战时，艾普西隆[E]粒子的效果变得更好。`,
             ccost: E('ee2e17'),
         },
         {
             desc: `Entropic Converter nerfing is 10% weaker.`,
             cost: E('e202000'),
-            cdesc: `Entropic Evaporation^2 is 10% weaker.`,
+            cdesc: `使熵消耗<sup>2</sup>的折算弱化10%。`,
             ccost: E('ee3e17'),
         },
         {
             desc: `Increase Entropic Evaporation’s base by 1.`,
             cost: E('e8.5e6'),
-            cdesc: `Increase Entropic Evaporation’s base by 1.`,
+            cdesc: `使熵消耗的基础效果增加1。`,
             ccost: E('ee4.2e17'),
         },
         {
             desc: `8th QC modifier in Big Rip is 20% weaker.`,
             cost: E('e1.2e7'),
-            cdesc: `This element is applied outside of Big Rips.`,
+            cdesc: `该元素的效果在大撕裂外同样生效。`,
             ccost: E('ee7e17'),
         },
         {
             desc: `Remove softcap^3 from Photon Upgrade 3 effect, its softcap^2 is weaker.`,
             cost: E('e2.15e7'),
-            cdesc: `Photon Upgrades 变得更好.`,
+            cdesc: `使全部光子升级变得更好。`,
             ccost: E('ee7.5e17'),
         },
         {
@@ -976,19 +976,19 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "+^"+format(x) },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee8e17'),
         },
         {
             desc: `Blueprint Particles effect is overpowered.`,
             cost: E('e3.5e7'),
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee1e18'),
         },
         {
             desc: `Tickspeed Power’s softcap starts ^100 later.`,
             cost: E('e111111111'),
-            cdesc: `Accelerator Effect softcap starts 100x later.`,
+            cdesc: `使加速器的效果软上限延迟100倍出现。`,
             ccost: E('ee2.2222e18'),
         },
         {
@@ -1001,7 +1001,7 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { if(hasChargedElement(103))return "^"+format(x);return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好. Also, permanently add ee10 Blueprint Particles to their effect.`,
+            cdesc: `这个元素的效果变得更好。同时，在计算蓝图粒子效果时，蓝图粒子数永久增加ee10(将x变为x+ee10)。`,
             ccost: E('ee4e18'),
             ceffect() {
 				if(hasChargedElement(103))return player.prestiges[1].add(1).log10().add(1).log10().add(1).pow(0.1).pow(hasPrestige(1,23)?prestigeEff(1,23):1);
@@ -1011,37 +1011,37 @@ const ELEMENTS = {
         {
             desc: `Add 200 more C9-12 maximum completions.`,
             cost: E('e1.2e9'),
-            cdesc: `C9-12 的效果变得更好.`,
+            cdesc: `挑战9-挑战12的效果变得更好。`,
             ccost: E('ee1.5e19'),
         },
         {
             desc: `Each Particle Power’s 1st effect is exponentially overpowered.`,
             cost: E('e2.2e9'),
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee5e19'),
         },
         {
             desc: `Entropic Evaporation^2 and Condenser^2 scale 15% weaker.`,
             cost: E('e7.25e9'),
-            cdesc: `Entropic Evaporation^2 scale 15% weaker.`,
+            cdesc: `熵消耗<sup>2</sup>的折算弱化15%。`,
             ccost: E('ee6.8888e19'),
         },
         {
             desc: `Beta Particles are twice effective.`,
             cost: E('e1.45e10'),
-            cdesc: `Beta Particles 变得更好.`,
+            cdesc: `贝塔[B]粒子的效果变得更好.`,
             ccost: E('ee6.9e19'),
         },
         {
             desc: `All scalings from Ranks to Pent scale 10% weaker (only 2% during Big Rip).`,
             cost: E('e1.6e10'),
-            cdesc: `All scalings from Hex to Oct scale 10% weaker.`,
+            cdesc: `从六重阶层到八重阶层的所有折算弱化10%。`,
             ccost: E('ee1e20'),
         },
         {
             desc: `Entropic Multiplier is effective, even in Big Rip.`,
             cost: E('e3e10'),
-            cdesc: `Entropic Multiplier boost Entropy gain.`,
+            cdesc: `使熵加倍可以加成熵的获取速度。`,
             ccost: E('ee1.3e20'),
             ceffect() {
 				return E(1.2).pow(player.qu.en.rewards[0]);
@@ -1051,7 +1051,7 @@ const ELEMENTS = {
         {
             desc: `Mass gain softcap^4 is 50% weaker (only 20% in Big Rip).`,
             cost: E('e6e10'),
-            cdesc: `使强化器的溢出弱化`,
+            cdesc: `使强化器的溢出弱化。`,
             ccost: E('ee1.6666e20'),
         },
         {
@@ -1063,25 +1063,25 @@ const ELEMENTS = {
                 return x
             },
             effDesc(x) { return "^"+format(x) },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee2e20'),
         },
         {
             desc: `[sn4] effect is increased by 2.`,
             cost: E('e3e12'),
-            cdesc: `[sn4] 的效果变得更好.`,
+            cdesc: `[sn4] 的效果变得更好。`,
             ccost: E('ee4e20'),
         },
         {
             desc: `[bs2] uses a better formula.`,
             cost: E('e4e12'),
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee4.4444e20'),
         },
         {
             desc: `Entropic Multiplier uses a better formula.`,
             cost: E('e1.2e13'),
-            cdesc: `Entropic Multiplier boost Entropy gain.`,
+            cdesc: `使熵加倍可以加成熵的获取速度。`,
             ccost: E('ee5e20'),
             ceffect() {
 				return E(1.2).pow(player.qu.en.rewards[0]);
@@ -1091,7 +1091,7 @@ const ELEMENTS = {
         {
             desc: `Mass Dilation upgrades are 5% stronger.`,
             cost: E("e7e13"),
-            cdesc: `Mass Dilation upgrades are 5% stronger.`,
+            cdesc: `使质量膨胀升级的效果增加5%。`,
             ccost: E('ee1e21'),
         },
         {
@@ -1104,7 +1104,7 @@ const ELEMENTS = {
                 return x.min("e2e30")
             },
             effDesc(x) { if(hasChargedElement(116))return "^"+format(x);return format(x)+"x"+(x.gte('e2e30')?" <span class='soft'>(hardcapped)</span>":"") },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E('ee1.5e21'),
             ceffect() {
 				if(hasChargedElement(116))return (tmp.prestiges.base||E(1)).add(10).log10().pow(0.5);
@@ -1114,13 +1114,13 @@ const ELEMENTS = {
         {
             desc: `Mass gain after all softcaps is raised by 10.`,
             cost: E("e5e16"),
-            cdesc: `Mass gain exponent ^1.01`,
+            cdesc: `使质量获取速度的指数变为原来的1.01次方。`,
             ccost: E('ee2.75e21'),
         },
         {
             desc: `解锁新的中子树升级。<span id="final_118" style="display:none;"></span>`,
             cost: E("e1.7e17"),
-            cdesc: `Unlock even more Neutron Tree Upgrades.`,
+            cdesc: `解锁更多新的中子树升级。（量子+）`,
             ccost: E("ee5.8e21"),
         },
 		
@@ -1136,7 +1136,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: E("1.5e3300056"),
 		},
 		{
@@ -1149,7 +1149,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `Each charged element after Oganesson multiplies your Exotic Matter gain by 2.`,
+            cdesc: `每一个已购买的编号大于118的充能元素使奇异物质的获取量翻倍。`,
             ccost: uni("3.3333e3333333"),
 			ceffect() {
 				let x = E(1)
@@ -1169,13 +1169,13 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("3.3333e3333333"),
 		},
 		{
 			desc: `使碎片产生器倍率乘以1.5。`,
 			cost: E("1e15"),
-            cdesc: `Raise Shard Generators Power by 1.5`,
+            cdesc: `使碎片产生器倍率变为1.5次方。`,
             ccost: E("1.5e3750056"),
 		},
 		{
@@ -1188,7 +1188,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `Effect of this element is squared.`,
+            cdesc: `这个元素的效果变为原来的平方。`,
             ccost: uni("e24850"),
 		},
 		{
@@ -1201,7 +1201,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e25100"),
 		},
 		{
@@ -1213,13 +1213,13 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("1e4900000"),
 		},
 		{
 			desc: `移除所有的费米子的阶层上限。`,
 			cost: E("1.6190000001e23"),
-            cdesc: `Meta-Fermion Tier starts 10x later.`,
+            cdesc: `使费米子阶层的元折算延迟10倍出现。`,
             ccost: uni("1e4900000"),
 		},
 		{
@@ -1234,7 +1234,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e27875"),
 		},
 		{
@@ -1255,45 +1255,45 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e27925"),
 		},
 		{
 			desc: `在大撕裂中，使“阶层超量”的效果变为原来的50%。`,
 			cost: E("5.9720000001e27"),
-            cdesc: `This element is applied outside of Big Rips.`,
+            cdesc: `该元素的效果在大撕裂外同样生效。`,
             ccost: uni("e6000000"),
 		},
 		{
 			desc: `'90%' in Neutron Tree Upgrade [br3] is now 80%.`,
 			cost: E("5.9720000001e27").mul(200),
-            cdesc: `Death Shards gain is squared.`,
+            cdesc: `使死寂碎片的获取速度变为原来的平方。`,
             ccost: uni("e6050000"),
 		},
 		{
 			desc: `你可以自动购买宇宙弦，127号元素的效果更好。`,
 			cost: E("1e14"),
 			et: true,
-            cdesc: `The 127th element is better based on Charged Elements.`,
+            cdesc: `127号元素的效果基于已充能的元素变得更好。`,
             ccost: uni("e42069"),
 		},
 		{
 			desc: `If you bought [prim8], levels of Epsilon/Theta/Beta Particles is 1 per 2 Primordium Theorem, instead of 2.5.`,
 			cost: E("1e15"),
 			et: true,
-            cdesc: `Gain 1.1x more Primordium Theorems.`,
+            cdesc: `使原基定理的获取乘以1.1倍。`,
             ccost: uni("e43000"),
 		},
 		{
 			desc: `Uncap C12 completions.`,
 			cost: E("1.9890000001e33"),
-            cdesc: `C12 的效果变得更好.`,
+            cdesc: `挑战12的效果变得更好。`,
             ccost: uni("e9050000"),
 		},
 		{
 			desc: `解锁加速器，时间速度效果改为以指数加成质量，但是氩(18Ar)失效。`,
 			cost: E("1.9890000001e33").mul(200),
-            cdesc: `Accelerator Effect Softcap^2 is weaker.`,
+            cdesc: `使加速器的二重软上限弱化。`,
             ccost: uni("e11500000"),
 		},
 		{
@@ -1306,7 +1306,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x)},
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e69000"),
 		},
 		{
@@ -1319,19 +1319,19 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e58000"),
 		},
 		{
 			desc: `加速器加成时间速度倍率。`,
 			cost: E("1.9890000001e37"),
-            cdesc: `Accelerator Effect Softcap^2 is weaker.`,
+            cdesc: `使加速器的二重软上限弱化。`,
             ccost: uni("e18888888"),
 		},
 		{
 			desc: `Entropic Condenser^2 is 15% weaker.`,
 			cost: E("1.9890000001e37"),
-            cdesc: `Entropic Evaporation^2 is 15% weaker.`,
+            cdesc: `使熵消耗<sup>2</sup>的折算弱化15%。`,
             ccost: uni("e22000000"),
 		},
 		{
@@ -1343,144 +1343,144 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `Entropic Evaporation^2 is 15% weaker.`,
+            cdesc: `使熵消耗<sup>2</sup>的折算弱化15%。`,
             ccost: uni("e88888"),
 		},
 		{
 			desc: `128号元素变得更好。`,
 			cost: E("1.6190000001e21"),
 			et: true,
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e99000"),
 		},
 		{
 			desc: `Entropic Radiation^2 is 20% weaker.`,
 			cost: E("2.98350000001e45"),
-            cdesc: `Entropic Evaporation^2 is 15% weaker.`,
+            cdesc: `使熵消耗<sup>2</sup>的折算弱化15%。`,
             ccost: uni("e3e7"),
 		},
 		{
 			desc: `121号元素的效果变为原来的平方。`,
 			cost: E("2.98350000001e45"),
-            cdesc: `Element 121 is squared.`,
+            cdesc: `121号元素的效果变为原来的平方。`,
             ccost: uni("e4e7"),
 		},
 		{
 			desc: `QC Modifier 'Intense Catalyst' is 5% weaker.`,
 			cost: E("1.6190000001e26"),
 			et: true,
-            cdesc: `QC Modifier 'Intense Catalyst' is 5% weaker.`,
+            cdesc: `使量子挑战5的削弱弱化5%。`,
             ccost: uni("e144000"),
 		},
 		{
 			desc: `Entropic Condenser^2 is 15% weaker.`,
 			cost: E("1.6190000001e27"),
 			et: true,
-            cdesc: `Entropic Evaporation^2 is 15% weaker.`,
+            cdesc: `使熵消耗<sup>2</sup>的折算弱化15%。`,
             ccost: uni("e144000"),
 		},
 		{
 			desc: `获得10倍的转生质量。`,
 			cost: E("2.98350000001e53"),
-            cdesc: `Base Prestige Mass gain ^1.1`,
+            cdesc: `基础转生质量获取速度变为原来的1.1次方。`,
             ccost: uni("e56000000"),
 		},
 		{
 			desc: `使高于1.8e308的熵加成基础无限质量获取。`,
 			cost: uni(1),
-            cdesc: `奇异物质加成黑暗射线to base Infinity Mass gain formula.`,
+            cdesc: `使高于1.8e308的奇异物质加成基础无限质量获取。`,
             ccost: uni("e56000000"),
 		},
 		{
 			desc: `128号元素的效果变为原来的1.2次方。`,
 			cost: E("5.9720000001e30"),
 			et: true,
-            cdesc: `Element 128's effect ^1.2.`,
+            cdesc: `128号元素的效果变为原来的1.2次方。`,
             ccost: uni("e180000"),
 		},
 		{
 			desc: `Timeshard effect is slightly stronger.`,
 			cost: E("5.9720000001e31"),
 			et: true,
-			cdesc: `Timeshard effect is slightly stronger.`,
+			cdesc: `时间碎片效果变得更好。`,
             ccost: uni("e181000"),
 		},
 		{
 			desc: `使六重阶层的超级折算弱化5%。`,
 			cost: uni(1e5),
-            cdesc: `Meta-Hept is 5% weaker.`,
+            cdesc: `使七重阶层的元折算弱化5%。`,
             ccost: uni("e63000000"),
 		},
 		{
 			desc: `降低七重阶层的需求。`,
 			cost: uni(1e7),
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e64000000"),
 		},
 		{
 			desc: `Entropic Condenser^2 is 15% weaker.`,
 			cost: E("1.9890000001e34"),
 			et: true,
-			cdesc: `Entropic Condenser is better.`,
+			cdesc: `使熵压缩的效果变得更好。`,
             ccost: uni("e200000"),
 		},
 		{
 			desc: `If you bought [prim8], levels of Epsilon/Theta/Beta Particles is 1 per 1.5 Primordium Theorem, instead of 2.`,
 			cost: E("1.9890000001e34"),
 			et: true,
-			cdesc: `Gain 1.1x more Primordium Theorems.`,
+			cdesc: `使原基定理的获取乘以1.1倍。`,
             ccost: uni("e200000"),
 		},
 		{
 			desc: `削除转生质量效果的第一个软上限。`,
 			cost: E("1.9890000001e36"),
 			et: true,
-			cdesc: `The second softcap of Prestige Mass effect is weaker.`,
+			cdesc: `削弱转生质量效果的第二个软上限。`,
             ccost: uni("e205000"),
 		},
 		{
 			desc: `QC Modifier 'Intense Catalyst' is 5% weaker.`,
 			cost: E("1.9890000001e40"),
 			et: true,
-            cdesc: `QC Modifier 'Intense Catalyst' is 5% weaker.`,
+            cdesc: `使量子挑战5的削弱弱化5%。`,
             ccost: uni("e205000"),
 		},
 		{
 			desc: `Unlock the 13th Challenge.`,
 			cost: uni(1e18),
-            cdesc: `C13 effect softcap is weaker.`,
+            cdesc: `使挑战13的效果软上限弱化。`,
             ccost: uni("e66666666"),
 		},
 		{
-			desc: `质子能量的效果变得更好（请检查元素105是否点了）。`,
+			desc: `质子能量的效果变得更好。`,
 			cost: uni(1e21),
-            cdesc: `Effects of Protons Powers is better.`,
+            cdesc: `质子能量的效果变得更好。`,
             ccost: uni("e67000000"),
 		},
 		{
 			desc: `128号元素的效果变为原来的1.2次方。`,
 			cost: E("1.9890000001e41").mul(3),
 			et: true,
-            cdesc: `Element 128's effect ^1.2.`,
+            cdesc: `128号元素的效果变为原来的1.2次方。`,
             ccost: uni("e220000"),
 		},
 		{
 			desc: `移除膨胀质量获取的软上限，膨胀溢出被削弱。`,
 			cost: E("1.9890000001e41").mul(3),
 			et: true,
-            cdesc: `Dilated Overflow is weaker.`,
+            cdesc: `削弱膨胀溢出。`,
             ccost: uni("e220000"),
 		},
 		{
 			desc: `Unlock the 14th Challenge.`,
 			cost: uni(1e27),
-            cdesc: `C14 effect is squared.`,
+            cdesc: `使挑战14的效果变为原来的平方。`,
             ccost: uni("e90000000"),
 		},
 		{
 			desc: `膨胀质量的基础效果变为原来的6次方。`,
 			cost: uni(1e29),
-            cdesc: `Base Dilated Mass effect ^6.`,
+            cdesc: `膨胀质量的基础效果变为原来的6次方。`,
             ccost: uni("e90000000"),
 		},
 		{
@@ -1495,52 +1495,52 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x" },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e280000"),
 		},
 		{
 			desc: `削弱第一个级别坍缩效果。`,
 			cost: E("2.98350000001e45"),
 			et: true,
-            cdesc: `Meta-Hept is 1% weaker.`,
+            cdesc: `使七重阶层的元折算削弱1%。`,
             ccost: uni("e288888"),
 		},
 		{
 			desc: `使高于1.8e308的转生基础值加成基础无限质量获取。`,
 			cost: uni(6e35),
-            cdesc: `深渊之渍 Post-1.8e308 added to base Infinity Mass gain formula.`,
+            cdesc: `使高于1.8e308的深渊之渍加成基础无限质量获取。`,
             ccost: uni("e107000000"),
 		},
 		{
 			desc: `Unlock the 15th Challenge.`,
 			cost: uni(5e39),
-            cdesc: `Change C15 effect.`,
+            cdesc: `修改挑战15的效果。`,
             ccost: uni("e108000000"),
 		},
 		{
             desc: `Entropic Evaporation^2 is 5% weaker.`,
 			cost: E("2.9835e49"),
 			et: true,
-			cdesc: `Entropic Evaporation^2 is 5% weaker.`,
+			cdesc: `使熵消耗<sup>2</sup>的折算弱化5%。`,
             ccost: uni("e310000"),
 		},
 		{
             desc: `If you bought [prim8], levels of Epsilon/Theta/Beta Particles is 1 per 1 Primordium Theorem, instead of 1.5.`,
 			cost: uni(1),
 			et: true,
-			cdesc: `Gain 1.1x more Primordium Theorems.`,
+			cdesc: `使原基定理的获取乘以1.1倍。`,
             ccost: uni("e310000"),
 		},
 		{
 			desc: `Entropic Condenser^2 is 15% weaker.`,
 			cost: uni(1e61),
-			cdesc: `Entropic Condenser is better.`,
+			cdesc: `使熵压缩的效果变得更好。`,
             ccost: uni("e1.3e8"),
 		},
 		{
 			desc: `Unlock the 16th Challenge.`,
 			cost: uni(1e100),
-			cdesc: `C16 boost Prestige Muscler Effect.`,
+			cdesc: `使挑战16的效果加成转生质量获取速度。`,
             ccost: uni("e1.6e8"),
 			ceffect() {
 				let x = player.chal.comps[16].add(10).log10().sqrt();
@@ -1552,28 +1552,28 @@ const ELEMENTS = {
             desc: `削弱第一个级别坍缩效果。`,
 			cost: uni(1e21),
 			et: true,
-			cdesc: `Meta-Hex starts 1e100x later.`,
+			cdesc: `使六重阶层的元折算延迟1e100倍。`,
             ccost: uni("e400000"),
 		},
 		{
             desc: `修改挑战5的效果。挑战15的目标变得更低。`,
 			cost: uni(1e22),
 			et: true,
-            cdesc: `C5 effect is changed. C21 goal is heavily weaken.`,
+            cdesc: `修改挑战5的效果。挑战21的目标变得更低。`,
             ccost: uni("e400000"),
 		},
 		{
             desc: `削弱第二个级别坍缩效果。`,
 			cost: uni(1e23),
 			et: true,
-			cdesc: `Meta-Hex starts 1e100x later.`,
+			cdesc: `使六重阶层的元折算延迟1e100倍出现。`,
             ccost: uni("e444444"),
 		},
 		{
             desc: `QC Modifier 'Intense Catalyst' is 6% weaker.`,
 			cost: uni(1e26),
 			et: true,
-			cdesc: `QC Modifier 'Intense Catalyst' is 6% weaker.`,
+			cdesc: `使量子挑战5的削弱弱化6%。`,
             ccost: uni("e444444"),
 		},
 		{
@@ -1591,7 +1591,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x) },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e2.5e8"),
 		},
 		{
@@ -1609,193 +1609,193 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return "^"+format(x) },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: uni("e2.5e8"),
 		},
 		{
             desc: `挑战13和15的次数上限增加100。`,
 			cost: uni(1e27),
 			et: true,
-			cdesc: `Reduce C13 & C15 Goals.`,
+			cdesc: `减少挑战13和挑战15的目标。`,
             ccost: uni("e495000"),
 		},
 		{
             desc: `削弱第二个级别坍缩效果。`,
 			cost: uni(1e27),
 			et: true,
-			cdesc: `Meta-Hept starts 2x later.`,
+			cdesc: `使七重阶层的元折算延迟2倍出现。`,
             ccost: uni("e495000"),
 		},
 		{
             desc: `Entropic Condenser^2 is 15% weaker.`,
 			cost: E(1.5e217),
-            cdesc: `Entropic Condenser is better.`,
+            cdesc: `使熵压缩的效果变得更好。`,
             ccost: uni("e2.8e8"),
 		},
 		{
             desc: `移除阶层除元折算以外的所有折算。`,
 			cost: E(1.5e221),
-            cdesc: `Meta-Tickspeed scaling starts ^2 later.`,
+            cdesc: `使时间速度的元折算延迟2次方出现。`,
             ccost: uni("e2.9e8"),
 		},
 		{
 			desc: `'80%' in Neutron Tree Upgrade [br3] is now 70%.`,
 			cost: uni(1e32),
 			et: true,
-            cdesc: `Death Shards gain ^2.5`,
+            cdesc: `使死寂碎片的获取速度变为原来的2.5次方。`,
             ccost: uni("e565000"),
 		},
 		{
 			desc: `如果你不在大撕裂中，绿色色度的效果变为原来的1.5次方。`,
 			cost: uni(1e36),
 			et: true,
-            cdesc: `绿色色度's softcap starts weaker.`,
+            cdesc: `使绿色色度的软上限延迟出现。`,
             ccost: uni("e570000"),
 		},
 		{
 			desc: `削弱第三个级别坍缩效果。`,
 			cost: uni(1e203),
-            cdesc: `Meta-Hept starts 2x later.`,
+            cdesc: `使七重阶层的元折算延迟2倍出现。`,
             ccost: uni("e3.4e8"),
 		},
 		{
 			desc: `挑战13和16的次数上限增加100。`,
 			cost: E(9e284),
-            cdesc: `C13 的效果变得更好.`,
+            cdesc: `挑战13的效果变得更好。`,
             ccost: uni("e3.5e8"),
 		},
 		{
 			desc: `移除第一个级别坍缩效果。`,
 			cost: uni(1e45),
 			et: true,
-            cdesc: `Meta-Hept starts 2x later.`,
+            cdesc: `使七重阶层的元折算延迟2倍出现。`,
             ccost: uni("e660000"),
 		},
 		{
 			desc: `移除第二个级别坍缩效果。`,
 			cost: uni(1e48),
 			et: true,
-            cdesc: `Meta-Hept starts 2x later.`,
+            cdesc: `使七重阶层的元折算延迟2倍出现。`,
             ccost: uni("e680000"),
 		},
 		{
 			desc: `量子挑战5高于20的效果被削弱。`,
 			cost: E(1.5e294),
-            cdesc: `Remove all QC Modifier 'Intense Catalyst' effect scaling.`,
+            cdesc: `移除所有量子挑战5的效果折算。`,
             ccost: uni("e4.2e8"),
 		},
 		{
 			desc: `挑战13和15的次数上限增加300。`,
 			cost: E(6e299),
-            cdesc: `C15 的效果变得更好.`,
+            cdesc: `挑战15的效果变得更好。`,
             ccost: uni("e4.4e8"),
 		},
 		{
 			desc: `移除宇宙弦的超级折算。`,
 			cost: uni(1e49),
 			et: true,
-            cdesc: `Square [qu6].`,
+            cdesc: `[qu6]的效果变为原来的平方。`,
             ccost: uni("e790000"),
 		},
 		{
 			desc: `撕裂膨胀升级5影响阶层的元折算。`,
 			cost: uni(5e51),
 			et: true,
-            cdesc: `Break Dilation Upgrade 5 affects Meta-Hept scaling at a reduced rate.`,
+            cdesc: `撕裂膨胀升级5将以较低的倍率影响七重阶层的元折算。`,
             ccost: uni("e850000"),
 		},
 		{
 			desc: `使高于1.8e308克的无限质量加成基础无限质量获取。`,
 			cost: E(2).pow(1024),
-			 cdesc: `这个元素的效果是原来的平方.`,
+			 cdesc: `这个元素的效果是原来的平方。`,
             ccost: uni("e555555555"),
 		},
 		{
 			desc: `挑战13和16的次数上限增加200。`,
 			cost: E("6e310"),
-            cdesc: `C13 的效果变得更好.`,
+            cdesc: `挑战13的效果变得更好。`,
             ccost: uni("e5.7e8"),
 		},
 		{
 			desc: `移除级别坍缩。`,
 			cost: uni(1e54),
 			et: true,
-            cdesc: `Meta-Hex starts ^2 later.`,
+            cdesc: `使六重阶层的元折算延迟2次方出现。`,
             ccost: uni("e1e6"),
 		},
 		{
 			desc: `Unlock the 17th Challenge.`,
 			cost: uni(1e61),
 			et: true,
-            cdesc: `Hardened Challenge scaling of C20 is weaker based on C17 completions.`,
+            cdesc: `基于挑战17的完成数弱化挑战20的硬化折算。`,
             ccost: uni("e1.1e6"),
 			ceffect() {
 				let x = E(0.99).pow(player.chal.comps[17].add(1).log10());
 				return x
 			},
-			ceffDesc(x) { return formatReduction(x)+" weaker" },
+			ceffDesc(x) { return "弱化"+formatReduction(x) },
 		},
 		{
 			desc: `移除辐射波加成“级别元折算加成”的3个软上限。`,
 			cost: uni(1e301),
-            cdesc: `Radiation Booster 'Meta-Rank Boost' affects Meta-Hept at a reduced rate.`,
+            cdesc: `辐射波加成“级别元折算加成”将以较低的倍率影响七重阶层的元折算。`,
             ccost: uni("e7.24e8"),
 			ceffect() {
 				let x = tmp.radiation.bs.eff[14].add(1).log10().add(1).log10().add(1).log10().add(1).log10().add(1).pow(0.5);
 				return x
 			},
-			ceffDesc(x) { return format(x)+"x later"; },
+			ceffDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
 			desc: `挑战13的次数上限增加200。`,
 			cost: E("3e393"),
-            cdesc: `C13 的效果变得更好.`,
+            cdesc: `挑战13的效果变得更好。`,
             ccost: uni("e7.25e8"),
 		},
 		{
 			desc: `每秒获得永恒质量和永恒次数，数量为重置时获取量的100%。`,
 			cost: uni(1e71),
 			et: true,
-            cdesc: `永恒质量 gain formula is better.`,
+            cdesc: `永恒质量的获取速度公式变得更好。`,
             ccost: uni("e1.15e6"),
 		},
 		{
 			desc: `膨胀溢出被削弱。`,
 			cost: uni(1e75),
 			et: true,
-            cdesc: `Dilated Overflow is weaker.`,
+            cdesc: `膨胀溢出被削弱。`,
             ccost: uni("e1.35e6"),
 		},
 		{
 			desc: `Entropic Condenser^2 is 15% weaker.`,
 			cost: E("1.5e461"),
-            cdesc: `Entropic Condenser is better.`,
+            cdesc: `使熵压缩的效果变得更好。`,
             ccost: uni("e7.7e8"),
 		},
 		{
 			desc: `Entropic Evaporation^2 is 10% weaker.`,
 			cost: E("1e500"),
-            cdesc: `Entropic Evaporation^2 is 10% weaker.`,
+            cdesc: `使熵压缩<sup>2</sup>的折算弱化10%。`,
             ccost: uni("e7.7e8"),
 		},
 		{
 			desc: `修改挑战5的效果。`,
 			cost: E("3e144"),
 			et: true,
-			cdesc: `C5 effect is changed.`,
+			cdesc: `修改挑战5的效果。`,
 			ccost: uni("e1440000"),
 		},
 		{
 			desc: `如果你不在大撕裂或量子挑战中，艾普西隆[Ε]粒子的第二个效果更好。`,
 			cost: E("3e152"),
 			et: true,
-			cdesc: `Gain 1.1x more Primordium Theorems.`,
+			cdesc: `使原基定理的获取乘以1.1倍。`,
             ccost: uni("e1.5e6"),
 		},
 		{
 			desc: `Entropic Radiation^2 is 25% weaker.`,
 			cost: E("1.5e523"),
-            cdesc: `Entropic Evaporation^2 is 25% weaker.`,
+            cdesc: `使熵压缩<sup>2</sup>的折算弱化25%。`,
             ccost: uni("e8.5e8"),
 		},
 		{
@@ -1806,97 +1806,97 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x later"; },
-            cdesc: `Radiation Booster 'Meta-Rank Boost' affects Meta-Hex at a reduced rate.`,
+            cdesc: `辐射波加成“级别元折算加成”以较低的效果影响六重阶层的元折算。`,
             ccost: uni("e8.7e8"),
 			ceffect() {
 				let x = tmp.radiation.bs.eff[14].add(1).log10().add(1).log10();
 				if(hasChargedElement(207))x = x.pow(10);
 				return x
 			},
-			ceffDesc(x) { return format(x)+"x later"; },
+			ceffDesc(x) { return "延迟"+format(x)+"倍出现"; },
 		},
 		{
 			desc: `'70%' in Neutron Tree Upgrade [br3] is now 60%.`,
 			cost: E("1.5e634"),
-            cdesc: `Death Shards gain is squared`,
+            cdesc: `使死寂碎片的获取速度变为原来的平方。`,
             ccost: uni("e8.8e8"),
 		},
 		{
 			desc: `挑战13的次数上限增加1000。`,
 			cost: E("1.5e674"),
-            cdesc: `C13 的效果变得更好.`,
+            cdesc: `挑战13的效果变得更好。`,
             ccost: uni("e9.4e8"),
 		},
 		{
 			desc: `Unlock the 18th Challenge.`,
 			cost: uni(2e123),
 			et: true,
-			cdesc: `C18 的效果变得更好.`,
+			cdesc: `挑战18的效果变得更好.`,
 			ccost: uni("e1530000"),
 		},
 		{
 			desc: `挑战14和16的次数上限增加100。`,
 			cost: E("7.5e193"),
 			et: true,
-			cdesc: `C14 的效果变得更好.`,
+			cdesc: `挑战14的效果变得更好.`,
 			ccost: uni("e1590000"),
 		},
 		{
 			desc: `移除辐射波加成“级别元折算加成”的1个软上限。`,
 			cost: E("6e832"),
-            cdesc: `Charged Effect of Element 202 ^10`,
+            cdesc: `元素202的充能效果变为原来的10次方。`,
             ccost: uni("e9.6e8"),
 		},
 		{
 			desc: `Entropic Radiation^2 is 50% weaker.`,
 			cost: E("6e852"),
-            cdesc: `Entropy Cap is multiplied by ee35.`,
+            cdesc: `将熵上限乘以ee35倍。`,
             ccost: uni("e9.7e8"),
 		},
 		{
 			desc: `Unlock the 19th Challenge.`,
 			cost: uni(1e158),
 			et: true,
-			cdesc: `C19 的效果变得更好.`,
+			cdesc: `挑战19的效果变得更好。`,
 			ccost: uni("e1650000"),
 		},
 		{
 			desc: `挑战14和17的次数上限增加100。`,
 			cost: E("9e224"),
 			et: true,
-			cdesc: `C14 的效果变得更好.`,
+			cdesc: `挑战14的效果变得更好。`,
 			ccost: uni("e1660000"),
 		},
 		{
 			desc: `无限升级3的效果变为原来的1.2次方。`,
 			cost: E("1.5e955"),
-			cdesc: `无限升级 3 的效果变得更好.`,
+			cdesc: `无限升级3的效果变得更好。`,
 			ccost: mlt(1.155),
 		},
 		{
 			desc: `荣耀9的效果变为原来的2倍。`,
 			cost: E("1.5e1099"),
-			cdesc: `Raise Honor 9 Effect by 1.35`,
+			cdesc: `荣耀9的效果变为原来的1.35次方。`,
 			ccost: mlt(1.169),
 		},
 		{
 			desc: `Unlock the 20th Challenge.`,
 			cost: uni(1e197),
 			et: true,
-			cdesc: `C20 effect boost Tickspeed Power.`,
+			cdesc: `挑战20的效果加成时间速度倍率。`,
 			ccost: uni("e1940000"),
 		},
 		{
 			desc: `挑战15和16的次数上限增加200。`,
 			cost: uni(2e198),
 			et: true,
-			cdesc: `C15 的效果变得更好.`,
+			cdesc: `挑战15的效果变得更好.`,
 			ccost: uni("e1960000"),
 		},
 		{
 			desc: `荣耀9的效果变为原来的2倍。`,
 			cost: E("1.5e1145"),
-			cdesc: `Raise Honor 9 Effect by 1.05`,
+			cdesc: `荣耀9的效果变为原来的1.05次方。`,
 			ccost: mlt(1.31),
 		},
 		{
@@ -1908,7 +1908,7 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
             ccost: mlt(1.5),
 		},
 		{
@@ -1921,14 +1921,14 @@ const ELEMENTS = {
 				return x
 			},
 			effDesc(x) { return format(x)+"x"; },
-            cdesc: `这个元素的效果变得更好.`,
+            cdesc: `这个元素的效果变得更好。`,
 			ccost: uni("e2150000"),
 		},
 		{
 			desc: `在超新星选项卡中解锁超新星星系。`,
 			cost: uni(1e210),
 			et: true,
-            cdesc: `Reduce Supernova Galaxies Requirements.`,
+            cdesc: `减少超新星星系的需求。`,
 			ccost: uni("e2160000"),
 		},
 		
@@ -1995,14 +1995,14 @@ const ELEMENTS = {
 			desc: `挑战17的次数上限增加300。`,
 			cost: E("1.5e3656"),
 			cdesc: `鲨鱼进进出出海洋，挑战22的次数上限增加300.`,
-			ccost: E("e6335000000"),				
+			ccost: E("e6338000000"),				
 		},
 		{
 			desc: `削弱星系能量效果的软上限。`,
 			cost: E(1e8),
 			galQk: true,
 			cdesc: `鲨鱼要膨胀了，但移除膨胀质量溢出.`,
-			ccost: E("e6338000000"),							
+			ccost: E("e6335000000"),							
 		},
 		{
 			desc: `挑战20效果变为原来的立方。`,
@@ -2214,8 +2214,8 @@ const ELEMENTS = {
 			desc: `使挑战17-19的次数上限增加250次.`,
 			cost: E("9e779"),
 			et: true,
-			cdesc: `鲨鱼没活了，使挑战14,19,21的效果变得更好(需:e1e204量子之前所有资源获取速度）.`,
-		    ccost: E("e11000000"),		
+			cdesc: `鲨鱼没活了，使挑战14,19,21的效果变得更好(需:e5e204量子之前所有资源获取速度）.`,
+		    ccost: E("e11100000"),		
 			
 		},
 		{
@@ -3229,7 +3229,7 @@ const ELEMENTS = {
 			effDesc(x) { return format(x)+"x" },
 		},
 		{
-			desc: `Accelerator effect softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: E("1.5e10081"),
 			et: true,
 		},
@@ -3415,7 +3415,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Accelerator Effect softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: E("1.5e21056"),
 			et: true,
 		},
@@ -3536,7 +3536,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Accelerator Effect softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: uni('e36800'),
 			et: true,
 		},
@@ -3690,7 +3690,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Accelerator Effect Softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: uni("e100000"),
 			et: true,
 		},
@@ -3728,7 +3728,7 @@ const ELEMENTS = {
 			cost: uni('e37500000'),
 		},
 		{
-			desc: `Accelerator Effect Softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: E("ee1.1111e44"),
 			qk: true,
 		},
@@ -3782,7 +3782,7 @@ const ELEMENTS = {
 			ds: true,
 		},
 		{
-			desc: `Accelerator Effect Softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: uni("e270000"),
 			et: true,
 		},
@@ -3792,7 +3792,7 @@ const ELEMENTS = {
 			exotic: true,
 		},
 		{
-			desc: `Accelerator Effect Softcap^2 is weaker.`,
+			desc: `使加速器的二重软上限弱化。`,
 			cost: uni("e300000"),
 			et: true,
 		},
@@ -4058,7 +4058,7 @@ function updateElementsHTML() {
 		if(ELEMENTS.upgs[ch].desc instanceof Function)tmp.el.elem_desc.setHTML("<b>["+ELEMENTS.fullNames[ch]+"]</b> "+ELEMENTS.upgs[ch].desc())
         tmp.el.elem_cost.setTxt(format(ELEMENTS.upgs[ch].cost,0)+"夸克"+(ch>86?"(需进入大撕裂)":"")+(player.qu.rip.active&&tmp.elements.cannot.includes(ch)?"[大撕裂中无法购买]":"") + ((hasElement(380) && ELEMENTS.upgs[ch].ccost) ? "，充能需要"+format(ELEMENTS.upgs[ch].ccost,0)+"夸克" : ""))
         if(ch > 118)tmp.el.elem_cost.setTxt((ELEMENTS.upgs[ch].galQk||ELEMENTS.upgs[ch].exotic||ELEMENTS.upgs[ch].qk||ELEMENTS.upgs[ch].ds?format:formatMass)(ELEMENTS.upgs[ch].cost,0)+(ELEMENTS.upgs[ch].qk?"夸克":ELEMENTS.upgs[ch].ds?" Dark Shadow":ELEMENTS.upgs[ch].exotic?"奇异物质":ELEMENTS.upgs[ch].galQk?"星系夸克":ELEMENTS.upgs[ch].et?"永恒质量":"无限质量") + ((hasElement(483) && ELEMENTS.upgs[ch].ccost) ? "，充能需要"+formatMass(ELEMENTS.upgs[ch].ccost,0)+(ELEMENTS.upgs[ch].et?"永恒质量":"无限质量") : ""))
-		tmp.el.elem_eff.setHTML((ELEMENTS.upgs[ch].effDesc?"Currently: "+ELEMENTS.upgs[ch].effDesc(tElem.effect[ch]):"")+(hasElement(380) && ELEMENTS.upgs[ch].ceffDesc?"<span class=yellow><br>Current Charged Effect: "+ELEMENTS.upgs[ch].ceffDesc(tElem.ceffect[ch])+"</span>":""))
+		tmp.el.elem_eff.setHTML((ELEMENTS.upgs[ch].effDesc?"Currently: "+ELEMENTS.upgs[ch].effDesc(tElem.effect[ch]):"")+(hasElement(380) && ELEMENTS.upgs[ch].ceffDesc?"<span class=yellow><br>目前充能效果： "+ELEMENTS.upgs[ch].ceffDesc(tElem.ceffect[ch])+"</span>":""))
     }
 
     for (let x = 1; x <= MAX_ELEM_TIERS; x++) {
