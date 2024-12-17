@@ -191,15 +191,15 @@
                 </div>
             </div>
         </div><div id="stab_frame5_6">
-			You have <span id="superCluster">0</span> <span id="superClusterScale"></span>Supernova Clusters<br>
-			Next at <span id="superClusterReq">0</span> Supernova Galaxies<br>
-            <button class="btn" onclick="SUPERNOVA_CLUSTER.reset()">Reset for a Supernova Cluster</button><br>
+			您拥有<span id="superCluster">0</span><span id="superClusterScale"></span>超新星星团<br>
+			下一个在<span id="superClusterReq">0</span>超新星星系<br>
+            <button class="btn" onclick="SUPERNOVA_CLUSTER.reset()">重置以得到超新星星团</button><br>
 			<hr>
 			<div id="superClusterEff">
 			</div>
 			<hr>
-			<span id="galPow6span">You have <span id="galPow6">0</span> Galactic Mass (gain based on Supernova Galaxies), which are boosting Galactic Resources gain in Galaxy Tab by <span id="galPow6_eff">1</span>x<br></span>
-			<span id="stardustspan">You have <span id="stardust">0</span> Stardust (gain based on Supernova), Super Supernova Galaxies starts <span id="stardustEff">1</span> later</span>
+			<span id="galPow6span">You have <span id="galPow6">0</span>星系质量（获取量基于超新星星系），超新星星系的星系资源获取变为<span id="galPow6_eff">1</span>倍<br></span>
+			<span id="stardustspan">You have <span id="stardust">0</span>星尘（获取量基于超新星），超新星星系的超级折算延迟<span id="stardustEff">1</span>次出现</span>
         </div>
     </div>
     <div id='app' style='display: none'>
@@ -262,7 +262,7 @@
                         <div tooltip="星尘" t-size="small"><img class="res_img" src="images/sd.png"></div>
                         <span style="margin-left: 5px; text-align: left;" id="stardustAmt">X</span>
                     </div><div class="resources sml" id="sunshard_div" style="color:#dcd814;">
-                        <div tooltip="太阳碎片" t-size="small"><img class="res_img" src="images/sunshard.png"onclick="sunshard.reset()"onmousemove="FORMS.reset_msg.set('sunshard')" onmouseleave="FORMS.reset_msg.reset()" style="cursor: pointer;"> </div>
+                        <div tooltip="太阳碎片" t-size="small"><img class="res_img" src="images/sunshard.png"onclick="sunshard.reset()" onmouseleave="SUNSHARD.reset_msg.reset()" style="cursor: pointer;"> </div>
                         <span style="margin-left: 5px; text-align: left;" id="sunAmt">X</span>
                     </div>
                 </div>
@@ -360,7 +360,7 @@
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/bhCondenser.png">
-                            <span style="margin-left: 5px; text-align: left;">Prestige Black Hole Condensers [<span id="prestigeBHC_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">转生黑洞压缩器[<span id="prestigeBHC_lvl">X</span>]</span>
                         </div>
                     </div><button id="prestigeBHC_btn" class="btn" style="width: 200px;" onclick="FORMS.prestigeBHC.buy()">Cost: <span id="prestigeBHC_cost">X</span> Prestige Dark Matter</button>
                     <button class="btn" style="width: 120px;" onclick="FORMS.prestigeBHC.buyMax()">Buy Max</button>
@@ -555,7 +555,7 @@
                 <br><span id="gc_trap2">强制进行的挑战数量：<span id="gc_trap"></span>/<span id="gc_trap_max"></span><button class="btn" onclick="decGCtrap()">-1</button><button class="btn" onclick="incGCtrap()">+1</button></span><br>
                 <span id="gc_trapu2">强制进行所有U-费米子：<span id="gc_trapu"></span><button class="btn" onclick="if(!player.gc.active)player.gc.trapu=!player.gc.trapu">切换</button><br></span>
                 <span id="gc_rip2">强制进行大撕裂：<span id="gc_rip"></span><button class="btn" onclick="if(!player.gc.active)player.gc.rip=!player.gc.rip">切换</button><br></span>
-<span id="gc_noeb2">Disable Exotic Boosts: <span id="gc_noeb"></span><button class="btn" onclick="if(!player.gc.active)player.gc.noeb=!player.gc.noeb">切换</button><br></span>				
+<span id="gc_noeb2">使奇异助推失效：<span id="gc_noeb"></span><button class="btn" onclick="if(!player.gc.active)player.gc.noeb=!player.gc.noeb">切换</button><br></span>				
 <span id="gc_nogp2">使星系粒子失效：<span id="gc_nogp"></span><button class="btn" onclick="if(!player.gc.active)player.gc.nogp=!player.gc.nogp">切换</button><br></span>		
 <button class="btn" onclick="GC.enter()" id="gc_btn">Enter the Galactic Challenge</button>
             </div>
@@ -653,7 +653,7 @@
             </div>
         </div><div id="tab_frame7">
             <div id="stab_frame7_0">
-                You have <span id="exotic_times">0</span> Exotic resets.<br><br>
+                You have <span id="exotic_times">0</span>次奇异重置<br><br>
                 <div id="ex_milestones_table"></div>
             </div>
             <div id="stab_frame7_1">
@@ -664,185 +664,185 @@
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/qu.png">
-                            <span style="margin-left: 5px; text-align: left;"><span id="rcb0_scale"></span>Quantum Count Boosters [<span id="rcb0_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;"><span id="rcb0_scale"></span>量子次数强化[<span id="rcb0_lvl">X</span>]</span>
                         </div>
                     </div><button id="rcb0_btn" class="btn" style="width: 200px;" onclick="EXOTIC.rcb.buy(0)">Cost: <span id="rcb0_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.rcb.buyMax(0)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Quantum Count Boosters Power: <span id="rcb0_pow">X</span>x<br>
-                        Quantum Count Boosters Effect: <span id="rcb0_eff">X</span>x
+                        量子次数强化倍率： <span id="rcb0_pow">X</span>x<br>
+                        量子次数强化效果： <span id="rcb0_eff">X</span>x
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/inf.png">
-                            <span style="margin-left: 5px; text-align: left;"><span id="rcb1_scale"></span>Infinity Count Boosters [<span id="rcb1_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;"><span id="rcb1_scale"></span>无限次数强化[<span id="rcb1_lvl">X</span>]</span>
                         </div>
                     </div><button id="rcb1_btn" class="btn" style="width: 200px;" onclick="EXOTIC.rcb.buy(1)">Cost: <span id="rcb1_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.rcb.buyMax(1)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Infinity Count Boosters Power: <span id="rcb1_pow">X</span>x<br>
-                        Infinity Count Boosters Effect: <span id="rcb1_eff">X</span>x
+                        无限次数强化倍率： <span id="rcb1_pow">X</span>x<br>
+                        无限次数强化效果： <span id="rcb1_eff">X</span>x
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/et.png">
-                            <span style="margin-left: 5px; text-align: left;"><span id="rcb2_scale"></span>Eternity Count Boosters [<span id="rcb2_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;"><span id="rcb2_scale"></span>永恒次数强化[<span id="rcb2_lvl">X</span>]</span>
                         </div>
                     </div><button id="rcb2_btn" class="btn" style="width: 200px;" onclick="EXOTIC.rcb.buy(2)">Cost: <span id="rcb2_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.rcb.buyMax(2)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Eternity Count Boosters Power: <span id="rcb2_pow">X</span>x<br>
-                        Eternity Count Boosters Effect: <span id="rcb2_eff">X</span>x
+                        永恒次数强化倍率： <span id="rcb2_pow">X</span>x<br>
+                        永恒次数强化效果：<span id="rcb2_eff">X</span>x
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="rcb3_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/exotic.png">
-                            <span style="margin-left: 5px; text-align: left;"><span id="rcb3_scale"></span>Exotic Count Boosters [<span id="rcb3_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;"><span id="rcb3_scale"></span>奇异次数强化[<span id="rcb3_lvl">X</span>]</span>
                         </div>
                     </div><button id="rcb3_btn" class="btn" style="width: 200px;" onclick="EXOTIC.rcb.buy(3)">Cost: <span id="rcb3_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.rcb.buyMax(3)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Exotic Count Boosters Power: +<span id="rcb3_pow">X</span><br>
-                        Exotic Count Boosters Effect: <span id="rcb3_eff">X</span>x
+                        奇异次数强化倍率：+<span id="rcb3_pow">X</span><br>
+                        奇异次数强化效果：<span id="rcb3_eff">X</span>x
                     </div>
                 </div>
             </div>
             <div id="stab_frame7_2">
-                You have <span id="ex_bp"></span> Exotic Boost Points (based on best Exotic Matter, next at <span id="ex_bp2"></span>).<br>Refund or Respec Exotic Boosts will force an Exotic reset!<br><br><button class="btn" onclick="EXOTIC_BOOST.respec()">Respec</button>
+                You have <span id="ex_bp"></span>奇异推进点数（获取基于奇异物质，下一推进会在<span id="ex_bp2"></span>奇异物质时获取）<br>退回或重置奇异推进会在不获得奇异物质的前提下强制进行奇异重置！<br><br><button class="btn" onclick="EXOTIC_BOOST.respec()">重置所有推进</button>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/rp.png">
-                            <span style="margin-left: 5px; text-align: left;">Rage Boost [<span id="exb0_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">狂怒推进 [<span id="exb0_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb0_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(0)">Cost: 1 Boost Point</button>
+                    </div><button id="exb0_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(0)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(0)">Buy Max</button>
-                    <button id="exb0_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(0)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(0)">Refund Max</button>
+                    <button id="exb0_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(0)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(0)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Rage Boost Effect: Rage Power Gain Exponent ^<span id="exb0_eff">X</span>
+                        狂怒推进效果：狂怒能量获取指数^<span id="exb0_eff">X</span>
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/dm.png">
-                            <span style="margin-left: 5px; text-align: left;">Dark Matter Boost [<span id="exb1_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">暗物质推进 [<span id="exb1_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb1_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(1)">Cost: 1 Boost Point</button>
+                    </div><button id="exb1_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(1)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(1)">Buy Max</button>
-                    <button id="exb1_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(1)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(1)">Refund Max</button>
+                    <button id="exb1_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(1)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(1)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Dark Matter Boost Effect: Dark Matter Gain Exponent ^<span id="exb1_eff">X</span>
+                        暗物质推进效果：暗物质获取指数^<span id="exb1_eff">X</span>
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="exb2_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/atom.png">
-                            <span style="margin-left: 5px; text-align: left;">Atom Boost [<span id="exb2_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">原子推进 [<span id="exb2_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb2_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(2)">Cost: 1 Boost Point</button>
+                    </div><button id="exb2_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(2)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(2)">Buy Max</button>
-                    <button id="exb2_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(2)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(2)">Refund Max</button>
+                    <button id="exb2_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(2)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(2)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Atom Boost Effect: Atom Gain Exponent ^<span id="exb2_eff">X</span>
+                        原子推进效果：原子获取指数^<span id="exb2_eff">X</span>
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="exb3_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/star_5.png">
-                            <span style="margin-left: 5px; text-align: left;">Star Boost [<span id="exb3_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">星辰推进 [<span id="exb3_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb3_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(3)">Cost: 1 Boost Point</button>
+                    </div><button id="exb3_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(3)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(3)">Buy Max</button>
-                    <button id="exb3_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(3)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(3)">Refund Max</button>
+                    <button id="exb3_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(3)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(3)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Star Boost Effect: Collapsed Star Gain Exponent ^<span id="exb3_eff">X</span>
+                        星辰推进效果：坍缩星辰获取指数^<span id="exb3_eff">X</span>
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="exb4_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/sn.png">
-                            <span style="margin-left: 5px; text-align: left;">Supernova Boost [<span id="exb4_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">超新星推进 [<span id="exb4_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb4_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(4)">Cost: 1 Boost Point</button>
+                    </div><button id="exb4_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(4)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(4)">Buy Max</button>
-                    <button id="exb4_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(4)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(4)">Refund Max</button>
+                    <button id="exb4_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(4)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(4)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Supernova Boost Effect: Neutron Star Gain Exponent ^<span id="exb4_eff">X</span>
+                        超新星推进效果：中子星获取指数^<span id="exb4_eff">X</span>
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="exb5_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/qu.png">
-                            <span style="margin-left: 5px; text-align: left;">Quantum Boost [<span id="exb5_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">量子推进 [<span id="exb5_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb5_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(5)">Cost: 1 Boost Point</button>
+                    </div><button id="exb5_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(5)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(5)">Buy Max</button>
-                    <button id="exb5_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(5)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(5)">Refund Max</button>
+                    <button id="exb5_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(5)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(5)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Quantum Boost Effect: Quantum Foam Gain Exponent ^<span id="exb5_eff">X</span>
+                        量子推进效果：量子泡沫获取指数^<span id="exb5_eff">X</span>
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="exb6_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/exotic.png">
-                            <span style="margin-left: 5px; text-align: left;">Exotic Meta-Boost [<span id="exb6_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">奇异元推进 [<span id="exb6_lvl">X</span>]</span>
                         </div>
-                    </div><button id="exb6_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(6)">Cost: 1 Boost Point</button>
+                    </div><button id="exb6_btn" class="btn" style="width: 200px;" onclick="EXOTIC_BOOST.buy(6)">需: 1 推进点数</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.buyMax(6)">Buy Max</button>
-                    <button id="exb6_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(6)">Refund 1</button>
-                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(6)">Refund Max</button>
+                    <button id="exb6_refund" class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refund(6)">退回 1 个</button>
+                    <button class="btn" style="width: 120px;" onclick="EXOTIC_BOOST.refundMax(6)">全部退回</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Exotic Meta-Boost Effect: Add <span id="exb6_eff">X</span> levels to All Previous Boosts
+                        奇异元推进效果：给前面的所有推进增加<span id="exb6_eff">X</span>额外等级
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="exb6_div2">
-				<button class="btn" onclick="EXOTIC_BOOST.import();">Import</button> <button class="btn" onclick="EXOTIC_BOOST.importrespec();">Respec And Import</button> <button class="btn" onclick="EXOTIC_BOOST.export();">Export</button><br></div>
+				<button class="btn" onclick="EXOTIC_BOOST.import();">Import</button> <button class="btn" onclick="EXOTIC_BOOST.importrespec();">重置并导入</button> <button class="btn" onclick="EXOTIC_BOOST.export();">Export</button><br></div>
             </div>
                 <div id="stab_frame7_3">
                     <div class="table_center">
                         <div style="width: 33.3%; min-width: 300px;">
-                            You have <b id="darkRay"></b> Dark Ray.
+                            You have <b id="darkRay"></b>暗射线
                             <div id="drEff" class="sky"></div>
                         </div><div style="width: 33.3%; min-width: 300px;">
-                            You have <b id="darkShadow"></b> Dark Shadow.
+                            You have <b id="darkShadow"></b>黑暗之影
                             <div id="dsEff" class="sky"></div>
                         </div><div style="width: 33.3%; min-width: 300px;">
                             <div id="ab_div">
-                                You have <b id="abyssalBlot"></b> Abyssal Blot.
+                                You have <b id="abyssalBlot"></b>深渊之渍
                                 <div id="abEff" class="sky"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="stab_frame7_4">
-                    While in Dark Run, You are trapped in QC with modifiers [30,30,30,30,30,30,30,30], and Galactic Challenge Difficulty 8.<br>
-					You will gain Glyphic Mass based on  your mass in Dark Run.<br>
-					<button class="btn" onclick="DARK_RUN.enter();">Enter/Exit Dark Run</button><br>
-					You have <span id="dr_points"></span> Glyphic Mass.<br>
+                    当进入黑暗狂奔时，您强制以[30,30,30,30,30,30,30,30]的配置进行量子挑战，同时进入难度等级为8的星系挑战。<br>
+					在黑暗狂奔中，您将根据您的质量获取雕文质量。<br>
+					<button class="btn" onclick="DARK_RUN.enter();">进入/离开黑暗狂奔</button><br>
+					您拥有<span id="dr_points"></span>雕文质量<br>
                 <div class="table_center">
                     <div id="dr_upg_table" class="table_center" style="width: 1000px;"></div>
                 </div>
                 </div>
                 <div id="stab_frame7_5">
-						Each Matter gain is (10<sup>(slog(previous matter)-1)<sup id="matters_pow"></sup></sup>-10)<span id="matters_extend"></span>.<br><br>
+						物质获取公式为(10<sup>(slog(前一物质)-1)<sup id="matters_pow"></sup></sup>-10)<span id="matters_extend"></span>.<br><br>
                     <div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
                             Exotic Matter
@@ -851,11 +851,11 @@
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters_em_gain"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-                            <span id="matters_ex">Boost Matter Exponent by <span id="matters_ex_eff"></span></span>
+                            <span id="matters_ex">物质获取公式指数<span id="matters_ex_eff"></span></span>
                         </div>
                     </div><br><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Dark Matter
+                            暗物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters_dm_amount"></span>
                         </div><div style="width: 20%; min-width: 300px;">
@@ -865,17 +865,17 @@
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Red Matter
+                            红色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters0_amount" class="red"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters0_gain" class="red"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-                            Multiply Exotic Matter gain by <span id="matters0_eff"></span>
+                            使奇异物质的获取速度乘以<span id="matters0_eff"></span>
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Pink Matter
+                            粉色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters1_amount" style="color:#ff009d;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
@@ -883,184 +883,184 @@
                         </div><div style="width: 40%; min-width: 300px;" id="matters1_eff1a">
                             Meta-Supernova is <span id="matters1_eff"></span> weaker
                         </div><div style="width: 40%; min-width: 300px;" id="matters1_eff2a">
-                            Divide the strength of Meta-Supernova scaling by <span id="matters1_eff2"></span>
+                            减弱超新星次数的一阶元折算强度<span id="matters1_eff2"></span>倍
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Magenta Matter
+                            品红色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters2_amount" class="magenta"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters2_gain" class="magenta"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Add <span id="matters2_eff"></span> to base Eternal Mass gain Exponent
+								基础永恒质量获取速度指数+<span id="matters2_eff"></span>
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Purple Matter
+                            紫色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters3_amount" style="color:#a0f;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters3_gain" style="color:#a0f;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Multiply Galactic Quarks gain by <span id="matters3_eff"></span>
+								使星系夸克的获取速度乘以<span id="matters3_eff"></span>倍
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Violet Matter
+                            蓝紫色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters4_amount" style="color:#70f;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters4_gain" style="color:#70f;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Add <span id="matters4_eff"></span> to Prestige Base Exponent
+								转生基础值指数+<span id="matters4_eff"></span>
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Blue Matter
+                            蓝色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters5_amount" style="color:#06f;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters5_gain" style="color:#06f;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Exotic Boost 'Atom Boost' is <span id="matters5_eff"></span>x stronger
+								奇异助推中的'原子助推'增强<span id="matters5_eff"></span>倍
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Cyan Matter
+                            青色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters6_amount" style="color:#0ff;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters6_gain" style="color:#0ff;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Exotic Boost 'Supernova Boost' is <span id="matters6_eff"></span>x stronger
+								奇异助推中的'超新星助推'增强<span id="matters6_eff"></span>倍
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Green Matter
+                            绿色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters7_amount" style="color:#0f0;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters7_gain" style="color:#0f0;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Quantum Foam gain ^<span id="matters7_eff"></span>
+								量子泡沫获取^<span id="matters7_eff"></span>
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Lime Matter
+                            绿黄色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters8_amount" style="color:#bf0;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters8_gain" style="color:#bf0;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Add <span id="matters8_eff"></span> to Ascension Base Exponent
+								飞升基础值指数+<span id="matters8_eff"></span>
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Yellow Matter
+                            黄色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters9_amount" style="color:#ff0;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters9_gain" style="color:#ff0;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Exotic Boost 'Dark Matter Boost' is <span id="matters9_eff"></span>x stronger
+								奇异助推中的'暗物质助推'增强<span id="matters9_eff"></span>倍
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Orange Matter
+                            橙色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters10_amount" style="color:#f80;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters10_gain" style="color:#f80;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Add <span id="matters10_eff"></span> to base Infinity Mass gain Exponent
+								基础无限质量获取速度指数+<span id="matters10_eff"></span>
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            White Matter
+                            白色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters11_amount" style="color:#fff;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters11_gain" style="color:#fff;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Multiply Abyssal Blot gain by <span id="matters11_eff"></span>
+								使深渊之渍的获取速度乘以<span id="matters11_eff"></span>倍
                         </div>
                     </div><div class="table_center">
                         <div style="width: 20%; min-width: 300px;">
-                            Fading Matter
+                            褪色物质
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters12_amount" style="color:#888;"></span>
                         </div><div style="width: 20%; min-width: 300px;">
                             <span id="matters12_gain" style="color:#888;"></span>
                         </div><div style="width: 40%; min-width: 300px;">
-								Multiply Dark Ray gain by <span id="matters12_eff"></span>
+								使暗射线的获取速度乘以<span id="matters12_eff"></span>倍
                         </div>
                     </div><br><div id="fss_div">
-                        You have <span id="fss_base"></span> FSS Base (based on matters).<br>
-                        You have <span id="fss_cnt"></span> Final Star Shards, next at <span id="fss_req"></span> FSS Base<br>
-            <button class="btn" onclick="MATTERS.fssReset()">Reset for a Final Star Shard</button><br>
-                        Your Final Star Shards are multiplying Axion Generators Power by <span id="fss_eff"></span> (based on FSS Base)<br>
+                        You have <span id="fss_base"></span>最终星辰碎片基础值（基于物质）<br>
+                        You have <span id="fss_cnt"></span>最终星辰碎片，下一碎片在达到<span id="fss_req"></span>最终星辰碎片基础值时获取<br>
+            <button class="btn" onclick="MATTERS.fssReset()">重置以获取最终星辰碎片</button><br>
+                        您的最终星辰碎片使轴生成器倍率乘以<span id="fss_eff"></span>倍（基于最终星辰碎片基础值）<br>
                     </div>
                 </div>
             <div id="stab_frame7_6">
-                <span id="ax0_span">You have <span id="ax0">0</span> X Axions, which multiply Exotic Matter gain by <span id="ax0b">0</span>.</span><br>
-                <span id="ax1_span">You have <span id="ax1">0</span> Y Axions, which multiply Dark Ray gain by <span id="ax1b">0</span>.</span><br>
-                <span id="ax2_span">You have <span id="ax2">0</span> Z Axions, which multiply Stardust gain by <span id="ax2b">0</span>.</span><br>
-                <span id="ax3_span">You have <span id="ax3">0</span> W Axions, which multiply Glyphic Mass gain by <span id="ax3b">0</span>.</span><br>
+                <span id="ax0_span">You have <span id="ax0">0</span> X轴，使奇异物质获取速度乘以<span id="ax0b">0</span>倍</span><br>
+                <span id="ax1_span">You have <span id="ax1">0</span> Y轴，使暗射线获取速度乘以<span id="ax1b">0</span>倍</span><br>
+                <span id="ax2_span">You have <span id="ax2">0</span> Z轴，使星尘获取速度乘以<span id="ax2b">0</span>倍</span><br>
+                <span id="ax3_span">You have <span id="ax3">0</span> W轴，使雕文质量获取速度乘以<span id="ax3b">0</span>倍</span><br>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/test.png">
-                            <span style="margin-left: 5px; text-align: left;">X Axion Generators [<span id="ax0_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">X轴生成器 [<span id="ax0_lvl">X</span>]</span>
                         </div>
                     </div><button id="ax0_btn" class="btn" style="width: 200px;" onclick="EXOTIC.ax.buy(0)">Cost: <span id="ax0_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.ax.buyMax(0)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        X Axion Generators Power: +<span id="ax0_pow">X</span><br>
-                        X Axion Generators Effect: +<span id="ax0_eff">X</span> X Axions/sec
+                        X轴生成器倍率：+<span id="ax0_pow">X</span><br>
+                        X轴生成器效果：+<span id="ax0_eff">X</span> X轴/秒
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="ax1_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/test.png">
-                            <span style="margin-left: 5px; text-align: left;">Y Axion Generators [<span id="ax1_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">Y轴生成器 [<span id="ax1_lvl">X</span>]</span>
                         </div>
                     </div><button id="ax1_btn" class="btn" style="width: 200px;" onclick="EXOTIC.ax.buy(1)">Cost: <span id="ax1_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.ax.buyMax(1)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Y Axion Generators Power: +<span id="ax1_pow">X</span><br>
-                        Y Axion Generators Effect: +<span id="ax1_eff">X</span> Y Axions/sec
+                        Y轴生成器倍率：+<span id="ax1_pow">X</span><br>
+                        Y轴生成器效果：+<span id="ax1_eff">X</span> Y轴/秒
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="ax2_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/test.png">
-                            <span style="margin-left: 5px; text-align: left;">Z Axion Generators [<span id="ax2_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">Z轴生成器 [<span id="ax2_lvl">X</span>]</span>
                         </div>
                     </div><button id="ax2_btn" class="btn" style="width: 200px;" onclick="EXOTIC.ax.buy(2)">Cost: <span id="ax2_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.ax.buyMax(2)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        Z Axion Generators Power: +<span id="ax2_pow">X</span><br>
-                        Z Axion Generators Effect: +<span id="ax2_eff">X</span> Z Axions/sec
+                        Z轴生成器倍率：+<span id="ax2_pow">X</span><br>
+                        Z轴生成器效果：+<span id="ax2_eff">X</span> Z轴/秒
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5px;" class="table_center" id="ax3_div">
                     <div style="width: 400px">
                         <div class="resources">
                             <img src="images/test.png">
-                            <span style="margin-left: 5px; text-align: left;">W Axion Generators [<span id="ax3_lvl">X</span>]</span>
+                            <span style="margin-left: 5px; text-align: left;">W轴生成器 [<span id="ax3_lvl">X</span>]</span>
                         </div>
                     </div><button id="ax3_btn" class="btn" style="width: 200px;" onclick="EXOTIC.ax.buy(3)">Cost: <span id="ax3_cost">X</span> Exotic Matter</button>
                     <button class="btn" style="width: 120px;" onclick="EXOTIC.ax.buyMax(3)">Buy Max</button>
                     <div style="margin-left: 5px; text-align: left; width: 400px">
-                        W Axion Generators Power: +<span id="ax3_pow">X</span><br>
-                        W Axion Generators Effect: +<span id="ax3_eff">X</span> W Axions/sec
+                        W轴生成器倍率：+<span id="ax3_pow">X</span><br>
+                        W轴生成器效果：+<span id="ax3_eff">X</span> W轴/秒
                     </div>
                 </div><br>
                 <span id="axs_span">
-                    You have <span id="axs_val"></span> of Axionic Space (based on X,Y,Z<span id="axs_add"></span> Axions), which are multiplying Glyphic Mass gain by <span id="axs_eff"></span>.
+                    You have <span id="axs_val"></span>的轴空间（基于X,Y,Z<span id="axs_add"></span>轴的数量），这使雕文质量获取速度乘以<span id="axs_eff"></span>倍
                 </span>
             </div>
         </div><div id="tab_frame8">
