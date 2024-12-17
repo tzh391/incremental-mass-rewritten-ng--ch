@@ -54,7 +54,7 @@ const TREE_IDS = [
         ['','','prim5','','','qu6','qu7','qu8','qu9','qu10','qu11'],
         ['qp40','qp16','qp14','qp12','qp13','qp15','qp41'],
 		['ax40','ax36','ax33','ax37','ax41'],
-        ['blbs13','','yedo2','','yebs11'],
+        ['','','yedo2','','yebs11'],
     ],[
         ['s5','sn6'],
         [],
@@ -72,7 +72,7 @@ const TREE_IDS = [
         [],
         ['qp32','qp29','qp27','qp20','qp28','qp31','qp34'],
 		[],
-        ['blbs12','bobo','rebs12'],
+        ['blbs13','','blkey1','yekey2','blkey2','',''],
     ],[
         [],
         [],
@@ -81,7 +81,7 @@ const TREE_IDS = [
         [],
         ['qp43','qp36','qp35','qp42'],
 		[],
-        ['lt'],
+        ['blbs12','yekey1','bobo','yekey3','rebs12'],
     ],[
         [],
         [],
@@ -90,7 +90,7 @@ const TREE_IDS = [
         [],
         ['qp37'],
 		[],
-        [],
+        ['lt'],
     ],
 ]
 
@@ -105,12 +105,16 @@ const NO_REQ_SP = ['qol1','qol2','qol3','qol4','qol5',
 const NO_REQ_QU = ['qu_qol1','qu_qol2','qu_qol4','qu_qol5','qu_qol6',
     'qu_qol7','qu_qol8','qu_qol9','unl2','unl3',
     'qc2','qc3','br1']
-const QP = ['qp1','qp2','qp3','qp4','qp5',
-        'qp6','qp7','qp8','qp9','qp10',
-        'qp11','qp12','qp13']
 const TREE_UPGS = {
     buy(x, auto=false) {
-     
+        if(TREE_UPGS.ids[sunshard]){
+           
+			if(hasTree(x))return;
+			if(tmp.supernova.tree_choosed != x)return;
+            if (player.sun.shard.gte(this.ids[x].cost))player.sun.shard=player.sun.shard.sub(this.ids[x].cost).max(0)
+            player.sunshard.tree.push(x)
+			return;
+		}
 		if(this.ids[x].ax){
 			if(auto)return;
 			if(hasTree(x))return;
@@ -121,14 +125,11 @@ const TREE_UPGS = {
 			return;
 		}
      
-        if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]&&(!this.ids[x].sunshard)) {
+        if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]) {
+           
              if (this.ids[x].qf) player.qu.points = player.qu.points.sub(this.ids[x].cost).max(0)
             else  player.supernova.stars = player.supernova.stars.sub(this.ids[x].cost).max(0)
             player.supernova.tree.push(x)
-        }
-        if ((tmp.supernova.tree_choosed == x || auto) && tmp.supernova.tree_afford[x]&&this.ids[x].sunshard){
-            player.sun.shard = player.sun.shard.sub(this.ids[x].cost).max(1)
-            player.sunshard.tree.push(x)
         }
      
     },
@@ -1317,13 +1318,13 @@ const TREE_UPGS = {
         qp1: {
             unl() { return hasChargedElement(118) },
             qf: true,
-            desc: `Quantum Foam gain formula is better.`,
+            desc: `量子泡沫的获取公式变得更好`,
             cost: E('ee33'),
         },
         qp2: {
             qf: true,
             branch: ["qp1","qp3"],
-            desc: `Alpha Particles boost Exotic Boost 'Rage Boost'`,
+            desc: `阿尔法[A]粒子加成奇异推进的'狂怒推进'`,
             cost: E('e2e34'),
             effect() {
                 let x = tmp.prim.eff[1][0].add(1).log10().add(1).log10().add(1).log10().add(1).pow(0.2);
@@ -1334,7 +1335,7 @@ const TREE_UPGS = {
         qp3: {
             qf: true,
             branch: ["qp1"],
-            desc: `Omega Particles boost Exotic Boost 'Dark Matter Boost'`,
+            desc: `欧米伽[Ω]粒子加成奇异推进的'暗物质推进'`,
             cost: E('e1e34'),
             effect() {
                 let x = tmp.prim.eff[2][0].add(1).log10().add(1).log10().add(1).log10().add(1).pow(0.2);
@@ -1345,7 +1346,7 @@ const TREE_UPGS = {
         qp4: {
             qf: true,
             branch: ["qp3"],
-            desc: `Sigma Particles boost Exotic Boost 'Atom Boost'`,
+            desc: `西格玛[∑]粒子加成奇异推进的'原子推进'`,
             cost: E('e1e34'),
             effect() {
                 let x = tmp.prim.eff[3][0].add(1).log10().add(1).log10().add(1).log10().add(1).pow(0.2);
@@ -1356,79 +1357,79 @@ const TREE_UPGS = {
         qp5: {
             qf: true,
             branch: ["qp4"],
-            desc: `Atom Upgrade 18 is better.`,
+            desc: `原子升级18变得更好`,
             cost: E('e1.3e34'),
         },
         qp6: {
             qf: true,
             branch: ["qp2"],
-            desc: `Rage Upgrade 18 is better.`,
+            desc: `狂怒升级18变得更好`,
             cost: E('e3e34'),
         },
         qp7: {
             qf: true,
             branch: ["qp2","qp3"],
-            desc: `Meta-Fermion Tier scaling starts 10x later.`,
+            desc: `费米子阶层的元折算延迟10倍出现`,
             cost: E('e7e34'),
         },
         qp8: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp3","qp4","qp7"],
-            desc: `Meta-Supernova scales 50% weaker.`,
+            desc: `超新星次数的一阶元折算削弱50%`,
             cost: E('e5e37'),
         },
         qp9: {
             qf: true,
             branch: ["qp2","qp6","qp7"],
-            desc: `Meta-Fermion Tier scaling is 90% weaker, Hyper Galactic Fermion Tier scaling starts 1.2x later.`,
+            desc: `费米子阶层的元折算削弱90%，星系费米子阶层的究极折算延迟1.2倍出现。`,
             cost: E('e1e35'),
         },
         qp10: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp1","qp3","qp4"],
-            desc: `Matter Exponent +0.3`,
+            desc: `物质获取公式指数+0.3`,
             cost: E('e5e37'),
         },
         qp11: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp4","qp5","qp8"],
-            desc: `Meta-Supernova scales weaker based on Atoms.`,
+            desc: `超新星次数的一阶元折算基于原子而削弱`,
             cost: E('e2e39'),
             effect() {
                 let x = E(0.96).pow(player.atom.points.add(1).log10().add(1).log10().add(1).log10());
                 return x
             },
-            effDesc(x) { return formatReduction(x)+" weaker" },
+            effDesc(x) { return "削弱"+formatReduction(x) },
         },
         qp12: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp7","qp8"],
-            desc: `Meta-Fermion Tier scaling and Meta-Supernova are 50% weaker.`,
+            desc: `费米子阶层的元折算和超新星次数的一阶元折算都削弱50%`,
             cost: E('e4e39'),
         },
         qp13: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp8","qp11","qp12"],
-            desc: `Neutron Star gain exponent ^1.1`,
+            desc: `中子星获取指数^1.1`,
             cost: E('e1e40'),
         },
         qp14: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp7","qp9","qp12"],
-            desc: `Boost Galactic Radiation effect.`,
+            desc: `增强星系辐射波的效果`,
             cost: E('e1e40'),
         },
         qp15: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp11","qp13"],
-            desc: `Supernova Galaxies boost Pink Matter gain.`,
+            desc: `超新星星系加成粉色物质的获取`,
             cost: E('e1e43'),
             effect() {
                 let x = player.superGal.add(1)
@@ -1441,14 +1442,14 @@ const TREE_UPGS = {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp9","qp14"],
-            desc: `Meta-Fermion Tier scaling starts 10x later, and is 90% weaker.`,
+            desc: `费米子阶层的元折算延迟10倍出现，且削弱90%。`,
             cost: E('e3e43'),
         },
         qp17: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp1","qp10"],
-            desc: `Quantum Foam boost Matter Exponent.`,
+            desc: `量子泡沫加成物质获取公式指数`,
             cost: E('e1e48'),
             effect() {
                 let x = player.qu.points.add(1).log10().add(1).log10().add(1).log10().add(1).log10();
@@ -1460,28 +1461,28 @@ const TREE_UPGS = {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp12","qp13"],
-            desc: `Super Supernova Galaxies starts 15 later.`,
+            desc: `超新星星系的超级折算延迟15次出现`,
             cost: E('e2.6e49'),
         },
         qp19: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp12","qp14","qp18"],
-            desc: `C20 effect is better.`,
+            desc: `挑战20的效果变得更好`,
             cost: E('e1e50'),
         },
         qp20: {
             unl() { return hasElement(486) },
             qf: true,
             branch: ["qp18","qp19"],
-            desc: `Collapsed Stars effect is better.`,
+            desc: `坍缩星辰的效果变得更好。`,
             cost: E('e9e53'),
         },
         qp21: {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp6"],
-            desc: `Rage Power boost Dark Ray gain.`,
+            desc: `狂怒能量加成暗射线获取`,
             cost: E('e1e55'),
             effect() {
                 let x = player.rp.points.add(1).log10().add(1).log10().add(1).log10();
@@ -1494,7 +1495,7 @@ const TREE_UPGS = {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp5"],
-            desc: `Atoms boost Dark Ray gain.`,
+            desc: `原子加成暗射线获取`,
             cost: E('e1e55'),
             effect() {
                 let x = player.atom.points.add(1).log10().add(1).log10().add(1).log10();
@@ -1506,138 +1507,138 @@ const TREE_UPGS = {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp6","qp9","qp16","qp21"],
-            desc: `Meta-Fermion Tier scaling starts 100x later, and is 90% weaker.`,
+            desc: `费米子阶层的元折算延迟100倍出现，且削弱90%。`,
             cost: E('e2e56'),
         },
         qp24: {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp5","qp11","qp15","qp22"],
-            desc: `[qp15] is squared.`,
+            desc: `[qp15]的效果^2`,
             cost: E('e4e57'),
         },
         qp25: {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp14","qp16","qp19"],
-            desc: `C20 effect is better.`,
+            desc: `挑战20的效果变得更好。`,
             cost: E('e6e58'),
         },
         qp26: {
             unl() { return player.superCluster.gte(14) },
             qf: true,
             branch: ["qp13","qp15","qp18"],
-            desc: `8x Stardust Effect.`,
+            desc: `星尘的效果x8`,
             cost: E('e4e59'),
         },
         qp27: {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp19","qp20","qp25"],
-            desc: `C20 effect is better.`,
+            desc: `挑战20的效果变得更好`,
             cost: E('ee63'),
         },
         qp28: {
             unl() { return hasElement(510) },
             qf: true,
             branch: ["qp18","qp20","qp26"],
-            desc: `Collapsed Stars effect is better.`,
+            desc: `坍缩星辰的效果变得更好`,
             cost: E('ee65'),
         },
         qp29: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp25","qp27"],
-            desc: `Reduce C1-C23 Goals.`,
+            desc: `减少挑战1-挑战23的目标`,
             cost: E('ee127'),
         },
         qp30: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp16","qp25","qp29"],
-            desc: `Reduce C1-C22 Goals.`,
+            desc: `减少挑战1-挑战22的目标`,
             cost: E('e2e128'),
         },
         qp31: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp26","qp28"],
-            desc: `Stardust boost Collapsed Star gain.`,
+            desc: `星尘加成坍缩星辰获取`,
             cost: E('e2e137'),
             effect() {
                 let x = player.stardust.log10().div(100).add(1);
                 return x
             },
-            effDesc(x) { return "exponent ^"+format(x) },
+            effDesc(x) { return "指数^"+format(x) },
         },
         qp32: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp29","qp30"],
-            desc: `Add 100 C21-C23 completions. Reduce C21-C23 Goals.`,
+            desc: `增加100次挑战21-挑战23的上限。减少挑战21-挑战23的目标。`,
             cost: E('ee153'),
         },
         qp33: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp15","qp26","qp31"],
-            desc: `[qp31] affects Neutron Stars and Star Generators.`,
+            desc: `[qp31]将同样加成中子星和星辰发生器`,
             cost: E('e2e163'),
         },
         qp34: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp31","qp33"],
-            desc: `Pink Matter effect is better.`,
+            desc: `粉色物质的效果变得更好`,
             cost: E('e2e166'),
         },
         qp35: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp20","qp28"],
-            desc: `Galactic Particles effect is better.`,
+            desc: `星系粒子的效果变得更好`,
             cost: E('ee179'),
         },
         qp36: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp20","qp27","qp35"],
-            desc: `C20 boost Star Generators.`,
+            desc: `挑战20的效果加成星辰发生器`,
             cost: E('ee186'),
         },
         qp37: {
             unl() { return hasElement(554) },
             qf: true,
             branch: ["qp35","qp36"],
-            desc: `Accelerator Effect Softcap^2 is weaker.`,
+            desc: `削弱加速器效果的二重软上限`,
             cost: E('ee187'),
         },
         qp38: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp17","qp21"],
-            desc: `[qp21] is better.`,
+            desc: `[qp21]的效果变得更好`,
             cost: E('ee238'),
         },
         qp39: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp17","qp22"],
-            desc: `Black Hole Overflow is weaker和移除强化器溢出.`,
+            desc: `弱化黑洞溢出和移除强化器溢出.`,
             cost: E('ee241'),
         },
         qp40: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp21","qp32"],
-            desc: `Unlock Challenge 24.`,
+            desc: `解锁挑战24`,
             cost: E('e5e249'),
         },
         qp41: {
             unl() { return hasTree('ax42') },
             qf: true,
             branch: ["qp22","qp34"],
-            desc: `Pink Matter effect is better（这很强）.`,
+            desc: `粉色物质的效果变得更~好（这很强）`,
             cost: E('e2.5e250'),
         },
         qp42: {
@@ -1666,7 +1667,7 @@ const TREE_UPGS = {
             unl() { return hasElement(556) },
             ax: true,
             branch: [],
-            desc: `Axionic Space effect boost Axion Generators Power.`,
+            desc: `轴空间的效果加成轴生成器倍率`,
             cost: E(3000),
             effect() {
                 let x = EXOTIC.axsEff();
@@ -1678,28 +1679,28 @@ const TREE_UPGS = {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax1"],
-            desc: `First 5 Exotic Boosts are 20% stronger.`,
+            desc: `前五种奇异推进增强20%`,
             cost: E(1500),
         },
         ax3: {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax1"],
-            desc: `Axionic Space effect is better.`,
+            desc: `轴空间的效果变得更强`,
             cost: E(2500),
         },
         ax4: {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax2"],
-            desc: `Last 2 Exotic Boosts are 2% stronger.`,
+            desc: `最后两种的奇异推进增强2%`,
             cost: E(3500),
         },
         ax5: {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax3"],
-            desc: `Axionic Space add to Matter Exponent.`,
+            desc: `轴空间增加物质获取公式指数`,
             cost: E(3500),
             effect() {
                 let x = EXOTIC.axsVal().add(1).log10().div(10);
@@ -1712,8 +1713,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax1"],
             req() { return (hasTree('ax2')&&hasTree('ax5')) || (hasTree('ax3')&&hasTree('ax4')) },
-            reqDesc() { return `Buy 4 Row 1 Axionic Tree Upgrades.` },
-            desc: `Gain 35% more Axionic Space. Multiply X & Y Axion Generators Power by 10.`,
+            reqDesc() { return `买4个第一行的轴空间树升级` },
+            desc: `获得额外的35%轴空间。使X和Y轴生成器的倍率x10。`,
             cost: E(2500),
         },
         ax7: {
@@ -1721,22 +1722,22 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax5"],
             req() { return hasTree('ax4')&&hasTree('ax5')&&hasTree('ax6') },
-            reqDesc() { return `Buy 5 Row 1 Axionic Tree Upgrades and a Row 2 Axionic Tree Upgrade.` },
-            desc: `FSS effect is stronger based on Axionic Space (Max: 100% stronger)`,
+            reqDesc() { return `买5个第一行和1个第二行的的轴空间树升级` },
+            desc: `最终星辰碎片的效果基于轴空间而增强（最大增强100%）`,
             cost: E(1500),
             effect() {
                 let x = E(2).sub(EXOTIC.axsVal().add(1).pow(-0.01));
                 return x
             },
-            effDesc(x) { return format(x.sub(1).mul(100))+"% stronger" },
+            effDesc(x) { return "增强"+format(x.sub(1).mul(100))+"%" },
         },
         ax8: {
             unl() { return hasTree('ax4')&&hasTree('ax5')&&hasTree('ax6') },
             ax: true,
             branch: ["ax4"],
             req() { return hasTree('ax4')&&hasTree('ax5')&&hasTree('ax6') },
-            reqDesc() { return `Buy 5 Row 1 Axionic Tree Upgrades and a Row 2 Axionic Tree Upgrade.` },
-            desc: `FSS boost Glyphic Mass`,
+            reqDesc() { return `买5个第一行和1个第二行的的轴空间树升级` },
+            desc: `最终星辰碎片加成雕文质量`,
             cost: E(3000),
             effect() {
                 let x = E(hasTree('ax25')?5:hasTree('ax15')?3:2).pow(player.exotic.fss);
@@ -1749,8 +1750,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax6"],
             req() { return hasTree('ax7')||hasTree('ax8') },
-            reqDesc() { return `Buy 6 Row 1 Axionic Tree Upgrades.` },
-            desc: `Exotic Matter's effect in 'The Matters' tab is better.`,
+            reqDesc() { return `买6个第一行的轴空间树升级` },
+            desc: `奇异物质在'物质'状态栏中的效果变得更好。`,
             cost: E(2000),
         },
         ax10: {
@@ -1758,34 +1759,34 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax6"],
             req() { return hasTree('ax7')||hasTree('ax8') },
-            reqDesc() { return `Buy 6 Row 1 Axionic Tree Upgrades.` },
-            desc: `Exotic Boosts are stronger based on Axionic Space (Max: 100% stronger)`,
+            reqDesc() { return `买6个第一行的轴空间树升级` },
+            desc: `奇异推进基于轴空间变得更强（最大：增强100%）`,
             cost: E(2500),
             effect() {
                 let x = E(2).sub(EXOTIC.axsVal().add(1).pow(-0.001));
                 return x
             },
-            effDesc(x) { return format(x.sub(1).mul(100))+"% stronger" },
+            effDesc(x) { return "增强"+format(x.sub(1).mul(100))+"%" },
         },
         ax11: {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax6"],
-            desc: `Each type of Axion Generators multiply its power equals to its amount.`,
+            desc: `每一个轴生成器的倍率乘以它们各自的已购数量`,
             cost: E(10000),
         },
         ax12: {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax11"],
-            desc: `'35%' in [ax6] is now 90%.`,
+            desc: `[ax6]中的'35%'变为'90%'`,
             cost: E(7500),
         },
         ax13: {
             unl() { return hasElement(556) },
             ax: true,
             branch: ["ax11"],
-            desc: `Supernova Cluster's Axion Generators Power boost effect is squared.`,
+            desc: `超新星星团中各个'轴生成器倍率'的效果^2`,
             cost: E(7500),
         },
         ax14: {
@@ -1793,22 +1794,22 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax7"],
             req() { return player.exotic.tree.length>=13 },
-            reqDesc() { return `Buy 13 Axionic Tree Upgrades.` },
-            desc: `Axionic Space makes Super Supernova Galaxies starts later.`,
+            reqDesc() { return `买13个轴空间树升级` },
+            desc: `轴空间使超新星星系的超级折算延迟出现`,
             cost: E(2500),
             effect() {
                 let x = EXOTIC.axsVal().add(1).log10().pow(2).mul(hasTree('ax26')?8.5:4);
                 return x
             },
-            effDesc(x) { return "+"+format(x)+" later" },
+            effDesc(x) { return "延迟"+format(x)+"次出现" },
         },
         ax15: {
             unl() { return player.exotic.tree.length>=13 },
             ax: true,
             branch: ["ax8"],
             req() { return player.exotic.tree.length>=13 },
-            reqDesc() { return `Buy 13 Axionic Tree Upgrades.` },
-            desc: `[ax8] is better.`,
+            reqDesc() { return `买13个轴空间树升级` },
+            desc: `[ax8]的效果变得更好`,
             cost: E(4000),
         },
         ax16: {
@@ -1816,8 +1817,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax9"],
             req() { return player.exotic.tree.length>=14 },
-            reqDesc() { return `Buy 14 Axionic Tree Upgrades.` },
-            desc: `Matters gain formula is better.`,
+            reqDesc() { return `买14个轴空间树升级` },
+            desc: `物质获取公式变得更好`,
             cost: E(5800),
         },
         ax17: {
@@ -1825,8 +1826,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax6"],
             req() { return player.exotic.tree.length>=14 },
-            reqDesc() { return `Buy 14 Axionic Tree Upgrades.` },
-            desc: `Exotic Meta-Boost affects Glyphic Mass gain.`,
+            reqDesc() { return `买14个轴空间树升级` },
+            desc: `奇异元推进加成雕文质量获取`,
             cost: E(11000),
             effect() {
                 let x = EXOTIC_BOOST.effect(6).add(1);
@@ -1839,8 +1840,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax12"],
             req() { return player.exotic.tree.length>=16 },
-            reqDesc() { return `Buy 16 Axionic Tree Upgrades.` },
-            desc: `'90%' in [ax6] is now 125%.`,
+            reqDesc() { return `买16个轴空间树升级` },
+            desc: `[ax6]中的'90%'变为'125%'`,
             cost: E(4200),
         },
         ax19: {
@@ -1848,8 +1849,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax13"],
             req() { return player.exotic.tree.length>=16 },
-            reqDesc() { return `Buy 16 Axionic Tree Upgrades.` },
-            desc: `Supernova Cluster's Axion Generators Power boost effect is squared again.`,
+            reqDesc() { return `买16个轴空间树升级` },
+            desc: `超新星星团中各个'轴生成器倍率'的效果再一次^2`,
             cost: E(16500),
         },
         ax20: {
@@ -1857,8 +1858,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax11"],
             req() { return player.exotic.tree.length>=19 },
-            reqDesc() { return `Buy 19 Axionic Tree Upgrades.` },
-            desc: `Unlock W Axions.`,
+            reqDesc() { return `买19个轴空间树升级` },
+            desc: `解锁W轴`,
             cost: E(10000),
         },
         ax21: {
@@ -1866,8 +1867,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax17"],
             req() { return player.exotic.tree.length>=20 },
-            reqDesc() { return `Buy 20 Axionic Tree Upgrades.` },
-            desc: `Multiply W Axion Generators Power by 12.5.`,
+            reqDesc() { return `买20个轴空间树升级` },
+            desc: `W轴生成器倍率x12.5`,
             cost: E(200000),
         },
         ax22: {
@@ -1875,8 +1876,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax16"],
             req() { return player.exotic.tree.length>=20 },
-            reqDesc() { return `Buy 20 Axionic Tree Upgrades.` },
-            desc: `Add 0.1 to Matter Exponent.`,
+            reqDesc() { return `买20个轴空间树升级` },
+            desc: `物质获取公式指数+0.1`,
             cost: E(200000),
         },
         ax23: {
@@ -1884,8 +1885,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax20"],
             req() { return player.exotic.tree.length>=20 },
-            reqDesc() { return `Buy 20 Axionic Tree Upgrades.` },
-            desc: `Galactic Particles Effect is better.`,
+            reqDesc() { return `买20个轴空间树升级` },
+            desc: `星系粒子的效果变得更好`,
             cost: E(600000),
         },
         ax24: {
@@ -1893,8 +1894,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax20"],
             req() { return player.exotic.tree.length>=20 },
-            reqDesc() { return `Buy 20 Axionic Tree Upgrades.` },
-            desc: `C20 Effect is better.`,
+            reqDesc() { return `买20个轴空间树升级` },
+            desc: `挑战20的效果变得更好`,
             cost: E(600000),
         },
         ax25: {
@@ -1902,8 +1903,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax15","ax21"],
             req() { return player.exotic.tree.length>=22 },
-            reqDesc() { return `Buy 22 Axionic Tree Upgrades.` },
-            desc: `[ax15] is better.`,
+            reqDesc() { return `买22个轴空间树升级` },
+            desc: `[ax15]的效果变得更好`,
             cost: E(300000),
         },
         ax26: {
@@ -1911,8 +1912,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax14","ax22"],
             req() { return player.exotic.tree.length>=22 },
-            reqDesc() { return `Buy 22 Axionic Tree Upgrades.` },
-            desc: `[ax14] is better.`,
+            reqDesc() { return `买22个轴空间树升级` },
+            desc: `[ax14]的效果变得更好`,
             cost: E(350000),
         },
         ax27: {
@@ -1920,8 +1921,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax18"],
             req() { return player.exotic.tree.length>=23 },
-            reqDesc() { return `Buy 23 Axionic Tree Upgrades.` },
-            desc: `'125%' in [ax6] is now 200%.`,
+            reqDesc() { return `买23个轴空间树升级` },
+            desc: `[ax6]中的'125%'变为'200%'`,
             cost: E(100000),
         },
         ax28: {
@@ -1929,8 +1930,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax19"],
             req() { return player.exotic.tree.length>=23 },
-            reqDesc() { return `Buy 23 Axionic Tree Upgrades.` },
-            desc: `Exotic Honor scaling is 25% weaker.`,
+            reqDesc() { return `买23个轴空间树升级` },
+            desc: `荣耀的奇异折算削弱25%`,
             cost: E(100000),
         },
         ax29: {
@@ -1938,8 +1939,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax25","ax27"],
             req() { return player.exotic.tree.length>=26 },
-            reqDesc() { return `Buy 26 Axionic Tree Upgrades.` },
-            desc: `'200%' in [ax6] is now 350%.`,
+            reqDesc() { return `买26个轴空间树升级` },
+            desc: `[ax6]中的'200%'变为'350%'`,
             cost: E(100000),
         },
         ax30: {
@@ -1947,8 +1948,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax26","ax28"],
             req() { return player.exotic.tree.length>=26 },
-            reqDesc() { return `Buy 26 Axionic Tree Upgrades.` },
-            desc: `Each type of Axion Generators multiply its power equals to its amount again.`,
+            reqDesc() { return `买26个轴空间树升级` },
+            desc: `每一个轴生成器的倍率再一次乘以它们各自的已购数量`,
             cost: E(750000),
         },
         ax31: {
@@ -1956,8 +1957,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax24"],
             req() { return player.exotic.tree.length>=30 },
-            reqDesc() { return `Buy 30 Axionic Tree Upgrades.` },
-            desc: `C20 Effect is better.`,
+            reqDesc() { return `买30个轴空间树升级` },
+            desc: `挑战20的效果变得更好`,
             cost: E(100000),
         },
         ax32: {
@@ -1965,8 +1966,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax23"],
             req() { return player.exotic.tree.length>=30 },
-            reqDesc() { return `Buy 30 Axionic Tree Upgrades.` },
-            desc: `Galactic Particles Effect is better.`,
+            reqDesc() { return `买30个轴空间树升级` },
+            desc: `星系粒子的效果变得更好`,
             cost: E(100000),
         },
         ax33: {
@@ -1974,22 +1975,22 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax20"],
             req() { return player.exotic.tree.length>=32 },
-            reqDesc() { return `Buy 32 Axionic Tree Upgrades.` },
-            desc: `Exotic Prestige Level scaling is weaker based on Axionic Space.`,
+            reqDesc() { return `买32个轴空间树升级` },
+            desc: `转生等级的奇异折算基于轴空间削弱`,
             cost: E(100000),
             effect() {
                 let x = EXOTIC.axsVal().add(1).pow(-0.001);
                 return x
             },
-            effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
+            effDesc(x) { return "削弱"+format(E(1).sub(x).mul(100))+"%" },
         },
         ax34: {
             unl() { return player.exotic.tree.length>=33 },
             ax: true,
             branch: ["ax32"],
             req() { return player.exotic.tree.length>=33 },
-            reqDesc() { return `Buy 33 Axionic Tree Upgrades.` },
-            desc: `Black Hole Overflow is weaker.`,
+            reqDesc() { return `买33个轴空间树升级` },
+            desc: `削弱黑洞溢出`,
             cost: E(200000),
         },
         ax35: {
@@ -1997,8 +1998,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax31"],
             req() { return player.exotic.tree.length>=33 },
-            reqDesc() { return `Buy 33 Axionic Tree Upgrades.` },
-            desc: `Add 0.1 to Matter Exponent.`,
+            reqDesc() { return `买33个轴空间树升级` },
+            desc: `物质获取公式指数+0.1`,
             cost: E(200000),
         },
         ax36: {
@@ -2006,22 +2007,22 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax33"],
             req() { return player.exotic.tree.length>=34 },
-            reqDesc() { return `Buy 34 Axionic Tree Upgrades.` },
-            desc: `Exotic Honor scaling is weaker based on Axionic Space.`,
+            reqDesc() { return `买34个轴空间树升级` },
+            desc: `荣耀的奇异折算基于轴空间削弱`,
             cost: E(500000),
             effect() {
                 let x = EXOTIC.axsVal().add(1).pow(-0.001);
                 return x
             },
-            effDesc(x) { return format(E(1).sub(x).mul(100))+"% weaker" },
+            effDesc(x) { return "削弱"+format(E(1).sub(x).mul(100))+"%" },
         },
         ax37: {
             unl() { return player.exotic.tree.length>=34 },
             ax: true,
             branch: ["ax33"],
             req() { return player.exotic.tree.length>=34 },
-            reqDesc() { return `Buy 34 Axionic Tree Upgrades.` },
-            desc: `Gain 250x W Axions.`,
+            reqDesc() { return `买34个轴空间树升级` },
+            desc: `W轴获取x250`,
             cost: E(500000),
         },
         ax38: {
@@ -2029,8 +2030,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax30","ax35"],
             req() { return player.exotic.tree.length>=36 },
-            reqDesc() { return `Buy 36 Axionic Tree Upgrades.` },
-            desc: `Add 0.1 to Matter Exponent.`,
+            reqDesc() { return `买36个轴空间树升级` },
+            desc: `物质获取公式指数+0.1`,
             cost: E(1000000),
         },
         ax39: {
@@ -2038,8 +2039,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax29","ax34"],
             req() { return player.exotic.tree.length>=36 },
-            reqDesc() { return `Buy 36 Axionic Tree Upgrades.` },
-            desc: `'350%' in [ax6] is now 400%.`,
+            reqDesc() { return `买36个轴空间树升级` },
+            desc: `[ax6]中的'350'变为'400%'`,
             cost: E(1255500),
         },
         ax40: {
@@ -2047,8 +2048,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax36"],
             req() { return player.exotic.tree.length>=38 },
-            reqDesc() { return `Buy 38 Axionic Tree Upgrades.` },
-            desc: `Super Supernova Galaxies starts 50 later.`,
+            reqDesc() { return `买38个轴空间树升级` },
+            desc: `超新星星系的超级折算延迟50次出现`,
             cost: E(540000),
         },
         ax41: {
@@ -2056,8 +2057,8 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax37"],
             req() { return player.exotic.tree.length>=38 },
-            reqDesc() { return `Buy 38 Axionic Tree Upgrades.` },
-            desc: `Gain 1000x X Axions.`,
+            reqDesc() { return `买38个轴空间树升级` },
+            desc: `X轴获取x1000.`,
             cost: E(600000),
         },
         ax42: {
@@ -2065,49 +2066,87 @@ const TREE_UPGS = {
             ax: true,
             branch: ["ax33"],
             req() { return player.mass.gte("eee99") },
-            reqDesc() { return `Reach eee99 g mass.` },
-            desc: `Unlock 6 final upgrades in the Quantum+ tab of Neutron Tree.`,
+            reqDesc() { return `达到eee99g质量` },
+            desc: `解锁量子+中最后6个升级。`,
             cost: E(1),
         },
 
-      
+        yekey1: {
+            unl() { return true },
+            sunshard: true,
+          
+            desc: `获得1黄钥匙.`,
+            cost: E(3),
+        },    
+        yekey2: {
+            unl() { return true },
+            sunshard: true,
+           
+            desc: `获得1黄钥匙.`,
+            cost: E(99),
+        },    
+        yekey3: {
+            unl() { return true },
+            sunshard: true,
+           
+            desc: `获得1黄钥匙.`,
+            cost: E(99),
+        },    
+        blkey1: {
+            unl() { return true },
+            sunshard: true,
+         
+            desc: `获得1蓝钥匙.`,
+            cost: E(99),
+        },      
+        blkey2: {
+            unl() { return true },
+            sunshard: true,
+         
+            desc: `获得1蓝钥匙.`,
+            cost: E(99),
+        },     
         bldo1: {
             unl() { return true },
             sunshard: true,
-            req() { return  hasTree('yedo1') },
-            reqDesc() { return `你需要有一条能前往这里的路.` },
+            req() { return player.exotic.tree.length>=99 },
+            reqDesc() { return `1蓝钥匙.` },
             desc: ``,
-            cost: E("5"),
+            cost: E("eee999"),
         },      
         bldo2: {
             unl() { return true },
             sunshard: true,
-            req() { return  hasTree('yedo1') },
-            reqDesc() { return `你需要有一条能前往这里的路.` },
+            req() { return player.exotic.tree.length>=99 },
+            reqDesc() { return `1蓝钥匙.` },
             desc: ``,
-            cost: E("5"),
+            cost: E("0"),
         },   
         yedo1: {
             unl() { return true },
             sunshard: true,
-            desc: ``,
-            cost: E("3"),
+            req() { return player.exotic.tree.length>=99 },
+        
+            desc: `消耗1黄钥匙`,
+            cost: E("eee999"),
         }, 
         yedo2: {
             unl() { return true },
             sunshard: true,
-            req() { return  hasTree('yedo1') },
-            reqDesc() { return `你需要有一条能前往这里的路.` },
-            desc: ``,
-            cost: E("3"),
+
+            req() { return player.exotic.tree.length>=99 },
+         
+            desc: `消耗1黄钥匙`,
+            cost: E("eee999"),
         },
         yedo3: {
             unl() { return true },
             sunshard: true,
-            req() { return  hasTree('yedo2') },
-            reqDesc() { return `你需要有一条能前往这里的路.` },
-            desc: ``,
-            cost: E("3"),
+         
+            req() { return player.exotic.tree.length>=99 },
+            
+            desc: `消耗1黄钥匙`,
+            cost: E("eee999"),
         },    
         bobo: {
             unl() { return true },
@@ -2122,7 +2161,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo1') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `奇异物质获取x5.`,
-            cost: E("0"),
+            cost: E("eee999"),
         },    
         rebs12: {
             unl() { return true },
@@ -2136,7 +2175,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo2') },
             reqDesc() { return `开下面的黄门.` },
             desc: `雕文质量获取x3.`,
-            cost: E("0"),
+            cost: E("eee999"),
         }, 
         blbs11: {
             unl() { return true },
@@ -2144,7 +2183,7 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo1') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `超新星的元折算弱化80%.`,
-            cost: E("0"),
+            cost: E("eee999"),
         },    
         blbs12: {
             unl() { return true },
@@ -2158,31 +2197,31 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo2') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `原子能量的软上限弱化2%.`,
-            cost: E("0"),
+            cost: E("eee999"),
         },   
         grbs11: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('bldo1') },
             reqDesc() { return `开旁边的蓝门.` },
-            desc: `行星重置时保留1e6奇异物质.`,
-            cost: E("0"),
+            desc: `行星重置时保留1e10奇异物质.`,
+            cost: E("eee999"),
         }, 
         grbs12: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('yedo2') },
             reqDesc() { return `开下面的黄门.` },
-            desc: `行星重置时保留1e4奇异重置次数.`,
-            cost: E("0"),
+            desc: `行星重置时保留1e6奇异重置次数.`,
+            cost: E("eee999"),
         },    
         grbs13: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('yedo3') },
             reqDesc() { return `开旁边的黄门.` },
-            desc: `行星重置时保留100暗射线.`,
-            cost: E("0"),
+            desc: `行星重置时保留1e4暗射线.`,
+            cost: E("eee999"),
         },   
         yebs11: {
             unl() { return true },
@@ -2190,15 +2229,15 @@ const TREE_UPGS = {
             req() { return  hasTree('bldo1') },
             reqDesc() { return `开旁边的蓝门.` },
             desc: `自动购买奇异升级.`,
-            cost: E("0"),
+            cost: E("eee999"),
         }, 
         yebs12: {
             unl() { return true },
             sunshard: true,
             req() { return  hasTree('bldo2') },
             reqDesc() { return `开旁边的蓝门.` },
-            desc: `自动获得超新星星团.`,
-            cost: E("0"),
+            desc: `自动购买奇异推进.`,
+            cost: E("eee999"),
         }, 
         yebs13: {
             unl() { return true },
@@ -2206,13 +2245,13 @@ const TREE_UPGS = {
             req() { return  hasTree('yedo3') },
             reqDesc() { return `开旁边的黄门.` },
             desc: `自动获得最终星辰碎片.`,
-            cost: E("0"),
+            cost: E("eee999"),
         }, 
         lt: {
             unl() { return true },
             sunshard: true,
            
-            desc: `当前区域黄门消耗3太阳碎片，蓝门消耗5太阳碎片.`,
+            desc: `当前区域黄钥匙消耗3太阳碎片，蓝钥匙消耗5太阳碎片.`,
             cost: E("0"),
         }, 
     },
@@ -2222,7 +2261,7 @@ function hasTree(id) {
    
 	if(TREE_UPGS.ids[id].ax)return player.exotic.tree.includes(id)
    
-    if(TREE_UPGS.ids[id] && !id.startsWith("sunshard") )return player.supernova.tree.includes(id)  
+    if(tmp.tree_tab <= 7)return player.supernova.tree.includes(id)  
 }
 
 function treeEff(id,def=1) { return tmp.supernova.tree_eff[id]||E(def) }
