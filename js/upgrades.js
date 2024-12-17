@@ -61,7 +61,7 @@ const UPGS = {
         },
         1: {
             unl() { return (!hasChargedElement(223)) },
-            title: "Muscler",
+            title: "锻体器",
             start: E(10),
             inc: E(1.5),
             effect(x) {
@@ -89,7 +89,7 @@ const UPGS = {
         },
         2: {
             unl() { return (!hasChargedElement(223))},
-            title: "Booster",
+            title: "助推器",
             start: E(100),
             inc: E(4),
             effect(x) {
@@ -118,7 +118,7 @@ const UPGS = {
         },
         3: {
             unl() { return player.ranks.rank.gte(3) || player.mainUpg.atom.includes(1) },
-            title: "Stronger",
+            title: "强化器",
             start: E(1000),
             inc: E(9),
             effect(x) {
@@ -209,7 +209,7 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+^"+format(eff.step),
-                    eff: "^"+format(eff.eff)+" to Stronger Power"+(eff.eff.gte(eff.ss)?` <span class='soft'>(softcapped${eff.eff.gte(eff.ss2)?"^2":""})</span>`:"")
+                    eff: "^"+format(eff.eff)+"强化器倍率"+(eff.eff.gte(eff.ss)?` <span class='soft'>(softcapped${eff.eff.gte(eff.ss2)?"^2":""})</span>`:"")
                 }
             },
             bonus() {
@@ -274,7 +274,7 @@ const UPGS = {
         },
         1: {
             unl() { return hasPrestige(2,38) },
-            title: "Prestige Muscler",
+            title: "转生锻体器",
             start: E(10),
             inc: E(1.5),
             effect(x) {
@@ -289,13 +289,13 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+"+format(eff.step),
-                    eff: "x"+format(eff.eff)+" to Prestige Mass gain"
+                    eff: "x"+format(eff.eff)+"转生质量获取速度"
                 }
             },
         },
         2: {
             unl() { return hasPrestige(2,39) },
-            title: "Prestige Booster",
+            title: "转生助推器",
             start: E(100),
             inc: E(4),
             effect(x) {
@@ -309,13 +309,13 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+"+format(eff.step)+"x",
-                    eff: "x"+format(eff.eff)+" to Prestige Muscler Power"
+                    eff: "x"+format(eff.eff)+"转生锻体器倍率"
                 }
             },
         },
         3: {
             unl() { return hasPrestige(2,40) },
-            title: "Prestige Stronger",
+            title: "转生强化器",
             start: E(1000),
             inc: E(9),
             effect(x) {
@@ -330,13 +330,13 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+^"+format(eff.step),
-                    eff: "^"+format(eff.eff)+" to Prestige Booster Power"+(eff.eff.gte(eff.ss)?` <span class='soft'>(softcapped)</span>`:"")
+                    eff: "^"+format(eff.eff)+"转生助推器倍率"+(eff.eff.gte(eff.ss)?` <span class='soft'>(受软上限限制)</span>`:"")
                 }
             },
         },
         4: {
             unl() { return hasUpgrade("exotic",4) },
-            title: "Prestige Overpower",
+            title: "转生降伏器",
             start: E(1e-4),
             inc: E(1.0005),
             effect(x) {
@@ -348,7 +348,7 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+"+format(eff.step)+"x",
-                    eff: "x"+format(eff.eff)+" to Prestige Stronger Power"
+                    eff: "x"+format(eff.eff)+"转生强化器倍率"
                 }
             }
         },
@@ -408,7 +408,7 @@ const UPGS = {
         },
         1: {
             unl() { return hasAscension(1,4) },
-            title: "Ascension Muscler",
+            title: "飞升锻体器",
             start: E(10),
             inc: E(1.5),
             effect(x) {
@@ -421,13 +421,13 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+"+format(eff.step),
-                    eff: "x"+format(eff.eff)+" to Ascension Mass gain"
+                    eff: "x"+format(eff.eff)+"飞升质量获取速度"
                 }
             },
         },
         2: {
             unl() { return hasAscension(1,5) },
-            title: "Ascension Booster",
+            title: "飞升助推器",
             start: E(100),
             inc: E(4),
             effect(x) {
@@ -440,13 +440,13 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+"+format(eff.step)+"x",
-                    eff: "x"+format(eff.eff)+" to Ascension Muscler Power"
+                    eff: "x"+format(eff.eff)+"飞升锻体器倍率"
                 }
             },
         },
         3: {
             unl() { return hasAscension(1,6) },
-            title: "Ascension Stronger",
+            title: "飞升强化器",
             start: E(1000),
             inc: E(9),
             effect(x) {
@@ -458,13 +458,13 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+^"+format(eff.step),
-                    eff: "^"+format(eff.eff)+" to Ascension Booster Power"+(eff.eff.gte(eff.ss)?` <span class='soft'>(softcapped)</span>`:"")
+                    eff: "^"+format(eff.eff)+"飞升助推器倍率"+(eff.eff.gte(eff.ss)?` <span class='soft'>（受软上限限制）</span>`:"")
                 }
             },
         },
         4: {
             unl() { return hasAscension(2,16) },
-            title: "Ascension Overpower",
+            title: "飞升降伏器",
             start: E(2e-5),
             inc: E(1.0005),
             effect(x) {
@@ -475,7 +475,7 @@ const UPGS = {
             effDesc(eff) {
                 return {
                     step: "+"+format(eff.step)+"x",
-                    eff: "x"+format(eff.eff)+" to Ascension Stronger Power"
+                    eff: "x"+format(eff.eff)+"飞升强化器倍率"
                 }
             }
         },
@@ -1482,7 +1482,7 @@ const UPGS = {
                     player.mainUpg.exotic.push(x)
                 }
             },
-            auto_unl() { return hasTree('yebs11') },
+            auto_unl() { return false },
             lens: 25,
             1: {
                 desc: `永恒次数x(200+奇异次数).移除质量和星辰溢出，自动购买无限升级.`,

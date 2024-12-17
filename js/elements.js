@@ -82,8 +82,8 @@ function setupHTML() {
 			<button class="btn" style="width: 120px;" onclick="UPGS.mass.buyMax(${x})">Buy Max</button>
 			<button id="massUpg_auto_${x}" class="btn" style="width: 80px;" onclick="UPGS.mass.autoSwitch(${x})">OFF</button>
 			<div style="margin-left: 5px; text-align: left; width: 400px">
-				${upg.title} Power: <span id="massUpg_step_${x}">X</span><br>
-				${upg.title} Effect: <span id="massUpg_eff_${x}">X</span>
+				${upg.title}倍率： <span id="massUpg_step_${x}">X</span><br>
+				${upg.title}效果：<span id="massUpg_eff_${x}">X</span>
 			</div>
 		</div>`
 	}
@@ -103,8 +103,8 @@ function setupHTML() {
 			<button class="btn" style="width: 120px;" onclick="UPGS.prestigeMass.buyMax(${x})">Buy Max</button>
 			<button id="prestigeMassUpg_auto_${x}" class="btn" style="width: 80px;" onclick="UPGS.prestigeMass.autoSwitch(${x})">OFF</button>
 			<div style="margin-left: 5px; text-align: left; width: 400px">
-				${upg.title} Power: <span id="prestigeMassUpg_step_${x}">X</span><br>
-				${upg.title} Effect: <span id="prestigeMassUpg_eff_${x}">X</span>
+				${upg.title}倍率： <span id="prestigeMassUpg_step_${x}">X</span><br>
+				${upg.title}效果：<span id="prestigeMassUpg_eff_${x}">X</span>
 			</div>
 		</div>`
 	}
@@ -124,8 +124,8 @@ function setupHTML() {
 			<button class="btn" style="width: 120px;" onclick="UPGS.ascensionMass.buyMax(${x})">Buy Max</button>
 			<button id="ascensionMassUpg_auto_${x}" class="btn" style="width: 80px;" onclick="UPGS.ascensionMass.autoSwitch(${x})">OFF</button>
 			<div style="margin-left: 5px; text-align: left; width: 400px">
-				${upg.title} Power: <span id="ascensionMassUpg_step_${x}">X</span><br>
-				${upg.title} Effect: <span id="ascensionMassUpg_eff_${x}">X</span>
+				${upg.title}倍率：<span id="ascensionMassUpg_step_${x}">X</span><br>
+				${upg.title}效果：<span id="ascensionMassUpg_eff_${x}">X</span>
 			</div>
 		</div>`
 	}
@@ -529,13 +529,7 @@ function updateBlackHoleHTML() {
 function updateOptionsHTML() {
 	for (let x = 0; x < CONFIRMS.length; x++) {
 		let unl = 
-		CONFIRMS[x] == "rp"
-		?(player.rp.points.gte(1)) 
-		:CONFIRMS[x] == "bh"
-		?(player.bh.dm.gte(1))
-		:CONFIRMS[x] == "atom"
-		?(player.atom.points.gte(1))
-		:CONFIRMS[x] == "sn"
+		CONFIRMS[x] == "sn"
 		?(player.supernova.times.gte(1) || quUnl() || player.superGal.gte(1))
 		:CONFIRMS[x] == "qu"
 		?(quUnl() || player.superGal.gte(1))
@@ -549,9 +543,10 @@ function updateOptionsHTML() {
 		?(player.superGal.gte(1))
 		:CONFIRMS[x] == "exotic"
 		?(player.exotic.times.gte(1))
-		?(player.superGal.gte(1))
-		:CONFIRMS[x] == "sunshard"
-		:(player.sun.shard.gte(1))	
+		:(player[CONFIRMS[x]].unl || player.superGal.gte(1))
+		
+			
+
 		tmp.el["confirm_div_"+x].setDisplay(unl)
 		tmp.el["confirm_btn_"+x].setTxt(player.confirms[CONFIRMS[x]] ? "ON":"OFF")
 	}

@@ -405,7 +405,7 @@ const CHALS = {
         title: "即时折算",
         desc: "Super Ranks, Mass Upgrades starts at 25. In addtional, Super Tickspeed start at 50.",
         reward() {
-			if(hasElement(348))return `Meta-Tickspeed scaling starts later.`;
+			if(hasElement(348))return `延迟时间速度的元折算出现。`;
 			return `Super Ranks starts later, Super Tickspeed scaling weaker by completions.`
 		},
         max: E(100),
@@ -589,7 +589,7 @@ const CHALS = {
         max: E(100),
         inc: E('e2000'),
         pow: E(2),
-        start: E('e27500').mul(1.5e56),
+        start: E('e29000').mul(1.5e56),
         effect(x) {
 			if(hasChargedElement(104))return x.add(1)
             let ret = x.root(1.75).mul(0.01).add(1)
@@ -680,7 +680,7 @@ const CHALS = {
         effect(x) {
 			if(CHALS.inChal(17) || CHALS.inChal(19))return E(1)
 			if(hasUpgrade('br',22)){
-        if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e1e204"))return x.pow(0.1);
+        if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e5e204"))return x.pow(0.1);
 				if(hasChargedElement(210))return x.add(1e10).log10().div(10).pow(4);
 				if(hasChargedElement(206))return x.add(1e10).log10().div(10).pow(3);
 				if(hasChargedElement(159))return x.add(1e10).log10().div(10).pow(2);
@@ -776,7 +776,7 @@ const CHALS = {
         effect(x) {
             let ret = x.div(4).add(1);
 			if(hasChargedElement(209))ret = x.add(1).pow(2);
-            if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e1e204"))ret = x.add(1).pow(3);
+            if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e5e204"))ret = x.add(1).pow(3);
 			return ret
         },
         effDesc(x) { return format(x)+"x" },
@@ -820,7 +820,7 @@ const CHALS = {
 			if(x.lt(1))return E(0);
 			let ret = x.mul(2).add(10);
 			if(hasElement(552))ret = ret.max(x.mul(3));
-            if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e1e204"))return ret.max(x.mul(3).pow(1.01));
+            if(hasChargedElement(252)&&tmp.preQUGlobalSpeed>=("e5e204"))return ret.max(x.mul(3).pow(1.01));
 			return ret
         },
         effDesc(x) { return "延迟"+format(x)+"次出现" },
