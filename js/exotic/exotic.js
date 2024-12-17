@@ -48,7 +48,6 @@ const EXOTIC = {
 		
 		if (player.ranks.enne.gte(9000)) x = x.mul(RANKS.effect.enne[9000]())
 		if (hasChargedElement(255)&&hasAscension(0,2245)) x = x.mul(tmp.elements.effect[255]);
-		if (hasTree('rebs11'))x = x.mul(5)	
         return x.floor()
     },
     gainTimes() {
@@ -399,29 +398,29 @@ function updateExoticHTML(){
             tmp.el.ab_div.changeStyle('display',hasElement(414)?'':'none');
             tmp.el.abyssalBlot.setTxt(player.exotic.ab.format(0));
 			tmp.el.drEff.setHTML(`
-					Boosts dark shadow gain by <b>x${tmp.ex.drEff.ds.format(3)}</b><br>`+
-					(hasElement(406)?`Boosts exotic matter gain by <b>x${tmp.ex.drEff.ex.format(3)}</b><br>`:"")+
-					(hasElement(456)?`Boosts glyphic mass gain by <b>x${tmp.ex.drEff.gm.format(3)}</b><br>`:"")+
-					(hasElement(524)?`Add <b>${tmp.ex.drEff.me.format(3)}</b> to Matter Exponent<br>`:"")
+					使黑暗之影获取速度<b>x${tmp.ex.drEff.ds.format(3)}</b><br>`+
+					(hasElement(406)?`使奇异物质获取速度<b>x${tmp.ex.drEff.ex.format(3)}</b><br>`:"")+
+					(hasElement(456)?`使雕文质量获取速度<b>x${tmp.ex.drEff.gm.format(3)}</b><br>`:"")+
+					(hasElement(524)?`使物质获取公式指数<b>+${tmp.ex.drEff.me.format(3)}</b><br>`:"")
 				);
 			tmp.el.dsEff.setHTML(`
-					Boosts exotic matter gain by <b>x${tmp.ex.dsEff.ex.format(3)}</b><br>
-					Boosts dark ray gain by <b>x${tmp.ex.dsEff.ex.format(3)}</b><br>`+
-					(hasElement(376)?`Meta-Supernova is <b>${formatReduction(tmp.ex.dsEff.sn)}</b> weaker<br>`:"")+
-					(hasElement(382)?`Boosts Galactic Quarks gain by <b>x${tmp.ex.dsEff.ex.format(3)}</b><br>`:"")+
-					(hasElement(394)?`Boosts Entropy gain by <b>x${tmp.ex.dsEff.en.format(3)}</b><br>`:"")+
-					(hasElement(400)?`Boosts Blueprint Particles gain by <b>^${tmp.ex.dsEff.bp.format(3)}</b><br>`:"")+
-					(hasElement(414)?`Boosts Abyssal Blot gain by <b>x${tmp.ex.dsEff.ab.format(3)}</b><br>`:"")+
-					(hasElement(474)?`Boosts Quantum Foam gain by <b>^${tmp.ex.dsEff.qf.format(3)}</b><br>`:"")+
-					(hasElement(492)?`Add <b>${tmp.ex.dsEff.me.format(3)}</b> to Matter Exponent<br>`:"")
+					使奇异物质获取速度<b>x${tmp.ex.dsEff.ex.format(3)}</b><br>
+					使暗射线获取速度<b>x${tmp.ex.dsEff.ex.format(3)}</b><br>`+
+					(hasElement(376)?`使超新星次数的一阶元折算削弱<b>${formatReduction(tmp.ex.dsEff.sn)}</b><br>`:"")+
+					(hasElement(382)?`使星系夸克获取速度<b>x${tmp.ex.dsEff.ex.format(3)}</b><br>`:"")+
+					(hasElement(394)?`使熵获取速度<b>x${tmp.ex.dsEff.en.format(3)}</b><br>`:"")+
+					(hasElement(400)?`使蓝图粒子获取速度<b>^${tmp.ex.dsEff.bp.format(3)}</b><br>`:"")+
+					(hasElement(414)?`使深渊之渍获取速度<b>x${tmp.ex.dsEff.ab.format(3)}</b><br>`:"")+
+					(hasElement(474)?`使量子泡沫获取速度<b>^${tmp.ex.dsEff.qf.format(3)}</b><br>`:"")+
+					(hasElement(492)?`使物质获取公式指数<b>+${tmp.ex.dsEff.me.format(3)}</b><br>`:"")
 				);
 			tmp.el.abEff.setHTML(`
-					Boosts dark shadow gain by <b>x${tmp.ex.abEff.ds.format(3)}</b><br>
-					Exotic boosts are <b>x${tmp.ex.abEff.exb.format(3)}</b> stronger<br>`+
-					(hasElement(420)?`Boosts Cosmic String power by <b>x${tmp.ex.abEff.csp.format(3)}</b><br>`:"")+
-					(hasElement(426)?`Boosts dark ray gain by <b>x${tmp.ex.abEff.ds.format(3)}</b><br>`:"")+
-					(hasElement(436)?`Boosts eternal mass gain by <b>x${tmp.ex.abEff.em.format(3)}</b><br>`:"")+
-					(hasElement(512)?`Add <b>${tmp.ex.abEff.me.format(3)}</b> to Matter Exponent<br>`:"")
+					使黑暗之影获取速度<b>x${tmp.ex.abEff.ds.format(3)}</b><br>
+					使奇异推进增强<b>x${tmp.ex.abEff.exb.format(3)}</b><br>`+
+					(hasElement(420)?`使宇宙弦倍率增强<b>x${tmp.ex.abEff.csp.format(3)}</b><br>`:"")+
+					(hasElement(426)?`使暗射线获取速度<b>x${tmp.ex.abEff.ds.format(3)}</b><br>`:"")+
+					(hasElement(436)?`使永恒质量获取速度<b>x${tmp.ex.abEff.em.format(3)}</b><br>`:"")+
+					(hasElement(512)?`使物质获取公式指数<b>+${tmp.ex.abEff.me.format(3)}</b><br>`:"")
 				);
         }
         if (tmp.stab[7] == 4) {
@@ -434,7 +433,7 @@ function updateExoticHTML(){
             tmp.el.matters_dm_amount.setTxt(format(player.bh.dm));
             tmp.el.matters_dm_gain.setTxt(player.bh.dm.formatGain(tmp.bh.dm_gain));
             tmp.el.matters_pow.setTxt(format(MATTERS.pow()));
-			if(hasTree('ax16'))tmp.el.matters_pow.setTxt(format(MATTERS.pow())+"max(slog(previous matter)/3,1))");
+			if(hasTree('ax16'))tmp.el.matters_pow.setTxt(format(MATTERS.pow())+"max(slog(前一物质)/3,1))");
 			for(var i=0;i<MATTERS_LENGTH;i++){
 				tmp.el["matters"+i+"_amount"].setTxt(format(player.exotic.matters[i]));
 				tmp.el["matters"+i+"_gain"].setTxt(player.exotic.matters[i].formatGain(MATTERS.gain(i)));
@@ -470,7 +469,7 @@ function updateExoticHTML(){
 			}
 			if(hasElement(548)){
 				tmp.el.matters_extend.changeStyle('display','');
-				tmp.el.matters_extend.setHTML("×(next matter+1)<sup>"+MATTERS.extendPow()+"</sup>");
+				tmp.el.matters_extend.setHTML("×(后一物质+1)<sup>"+MATTERS.extendPow()+"</sup>");
 			}else{
 				tmp.el.matters_extend.changeStyle('display','none');
 			}
@@ -519,7 +518,7 @@ function setupExoticHTML() {
     for (let x in EXOTIC.mils) {
         html += `
         <div id="ex_mil${x}" style="width: 100%; margin: 5px 0px; padding: 8px 0px; background-color: #4444; font-size: 14px;">
-            <h2><span id="ex_mil_goal${x}">X</span> Exotic Resets</h2><br><br>
+            <h2><span id="ex_mil_goal${x}">X</span>次奇异重置</h2><br><br>
             ${EXOTIC.mils[x][1]}
         </div>
         `

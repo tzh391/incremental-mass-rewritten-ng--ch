@@ -19,7 +19,6 @@ const DARK_RUN = {
     
         if(hasChargedElement(230))x = x.pow(tmp.chal?tmp.chal.eff[15]:1);
 		x = x.mul(SUPERNOVA_GALAXY.effects.em());
-        if (hasTree('rebs11'))x = x.mul(3)	
 		return x;
     },
     enter() {
@@ -35,7 +34,7 @@ const DARK_RUN = {
         },
         ids: [
             {
-                desc: `Supernova Boost Glyphic Mass gain.`,
+                desc: `超新星次数加成雕文质量获取。`,
                 cost(x) { return E(10) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(10))?E(1):E(0) },
@@ -49,7 +48,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x)+"x"},
             },
             {
-                desc: `Double Glyphic Mass gain.`,
+                desc: `使雕文质量获取速度翻倍。`,
                 cost(x) { return E(10).pow(x.pow(1.25)).mul(100) },
                 bulk() { return player.exotic.dark_run.points.gte(100)?player.exotic.dark_run.points.div(100).max(1).log10().pow(1/1.25).add(1).floor():E(0) },
                 effect(x) {
@@ -59,7 +58,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x,0)+"x"},
             },
             {
-                desc: `Glyphic Mass boost Dark Ray gain.`,
+                desc: `雕文质量加成暗射线获取速度。`,
                 cost(x) { return E(2000) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(2000))?E(1):E(0) },
@@ -69,41 +68,41 @@ const DARK_RUN = {
                 effDesc(x) { return format(x)+"x"},
             },
             {
-                desc: `Dark Run Upgrade 1 is better.`,
+                desc: `黑暗狂奔升级1的效果变得更好。`,
                 cost(x) { return E(1e4) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(1e4))?E(1):E(0) },
             },
             {
-                desc: `Gain 100% of Exotic Resets gained per second.`,
+                desc: `每秒自动获取100%的奇异重置次数。`,
                 cost(x) { return E(1e7) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(1e7))?E(1):E(0) },
             },
             {
-                desc: `Dark Matter Upgrade 25 is better.`,
+                desc: `黑洞升级25的效果变得更好。`,
                 cost(x) { return E(1e9) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(1e9))?E(1):E(0) },
             },
             {
-                desc: `Galactic Challenge nerfing is weaker.`,
+                desc: `使星系挑战的削弱弱化。`,
                 cost(x) { return E(1e13).mul(Decimal.pow(100,x.pow(2))) },
                 maxLvl: 15,
                 bulk() { return player.exotic.dark_run.points.gte(1e13)?player.exotic.dark_run.points.div(1e13).max(1).log10().div(2).pow(1/2).add(1).floor():E(0) },
                 effect(x) {
 					return 1-x.toNumber()/100;
                 },
-                effDesc(x) { return formatReduction(x)+" weaker"},
+                effDesc(x) { return "弱化"+formatReduction(x)},
             },
             {
-                desc: `Galactic Shards gain is better.`,
+                desc: `星系碎片的获取变得更好。`,
                 cost(x) { return E(1e15) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(1e15))?E(1):E(0) },
             },
             {
-                desc: `Relativistic Mass Boost Glyphic Mass gain.`,
+                desc: `使相对论质量加成雕文质量的获取速度。`,
                 cost(x) { return E(5e18) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(5e18))?E(1):E(0) },
@@ -114,7 +113,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x)+"x"},
             },
             {
-                desc: `Glyphic Mass boost Abyssal Blot gain.`,
+                desc: `使雕文质量加成深渊之渍的获取速度。`,
                 cost(x) { return E(3.238e21) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(3.238e21))?E(1):E(0) },
@@ -126,7 +125,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x)+"x"},
             },
             {
-                desc: `Double Exotic Matter gain.`,
+                desc: `使奇异物质的获取速度翻倍。`,
                 cost(x) { return E(10).pow(x.pow(1.25)).mul(1.619e20) },
                 bulk() { return player.exotic.dark_run.points.gte(1.619e20)?player.exotic.dark_run.points.div(1.619e20).max(1).log10().pow(1/1.25).add(1).floor():E(0) },
                 effect(x) {
@@ -136,7 +135,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x,0)+"x"},
             },
             {
-                desc: `Exotic Boosts are stronger.`,
+                desc: `使奇异推进的效果变得更好。`,
                 cost(x) { return E(10).pow(x.pow(2)).mul(1.619e24) },
                 bulk() { return player.exotic.dark_run.points.gte(1.619e24)?player.exotic.dark_run.points.div(1.619e24).max(1).log10().pow(1/2).add(1).floor():E(0) },
                 effect(x) {
@@ -145,7 +144,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x)+"x"},
             },
             {
-                desc: `Exotic Prestige Level scales weaker based on Glyphic Mass.`,
+                desc: `基于雕文质量减弱转生等级的奇异折算。`,
                 cost(x) { return E(5.972e27) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(5.972e27))?E(1):E(0) },
@@ -153,16 +152,16 @@ const DARK_RUN = {
 					if(hasAscension(2,23))return E(0.999).pow(player.exotic.dark_run.points.add(10).log10().add(player.exotic.dark_run.points.add(10).log10().pow(2).div(200)))
 					return E(0.999).pow(player.exotic.dark_run.points.add(10).log10())
                 },
-                effDesc(x) { return formatReduction(x)+" weaker"},
+                effDesc(x) { return "弱化"+formatReduction(x)},
             },
             {
-                desc: `Dark Run Upgrade 9 is better.`,
+                desc: `黑暗狂奔升级9的效果变得更好。`,
                 cost(x) { return E(1.989e43) },
                 maxLvl: 1,
                 bulk() { return player.exotic.dark_run.points.gte(E(1.989e43))?E(1):E(0) },
             },
             {
-                desc: `Double Dark Ray gain.`,
+                desc: `使暗射线的获取速度翻倍。`,
                 cost(x) { return E(10).pow(x.pow(1.25)).mul(2.9835e45) },
                 bulk() { return player.exotic.dark_run.points.gte(2.9835e45)?player.exotic.dark_run.points.div(2.9835e45).max(1).log10().pow(1/1.25).add(1).floor():E(0) },
                 effect(x) {
@@ -172,7 +171,7 @@ const DARK_RUN = {
                 effDesc(x) { return format(x,0)+"x"},
             },
             {
-                desc: `Increase Matter Exponent.`,
+                desc: `增加物质获取公式的指数。`,
 				unl(){ return hasElement(486)},
                 cost(x) { return E(10).pow(x.pow(1.25)).mul(1.5e56) },
                 bulk() { return player.exotic.dark_run.points.gte(1.5e56)?player.exotic.dark_run.points.div(1.5e56).max(1).log10().pow(1/1.25).add(1).floor():E(0) },
@@ -231,7 +230,7 @@ function updateDRHTML() {
             tmp.el["dr_upg"+x+"_div"].setClasses({btn: true, full: true, md: true, locked: !tmp.dark_run.upgs[x].can})
             if ((upg.maxLvl||1/0) > 1) tmp.el["dr_upg"+x+"_lvl"].setTxt(format(player.exotic.dark_run.upgs[x],0)+(upg.maxLvl!==undefined?" / "+format(upg.maxLvl,0):""))
             if (upg.effDesc) tmp.el["dr_upg"+x+"_eff"].setHTML(upg.effDesc(tmp.dark_run.upgs[x].eff))
-            tmp.el["dr_upg"+x+"_cost"].setTxt(player.exotic.dark_run.upgs[x].lt(upg.maxLvl||1/0)?"Cost: "+formatMass(tmp.dark_run.upgs[x].cost):"")
+            tmp.el["dr_upg"+x+"_cost"].setTxt(player.exotic.dark_run.upgs[x].lt(upg.maxLvl||1/0)?"花费: "+formatMass(tmp.dark_run.upgs[x].cost):"")
         }
     }
 }
