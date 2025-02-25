@@ -558,7 +558,7 @@ const UPGS = {
             },
             8: {
                 desc: "Super, Hyper Mass Upgrades scaling is weaker by Rage Points.",
-                cost: E(1e15),
+                cost: E(2e41),
                 effect() {
 					if(hasElement(526))return E(0);
                     let ret = E(0.9).pow(player.rp.points.max(1).log10().max(1).log10().pow(1.25).softcap(2.5,0.5,0))
