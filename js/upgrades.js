@@ -804,7 +804,7 @@ const UPGS = {
             10: {
                 unl() { return player.chal.unl },
                 desc: "Mass gain is boosted by OoM of Dark Matters.",
-                cost: E(1e33),
+                cost: E(1e86),
                 effect() {
                     let ret = E(2).pow(overflow(player.bh.dm.add(1).log10().softcap(11600,0.5,0),"e5e13",0.2))
                     return ret
