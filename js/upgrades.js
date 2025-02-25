@@ -729,11 +729,11 @@ const UPGS = {
             lens: 25,
             1: {
                 desc: "Mass Upgardes no longer spends mass.",
-                cost: E(1),
+                cost: E(1e9),
             },
             2: {
                 desc: "Tickspeeds boosts BH Condenser Power.",
-                cost: E(10),
+                cost: E(5e9),
                 effect() {
                     let ret = player.tickspeed.add(1).root(8)
                     return ret
