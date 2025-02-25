@@ -792,7 +792,7 @@ const UPGS = {
             9: {
                 unl() { return player.chal.unl },
                 desc: "Stronger Effect's softcap start later based on unspent Dark Matters.",
-                cost: E(1e27),
+                cost: E(1e34),
                 effect() {
                     let ret = player.bh.dm.max(1).log10().pow(0.5)
                     return ret
