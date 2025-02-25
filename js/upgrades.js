@@ -787,7 +787,7 @@ const UPGS = {
             8: {
                 unl() { return player.chal.unl },
                 desc: "Raise Rage Power gain by 1.15.",
-                cost: E(1e17),
+                cost: E(1e27),
             },
             9: {
                 unl() { return player.chal.unl },
