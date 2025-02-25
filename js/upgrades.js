@@ -547,7 +547,7 @@ const UPGS = {
             },
             7: {
                 desc: "For every 3 tickspeeds adds Stronger.",
-                cost: E(1e7),
+                cost: E(5e27),
                 effect() {
                     let ret = player.tickspeed.div(3).add(hasElement(38)?tmp.elements.effect[38]:0).floor()
                     return ret
