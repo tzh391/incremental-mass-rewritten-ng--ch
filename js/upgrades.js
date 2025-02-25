@@ -763,7 +763,7 @@ const UPGS = {
             },
             6: {
                 desc: "Gain 100% of Rage Power gained from reset per second. Rage Powers are boosted by mass of Black Hole.",
-                cost: E(2e6),
+                cost: E(1e19),
                 effect() {
                     let ret = player.bh.mass.max(1).log10().add(1).pow(2)
                     return ret
