@@ -958,11 +958,11 @@ const UPGS = {
             lens: 25,
             1: {
                 desc: "重置时保留质量升级3解锁，狂怒能量的获取变为原来的5倍.",
-                cost: E(1),
+                cost: E(1e6),
             },
             2: {
                 desc: "You can automatically buy BH Condenser and upgrades. Tickspeed no longer spent Rage Powers.",
-                cost: E(100),
+                cost: E(1e7),
             },
             3: {
                 desc: "[Tetr Era] Unlock Tetr.",
