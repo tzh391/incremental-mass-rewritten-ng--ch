@@ -744,7 +744,7 @@ const UPGS = {
             },
             3: {
                 desc: "Super Mass Upgrade scales later based on mass of Black Hole.",
-                cost: E(100),
+                cost: E(1e12),
                 effect() {
                     let ret = player.bh.mass.max(1).log10().pow(1.5).softcap(100,1/3,0).floor()
                     return ret.min(400)
@@ -755,11 +755,11 @@ const UPGS = {
             },
             4: {
                 desc: "Tiers no longer resets anything.",
-                cost: E(1e4),
+                cost: E(2e12),
             },
             5: {
                 desc: "You can automatically buy tickspeed and Rage Power upgrades.",
-                cost: E(5e5),
+                cost: E(3e12),
             },
             6: {
                 desc: "Gain 100% of Rage Power gained from reset per second. Rage Powers are boosted by mass of Black Hole.",
