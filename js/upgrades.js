@@ -816,7 +816,7 @@ const UPGS = {
             11: {
                 unl() { return player.atom.unl },
                 desc: "Mass gain softcap is 10% weaker.",
-                cost: E(1e80),
+                cost: E(1e120),
             },
             12: {
                 unl() { return player.atom.unl },
@@ -966,11 +966,11 @@ const UPGS = {
             },
             3: {
                 desc: "[Tetr Era] Unlock Tetr.",
-                cost: E(25000),
+                cost: E(1e13),
             },
             4: {
                 desc: "Keep 1-4 Challenge on reset. BH Condensers adds Cosmic Rays Power at a reduced rate.",
-                cost: E(1e10),
+                cost: E(1e14),
                 effect() {
                     let ret = player.bh.condenser.pow(0.8).mul(0.01)
                     return ret
