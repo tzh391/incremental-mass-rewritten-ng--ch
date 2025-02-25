@@ -539,11 +539,11 @@ const UPGS = {
             },
             5: {
                 desc: "You can automatically rank up.",
-                cost: E(1e4),
+                cost: E(1e14),
             },
             6: {
                 desc: "You can automatically tier up.",
-                cost: E(1e5),
+                cost: E(1e15),
             },
             7: {
                 desc: "For every 3 tickspeeds adds Stronger.",
