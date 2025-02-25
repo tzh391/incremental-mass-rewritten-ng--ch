@@ -572,7 +572,7 @@ const UPGS = {
             9: {
                 unl() { return player.bh.unl || player.chal.unl},
                 desc: "Stronger Power is added +^0.25.",
-                cost: E(1e31),
+                cost: E(2e50),
             },
             10: {
                 unl() { return player.bh.unl || player.chal.unl},
