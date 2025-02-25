@@ -775,7 +775,7 @@ const UPGS = {
             7: {
                 unl() { return player.chal.unl },
                 desc: "Mass gain softcap start later based on mass of Black Hole.",
-                cost: E(2e23),
+                cost: E(1e34),
                 effect() {
                     let ret = player.bh.mass.add(1).root(3)
                     return ret
