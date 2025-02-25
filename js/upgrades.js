@@ -577,7 +577,7 @@ const UPGS = {
             10: {
                 unl() { return player.bh.unl || player.chal.unl},
                 desc: "Super Rank scaling is 20% weaker.",
-                cost: E(1e43),
+                cost: E(3e56),
             },
             11: {
                 unl() { return player.chal.unl },
