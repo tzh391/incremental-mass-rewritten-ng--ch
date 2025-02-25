@@ -520,7 +520,7 @@ const UPGS = {
             },
             2: {
                 desc: "Strongers adds Boosters.",
-                cost: E(10),
+                cost: E(1e6),
                 effect() {
                     let ret = E(player.massUpg[3]||0)
                     return ret
@@ -531,11 +531,11 @@ const UPGS = {
             },
             3: {
                 desc: "You can automatically buys mass upgrades.",
-                cost: E(25),
+                cost: E(1e7),
             },
             4: {
                 desc: "Ranks no longer resets anything.",
-                cost: E(50),
+                cost: E(3e7),
             },
             5: {
                 desc: "You can automatically rank up.",
