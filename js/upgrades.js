@@ -509,7 +509,7 @@ const UPGS = {
             lens: 25,
             1: {
                 desc: "Boosters adds Musclers.",
-                cost: E(1),
+                cost: E(4000),
                 effect() {
                     let ret = E(player.massUpg[2]||0)
                     return ret
