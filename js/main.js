@@ -862,15 +862,27 @@ const FORMS = {
     },
 }
 var paused = false
+
+
 function loop() {
-    diff = Date.now()-date;
-    ssf[1]()
-    updateTemp()
-    if (paused || player.paused) diff = 0
-    updateHTML()
-    calc(diff/1000*tmp.offlineMult,diff/1000);
-    date = date+diff;
-    player.offline.current = date
+    let now = Date.now();
+    let diff = now - date;
+
+    if (paused || player.paused) {
+        // 游戏暂停时，更新时间基准，但不进行资源计算
+        date = now;
+        updateHTML(); // UI可以保持显示暂停状态
+        return;
+    }
+
+    ssf[1]();
+    updateTemp();
+
+    updateHTML();
+    calc(diff / 1000 * tmp.offlineMult, diff / 1000);
+
+    date = now;
+    player.offline.current = date;
 }
 
 function format(ex, acc=4, max=12, type=player.options.notation) {
