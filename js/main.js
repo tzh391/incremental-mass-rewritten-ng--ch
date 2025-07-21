@@ -870,6 +870,7 @@ function loop() {
     calc(diff/1000*tmp.offlineMult,diff/1000);
     date = date+diff;
     player.offline.current = date
+	if (paused || player.paused) diff = 0
 }
 
 function format(ex, acc=4, max=12, type=player.options.notation) {
