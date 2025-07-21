@@ -864,13 +864,14 @@ const FORMS = {
 
 function loop() {
     diff = Date.now()-date;
+	if (paused || player.paused) diff = 0
     ssf[1]()
     updateTemp()
     updateHTML()
     calc(diff/1000*tmp.offlineMult,diff/1000);
     date = date+diff;
     player.offline.current = date
-	if (paused || player.paused) diff = 0
+	
 }
 
 function format(ex, acc=4, max=12, type=player.options.notation) {
