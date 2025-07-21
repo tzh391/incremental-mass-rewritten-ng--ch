@@ -861,7 +861,7 @@ const FORMS = {
         reset() { player.reset_msg = "" },
     },
 }
-
+var paused = false
 function loop() {
     diff = Date.now()-date;
 	if (paused || player.paused) diff = 0
